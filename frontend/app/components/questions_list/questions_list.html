@@ -1,13 +1,14 @@
 <header>
-  <h1>Recettes maison</h1>
+  <h1>Questions list</h1>
 </header>
 <div ng-if="$ctrl.model.list.length > 0">
   <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
   <div class="content">
     <div ng-repeat="item in $ctrl.model.list | filter : $ctrl.model.query" class="item">
-      <div class="text">
-        <div class="name">{{item.title}}</div>
-        <div class="type">{{item.content}}</div>
+      <div class="question-list">
+        <div class="title" ng-bind="item.title"></div>
+        <div class="content" ng-bind="item.content"></div>
+        <div class="content" ng-bind="item.user.name"></div>
       </div>
     </div>
   </div>

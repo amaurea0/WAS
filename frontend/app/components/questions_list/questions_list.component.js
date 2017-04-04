@@ -29,6 +29,10 @@ COMPNT
           this.model.list = items.data;
           console.log(items.data);
         }).catch((err) => {});
+
+    //         QuestionsListService.getUser(userId).then {
+    //   return $http.get(API_URL + '/users/' + userId);
+    // }
       };
 
     //   // Remove an existing item

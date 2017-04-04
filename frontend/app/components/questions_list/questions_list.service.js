@@ -1,6 +1,6 @@
 'use strict';
 
-const API_URL = "http://localhost:3000/questions";
+const API_URL = "http://localhost:3000";
 
 /**
  * The recipes service
@@ -8,23 +8,27 @@ const API_URL = "http://localhost:3000/questions";
 SERVICES.service('QuestionsListService', ['$http', function ($http) {
 
     this.get = function () {
-      return $http.get(API_URL);
+      return $http.get(API_URL + '/questions?_expand=user');
     }
 
-    this.getById = function (id) {
-      return $http.get(API_URL + '/' + id);
-    }
+    // this.getById = function (id) {
+    //   return $http.get(API_URL + '/questions/' + id);
+    // }
 
-    this.save = function (recipe) {
-      if (recipe._id) {
-        return $http.put(API_URL + '/' + recipe._id, recipe);
-      } else {
-        return $http.post(API_URL, recipe);
-      }
-    }
+    // this.getUser = function (userId) {
+    //   return $http.get(API_URL + '/users/' + userId);
+    // }
 
-    this.delete = function (recipe) {
-      return $http.delete(API_URL + '/' + recipe._id);
-    }
+    // this.save = function (recipe) {
+    //   if (recipe._id) {
+    //     return $http.put(API_URL + '/' + recipe._id, recipe);
+    //   } else {
+    //     return $http.post(API_URL, recipe);
+    //   }
+    // }
+
+    // this.delete = function (recipe) {
+    //   return $http.delete(API_URL + '/' + recipe._id);
+    // }
 
 }]);
