@@ -1,40 +1,52 @@
 {
+  "users": [
+	{
+		"id":1,
+		"name": "toto"
+	}
+  ],
   "questions": [
     {
       "title": "Responsive div/container - Fixed Soze",
       "tags": "lkdsjfc",
       "content": "lksmmkndsc  lksdjfmqlkdsjf",
-      "id": 1
+      "id": 1,
+      "userId": 1
     },
     {
       "title": "comment on fait ?",
       "tags": "JS PHP",
       "content": "blablb\nanbladplsimkc",
-      "id": 2
+      "id": 2,
+      "userId": 1
     },
      {
       "title": "et si on allait ?",
       "tags": "JS PHP",
       "content": "blablb\nanbladplsimkc",
-      "id": 3
+      "id": 3,
+      "userId": 1
     },
      {
       "title": "pourquoi le monde ?",
       "tags": "JS PHP",
       "content": "blablb\nanbladplsimkc",
-      "id": 4
+      "id": 4,
+      "userId": 1
     },
      {
       "title": "quand est-ce qu'on ?",
       "tags": "JS PHP",
       "content": "blablb\nanbladplsimkc",
-      "id": 5
+      "id": 5,
+      "userId": 1
     },
      {
       "title": "combien font ?",
       "tags": "JS PHP",
       "content": "blablb\nanbladplsimkc",
-      "id": 6
+      "id": 6,
+      "userId": 1
     }
   ]
 }
