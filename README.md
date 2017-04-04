@@ -63,7 +63,7 @@ Afin d'éviter les conflits si le dev à été mis à jour pendant que l'on trav
 
 Cela créé la branch BRANCH_NAME dans le repository distant.
 
-- On rebase ensuite les changement du master sur notre branche en local : 
+- On rebase ensuite les changement du dev sur notre branche en local : 
 
 	- `git rebase dev BRANCH_NAME`
 
@@ -78,9 +78,9 @@ Cela créé la branch BRANCH_NAME dans le repository distant.
 
 - Toute l'équipe peut regarder les nouveaux commit. Si il y a des conflits on les résoud ensemble.
 
-- Une fois que les conflits sont réglés, on merge sur le master et on supprime la branche sur github.
+- Une fois que les conflits sont réglés, on merge sur la branche dev et on supprime la branche de travail sur github.
 
-- Chacun met à jour son master en local avec git pull.
+- Chacun met à jour sa branche dev en local avec git pull.
 
 - Suppression de notre branche locale une fois qu'elle a été intégrée : 
 	- `git branch -d BRANCH_NAME`
