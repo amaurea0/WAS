@@ -1,40 +1,37 @@
 {
   "questions": [
     {
-      "title": "Responsive div/container - Fixed Soze",
-      "tags": "lkdsjfc",
-      "content": "lksmmkndsc  lksdjfmqlkdsjf",
-      "id": 1
+      "title": "oh my gad",
+      "content": "it's raining today",
+      "userId": 1,
+      "id":1	
+    }
+  ]
+  ,
+  "users": [
+    {
+      "email": "laetitiadervaux33@gmail.com",
+      "pass": "passWCS",
+      "id": 1,
+      "name": "toto"
     },
     {
-      "title": "comment on fait ?",
-      "tags": "JS PHP",
-      "content": "blablb\nanbladplsimkc",
-      "id": 2
+      "email": "laetitiadervaux33@gmail.com",
+      "pass": "blabla",
+      "id": 2,
+      "name": "toto"
     },
-     {
-      "title": "et si on allait ?",
-      "tags": "JS PHP",
-      "content": "blablb\nanbladplsimkc",
-      "id": 3
+    {
+      "email": "laetitiadervaux33@gmail.com",
+      "pass": "blabla",
+      "id": 3,
+      "name": "toto"
     },
-     {
-      "title": "pourquoi le monde ?",
-      "tags": "JS PHP",
-      "content": "blablb\nanbladplsimkc",
-      "id": 4
-    },
-     {
-      "title": "quand est-ce qu'on ?",
-      "tags": "JS PHP",
-      "content": "blablb\nanbladplsimkc",
-      "id": 5
-    },
-     {
-      "title": "combien font ?",
-      "tags": "JS PHP",
-      "content": "blablb\nanbladplsimkc",
-      "id": 6
+    {
+      "email": "laetitiadervaux33@gmail.com",
+      "pass": "",
+      "id": 4,
+      "name": "toto"
     }
   ]
 }
