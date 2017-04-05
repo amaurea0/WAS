@@ -1,0 +1,15 @@
+<h3>Nouvelle recette</h3>
+<form ng-submit="$ctrl.save($ctrl.question)" novalidate>
+    <div class="form-group">
+        <label for="title">Titre question</label>
+        <input type="text" class="form-control" id="title" ng-model="$ctrl.question.title" />
+    </div>
+    <div class="form-group">
+        <label for="content">Content</label>
+        <input type="text" class="form-control" id="content" ng-model="$ctrl.question.content" />
+    </div>
+    <div class="item-actions">
+        <input class="btn btn-success" type="submit" value="Valider" />
+        <a class="btn btn-default" ui-sref="list">Annuler</a>
+    </div>
+</form>
