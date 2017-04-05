@@ -6,5 +6,13 @@ WEA.config(function ($stateProvider) {
         resolve: {}
     };
 
+    var usersState = {
+        name: 'users',
+        url: '/users',
+        component: 'usersList',
+        resolve: {}
+    }
+
     $stateProvider.state(questionsState);
+    $stateProvider.state(usersState);
 });
