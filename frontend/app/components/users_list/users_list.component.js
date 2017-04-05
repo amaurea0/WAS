@@ -12,7 +12,7 @@ COMPNT
             users: '<'
         },
 
-        controller: ['UsersListService', function (UsersListService) {
+        controller: ['UsersService', function (UsersService) {
 
             this.model = {
                 list: [],
@@ -24,7 +24,7 @@ COMPNT
             };
 
             this.getAllUsers = () => {
-                UsersListService.getUsers().then((items) => {
+                UsersService.getUsers().then((items) => {
                     this.model.list = items.data;
                     console.log(items.data);
                 }).catch((err) => {});
