@@ -11,13 +11,13 @@ COMPNT.component('userCreate', {
             user: '<'
         },
 
-        controller: ['usersService',
+        controller: ['UsersService',
 
-            function (usersService) {
+            function (UsersService) {
 
                 // Save the new user
                 this.addUser = (user) => {
-                    usersService.addUser(user).then(() => {
+                    UsersService.addUser(user).then(() => {
                         //$state.go('index');
                         console.log('yEEESSSS!');
                     }).catch((err) => { });

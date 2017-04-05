@@ -6,4 +6,3 @@ const COMPNT = angular.module('wild.components', []);
 
 const SERVICES = angular.module('wild.services', []);
 
-const API_URL = "http://localhost:3000";

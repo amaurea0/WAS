@@ -10,13 +10,13 @@ COMPNT.component("questionPost", {
     bindings: {
     },
 
-    controller: ['QuestionPostService',
+    controller: ['QuestionsService',
 
-      function (QuestionPostService) {
+      function (QuestionsService) {
 
         // Save the new question
         this.save = (question) => {
-          QuestionPostService.save(question).then((items) => {
+          QuestionsService.save(question).then((items) => {
             // $state.go('list');
             console.log('yeeeah');
           }).catch((err) => {});
