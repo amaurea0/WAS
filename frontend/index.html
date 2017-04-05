@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="app/assets/CSS/style.css ">
+    <link rel="stylesheet" href="/assets/css/style.css ">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
@@ -15,6 +15,9 @@
     <script src="app/app.module.js"></script>
     <script src="app/components/questions_list/questions_list.component.js"></script>
     <script src="app/components/questions_list/questions_list.service.js"></script>
+    <script src="app/components/users_list/users_list.component.js"></script>
+    <script src="app/components/users_list/users_list.service.js"></script>
+    <script src="app/app.routes.js"></script>
     <script src="app/components/users/components.users.js"></script>
     <script src="app/components/users/services.users.js"></script>
 
@@ -22,11 +25,21 @@
 </head>
 
 <body>
-    <navbar-wild></navbar-wild>
+    <nav id="navbar">
+        <ul>
+            <li><a ui-sref="questions" ui-sref-active="select">Questions</a></li>
+            <li><a ui-sref="users" ui-sref-active="select">Users</a></li>
+            <li><a ui-sref="jobs" ui-sref-active="select">Jobs</a></li>
+            <li><a ui-sref="nuage" ui-sref-active="select">Nuage</a></li>
+            <li><a ui-sref="tips" ui-sref-active="select">Tips</a></li>
+            <login></login>
+        </ul>
+    </nav>
+    <user-create></user-create>
+
     <ui-view></ui-view>
-     <user-create></user-create>
-    <questions-list></questions-list>
-    <footer-wild></footer-wild>
+    <footer></footer>
+
 </body>
 
 </html>
