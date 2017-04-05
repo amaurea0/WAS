@@ -1,7 +1,9 @@
 # Travailler à plusieurs avec github
 	
 ## Principes généraux
-Le travail se push toujours sur une branche à part, avant de merger sur la branche dev. La mise à jour du master se fait seulement lorsque qu'une version est prête sur la branche dev.
+
+**!!! Important : ne jamais faire de modifications en local en étant sur la branche dev ou master, toujours se créer une branche !!!**
+Le travail se push toujours sur une branche à part dans le dépôt distant, avant de merger sur la branche dev. La mise à jour du master se fait seulement lorsque qu'une version est prête sur la branche dev.
 
 ## Création d'un repository local :
 
