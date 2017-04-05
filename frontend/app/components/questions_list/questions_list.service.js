@@ -1,7 +1,5 @@
 'use strict';
 
-const API_URL = "http://localhost:3000";
-
 /**
  * The recipes service
  */
