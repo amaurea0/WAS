@@ -10,7 +10,8 @@ COMPNT
 
     bindings: {
       list: '<',
-      query: '@'
+      query: '@',
+      questions: '<'
     },
 
     controller: ['QuestionsListService', function (QuestionsListService) {
@@ -25,33 +26,33 @@ COMPNT
       };
 
       this.getAllItems = () => {
-        QuestionsListService.get().then((items) => {
+        QuestionsListService.getQuestions().then((items) => {
           this.model.list = items.data;
           console.log(items.data);
         }).catch((err) => {});
 
-    //         QuestionsListService.getUser(userId).then {
-    //   return $http.get(API_URL + '/users/' + userId);
-    // }
+        //         QuestionsListService.getUser(userId).then {
+        //   return $http.get(API_URL + '/users/' + userId);
+        // }
       };
 
-    //   // Remove an existing item
-    //   this.removeItem = (item) => {
-    //     RecipesService.delete(item).then((items) => {
-    //       this.model.list.splice(this.model.list.indexOf(item), 1);
-    //     }).catch((err) => {});
-    //   };
+      //   // Remove an existing item
+      //   this.removeItem = (item) => {
+      //     RecipesService.delete(item).then((items) => {
+      //       this.model.list.splice(this.model.list.indexOf(item), 1);
+      //     }).catch((err) => {});
+      //   };
 
-    //   // Toggle items completion flag
-    //   this.markAll = (completed) => {
-    //     this.model.list.forEach((item) => item.completed = !completed);
-    //     this.model.allChecked = !completed;
-    //   };
+      //   // Toggle items completion flag
+      //   this.markAll = (completed) => {
+      //     this.model.list.forEach((item) => item.completed = !completed);
+      //     this.model.allChecked = !completed;
+      //   };
 
-    //   // Remove all checked items
-    //   this.clearCompletedItems = () => {
-    //     this.model.list = this.model.list.filter((item) => !item.completed);
-    //   };
+      //   // Remove all checked items
+      //   this.clearCompletedItems = () => {
+      //     this.model.list = this.model.list.filter((item) => !item.completed);
+      //   };
 
     }]
   });

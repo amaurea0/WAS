@@ -7,7 +7,7 @@ const API_URL = "http://localhost:3000";
  */
 SERVICES.service('QuestionsListService', ['$http', function ($http) {
 
-    this.get = function () {
+    this.getQuestions = () => {
       return $http.get(API_URL + '/questions?_expand=user');
     }
 
