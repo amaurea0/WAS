@@ -1,0 +1,14 @@
+<h1>Crée ton compte utilisateur</h1>
+<form>
+    <!--<span ng-show ="$ctrl.message.length > 0"></span>-->
+    <label for="email">Ton email</label><br />
+    <input type="email" name="email" id="email" ng-model="$ctrl.user.email" /><br />
+
+    <label for="pass">Ton mot de passe</label><br />
+    <input type="password" name="pass" id="pass" ng-model="$ctrl.user.password" /><br />
+
+    <label for="pass">Resaisis ton mot de passe</label><br />
+    <input type="password" name="pass_verif" id="pass_verif" ng-model ="$ctrl.user.passwordVerif" /><br />
+
+    <button type="submit" ng-click="$ctrl.addUser($ctrl.user)">valider</button>
+</form>
