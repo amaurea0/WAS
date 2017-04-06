@@ -9,6 +9,7 @@
     list-style: none;
 }
 
+
 .msg {
     display: block;
     color: red;
@@ -30,6 +31,7 @@ button[type=submit] {
     text-decoration: none;
     cursor: pointer;
 }
+
 
 /*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
 
@@ -68,4 +70,30 @@ button[type=submit] {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+
+/*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS*/
+
+#question {
+    border: solid 2px black;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    background: #FBA858;
+}
+
+#center {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#votes {
+    color: green;
+}
+
+#answers {
+    color: blue;
 }
