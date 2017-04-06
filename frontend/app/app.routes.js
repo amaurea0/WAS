@@ -1,3 +1,5 @@
+'use strict';
+
 WEA.config(function ($stateProvider) {
     var questionsState = {
         name: 'questions',
