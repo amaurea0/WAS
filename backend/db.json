@@ -4,10 +4,9 @@
       "title": "oh my gad",
       "content": "it's raining today",
       "userId": 1,
-      "id":1	
+      "id": 1
     }
-  ]
-  ,
+  ],
   "users": [
     {
       "email": "laetitiadervaux33@gmail.com",
@@ -32,6 +31,60 @@
       "pass": "",
       "id": 4,
       "name": "toto"
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "az",
+      "passwordVerif": "xc",
+      "id": 5
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "aaaz",
+      "passwordVerif": "zzzz",
+      "id": 6
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "test",
+      "id": 7
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "password": "dfs",
+      "id": 10
+    },
+    {
+      "password": "dfs",
+      "id": 11
+    },
+    {
+      "password": "azaaz",
+      "id": 12
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "aaa",
+      "id": 17
     }
   ]
 }
