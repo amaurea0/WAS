@@ -14,7 +14,7 @@ COMPNT
       questions: '<'
     },
 
-    controller: ['QuestionsListService', function (QuestionsListService) {
+    controller: ['QuestionsService', function (QuestionsService) {
 
       this.model = {
         list: [],
@@ -26,33 +26,11 @@ COMPNT
       };
 
       this.getAllItems = () => {
-        QuestionsListService.getQuestions().then((items) => {
+        QuestionsService.getQuestions().then((items) => {
           this.model.list = items.data;
           console.log(items.data);
         }).catch((err) => {});
-
-        //         QuestionsListService.getUser(userId).then {
-        //   return $http.get(API_URL + '/users/' + userId);
-        // }
       };
-
-      //   // Remove an existing item
-      //   this.removeItem = (item) => {
-      //     RecipesService.delete(item).then((items) => {
-      //       this.model.list.splice(this.model.list.indexOf(item), 1);
-      //     }).catch((err) => {});
-      //   };
-
-      //   // Toggle items completion flag
-      //   this.markAll = (completed) => {
-      //     this.model.list.forEach((item) => item.completed = !completed);
-      //     this.model.allChecked = !completed;
-      //   };
-
-      //   // Remove all checked items
-      //   this.clearCompletedItems = () => {
-      //     this.model.list = this.model.list.filter((item) => !item.completed);
-      //   };
 
     }]
   });

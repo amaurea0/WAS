@@ -43,6 +43,7 @@ COMPNT.component('userCreate', {
                         'password': user.password
                     }
                     usersService.addUser(userAdd).then(() => {
+
                         //$state.go('index');
                         console.log('yEEESSSS!');
                     }).catch((err) => { });

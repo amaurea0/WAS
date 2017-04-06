@@ -7,7 +7,8 @@
     <div class="content">
         <div ng-repeat="item in $ctrl.model.list | filter : $ctrl.model.query" class="item">
             <div class="question-list">
-                <div class="name" ng-bind="item.name"></div>
+                <span class="name" ng-bind="item.first_name"></span><span class="name" ng-bind="item.last_name"></span>
+                <img ng-src="{{item.avatar}}" alt="photo">
             </div>
         </div>
     </div>

@@ -13,18 +13,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.js"></script>
     <script src="app/app.module.js"></script>
-    <script src="app/components/questions_list/questions_list.component.js"></script>
-    <script src="app/components/questions_list/questions_list.service.js"></script>
-    <script src="app/components/users_list/users_list.component.js"></script>
-    <script src="app/components/users_list/users_list.service.js"></script>
     <script src="app/app.routes.js"></script>
-    <script src="app/components/users/components.users.js"></script>
-    <script src="app/components/users/services.users.js"></script>
+    <script src="app/components/main/main.component.js"></script>
+    <script src="app/components/questions_list/questions_list.component.js"></script>
+    <script src="app/components/question_post/question_post.component.js"></script>
+    <script src="app/components/users_list/users_list.component.js"></script>
+    <script src="app/components/users/users.component.js"></script>
+    <script src="app/components/nuage/nuage.component.js"></script>
+    <script src="app/services/users.service.js"></script>
+    <script src="app/services/questions.service.js"></script>
 
     <title>Wild Exchange</title>
 </head>
 
 <body>
+
     <nav id="navbar">
         <ul>
             <li><a ui-sref="questions" ui-sref-active="select">Questions</a></li>
@@ -40,6 +43,7 @@
 
     <ui-view></ui-view>
     <footer></footer>
+
 
 </body>
 
