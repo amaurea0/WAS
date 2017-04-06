@@ -1,12 +1,14 @@
 <header>
     <h1>Users list</h1>
+    <div><a ui-sref="addUser" ui-sref-active="select">S'enregistrer</a></div>
+
 </header>
 <div ng-if="$ctrl.model.list.length > 0">
     <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
     <div id="user" ng-repeat="item in $ctrl.model.list | filter : $ctrl.model.query">
         <img ng-src="{{item.avatar}}" alt="photo">
         <div id="bio">
-            <div id="head"><span ng-bind="item.first_name"></span>   <span ng-bind="item.last_name"></span></div>
+            <div id="head"><span ng-bind="item.first_name"></span> <span ng-bind="item.last_name"></span></div>
             <div id="body">
                 <div><span ng-bind="item.pseudo"></div>
             <div>Job</div>
