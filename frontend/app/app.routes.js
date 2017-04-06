@@ -13,14 +13,14 @@ WEA.config(function ($stateProvider) {
         url: '/users',
         component: 'usersList',
         resolve: {}
-    }
+    };
 
     var questionPostState = {
         name: 'questionPost',
         url: '/post',
         component: 'questionPost',
         resolve: {}
-    }
+    };
 
     var nuageState = {
         name: 'nuage',
