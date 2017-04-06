@@ -16,7 +16,14 @@ COMPNT.component("questionPost", {
 
         // Save the new question
         this.save = (question) => {
-          QuestionsService.save(question).then((items) => {
+          var new_question = {
+            "title": question.title,
+            "content": question.content,
+            "nb_views": "",
+            "votes": "",
+            "date": new Date()
+          }
+          QuestionsService.save(new_question).then((items) => {
             // $state.go('list');
             console.log('yeeeah');
           }).catch((err) => {});
