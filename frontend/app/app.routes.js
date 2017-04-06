@@ -11,14 +11,14 @@ WEA.config(function ($stateProvider) {
         url: '/users',
         component: 'usersList',
         resolve: {}
-    }
+    };
 
     var questionPostState = {
         name: 'questionPost',
         url: '/post',
         component: 'questionPost',
         resolve: {}
-    }
+    };
 
     $stateProvider.state(questionsState);
     $stateProvider.state(usersState);
