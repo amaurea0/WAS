@@ -20,7 +20,15 @@ WEA.config(function ($stateProvider) {
         resolve: {}
     }
 
+    var nuageState = {
+        name: 'nuage',
+        url: '/nuage',
+        component: 'nuage',
+        resolve:{}
+      };
+
     $stateProvider.state(questionsState);
     $stateProvider.state(usersState);
     $stateProvider.state(questionPostState);
+    $stateProvider.state(nuageState);
 });
