@@ -1,14 +1,17 @@
 <h1>Crée ton compte utilisateur</h1>
-<form>
+<form name="createUserForm" novalidate>
+    <span class="msg" ng-show="$ctrl.messageAll.length > 0">{{$ctrl.messageAll}}</span>
     <!--<span ng-show ="$ctrl.message.length > 0"></span>-->
     <label for="email">Ton email</label><br />
-    <input type="email" name="email" id="email" ng-model="$ctrl.user.email" /><br />
 
+    <input type="email" name="email" id="email" ng-model="$ctrl.user.email" required /><br />
+    <span class="msg" ng-show="$ctrl.messageEmail.length > 0">{{$ctrl.messageEmail}}</span>
     <label for="pass">Ton mot de passe</label><br />
-    <input type="password" name="pass" id="pass" ng-model="$ctrl.user.password" /><br />
+    <input type="password" name="pass" id="pass" required pattern=".{2,}" ng-model="$ctrl.user.password" required /><br />
 
-    <label for="pass">Resaisis ton mot de passe</label><br />
-    <input type="password" name="pass_verif" id="pass_verif" ng-model ="$ctrl.user.passwordVerif" /><br />
+    <label for="pass_confirm">Confirme ton mot de passe</label><br />
+    <input type="password" name="pass_confirm" id="pass_confirm" ng-model="$ctrl.user.passwordConfirm" required /><br />
+    <span class="msg" ng-show="$ctrl.messagePass.length > 0">{{$ctrl.messagePass}}</span>
+    <button type="submit" ng-click="$ctrl.verif($ctrl.user)">valider</button>
 
-    <button type="submit" ng-click="$ctrl.addUser($ctrl.user)">valider</button>
 </form>

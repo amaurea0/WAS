@@ -9,6 +9,28 @@
     list-style: none;
 }
 
+.msg {
+    display: block;
+    color: red;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    margin : 20px;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+button[type=submit] {
+    font-size: 1.2em;
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
 
 #user {
