@@ -24,6 +24,17 @@ SERVICES.service('UsersService', ['$http', '$log', '$q',
             return $http.get(USER_URL);
         }
 
+        this.get = (mail) => {
+            var deferred = $q.defer();
+            $http.get(USER_URL + '?email=' + mail).then(function (response) {
+                deferred.resolve(response.data);
+            }, function (error) {
+                deferred.reject(error);
+                $log.error(error);
+            });
+            return deferred.promise;
+        }
+
     }
 
 ]);
