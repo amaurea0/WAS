@@ -8,3 +8,7 @@
     display: inline-block;
     list-style: none;
 }
+
+.msg {
+color: red;
+}

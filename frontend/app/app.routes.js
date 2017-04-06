@@ -13,6 +13,14 @@ WEA.config(function ($stateProvider) {
         resolve: {}
     }
 
+    var createUserState ={
+        name: 'addUser',
+        url: '/addUser',
+        component: 'userCreate',
+        resolve: {}
+    }
+
     $stateProvider.state(questionsState);
     $stateProvider.state(usersState);
+     $stateProvider.state(createUserState);
 });
