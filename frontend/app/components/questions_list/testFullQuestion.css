@@ -1,0 +1,22 @@
+#question {
+    border: solid 2px black;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    background: #FBA858;
+}
+
+#center {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#votes {
+    color: green;
+}
+
+#answers {
+    color: blue;
+}

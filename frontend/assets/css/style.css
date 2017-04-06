@@ -1,0 +1,99 @@
+#navbar {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+}
+
+#navbar li {
+    display: inline-block;
+    list-style: none;
+}
+
+
+.msg {
+    display: block;
+    color: red;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    margin : 20px;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+button[type=submit] {
+    font-size: 1.2em;
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
+
+#user {
+    display: flex;
+    flex-direction: row;
+    border: solid 2px black;
+    width: 750px;
+    padding: 10px;
+}
+
+#user img {
+    /*width: 150px;
+    height: 150px;*/
+}
+
+#bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+}
+
+#head {
+    text-align: center;
+}
+
+#body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#tail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS*/
+
+#question {
+    border: solid 2px black;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    background: #FBA858;
+}
+
+#center {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#votes {
+    color: green;
+}
+
+#answers {
+    color: blue;
+}
