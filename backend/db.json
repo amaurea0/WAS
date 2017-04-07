@@ -113,5 +113,35 @@
       "jobs id": "2",
       "promotion id": "Février 2017"
     }
+  ],
+  "taglink": [
+    {
+      "questionId": 1,
+      "tagId": 1
+    },
+    {
+      "questionId": 2,
+      "tagId": 2
+    },
+    {
+      "questionId": 2,
+      "tagId": 1
+    },
+    {
+      "questionId": 3,
+      "tagId": 1
+    },
+    {
+      "questionId": 3,
+      "tagId": 2
+    },
+    {
+      "questionId": 4,
+      "tagId": 1
+    },
+    {
+      "questionId": 4,
+      "tagId": 3
+    }
   ]
 }

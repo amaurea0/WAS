@@ -11,9 +11,14 @@ COMPNT.component("questionPost", {
     info: '<'
   },
 
-  controller: ['QuestionsService', '$scope',
+  controller: ['QuestionsService', 'TagsService', '$scope',
 
-    function (QuestionsService, $scope) {
+    function (QuestionsService, TagsService, $scope) {
+
+      TagsService.getTags().then((data) => {
+        this.tags = data;
+        console.log(data);
+      }).catch((err) => { });
 
       // Save the new question
       this.save = (question) => {
