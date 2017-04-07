@@ -11,9 +11,9 @@ COMPNT.component('userCreate', {
         user: '<'
     },
 
-    controller: ['UsersService', '$scope', 'INFO',
+    controller: ['UsersService', '$scope',  '$state', 'INFO',
 
-        function (UsersService, $scope, INFO) {
+        function (UsersService, $scope,  $state, INFO) {
             var self = this;
             var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
             var userAdd = {};
