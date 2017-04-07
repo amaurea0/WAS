@@ -20,7 +20,11 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
     };
 
     this.getQuestions = () => {
-      return $http.get(QST_URL + '?_expand=user');
+        return $http.get(QST_URL + '?_expand=user');
+    }
+
+    this.getQuestionAnswers = () => {
+        return $http.get(QST_URL + '?_expand=answers');
     }
 
 }]);

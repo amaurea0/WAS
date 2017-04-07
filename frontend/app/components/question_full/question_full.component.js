@@ -4,9 +4,9 @@
  * The recipesList component
  */
 COMPNT
-  .component("questionsList", {
+  .component("questionsFull", {
 
-    templateUrl: '/app/components/questions_list/questions_list.html',
+    templateUrl: '/app/components/questions_full/questions_full.html',
 
     bindings: {
       list: '<',
@@ -22,10 +22,10 @@ COMPNT
       };
 
       this.$onInit = () => {
-        this.getAllItems();
+        this.getQuestionAnswers();
       };
 
-      this.getAllItems = () => {
+      this.getQuestionAnswers = () => {
         QuestionsService.getQuestions().then((items) => {
           this.model.list = items.data;
           console.log(items.data);
