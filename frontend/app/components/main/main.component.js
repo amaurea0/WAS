@@ -8,4 +8,16 @@ COMPNT
     bindings: {
     },
 
+    controller: ['$scope',
+
+      function ($scope) {
+
+        this.info= {};
+
+        $scope.$on("userId", (event, key) => {
+          this.info.userId = key;
+        });
+
+
+      }]
   });

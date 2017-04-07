@@ -5,29 +5,32 @@
  */
 COMPNT.component("questionPost", {
 
-    templateUrl: '/app/components/question_post/question_post.html',
+  templateUrl: '/app/components/question_post/question_post.html',
 
-    bindings: {
-    },
+  bindings: {
+    info: '<'
+  },
 
-    controller: ['QuestionsService',
+  controller: ['QuestionsService', '$scope',
 
-      function (QuestionsService) {
+    function (QuestionsService, $scope) {
 
-        // Save the new question
-        this.save = (question) => {
-          var new_question = {
-            "title": question.title,
-            "content": question.content,
-            "nb_views": "",
-            "votes": "",
-            "date": new Date()
-          }
-          QuestionsService.save(new_question).then((items) => {
-            // $state.go('list');
-            console.log('yeeeah');
-          }).catch((err) => {});
-        };
-      }
-    ]
-  });
+      // Save the new question
+      this.save = (question) => {
+        var new_question = {
+          "title": question.title,
+          "content": question.content,
+          "nb_views": "",
+          "votes": "",
+          "date": new Date(),
+          "userId": this.info.userId
+        }
+
+        QuestionsService.save(new_question).then((items) => {
+          // $state.go('list');
+          console.log('yeeeah');
+        }).catch((err) => { });
+      };
+    }
+  ]
+});
