@@ -4,6 +4,7 @@
       "title": "oh my gad",
       "content": "it's raining today",
       "userId": 1,
+      "tagsId": "PHP",
       "id": 1
     },
     {
@@ -11,29 +12,24 @@
       "tags": "JS PHP",
       "content": "blablb\nanbladplsimkc",
       "id": 4,
-      "userId": 1
+      "userId": 1,
+      "tagsId": "javascript"
     },
     {
       "title": "quand est-ce qu'on ?",
       "tags": "JS PHP",
       "content": "blablb\nanbladplsimkc",
       "id": 5,
-      "userId": 1
+      "userId": 1,
+      "tagsId": "javascript"
     },
     {
       "title": "combien font ?",
       "tags": "JS PHP",
       "content": "blablb\nanbladplsimkc",
       "id": 6,
-      "userId": 1
-    },
-    {
-      "title": "allo le monde",
-      "content": "êtes vous là ?",
-      "nb_views": "",
-      "votes": "",
-      "date": "2017-04-06T15:50:03.881Z",
-      "id": 7
+      "userId": 1,
+      "tagsId": "javascript"
     }
   ],
   "users": [

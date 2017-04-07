@@ -28,6 +28,12 @@ WEA.config(function ($stateProvider) {
         component: 'nuage',
         resolve: {}
     };
+    var tagsState = {
+        name: 'tags',
+        url: '/questions/tags',
+        component: 'tags',
+        resolve: {}
+    };
 
     var createUserState = {
         name: 'addUser',
@@ -57,4 +63,5 @@ WEA.config(function ($stateProvider) {
     $stateProvider.state(createUserState);
     $stateProvider.state(loginUserState);
     $stateProvider.state(specificQuestionState);
+    $stateProvider.state(tagsState);
 });

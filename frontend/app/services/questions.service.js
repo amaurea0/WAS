@@ -22,7 +22,9 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
     this.getQuestions = () => {
         return $http.get(QST_URL + '?_expand=user');
     }
-
+    this.getQuestionsTag = () => {
+        return $http.get(QST_URL + '?tagsId='+'PHP'+'&_expand=user');
+    }
     this.getSpecificQuestion = () => {
         return $http.get('http://localhost:3000/questions/3?_expand=user&_embed=answers');
     }
