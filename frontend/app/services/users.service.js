@@ -20,6 +20,10 @@ SERVICES.service('UsersService', ['$http', '$log', '$q',
             return deferred.promise;
         };
 
+        this.logUser = function (user) {
+           
+        };
+
         this.getUsers = () => {
             return $http.get(USER_URL);
         }
