@@ -8,10 +8,6 @@ COMPNT.component('nuage', {
   },
 
   controller: function () {
-
-    this.itWorks = () => {
-      console.log('coucou');
-    }
   }
 
 });

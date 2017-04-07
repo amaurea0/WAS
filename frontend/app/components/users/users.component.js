@@ -19,7 +19,7 @@ COMPNT.component('userCreate', {
                 this.addUser = (user) => {
                     UsersService.addUser(user).then(() => {
                         //$state.go('index');
-                        console.log('yEEESSSS!');
+                        console.log('users.component');
                     }).catch((err) => { });
                 };
             }

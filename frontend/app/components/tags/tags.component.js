@@ -1,24 +1,19 @@
 'use strict';
 
-/**
- * The recipesList component
- */
+
 COMPNT
-  .component("questionsList", {
+  .component("tags", {
 
     templateUrl: '/app/components/questions_list/questions_list.html',
 
     bindings: {
-      list: '<',
-      query: '@',
-      questions: '<'
+      tags: '<'
     },
 
     controller: ['QuestionsService', function (QuestionsService) {
 
       this.model = {
         list: [],
-        query: ''
       };
 
       this.$onInit = () => {
@@ -26,10 +21,10 @@ COMPNT
       };
 
       this.getAllItems = () => {
-        QuestionsService.getQuestions().then((items) => {
+        QuestionsService.getQuestionsTag().then((items) => {
           this.model.list = items.data;
-          console.log("questions_list.component")
-        }).catch((err) => {});
+         
+        }).catch((err) => { });
       };
 
     }]

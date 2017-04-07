@@ -26,7 +26,7 @@ COMPNT
             this.getAllUsers = () => {
                 UsersService.getUsers().then((items) => {
                     this.model.list = items.data;
-                    console.log(items.data);
+                    console.log('users_list.component');
                 }).catch((err) => {});
 
                 //         QuestionsListService.getUser(userId).then {

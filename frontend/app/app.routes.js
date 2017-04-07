@@ -13,24 +13,34 @@ WEA.config(function ($stateProvider) {
         url: '/users',
         component: 'usersList',
         resolve: {}
-    }
+    };
 
     var questionPostState = {
         name: 'questionPost',
         url: '/post',
         component: 'questionPost',
         resolve: {}
-    }
+    };
 
     var nuageState = {
         name: 'nuage',
         url: '/nuage',
         component: 'nuage',
-        resolve:{}
-      };
+        resolve: {}
+    };
+
+    var tagsState = {
+        name: 'tags',
+        url: '/nuage/tags',
+        component: 'tags',
+        resolve: {}
+    };
+
+
 
     $stateProvider.state(questionsState);
     $stateProvider.state(usersState);
     $stateProvider.state(questionPostState);
     $stateProvider.state(nuageState);
+    $stateProvider.state(tagsState);
 });

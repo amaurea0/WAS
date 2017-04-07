@@ -23,7 +23,6 @@ SERVICES.service('UsersService', ['$http', '$log', '$q',
         this.getUsers = () => {
             return $http.get(USER_URL);
         }
-
     }
 
 ]);
