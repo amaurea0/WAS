@@ -4,31 +4,34 @@
       "title": "oh my gad",
       "content": "it's raining today",
       "userId": 1,
-      "id":1	
+      "tagsId": "PHP",
+      "id": 1
     },
     {
       "title": "pourquoi le monde ?",
       "tags": "JS PHP",
       "content": "blablb\nanbladplsimkc",
       "id": 4,
-      "userId": 1
+      "userId": 1,
+      "tagsId": "javascript"
     },
     {
       "title": "quand est-ce qu'on ?",
       "tags": "JS PHP",
       "content": "blablb\nanbladplsimkc",
       "id": 5,
-      "userId": 1
+      "userId": 1,
+      "tagsId": "javascript"
     },
     {
       "title": "combien font ?",
       "tags": "JS PHP",
       "content": "blablb\nanbladplsimkc",
       "id": 6,
-      "userId": 1
+      "userId": 1,
+      "tagsId": "javascript"
     }
-  ]
-  ,
+  ],
   "users": [
     {
       "email": "laetitiadervaux33@gmail.com",
@@ -41,45 +44,74 @@
       "pass": "blabla",
       "id": 2,
       "name": "toto"
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "www",
+      "id": 3
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "www",
+      "id": 4
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "az",
+      "id": 5
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "test",
+      "id": 6
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "az",
+      "id": 7
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "az",
+      "id": 8
     }
-  ]
-  ,
-"tags": [
-    { 
-        "id": 1, 
-        "name": "Javascript", 
-        "school id": "5",
-        "posts id": "4",
-        "users id": "3",
-        "jobs id": "2",
-        "promotion id": "Juillet 2017"
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "Javascript",
+      "school id": "5",
+      "posts id": "4",
+      "users id": "3",
+      "jobs id": "2",
+      "promotion id": "Juillet 2017"
     },
-    { 
-        "id": 2, 
-        "name": "AngularJS", 
-        "school id": "3",
-        "posts id": "2",
-        "users id": "1",
-        "jobs id": "7",
-        "promotion id": "Juin 2017"
+    {
+      "id": 2,
+      "name": "AngularJS",
+      "school id": "3",
+      "posts id": "2",
+      "users id": "1",
+      "jobs id": "7",
+      "promotion id": "Juin 2017"
     },
-    { 
-        "id": 3, 
-        "name": "PHP", 
-        "school id": "2",
-        "posts id": "1",
-        "users id": "7",
-        "jobs id": "4",
-        "promotion id": "Août 2017"
+    {
+      "id": 3,
+      "name": "PHP",
+      "school id": "2",
+      "posts id": "1",
+      "users id": "7",
+      "jobs id": "4",
+      "promotion id": "Août 2017"
     },
-    { 
-        "id": 4, 
-        "name": "Simfony", 
-        "school id": "5",
-        "posts id": "4",
-        "users id": "3",
-        "jobs id": "2",
-        "promotion id": "Février 2017"
+    {
+      "id": 4,
+      "name": "Simfony",
+      "school id": "5",
+      "posts id": "4",
+      "users id": "3",
+      "jobs id": "2",
+      "promotion id": "Février 2017"
     }
   ]
 }

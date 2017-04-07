@@ -74,7 +74,7 @@ function generateAnswers() {
       "votes": nbVotes,
       "date": date,
       "userId": userId,
-      "postId": postId
+      "questionId": postId
     })
   }
   return answers;
