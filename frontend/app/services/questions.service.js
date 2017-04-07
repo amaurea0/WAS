@@ -24,7 +24,7 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
     }
 
     this.getSpecificQuestion = () => {
-        return $http.get('http://localhost:3000/questions/2?_expand=user&_embed=answers&_expand=user');
+        return $http.get('http://localhost:3000/questions/3?_expand=user&_embed=answers');
     }
 
 }]);
