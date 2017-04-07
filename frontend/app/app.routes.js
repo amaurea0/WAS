@@ -29,18 +29,26 @@ WEA.config(function ($stateProvider) {
         resolve: {}
     };
 
-    var createUserState ={
+    var createUserState = {
         name: 'addUser',
         url: '/addUser',
         component: 'userCreate',
         resolve: {}
-    }
+    };
+
+    var specificQuestionState = {
+        name: 'questionid',
+        url: 'questionspecific',
+        component: 'questionFull',
+        resolve: {}
+    };
+
     var loginUserState ={
         name: 'logUser',
         url: '/logUser',
         component: 'userLogin',
         resolve: {}
-    }
+    };
 
     $stateProvider.state(questionsState);
     $stateProvider.state(usersState);
@@ -48,6 +56,5 @@ WEA.config(function ($stateProvider) {
     $stateProvider.state(nuageState);
     $stateProvider.state(createUserState);
     $stateProvider.state(loginUserState);
-
+    $stateProvider.state(specificQuestionState);
 });
-
