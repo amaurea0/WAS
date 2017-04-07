@@ -1,0 +1,36 @@
+#user {
+    display: flex;
+    flex-direction: row;
+    border: solid 2px black;
+    width: 750px;
+    padding: 10px;
+}
+
+#user img {
+    width: 150px;
+    height: 150px;
+}
+
+#bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+}
+
+#head {
+    text-align: center;
+}
+
+#body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#tail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

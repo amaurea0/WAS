@@ -28,7 +28,6 @@ COMPNT
       this.getAllItems = () => {
         QuestionsService.getQuestions().then((items) => {
           this.model.list = items.data;
-          console.log("questions_list.component")
         }).catch((err) => {});
       };
 

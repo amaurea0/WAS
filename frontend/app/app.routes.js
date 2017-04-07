@@ -36,11 +36,26 @@ WEA.config(function ($stateProvider) {
         resolve: {}
     };
 
-
+    var createUserState ={
+        name: 'addUser',
+        url: '/addUser',
+        component: 'userCreate',
+        resolve: {}
+    }
+    var loginUserState ={
+        name: 'logUser',
+        url: '/logUser',
+        component: 'userLogin',
+        resolve: {}
+    }
 
     $stateProvider.state(questionsState);
     $stateProvider.state(usersState);
     $stateProvider.state(questionPostState);
     $stateProvider.state(nuageState);
     $stateProvider.state(tagsState);
+    $stateProvider.state(createUserState);
+    $stateProvider.state(loginUserState);
+
 });
+
