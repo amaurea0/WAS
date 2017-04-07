@@ -4,7 +4,7 @@
 COMPNT
   .component("tags", {
 
-    templateUrl: '/app/components/questions_list/questions_list.html',
+    templateUrl: '/app/components/questions/questions_list.html',
 
     bindings: {
       tags: '<'

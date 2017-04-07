@@ -4,7 +4,7 @@
 COMPNT
     .component("usersList", {
 
-        templateUrl: '/app/components/users_list/users_list.html',
+        templateUrl: '/app/components/users/users_list.html',
 
         bindings: {
             list: '<',
