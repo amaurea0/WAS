@@ -11,9 +11,9 @@ COMPNT.component('userCreate', {
         user: '<'
     },
 
-    controller: ['UsersService',
+    controller: ['UsersService', '$scope',
 
-        function (usersService) {
+        function (UsersService, $scope) {
             var self = this;
             var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
             var userAdd = {};
@@ -42,12 +42,17 @@ COMPNT.component('userCreate', {
                         'email': user.email,
                         'password': user.password
                     }
-                    usersService.addUser(userAdd).then(() => {
-                        //$state.go('index');
-                        console.log('yEEESSSS!');
+                    UsersService.addUser(userAdd).then(() => {
+                        UsersService.get(user.email).then((data) => {
+                            $scope.$emit("userId", data[0].id);
+                        }); console.log('yEEESSSS!');
                     }).catch((err) => { });
                 };
+
+
             }
+
+
         }
     ]
 
