@@ -23,4 +23,8 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
       return $http.get(QST_URL + '?_expand=user');
     }
 
+    this.getQuestionsTag = () => {
+        return $http.get(QST_URL + '?tagsId='+'PHP'+'&_expand=user');
+    }
+
 }]);

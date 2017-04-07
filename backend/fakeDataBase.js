@@ -32,6 +32,12 @@ function generateUsers() {
   return users;
 }
 
+function chooseTag (){
+var array = ["javascript", "Symfony", "PHP", "Angularjs"]
+var randomNber = Math.floor(Math.random() * array.length);
+return array[randomNber];
+}
+
 function generatePosts() {
   var questions = []
 
@@ -42,6 +48,7 @@ function generatePosts() {
     var nbVotes = faker.random.number();
     var date = faker.date.recent();
     var userId = randomIntNum(15);
+    var tagsId = chooseTag();
 
     questions.push({
       "id": id,
@@ -50,7 +57,8 @@ function generatePosts() {
       "views": nbViews,
       "votes": nbVotes,
       "date": date,
-      "userId": userId
+      "userId": userId,
+      "tagsId": tagsId
     });
   }
   return questions;
