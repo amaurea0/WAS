@@ -48,6 +48,36 @@
       "pass": "blabla",
       "id": 2,
       "name": "toto"
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "www",
+      "id": 3
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "www",
+      "id": 4
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "az",
+      "id": 5
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "test",
+      "id": 6
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "az",
+      "id": 7
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "az",
+      "id": 8
     }
   ],
   "tags": [

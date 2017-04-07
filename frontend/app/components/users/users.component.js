@@ -42,10 +42,12 @@ COMPNT.component('userCreate', {
                         'email': user.email,
                         'password': user.password
                     }
+
                     UsersService.addUser(userAdd).then(() => {
                         UsersService.get(user.email).then((data) => {
                             $scope.$emit("userId", data[0].id);
                         }); console.log('yEEESSSS!');
+                        $state.go('questions');
                     }).catch((err) => { });
                 };
 
