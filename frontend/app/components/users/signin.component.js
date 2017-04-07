@@ -9,8 +9,6 @@ COMPNT.component('userLogin', {
 
     bindings: {
 
-    },
-
-    controller: []
+    }
 
 });
