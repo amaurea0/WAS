@@ -46,8 +46,10 @@ COMPNT.component('userCreate', {
                     UsersService.addUser(userAdd).then(() => {
                         UsersService.get(user.email).then((data) => {
                             $scope.$emit(INFO.userId, data[0].id);
+                            console.log(data[0].id)
                         }); console.log('yEEESSSS!');
-                        $state.go('questions');
+                        //faire passer par le main pour sauver la variable globale
+                        $state.go('main');
                     }).catch((err) => { });
                 };
 

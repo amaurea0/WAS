@@ -11,23 +11,21 @@ COMPNT.component("questionPost", {
     info: '<'
   },
 
-  controller: ['QuestionsService', 'TagsService', '$scope',
+  controller: ['QuestionsService', 'TagsService', 'TaglinkService', '$scope', '$state',
 
-    function (QuestionsService, TagsService, $scope) {
+    function (QuestionsService, TagsService, TaglinkService, $scope, $state) {
 
+      //get Tags for the input datalist
       TagsService.getTags().then((data) => {
         this.tags = data;
-        console.log(data);
       }).catch((err) => { });
 
       this.new_tags = [];
       this.saveTag = (tag) => {
-        console.log(tag)
         this.new_tags.push(tag);
-        console.log(this.new_tags)
         this.SelectedTag = "";
       };
-      // Save the new question
+
       this.save = (question) => {
         var new_question = {
           "title": question.title,
@@ -35,12 +33,28 @@ COMPNT.component("questionPost", {
           "nb_views": "",
           "votes": "",
           "date": new Date(),
-          "userId": this.info.userId
+          // "userId": this.info.userId
+          "userId": 1
         }
 
+        // Save the new question
         QuestionsService.save(new_question).then((items) => {
-          // $state.go('list');
-          console.log('yeeeah');
+          console.log('new question posted');
+
+          // Save the tags
+          angular.forEach(this.new_tags, (value, key) => {
+            var new_link = {};
+            TagsService.getTagId(value).then((tag) => {
+              new_link.questionId = items.id;
+              new_link.tagId = tag[0].id;
+
+              TaglinkService.saveTaglink(new_link).then((resp) => {
+                console.log("new_link posted");
+
+              }).catch((err) => { });
+            }).catch((err) => { });
+          });
+          $state.go('questions');
         }).catch((err) => { });
       };
     }

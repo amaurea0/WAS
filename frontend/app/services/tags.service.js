@@ -18,4 +18,16 @@ SERVICES.service('TagsService', ['$http', '$log', '$q', function ($http, $log, $
         return deferred.promise;
     };
 
+    this.getTagId = (tag) => {
+        var deferred = $q.defer();
+
+        $http.get(TAG_URL + '?name=' + tag).then(function (response) {
+            deferred.resolve(response.data);
+        }, function (error) {
+            deferred.reject(error);
+            $log.error(error);
+        });
+        return deferred.promise;
+    };
+
 }]);
