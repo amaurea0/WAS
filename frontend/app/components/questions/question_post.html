@@ -15,7 +15,7 @@
     <div class="form-group">
         <label>Tag : <span ng-repeat="eachTag in $ctrl.new_tags"> {{eachTag}} <span ng-click="$ctrl.removeTag(eachTag)">x</span></span>
         </label> <br> 
-        <input id="tag" list="testList" type="" required ng-model="$ctrl.SelectedTag" />
+        <input id="tag" list="testList" type="" ng-model="$ctrl.SelectedTag" />
         <datalist id="testList">
             <option ng-repeat="newtag in $ctrl.tags | orderBy:'name' " value="{{newtag.name}}">
         </datalist>
