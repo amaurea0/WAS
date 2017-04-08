@@ -22,8 +22,11 @@ COMPNT.component("questionPost", {
 
       this.new_tags = [];
       this.saveTag = (tag) => {
-        this.new_tags.push(tag);
+        if(this.new_tags.indexOf(tag) == -1) this.new_tags.push(tag);
         this.SelectedTag = "";
+      };
+      this.removeTag = (tag) => {
+        this.new_tags.splice(this.new_tags.indexOf(tag),1);
       };
 
       this.save = (question) => {
