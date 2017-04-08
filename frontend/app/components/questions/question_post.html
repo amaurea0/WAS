@@ -1,31 +1,30 @@
 <h3>Nouvelle Question</h3>
-<form ng-submit="$ctrl.save($ctrl.question)" novalidate>
+
+<form novalidate>
     <div class="form-group">
         <label for="title">Titre question</label>
         <input type="text" class="form-control" id="title" ng-model="$ctrl.question.title" />
     </div>
     <div class="form-group">
         <label for="content">Content</label>
-        <input type="text" class="form-control" id="content" ng-model="$ctrl.question.content" />
+        <textarea type="text" class="form-control" id="content" ng-model="$ctrl.question.content"></textarea>
     </div>
     <div class="form-group">
 
-        <p>Tag : {{selectedTag1}} {{selectedTag2}} {{selectedTag3}} </p>
+        <div>
+            <p>Tag : <span ng-repeat="eachTag in $ctrl.new_tags"> {{eachTag}}</span> </p>
+            <input list="testList" type="" ng-model="$ctrl.SelectedTag" />
+            <datalist id="testList">
+                <option ng-repeat="tag in $ctrl.tags | orderBy:'name' " value="{{tag.name}}">
+            </datalist>
+            <input type="button" ng-click="$ctrl.saveTag($ctrl.SelectedTag)" value="valider" />
+        </div>
 
-        <select ng-model="selectedTag1">
-            <option ng-repeat="tag in $ctrl.tags | orderBy:'name' " value="{{tag.name}}">{{tag.name}}</option>
-        </select>
-        <select ng-model="selectedTag2">
-            <option ng-repeat="tag in $ctrl.tags | orderBy:'name' " value="{{tag.name}}">{{tag.name}}</option>
-        </select>
-        <select ng-model="selectedTag3">
-            <option ng-repeat="tag in $ctrl.tags | orderBy:'name' " value="{{tag.name}}">{{tag.name}}</option>
-        </select>
     </div>
 
 
     <div class="item-actions">
-        <input class="btn btn-success" type="submit" value="Valider" />
+        <input class="btn btn-success" type="submit" value="Valider" ng-click="$ctrl.save($ctrl.question)" />
         <a class="btn btn-default" ui-sref="list">Annuler</a>
     </div>
 </form>

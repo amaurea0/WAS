@@ -20,6 +20,13 @@ COMPNT.component("questionPost", {
         console.log(data);
       }).catch((err) => { });
 
+      this.new_tags = [];
+      this.saveTag = (tag) => {
+        console.log(tag)
+        this.new_tags.push(tag);
+        console.log(this.new_tags)
+        this.SelectedTag = "";
+      };
       // Save the new question
       this.save = (question) => {
         var new_question = {
