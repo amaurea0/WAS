@@ -32,6 +32,12 @@ function generateUsers() {
   return users;
 }
 
+function chooseTag (){
+var array = ["javascript", "Symfony", "PHP", "Angularjs"]
+var randomNber = Math.floor(Math.random() * array.length);
+return array[randomNber];
+}
+
 function generatePosts() {
   var questions = []
 
@@ -50,7 +56,8 @@ function generatePosts() {
       "views": nbViews,
       "votes": nbVotes,
       "date": date,
-      "userId": userId
+      "userId": userId,
+      "tagsId": tagsId
     });
   }
   return questions;
