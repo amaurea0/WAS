@@ -48,6 +48,7 @@ function generatePosts() {
     var nbVotes = faker.random.number();
     var date = faker.date.recent();
     var userId = randomIntNum(15);
+    var tagsId = chooseTag();
 
     questions.push({
       "id": id,
