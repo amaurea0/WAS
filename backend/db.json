@@ -2,7 +2,7 @@
   "questions": [
     
     {
-      "title": "q69 votes 100",
+      "title": "q69 votes 100 ",
       "content": "q",
       "nb_views": 69,
       "votes": 100,
@@ -11,7 +11,7 @@
       "id": 12
     },
     {
-      "title": "a6 votes 521",
+      "title": "a6 votes 521 symphony angular",
       "content": "a",
       "nb_views": 6,
       "votes": 521,
@@ -20,7 +20,7 @@
       "id": 13
     },
     {
-      "title": "a 48 votes 871",
+      "title": "a 48 votes 871 javascript",
       "content": "a",
       "nb_views": 48,
       "votes": 871,
@@ -29,7 +29,7 @@
       "id": 14
     },
     {
-      "title": "a 9 votes 98",
+      "title": "a 9 votes 98 php angular",
       "content": "a",
       "nb_views": 9,
       "votes": 98,
@@ -38,7 +38,7 @@
       "id": 15
     },
     {
-      "title": "vsdfs 5 votes 745",
+      "title": "vsdfs 5 votes 745 symphony angular",
       "content": "sdf",
       "nb_views": 5,
       "votes": 745,
@@ -116,9 +116,34 @@
       "id": 1
     },
     {
-      "questionId": 19,
-      "tagId": 2,
+      "questionId": 23,
+      "tagId": 4,
       "id": 2
+    },
+    {
+      "questionId": 13,
+      "tagId": 2,
+      "id": 3
+    },
+    {
+      "questionId": 13,
+      "tagId": 4,
+      "id": 4
+    },
+    {
+      "questionId": 14,
+      "tagId": 1,
+      "id": 5
+    },
+    {
+      "questionId": 15,
+      "tagId": 3,
+      "id": 6
+    },
+    {
+      "questionId": 15,
+      "tagId": 2,
+      "id": 7
     }
   ]
 }

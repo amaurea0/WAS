@@ -45,7 +45,8 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
             }
         );
         return deferred.promise;
-    }
+    };
+
     this.getQuestionId = (id) => {
         var deferred = $q.defer();
         $http.get(QST_URL + '?id='+id+'&_expand=user').then(
@@ -58,7 +59,7 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
             }
         );
         return deferred.promise;
-    }
+    };
 
     this.getSpecificQuestion = (param) => {
 
