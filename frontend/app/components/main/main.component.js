@@ -16,6 +16,7 @@ COMPNT
 
         $scope.$on(INFO.userId, (event, key) => {
           this.info.userId = key;
+          console.log("éh la"+key)
         });
 
 
