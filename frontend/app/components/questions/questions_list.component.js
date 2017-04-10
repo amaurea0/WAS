@@ -11,7 +11,7 @@ COMPNT
     bindings: {
       list: '<',
       query: '@',
+      tagFilter: '<',
       questions: '<'
-    },
-
+    }
   });

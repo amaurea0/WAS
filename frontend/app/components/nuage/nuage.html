@@ -1,8 +1,8 @@
 <h1>NUAGE</h1>
+<input class="form-control" placeholder="Rechercher..." ng-model="$ctrl.nuage.query" />
 
 <ul>
-    <li><a ui-sref="tags" ui-sref-active="select">Javascript</a></li>
-    <li><a ui-sref="tags" ui-sref-active="select">Angularjs</a></li>
-    <li><a ui-sref="tags" ui-sref-active="select">PHP</a></li>
-    <li><a ui-sref="tags" ui-sref-active="select">Symfony</a></li>
+  <li ng-repeat="tag in $ctrl.nuage.list">
+    <a ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">{{tag.name}}</a>
+  </li>
 </ul>

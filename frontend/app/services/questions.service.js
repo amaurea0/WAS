@@ -33,10 +33,32 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         return defer.promise;
     };
 
-    this.getQuestionsTag = () => {
-        return $http.get(QST_URL + '?tagsId=' + 'PHP' + '&_expand=user');
+    this.getQuestionsTag = (tagid) => {
+        var deferred = $q.defer();
+        $http.get(QST_URL + '?tagsId='+tagid+'&_expand=user').then(
+            function (response) {
+                deferred.resolve(response.data);
+            },
+            function (error) {
+                deferred.reject(error);
+                $log.error(error);
+            }
+        );
+        return deferred.promise;
     }
-
+    this.getQuestionId = (id) => {
+        var deferred = $q.defer();
+        $http.get(QST_URL + '?id='+id+'&_expand=user').then(
+            function (response) {
+                deferred.resolve(response.data);
+            },
+            function (error) {
+                deferred.reject(error);
+                $log.error(error);
+            }
+        );
+        return deferred.promise;
+    }
 
     this.getSpecificQuestion = (param) => {
 

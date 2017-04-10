@@ -52,9 +52,16 @@ WEA.config(function ($stateProvider) {
 
         .state({
             name: 'tags',
-            url: '/questions/tags',
-            component: 'tags',
-            resolve: {}
+            url: '/questions/:tagId/:tagName',
+            component: 'questionsList',
+            resolve: {
+                tagFilter: function ($stateParams) {
+                    return {
+                        tagId: $stateParams.tagId,
+                        tagName: $stateParams.tagName
+                    };
+                }
+            }
         })
 
         .state({
@@ -90,4 +97,5 @@ WEA.config(function ($stateProvider) {
         });
 
 });
+
 

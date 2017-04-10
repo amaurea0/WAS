@@ -4,6 +4,7 @@
 </header>
 <div ng-if="$ctrl.questions.length > 0">
   <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
+  <span ng-bind="$ctrl.model.tag.tagName"></span>
   <div class="panel" ng-repeat="question in $ctrl.questions | filter : $ctrl.model.query">
     <div id="left">
       <div id="votes" ng-bind="question.votes"></div>
