@@ -3,7 +3,7 @@
     <div><a ui-sref="addUser" ui-sref-active="select">S'enregistrer</a></div>
 
 </header>
-<div>
+<div ng-if="$ctrl.users.length > 0">
     <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
     <div id="user" ng-repeat="user in $ctrl.users | filter : $ctrl.model.query">
         <a ui-sref="person({personId : user.id})"> <img ng-src="{{user.avatar}}" alt="photo">
