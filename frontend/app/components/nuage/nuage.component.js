@@ -7,6 +7,4 @@ COMPNT.component('nuage', {
   bindings: {
   }
 
-
-
 });
