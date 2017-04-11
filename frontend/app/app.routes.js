@@ -4,13 +4,18 @@ WEA.config(function ($stateProvider) {
     $stateProvider
 
         .state({
+            name: 'questionscomplet',
+            url: '/questionscomplet',
+            component: 'questionsComplet',
+            resolve: {}
+        })
+
+        .state({
             name: 'questions',
             url: '/questions',
             component: 'questionsList',
             resolve: {
-                questions: function ($rootScope, QuestionsService) {
-                    return QuestionsService.getQuestions();
-                }
+                
             }
         })
 
@@ -52,9 +57,16 @@ WEA.config(function ($stateProvider) {
 
         .state({
             name: 'tags',
-            url: '/questions/tags',
-            component: 'tags',
-            resolve: {}
+            url: '/questions/:tagId/:tagName',
+            component: 'questionsList',
+            resolve: {
+                tagFilter: function ($stateParams) {
+                    return {
+                        tagId: $stateParams.tagId,
+                        tagName: $stateParams.tagName
+                    };
+                }
+            }
         })
 
         .state({
