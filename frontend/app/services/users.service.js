@@ -6,6 +6,9 @@ SERVICES.service('UsersService', ['$http', '$log', '$q',
 
         const USER_URL = "http://localhost:3000/users";
 
+        this.userId = (id) => {
+            return $http.get(USER_URL + id);
+        };
 
         this.addUser = function (user) {
             var deferred = $q.defer();
