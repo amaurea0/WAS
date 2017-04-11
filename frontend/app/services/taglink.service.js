@@ -25,7 +25,7 @@ SERVICES.service('TaglinkService', ['$http', '$log', '$q', function ($http, $log
 
     this.getQuestionsTag = (tagid) => {
         var deferred = $q.defer();
-        $http.get(TAGLNK_URL + '?tagsId=' + tagid).then(
+        $http.get(TAGLNK_URL + '?tagId=' + tagid).then(
             function (response) {
                 deferred.resolve(response.data);
             },
