@@ -2,14 +2,14 @@
 
 COMPNT.component("profil", {
 
-	templateUrl: './app/components/profil/profil.html',
+	templateUrl: './app/components/users/profil.html',
 
-	controller: ['UserProfileService',
+	controller: ['UsersService',
 
-	 function(UserProfileService) {
+	 function(UsersService) {
 		var self = this;
 		this.identify = () =>{
-				var promise = UserProfileService.userId(1);
+				var promise = UsersService.userId(1);
 				promise.then(
 					function(user) { 
 						 self.userProfil = user.data;
