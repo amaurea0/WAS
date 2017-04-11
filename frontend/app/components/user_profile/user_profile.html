@@ -1,0 +1,23 @@
+<header>
+    <h1>User Profile</h1>
+    <div><a ui-sref="addUser" ui-sref-active="select">S'enregistrer</a></div>
+
+</header>
+<div>
+    <div id="user">
+        <img ng-src="{{$ctrl.person.avatar}}" alt="photo">
+        <div id="bio">
+            <div id="head"><span ng-bind="$ctrl.person.first_name"></span> <span ng-bind="$ctrl.person.last_name"></span></div>
+            <div id="body">
+                <div><span ng-bind="$ctrl.person.pseudo"></div>
+            <div>Job</div>
+            <div><span ng-bind="$ctrl.person.ville"></div>
+        </div>
+        <div id="tail">
+            <div>Rèp:ThugLife</div>
+            <div>#HashTags###</div>
+            <div><button type="">Full Profile</button></div>
+        </div>
+    </div>
+</div>
+</div>

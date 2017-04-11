@@ -20,13 +20,35 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
     };
 
     this.getQuestions = () => {
-        return $http.get(QST_URL + '?_expand=user');
-    }
+
+        var defer = $q.defer();
+
+        $http.get(QST_URL + '?_expand=user').then((response) => {
+            defer.resolve(response.data);
+        }).catch((err) => {
+            $log.debug(`SVC: ERROR!!! ${err}`);
+            defer.reject(err);
+        });
+
+        return defer.promise;
+    };
+
     this.getQuestionsTag = () => {
-        return $http.get(QST_URL + '?tagsId='+'PHP'+'&_expand=user');
-    }
-    this.getSpecificQuestion = () => {
-        return $http.get('http://localhost:3000/questions/3?_expand=user&_embed=answers');
+        return $http.get(QST_URL + '?tagsId=' + 'PHP' + '&_expand=user');
     }
 
+
+    this.getSpecificQuestion = (param) => {
+
+        var defer = $q.defer();
+
+        $http.get(QST_URL + '/' + param + '?_expand=user&_embed=answers').then((response) => {
+            defer.resolve(response.data);
+        }).catch((err) => {
+            $log.debug(`SVC: ERROR!!! ${err}`);
+            defer.reject(err);
+        });
+
+        return defer.promise;
+    };
 }]);
