@@ -81,4 +81,13 @@ WEA.config(function ($stateProvider) {
             component: 'userLogin',
             resolve: {}
         })
+
+        .state({
+            name: 'userprofile',
+            url: '/userprofile',
+            component: 'profil',
+            resolve: {}
+        });
+
 });
+
