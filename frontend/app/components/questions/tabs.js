@@ -12,18 +12,18 @@ let tabs = {
           </span>
         </div>
         <div class="tabs_content">
-            <tab label="Populaires" selection="$ctrl.tabsList[0].sort" tabs="$ctrl.tabs">
+            <tab label={{$ctrl.tabsList[0].label}} selection="$ctrl.tabsList[0].sort" tabs="$ctrl.tabs" aquery={{$ctrl.query}}>
             </tab>
-            <tab label="Plus vues" selection="$ctrl.tabsList[1].sort" tabs="$ctrl.tabs">
+            <tab label={{$ctrl.tabsList[1].label}} selection="$ctrl.tabsList[1].sort" tabs="$ctrl.tabs" aquery={{$ctrl.query}}>
             </tab>
-            <tab label="Non répondues" selection="$ctrl.tabsList[0].sort" tabs="$ctrl.tabs">
+            <tab label={{$ctrl.tabsList[0].label}} selection="$ctrl.tabsList[0].sort" tabs="$ctrl.tabs" aquery={{$ctrl.query}}>
             </tab>
         </div>
       </div>
     `,
 
     bindings: {
-
+        query:'@'
     },
 
     controller: function () {
@@ -49,13 +49,10 @@ let tabs = {
 
         this.selectTab = (index) => {
             this.tabs.map((tab, i) => tab.selected = (i == index));
-            console.log(this.tabs)
-
         };
 
         this.$postLink = () => {
             this.selectTab(this.selected || 0);
-
         }
     }
 };
@@ -64,7 +61,7 @@ let tab = {
 
     template: `
     <div ng-if="$ctrl.tab.selected">
-        <div class="panel" ng-repeat="question in $ctrl.questions | filter : $ctrl.model.query">
+        <div class="panel" ng-repeat="question in $ctrl.questions | filter : $ctrl.aquery">
             <div id="left">
                 <div id="votes" ng-bind="question.votes"></div>
                 <div id="answers">
@@ -93,7 +90,8 @@ let tab = {
         label: '@',
         selection: '<',
         tabs: '<',
-        selected: '@'
+        selected: '@',
+        aquery: '@'
     },
 
     require: {
@@ -110,16 +108,12 @@ let tab = {
             };
 
             this.tabs.addTab(this.tab);
-
-            console.log(this.selection)
-
             this.getAllItems();
         };
 
         this.getAllItems = () => {
             QuestionsService.getQuestions(this.selection).then((items) => {
                 this.questions = items;
-                console.log(items);
             }).catch((err) => { });
         };
 
