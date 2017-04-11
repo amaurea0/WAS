@@ -2,7 +2,7 @@
 
 SERVICES.service('UsersService', ['$http', '$log', '$q',
 
-    function ( $http, $log, $q) {
+    function ($http, $log, $q) {
 
         const USER_URL = "http://localhost:3000/users";
 
@@ -21,12 +21,37 @@ SERVICES.service('UsersService', ['$http', '$log', '$q',
         };
 
         this.logUser = function (user) {
-           
+
         };
 
         this.getUsers = () => {
-            return $http.get(USER_URL);
+
+            var defer = $q.defer();
+
+            $http.get(USER_URL).then((response) => {
+                defer.resolve(response.data);
+            }).catch((err) => {
+                $log.debug(`SVC: ERROR!!! ${err}`);
+                defer.reject(err);
+            });
+
+            return defer.promise;
+        };
+
+        this.getPerson = (param) => {
+
+            var defer = $q.defer();
+
+            $http.get(USER_URL + '/' + param).then((response) => {
+                defer.resolve(response.data);
+            }).catch((err) => {
+                $log.debug(`SVC: ERROR!!! ${err}`);
+                defer.reject(err);
+            });
+
+            return defer.promise;
         }
+
 
         this.get = (mail) => {
             var deferred = $q.defer();
