@@ -1,5 +1,3 @@
-'use strict';
-
 let tabs = {
 
   template: `
@@ -14,21 +12,19 @@ let tabs = {
           </span>
         </div>
         <div class="tabs_content">
-            <tab label="Populaires" selection="$ctrl.tabsList[0].sort">
+            <tab label="Populaires" selection="$ctrl.tabsList[0].sort" tabsss="$ctrl.tabs">
             </tab>
-            <tab label="Plus vues" selection="$ctrl.tabsList[1].sort">
+            <tab label="Plus vues" selection="$ctrl.tabsList[1].sort" tabsss="$ctrl.tabs">
             </tab>
-            <tab label="Non répondues" selection="$ctrl.tabsList[0].sort">
+            <tab label="Non répondues" selection="$ctrl.tabsList[0].sort" tabsss="$ctrl.tabs">
             </tab>
         </div>
       </div>
-        `,
-    
-  bindings: {
-    selected: '@'
-  },
+    `,
 
-  transclude: true,
+  bindings: {
+
+  },
 
   controller: function () {
 
@@ -43,7 +39,6 @@ let tabs = {
       }
     ];
 
-
     this.$onInit = () => {
       this.tabs = [];
     }
@@ -53,32 +48,31 @@ let tabs = {
     };
 
     this.selectTab = (index) => {
-      this.tabs.map((tab, i) => tab.selected = (i == index)); // tab.selected vaut true seulement sur l'index courant
+      this.tabs.map((tab, i) => tab.selected = (i == index));
+      console.log(this.tabs)
     };
 
     this.$postLink = () => {
       this.selectTab(this.selected || 0);
+ 
     }
-  },
+  }
 };
 
 let tab = {
 
-  template: `
-    <div ng-if="$ctrl.tab.selected" ng-bind="$ctrl.selection">
-    </div>
-  `,
+  template: '/app/components/questions/tabs.html',
 
   bindings: {
     label: '@',
-    selection: '<'
+    selection: '<',
+    tabsss: '<',
+    selected: '@'
   },
 
   require: {
     tabs: '^^tabs'
   },
-
-  transclude: true,
 
   controller: function () {
 
@@ -92,10 +86,14 @@ let tab = {
       this.tabs.addTab(this.tab);
     };
 
-
-
+    // this.$onChanges = (changes) => {
+    //   console.log(changes)
+    //   console.log(this.tabsss)
+    //   this.tabsss=changes;
+    // }
   }
 };
+
 
 
 COMPNT
