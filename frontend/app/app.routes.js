@@ -4,6 +4,13 @@ WEA.config(function ($stateProvider) {
     $stateProvider
 
         .state({
+            name: 'questionscomplet',
+            url: '/questionscomplet',
+            component: 'questionsComplet',
+            resolve: {}
+        })
+
+        .state({
             name: 'questions',
             url: '/questions',
             component: 'questionsList',
@@ -97,5 +104,4 @@ WEA.config(function ($stateProvider) {
         });
 
 });
-
 
