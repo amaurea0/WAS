@@ -15,9 +15,7 @@ WEA.config(function ($stateProvider) {
             url: '/questions',
             component: 'questionsList',
             resolve: {
-                questions: function ($rootScope, QuestionsService) {
-                    return QuestionsService.getQuestions();
-                }
+                
             }
         })
 

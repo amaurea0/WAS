@@ -1,122 +1,47 @@
 {
   "questions": [
+    
     {
-      "title": "oh my gad",
-      "content": "it's raining today",
-      "userId": 1,
-      "tagsId": "PHP",
-      "id": 1
-    },
-    {
-      "title": "pourquoi le monde ?",
-      "tags": "JS PHP",
-      "content": "blablb\nanbladplsimkc",
-      "id": 4,
-      "userId": 1,
-      "tagsId": "javascript"
-    },
-    {
-      "title": "quand est-ce qu'on ?",
-      "tags": "JS PHP",
-      "content": "blablb\nanbladplsimkc",
-      "id": 5,
-      "userId": 1,
-      "tagsId": "javascript"
-    },
-    {
-      "title": "combien font ?",
-      "tags": "JS PHP",
-      "content": "blablb\nanbladplsimkc",
-      "id": 6,
-      "userId": 1,
-      "tagsId": "javascript"
-    },
-    {
-      "title": "aa",
-      "content": "aaer",
-      "nb_views": "",
-      "votes": "",
-      "date": "2017-04-08T01:32:23.336Z",
-      "userId": 9,
-      "id": 7
-    },
-    {
-      "title": "a",
-      "content": "a",
-      "nb_views": "10",
-      "votes": "",
-      "date": "2017-04-08T01:35:55.976Z",
-      "userId": 9,
-      "id": 8
-    },
-    {
-      "title": "a",
-      "content": "a",
-      "nb_views": "",
-      "votes": "",
-      "date": "2017-04-08T01:40:37.698Z",
-      "userId": 9,
-      "id": 9
-    },
-    {
-      "title": "aa",
-      "content": "a",
-      "nb_views": "",
-      "votes": "",
-      "date": "2017-04-08T01:43:30.522Z",
-      "userId": 1,
-      "id": 10
-    },
-    {
-      "title": "q",
+      "title": "q69 votes 100",
       "content": "q",
-      "nb_views": "",
-      "votes": "",
-      "date": "2017-04-08T01:45:57.733Z",
-      "userId": 1,
-      "id": 11
-    },
-    {
-      "title": "q",
-      "content": "q",
-      "nb_views": "",
-      "votes": "",
+      "nb_views": 69,
+      "votes": 100,
       "date": "2017-04-08T01:47:18.815Z",
       "userId": 1,
       "id": 12
     },
     {
-      "title": "a",
+      "title": "a6 votes 521",
       "content": "a",
-      "nb_views": "",
-      "votes": "",
+      "nb_views": 6,
+      "votes": 521,
       "date": "2017-04-08T01:49:44.615Z",
       "userId": 1,
       "id": 13
     },
     {
-      "title": "a",
+      "title": "a 48 votes 871",
       "content": "a",
-      "nb_views": "",
-      "votes": "",
+      "nb_views": 48,
+      "votes": 871,
       "date": "2017-04-08T01:51:51.436Z",
       "userId": 1,
       "id": 14
     },
     {
-      "title": "a",
+      "title": "a 9 votes 98",
       "content": "a",
-      "nb_views": "",
-      "votes": "",
+      "nb_views": 9,
+      "votes": 98,
       "date": "2017-04-08T01:53:23.566Z",
       "userId": 1,
       "id": 15
     },
     {
-      "title": "vsdfs",
+      "title": "vsdfs 5 votes 745",
       "content": "sdf",
-      "nb_views": "",
-      "votes": "",
+      "nb_views": 5,
+      "votes": 745,
       "date": "2017-04-08T09:25:09.366Z",
       "userId": 1,
       "id": 23

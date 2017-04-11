@@ -19,11 +19,11 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         return deferred.promise;
     };
 
-    this.getQuestions = () => {
+    this.getQuestions = (sorting) => {
 
         var defer = $q.defer();
 
-        $http.get(QST_URL + '?_expand=user').then((response) => {
+        $http.get(QST_URL + '?_expand=user&_sort='+sorting+'&_order=DESC').then((response) => {
             defer.resolve(response.data);
         }).catch((err) => {
             $log.debug(`SVC: ERROR!!! ${err}`);
