@@ -15,8 +15,8 @@ WEA.config(function ($stateProvider) {
             url: '/users',
             component: 'usersList',
             resolve: {
-                users: function ($rootScope, UsersService, $transition$) {
-                    return UsersService.getUsers($transition$.params().personId);
+                users: function ($rootScope, UsersService) {
+                    return UsersService.getUsers();
                 }
             }
         })
@@ -81,11 +81,11 @@ WEA.config(function ($stateProvider) {
 
         .state({
             name: 'questionSpec',
-            url: '/questions/{questionId}',
+            url: '/questions/{idQuestion}',
             component: 'questionFull',
             resolve: {
                 question: function ($rootScope, QuestionsService, $transition$) {
-                    return QuestionsService.getSpecificQuestion($transition$.params().questionId);
+                    return QuestionsService.getSpecificQuestion($transition$.params().idQuestion);
                 }
             }
         })
@@ -120,6 +120,13 @@ WEA.config(function ($stateProvider) {
             name: 'logUser',
             url: '/logUser',
             component: 'userLogin',
+            resolve: {}
+        })
+
+        .state({
+            name: 'questionSpec.postAnswer',
+            url: '/newAnswer',
+            component: 'answerPost',
             resolve: {}
         })
 });
