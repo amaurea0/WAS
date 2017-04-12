@@ -1,7 +1,6 @@
 {
   "questions": [
     {
-      "tagsId": "AngularJS",
       "title": "q69 votes 100 ",
       "content": "q",
       "nb_views": 69,
@@ -13,7 +12,6 @@
     {
       "title": "a6 votes 521 symphony angular",
       "content": "a",
-      "tagsId": "AngularJS",
       "nb_views": 6,
       "votes": 521,
       "date": "2017-04-08T01:49:44.615Z",
@@ -23,7 +21,6 @@
     {
       "title": "a 48 votes 871 javascript",
       "content": "a",
-      "tagsId": "Symfony",
       "nb_views": 48,
       "votes": 871,
       "date": "2017-04-08T01:51:51.436Z",
@@ -33,7 +30,6 @@
     {
       "title": "a 9 votes 98 php angular",
       "content": "a",
-      "tagsId": "AngularJS",
       "nb_views": 9,
       "votes": 98,
       "date": "2017-04-08T01:53:23.566Z",
@@ -43,7 +39,6 @@
     {
       "title": "vsdfs 5 votes 745 symphony angular",
       "content": "sdf",
-      "tagsId": "Symfony",
       "nb_views": 5,
       "votes": 745,
       "date": "2017-04-08T09:25:09.366Z",
