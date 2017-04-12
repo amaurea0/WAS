@@ -12,18 +12,19 @@ let tabs = {
           </span>
         </div>
         <div class="tabs_content">
-            <tab label={{$ctrl.tabsList[0].label}} selection="$ctrl.tabsList[0].sort" tabs="$ctrl.tabs" aquery={{$ctrl.query}}>
+            <tab label={{$ctrl.tabsList[0].label}} selection="$ctrl.tabsList[0].sort" tabs="$ctrl.tabs" aquery="{{$ctrl.query}}" tag-filter="$ctrl.tagFilter">
             </tab>
-            <tab label={{$ctrl.tabsList[1].label}} selection="$ctrl.tabsList[1].sort" tabs="$ctrl.tabs" aquery={{$ctrl.query}}>
+            <tab label={{$ctrl.tabsList[1].label}} selection="$ctrl.tabsList[1].sort" tabs="$ctrl.tabs" aquery="{{$ctrl.query}}" tag-filter="$ctrl.tagFilter">
             </tab>
-            <tab label={{$ctrl.tabsList[0].label}} selection="$ctrl.tabsList[0].sort" tabs="$ctrl.tabs" aquery={{$ctrl.query}}>
+            <tab label={{$ctrl.tabsList[0].label}} selection="$ctrl.tabsList[0].sort" tabs="$ctrl.tabs" aquery="{{$ctrl.query}}" tag-filter="$ctrl.tagFilter">
             </tab>
         </div>
       </div>
     `,
 
     bindings: {
-        query:'@'
+        query: '@',
+        tagFilter: '<'
     },
 
     controller: function () {
@@ -41,6 +42,8 @@ let tabs = {
 
         this.$onInit = () => {
             this.tabs = [];
+            console.log(this.tagFilter)
+            console.log(this.query)
         }
 
         this.addTab = (tab) => {
@@ -91,14 +94,15 @@ let tab = {
         selection: '<',
         tabs: '<',
         selected: '@',
-        aquery: '@'
+        aquery: '@',
+        tagFilter: '<'
     },
 
     require: {
         tabs: '^^tabs'
     },
 
-    controller: ['QuestionsService', function (QuestionsService) {
+    controller: ['QuestionsService', 'TaglinkService', function (QuestionsService, TaglinkService) {
 
         this.$onInit = () => {
 
@@ -108,8 +112,30 @@ let tab = {
             };
 
             this.tabs.addTab(this.tab);
-            this.getAllItems();
+
+            this.model = {
+                tagQuestionId: [],
+                query: ''
+            };
+            this.questions = [];
+            if (this.tagFilter) this.getTagedItems();
+            else this.getAllItems();
         };
+
+        // this.getTagedItems = () => {
+        //     TaglinkService.getQuestionsTag(this.tagFilter.tagId, this.selection).then((items) => {
+        //         this.model.tagQuestionId = items;
+
+        //         angular.forEach(this.model.tagQuestionId, (value, key) => {
+        //             QuestionsService.getQuestionId(value.questionId).then((question) => {
+
+        //                 this.questions.push(question[0]);
+
+        //             }).catch((err) => { });
+        //         });
+
+        //     }).catch((err) => { });
+        // };
 
         this.getAllItems = () => {
             QuestionsService.getQuestions(this.selection).then((items) => {

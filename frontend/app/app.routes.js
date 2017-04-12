@@ -57,8 +57,8 @@ WEA.config(function ($stateProvider) {
 
         .state({
             name: 'tags',
-            url: '/questions/:tagId/:tagName',
-            component: 'questionsList',
+            url: '/questionscomplet/:tagId/:tagName',
+            component: 'questionsComplet',
             resolve: {
                 tagFilter: function ($stateParams) {
                     return {

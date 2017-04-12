@@ -10,6 +10,5 @@
   <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
   <span ng-bind="$ctrl.model.tag.tagName"></span>
 </div>
-
-<tabs query={{$ctrl.model.query}}>
+<tabs query="{{$ctrl.model.query}}" tag-filter="$ctrl.tagFilter">
 </tabs>
