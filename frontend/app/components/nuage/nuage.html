@@ -1,9 +1,10 @@
 <h1>NUAGE</h1>
+<input class="form-control" placeholder="Rechercher..." ng-model="$ctrl.nuage.query" />
 
 <table class="table">
-    <tr ng-repeat="tag in $ctrl.tags">
+    <tr ng-repeat="tag in $ctrl.nuage.list">
         <td>
-            <button ng-bind="tag.name" ui-sref="tags({currentTag: tag.name})" ui-sref-active="active">
+            <button ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select" >{{tag.name}}
             </button>
         </td>
     </tr>
