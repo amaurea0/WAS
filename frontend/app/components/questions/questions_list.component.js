@@ -6,7 +6,7 @@
 COMPNT
   .component("questionsList", {
 
-    templateUrl: '/app/components/questions/questions_list.html',
+    templateUrl: '/frontend/app/components/questions/questions_list.html',
 
     bindings: {
       list: '<',

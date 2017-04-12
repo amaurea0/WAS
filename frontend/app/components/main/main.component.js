@@ -3,7 +3,7 @@
 COMPNT
   .component("main", {
 
-    templateUrl: '/app/components/main/main.html',
+    templateUrl: '/frontend/app/components/main/main.html',
 
     bindings: {
     },

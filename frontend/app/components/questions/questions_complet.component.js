@@ -3,7 +3,7 @@
 COMPNT
   .component("questionsComplet", {
 
-    templateUrl: '/app/components/questions/questions_complet.html',
+    templateUrl: '/frontend/app/components/questions/questions_complet.html',
 
     bindings: {
       tagFilter: '<'
