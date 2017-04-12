@@ -64,7 +64,7 @@ let tab = {
 
     template: `
     <div ng-if="$ctrl.tab.selected">
-        <div class="panel" ng-repeat="question in $ctrl.questions | filter : $ctrl.aquery">
+        <div class="panel" ng-repeat="question in $ctrl.questions | orderBy : $ctrl.selection | filter : $ctrl.aquery">
             <div id="left">
                 <div id="votes" ng-bind="question.votes"></div>
                 <div id="answers">
@@ -106,6 +106,8 @@ let tab = {
 
         this.$onInit = () => {
 
+            this.selection='-'+this.selection;
+
             this.tab = {
                 label: this.label,
                 selected: false
@@ -122,20 +124,20 @@ let tab = {
             else this.getAllItems();
         };
 
-        // this.getTagedItems = () => {
-        //     TaglinkService.getQuestionsTag(this.tagFilter.tagId, this.selection).then((items) => {
-        //         this.model.tagQuestionId = items;
+        this.getTagedItems = () => {
+            TaglinkService.getQuestionsTag(this.tagFilter.tagId).then((items) => {
+                this.model.tagQuestionId = items;
 
-        //         angular.forEach(this.model.tagQuestionId, (value, key) => {
-        //             QuestionsService.getQuestionId(value.questionId).then((question) => {
+                angular.forEach(this.model.tagQuestionId, (value, key) => {
+                    QuestionsService.getQuestionId(value.questionId).then((question) => {
 
-        //                 this.questions.push(question[0]);
+                        this.questions.push(question[0]);
 
-        //             }).catch((err) => { });
-        //         });
+                    }).catch((err) => { });
+                });
 
-        //     }).catch((err) => { });
-        // };
+            }).catch((err) => { });
+        };
 
         this.getAllItems = () => {
             QuestionsService.getQuestions(this.selection).then((items) => {
@@ -143,10 +145,6 @@ let tab = {
             }).catch((err) => { });
         };
 
-        // this.$onChanges = (changes) => {
-        //   console.log(changes)
-        //   console.log(this.tabs)
-        // }
     }]
 };
 
