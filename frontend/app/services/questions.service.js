@@ -33,8 +33,8 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         return defer.promise;
     };
 
-    this.getQuestionsTag = () => {
-        return $http.get(QST_URL + '?tagsId=' + 'PHP' + '&_expand=user');
+    this.getQuestionsTag = (currentTag) => {
+        return $http.get(QST_URL + '?tagsId=' + currentTag + '&_expand=user');
     }
 
 

@@ -52,9 +52,13 @@ WEA.config(function ($stateProvider) {
 
         .state({
             name: 'tags',
-            url: '/questions/tags',
+            url: '/questions/:currentTag',
             component: 'tags',
-            resolve: {}
+            resolve: {
+                currentTag: function ($stateParams) {
+                    return { nameTag: $stateParams.currentTag };
+                }
+            }
         })
 
         .state({
