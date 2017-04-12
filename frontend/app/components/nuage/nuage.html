@@ -4,7 +4,7 @@
 <table class="table">
     <tr ng-repeat="tag in $ctrl.nuage.list">
         <td>
-            <button ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select" value={{tag.name}}>
+            <button ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select" >{{tag.name}}
             </button>
         </td>
     </tr>
