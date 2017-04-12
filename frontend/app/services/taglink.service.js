@@ -23,4 +23,18 @@ SERVICES.service('TaglinkService', ['$http', '$log', '$q', function ($http, $log
         return deferred.promise;
     };
 
+    this.getQuestionsTag = (tagid) => {
+        var deferred = $q.defer();
+        $http.get(TAGLNK_URL + '?tagId=' + tagid).then(
+            function (response) {
+                deferred.resolve(response.data);
+            },
+            function (error) {
+                deferred.reject(error);
+                $log.error(error);
+            }
+        );
+        return deferred.promise;
+    }
+
 }]);

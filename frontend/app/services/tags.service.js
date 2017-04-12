@@ -6,7 +6,7 @@ const TAG_URL = "http://localhost:3000/tags";
 SERVICES.service('TagsService', ['$http', '$log', '$q', function ($http, $log, $q) {
 
 
-    this.getTags = function () {
+    this.getTags = () => {
         var deferred = $q.defer();
 
         $http.get(TAG_URL).then(function (response) {
