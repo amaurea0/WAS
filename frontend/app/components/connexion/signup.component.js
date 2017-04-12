@@ -5,15 +5,15 @@
  */
 COMPNT.component('userCreate', {
 
-    templateUrl: '/app/components/users/signup.html',
+    templateUrl: '/app/components/connexion/signup.html',
 
     bindings: {
         user: '<'
     },
 
-    controller: ['UsersService', '$scope',
+    controller: ['UsersService', '$scope',  '$state', 'INFO',
 
-        function (UsersService, $scope) {
+        function (UsersService, $scope,  $state, INFO) {
             var self = this;
             var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
             var userAdd = {};
@@ -45,9 +45,11 @@ COMPNT.component('userCreate', {
 
                     UsersService.addUser(userAdd).then(() => {
                         UsersService.get(user.email).then((data) => {
-                            $scope.$emit("userId", data[0].id);
+                            $scope.$emit(INFO.userId, data[0].id);
+                            console.log(data[0].id)
                         }); console.log('yEEESSSS!');
-                        $state.go('questions');
+                        //faire passer par le main pour sauver la variable globale
+                        $state.go('main');
                     }).catch((err) => { });
                 };
 

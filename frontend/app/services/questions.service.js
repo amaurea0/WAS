@@ -19,14 +19,59 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         return deferred.promise;
     };
 
-    this.getQuestions = () => {
-        return $http.get(QST_URL + '?_expand=user');
-    }
-    this.getQuestionsTag = () => {
-        return $http.get(QST_URL + '?tagsId='+'PHP'+'&_expand=user');
-    }
-    this.getSpecificQuestion = () => {
-        return $http.get('http://localhost:3000/questions/3?_expand=user&_embed=answers');
-    }
+    this.getQuestions = (sorting) => {
 
+        var defer = $q.defer();
+
+        $http.get(QST_URL + '?_expand=user&_sort='+sorting+'&_order=DESC').then((response) => {
+            defer.resolve(response.data);
+        }).catch((err) => {
+            $log.debug(`SVC: ERROR!!! ${err}`);
+            defer.reject(err);
+        });
+
+        return defer.promise;
+    };
+
+    this.getQuestionsTag = (tagid) => {
+        var deferred = $q.defer();
+        $http.get(QST_URL + '?tagsId='+tagid+'&_expand=user').then(
+            function (response) {
+                deferred.resolve(response.data);
+            },
+            function (error) {
+                deferred.reject(error);
+                $log.error(error);
+            }
+        );
+        return deferred.promise;
+    };
+
+    this.getQuestionId = (id) => {
+        var deferred = $q.defer();
+        $http.get(QST_URL + '?id='+id+'&_expand=user').then(
+            function (response) {
+                deferred.resolve(response.data);
+            },
+            function (error) {
+                deferred.reject(error);
+                $log.error(error);
+            }
+        );
+        return deferred.promise;
+    };
+
+    this.getSpecificQuestion = (param) => {
+
+        var defer = $q.defer();
+
+        $http.get(QST_URL + '/' + param + '?_expand=user&_embed=answers').then((response) => {
+            defer.resolve(response.data);
+        }).catch((err) => {
+            $log.debug(`SVC: ERROR!!! ${err}`);
+            defer.reject(err);
+        });
+
+        return defer.promise;
+    };
 }]);

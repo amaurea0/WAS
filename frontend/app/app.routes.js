@@ -1,67 +1,105 @@
 'use strict';
 
 WEA.config(function ($stateProvider) {
-    var questionsState = {
-        name: 'questions',
-        url: '/questions',
-        component: 'questionsList',
-        resolve: {}
-    };
+    $stateProvider
 
-    var usersState = {
-        name: 'users',
-        url: '/users',
-        component: 'usersList',
-        resolve: {}
-    };
+        .state({
+            name: 'questionscomplet',
+            url: '/questionscomplet',
+            component: 'questionsComplet',
+            resolve: {}
+        })
 
-    var questionPostState = {
-        name: 'questionPost',
-        url: '/post',
-        component: 'questionPost',
-        resolve: {}
-    };
+        .state({
+            name: 'questions',
+            url: '/questions',
+            component: 'questionsList',
+            resolve: {
+                
+            }
+        })
 
-    var nuageState = {
-        name: 'nuage',
-        url: '/nuage',
-        component: 'nuage',
-        resolve: {}
-    };
-    var tagsState = {
-        name: 'tags',
-        url: '/questions/tags',
-        component: 'tags',
-        resolve: {}
-    };
+        .state({
+            name: 'users',
+            url: '/users',
+            component: 'usersList',
+            resolve: {
+                users: function ($rootScope, UsersService, $transition$) {
+                    return UsersService.getUsers($transition$.params().personId);
+                }
+            }
+        })
 
-    var createUserState = {
-        name: 'addUser',
-        url: '/addUser',
-        component: 'userCreate',
-        resolve: {}
-    };
+        .state({
+            name: 'person',
+            url: '/users/{personId}',
+            component: 'userProfile',
+            resolve: {
+                person: function ($rootScope, UsersService, $transition$) {
+                    return UsersService.getPerson($transition$.params().personId);
+                }
+            }
+        })
 
-    var specificQuestionState = {
-        name: 'questionid',
-        url: 'questionspecific',
-        component: 'questionFull',
-        resolve: {}
-    };
+        .state({
+            name: 'questionPost',
+            url: '/post',
+            component: 'questionPost',
+            resolve: {}
+        })
 
-    var loginUserState ={
-        name: 'logUser',
-        url: '/logUser',
-        component: 'userLogin',
-        resolve: {}
-    };
+        .state({
+            name: 'nuage',
+            url: '/nuage',
+            component: 'nuage',
+            resolve: {}
+        })
 
-    $stateProvider.state(questionsState);
-    $stateProvider.state(usersState);
-    $stateProvider.state(questionPostState);
-    $stateProvider.state(nuageState);
-    $stateProvider.state(createUserState);
-    $stateProvider.state(loginUserState);
-    $stateProvider.state(specificQuestionState);
-    $stateProvider.state(tagsState);
+        .state({
+            name: 'tags',
+            url: '/questions/:tagId/:tagName',
+            component: 'questionsList',
+            resolve: {
+                tagFilter: function ($stateParams) {
+                    return {
+                        tagId: $stateParams.tagId,
+                        tagName: $stateParams.tagName
+                    };
+                }
+            }
+        })
+
+        .state({
+            name: 'addUser',
+            url: '/addUser',
+            component: 'userCreate',
+            resolve: {}
+        })
+
+        .state({
+            name: 'questionSpec',
+            url: '/questions/{questionId}',
+            component: 'questionFull',
+            resolve: {
+                question: function ($rootScope, QuestionsService, $transition$) {
+                    return QuestionsService.getSpecificQuestion($transition$.params().questionId);
+                }
+            }
+        })
+
+        .state({
+            name: 'logUser',
+            url: '/logUser',
+            component: 'userLogin',
+            resolve: {}
+        })
+
+        .state({
+            name: 'userprofile',
+            url: '/userprofile',
+            component: 'profil',
+            resolve: {}
+        });
+
 });
+

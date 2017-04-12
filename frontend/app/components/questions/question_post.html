@@ -1,0 +1,29 @@
+<h3>Nouvelle Question</h3>
+
+<form name="myForm" ng-submit="$ctrl.save($ctrl.question)" novalidate>
+    <div class="form-group">
+        <label for="title">Titre question</label> <br>  
+        <input name="title" type="text" class="form-control" id="title" required ng-model="$ctrl.question.title" />
+        <!--<p ng-show="myForm.title.$invalid">Champ requis</p>-->
+    </div>
+    <div class="form-group">
+        <label for="content">Content</label> <br> 
+        <input name="content" size="10" type="text" class="form-control" id="content" required ng-model="$ctrl.question.content"
+        />
+        <!--<p ng-show="myForm.content.$invalid">Champ requis</p>-->
+    </div>
+    <div class="form-group">
+        <label>Tag : <span ng-repeat="eachTag in $ctrl.new_tags"> {{eachTag}} <span ng-click="$ctrl.removeTag(eachTag)">x</span></span>
+        </label> <br> 
+        <input id="tag" list="testList" type="" ng-model="$ctrl.SelectedTag" />
+        <datalist id="testList">
+            <option ng-repeat="newtag in $ctrl.tags | orderBy:'name' " value="{{newtag.name}}">
+        </datalist>
+        <input type="button" ng-click="$ctrl.saveTag($ctrl.SelectedTag)" value="ajouter" />
+    </div>
+
+    <div class="item-actions">
+        <input class="btn btn-success" type="submit" value="Valider" ng-disabled="myForm.$invalid" />
+        <a class="btn btn-default" ui-sref="list">Annuler</a>
+    </div>
+</form>
