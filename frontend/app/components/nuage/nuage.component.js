@@ -32,6 +32,4 @@ COMPNT.component('nuage', {
     };
 
   }]
-
-
 });

@@ -1,6 +1,5 @@
 {
   "questions": [
-    
     {
       "title": "q69 votes 100 ",
       "content": "q",
@@ -101,7 +100,7 @@
     },
     {
       "id": 4,
-      "name": "Simfony",
+      "name": "Symfony",
       "school id": "5",
       "posts id": "4",
       "users id": "3",
