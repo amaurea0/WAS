@@ -1,36 +1,6 @@
 {
   "questions": [
     {
-      "title": "a",
-      "content": "a",
-      "nb_views": "",
-      "votes": "",
-      "tagsId": "AngularJS",
-      "date": "2017-04-08T01:40:37.698Z",
-      "userId": 9,
-      "id": 9
-    },
-    {
-      "title": "aa",
-      "content": "a",
-      "nb_views": "",
-      "votes": "",
-      "tagsId": "PHP",
-      "date": "2017-04-08T01:43:30.522Z",
-      "userId": 1,
-      "id": 10
-    },
-    {
-      "title": "q",
-      "content": "q",
-      "nb_views": "",
-      "votes": "",
-      "tagsId": "AngularJS",
-      "date": "2017-04-08T01:45:57.733Z",
-      "userId": 1,
-      "id": 11
-    },
-    {
       "tagsId": "AngularJS",
       "title": "q69 votes 100 ",
       "content": "q",
