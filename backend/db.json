@@ -1,37 +1,5 @@
 {
   "questions": [
-    
-    {
-      "title": "oh my gad",
-      "content": "it's raining today",
-      "userId": 1,
-      "tagsId": "PHP",
-      "id": 1
-    },
-    {
-      "title": "pourquoi le monde ?",
-      "tags": "JS PHP",
-      "content": "blablb\nanbladplsimkc",
-      "id": 4,
-      "userId": 1,
-      "tagsId": "Symfony"
-    },
-    {
-      "title": "quand est-ce qu'on ?",
-      "tags": "JS PHP",
-      "content": "blablb\nanbladplsimkc",
-      "id": 5,
-      "userId": 1,
-      "tagsId": "Javascript"
-    },
-    {
-      "title": "combien font ?",
-      "tags": "JS PHP",
-      "content": "blablb\nanbladplsimkc",
-      "id": 6,
-      "userId": 1,
-      "tagsId": "Javascript"
-    },
     {
       "title": "a",
       "content": "a",
