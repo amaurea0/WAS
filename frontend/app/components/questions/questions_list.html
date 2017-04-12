@@ -2,7 +2,7 @@
   <h1>Questions list</h1>
   <a ui-sref="questionPost" ui-sref-active="select">Poser une question</a>
 </header>
-<div ng-if="$ctrl.model.list.length > 0">
+<div ng-if="$ctrl.questions.length > 0">
   <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
 
   <span ng-bind="$ctrl.model.tag.tagName"></span>
