@@ -7,7 +7,15 @@ COMPNT
 
     bindings: {
       tagFilter: '<'
-    }
+    },
 
+    controller: ['$state',
+
+      function ($state) {
+
+        this.removeTag = () => {
+          $state.go('questionscomplet');
+        };
+      }]
 
   });
