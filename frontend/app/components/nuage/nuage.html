@@ -1,8 +1,10 @@
 <h1>NUAGE</h1>
 
-<ul>
-    <li><a ui-sref="tags" ui-sref-active="select">Javascript</a></li>
-    <li><a ui-sref="tags" ui-sref-active="select">Angularjs</a></li>
-    <li><a ui-sref="tags" ui-sref-active="select">PHP</a></li>
-    <li><a ui-sref="tags" ui-sref-active="select">Symfony</a></li>
-</ul>
+<table class="table">
+    <tr ng-repeat="tag in $ctrl.tags">
+        <td>
+            <button ng-bind="tag.name" ui-sref="tags({currentTag: tag.name})" ui-sref-active="active">
+            </button>
+        </td>
+    </tr>
+</table>

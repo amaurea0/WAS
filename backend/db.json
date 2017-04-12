@@ -13,7 +13,7 @@
       "content": "blablb\nanbladplsimkc",
       "id": 4,
       "userId": 1,
-      "tagsId": "javascript"
+      "tagsId": "Symfony"
     },
     {
       "title": "quand est-ce qu'on ?",
@@ -21,7 +21,7 @@
       "content": "blablb\nanbladplsimkc",
       "id": 5,
       "userId": 1,
-      "tagsId": "javascript"
+      "tagsId": "Javascript"
     },
     {
       "title": "combien font ?",
@@ -29,13 +29,14 @@
       "content": "blablb\nanbladplsimkc",
       "id": 6,
       "userId": 1,
-      "tagsId": "javascript"
+      "tagsId": "Javascript"
     },
     {
       "title": "a",
       "content": "a",
       "nb_views": "",
       "votes": "",
+      "tagsId": "AngularJS",
       "date": "2017-04-08T01:40:37.698Z",
       "userId": 9,
       "id": 9
@@ -45,6 +46,7 @@
       "content": "a",
       "nb_views": "",
       "votes": "",
+      "tagsId": "PHP",
       "date": "2017-04-08T01:43:30.522Z",
       "userId": 1,
       "id": 10
@@ -54,6 +56,7 @@
       "content": "q",
       "nb_views": "",
       "votes": "",
+      "tagsId": "AngularJS",
       "date": "2017-04-08T01:45:57.733Z",
       "userId": 1,
       "id": 11
@@ -63,6 +66,7 @@
       "content": "q",
       "nb_views": "",
       "votes": "",
+      "tagsId": "AngularJS",
       "date": "2017-04-08T01:47:18.815Z",
       "userId": 1,
       "id": 12
@@ -72,6 +76,7 @@
       "content": "a",
       "nb_views": "",
       "votes": "",
+      "tagsId": "AngularJS",
       "date": "2017-04-08T01:49:44.615Z",
       "userId": 1,
       "id": 13
@@ -81,6 +86,7 @@
       "content": "a",
       "nb_views": "",
       "votes": "",
+      "tagsId": "Symfony",
       "date": "2017-04-08T01:51:51.436Z",
       "userId": 1,
       "id": 14
@@ -90,6 +96,7 @@
       "content": "a",
       "nb_views": "",
       "votes": "",
+      "tagsId": "AngularJS",
       "date": "2017-04-08T01:53:23.566Z",
       "userId": 1,
       "id": 15
@@ -99,6 +106,7 @@
       "content": "sdf",
       "nb_views": "",
       "votes": "",
+      "tagsId": "Symfony",
       "date": "2017-04-08T09:25:09.366Z",
       "userId": 1,
       "id": 23
@@ -158,7 +166,7 @@
     },
     {
       "id": 4,
-      "name": "Simfony",
+      "name": "Symfony",
       "school id": "5",
       "posts id": "4",
       "users id": "3",
