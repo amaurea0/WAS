@@ -4,18 +4,25 @@ WEA.config(function ($stateProvider) {
     $stateProvider
 
         .state({
-            name: 'questionscomplet',
-            url: '/questionscomplet',
-            component: 'questionsComplet',
-            resolve: {}
-        })
-
-        .state({
             name: 'questions',
             url: '/questions',
             component: 'questionsList',
             resolve: {
 
+            }
+        })
+
+        .state({
+            name: 'tags',
+            url: '/questions/:tagId/:tagName',
+            component: 'questionsList',
+            resolve: {
+                tagFilter: function ($stateParams) {
+                    return {
+                        tagId: $stateParams.tagId,
+                        tagName: $stateParams.tagName
+                    };
+                }
             }
         })
 
@@ -55,19 +62,6 @@ WEA.config(function ($stateProvider) {
             resolve: {}
         })
 
-        .state({
-            name: 'tags',
-            url: '/tabtest/:tagId/:tagName',
-            component: 'questionsTabTest',
-            resolve: {
-                tagFilter: function ($stateParams) {
-                    return {
-                        tagId: $stateParams.tagId,
-                        tagName: $stateParams.tagName
-                    };
-                }
-            }
-        })
 
         .state({
             name: 'addUser',
@@ -93,14 +87,6 @@ WEA.config(function ($stateProvider) {
             component: 'userLogin',
             resolve: {}
         })
-
-        .state({
-            name: 'tabtest',
-            url: '/tabtest',
-            component: 'questionsTabTest',
-            resolve: {}
-        })
-
 
 });
 

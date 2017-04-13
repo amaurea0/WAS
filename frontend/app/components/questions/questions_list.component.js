@@ -14,7 +14,30 @@ COMPNT
       tagFilter: '<'
     },
 
-    controller: ['QuestionsService', 'TaglinkService', function (QuestionsService, TaglinkService) {
+    controller: ['QuestionsService', 'TaglinkService', '$state',function (QuestionsService, TaglinkService, $state) {
+
+      this.tabsList = [
+        {
+          "view": "view1",
+          "label": "Plus populaire",
+          "sort": "-votes"
+        },
+        {
+          "view": "view2",
+          "label": "Plus vues",
+          "sort": "-nb_views"
+        },
+        {
+          "view": "view3",
+          "label": "Plus vues",
+          "sort": "-nb_views"
+        },
+        {
+          "view": "view4",
+          "label": "Plus vues",
+          "sort": "-nb_views"
+        }
+      ];
 
       this.model = {
         tagQuestionId: [],
@@ -44,10 +67,14 @@ COMPNT
       };
 
       this.getAllItems = () => {
-        QuestionsService.getQuestions('nb_views').then((items) => {
+        QuestionsService.getQuestions().then((items) => {
           this.questions = items;
           console.log(items);
         }).catch((err) => { });
+      };
+
+      this.removeTag = () => {
+        $state.go('questionscomplet');
       };
 
     }]

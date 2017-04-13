@@ -4,9 +4,9 @@
  * The recipesList component
  */
 COMPNT
-  .component("questionsTabTest", {
+  .component("questionsListv1", {
 
-    templateUrl: '/frontend/app/components/questions/questions_tabtest.html',
+    templateUrl: '/frontend/app/components/questions/questions_listv1.html',
 
     bindings: {
       list: '<',
@@ -14,30 +14,7 @@ COMPNT
       tagFilter: '<'
     },
 
-    controller: ['QuestionsService', 'TaglinkService', '$state',function (QuestionsService, TaglinkService, $state) {
-
-      this.tabsList = [
-        {
-          "view": "view1",
-          "label": "Plus populaire",
-          "sort": "-votes"
-        },
-        {
-          "view": "view2",
-          "label": "Plus vues",
-          "sort": "-nb_views"
-        },
-        {
-          "view": "view3",
-          "label": "Plus vues",
-          "sort": "-nb_views"
-        },
-        {
-          "view": "view4",
-          "label": "Plus vues",
-          "sort": "-nb_views"
-        }
-      ];
+    controller: ['QuestionsService', 'TaglinkService', function (QuestionsService, TaglinkService) {
 
       this.model = {
         tagQuestionId: [],
@@ -67,14 +44,10 @@ COMPNT
       };
 
       this.getAllItems = () => {
-        QuestionsService.getQuestions().then((items) => {
+        QuestionsService.getQuestions('nb_views').then((items) => {
           this.questions = items;
           console.log(items);
         }).catch((err) => { });
-      };
-
-      this.removeTag = () => {
-        $state.go('questionscomplet');
       };
 
     }]
