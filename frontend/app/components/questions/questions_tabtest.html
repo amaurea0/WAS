@@ -1,0 +1,51 @@
+<header>
+  <h1>Questions list</h1>
+  <a ui-sref="questionPost" ui-sref-active="select">Poser une question</a>
+</header>
+<div ng-if="$ctrl.questions.length > 0">
+
+    <span>{{$ctrl.tagFilter.tagName}}
+    <span ng-if="$ctrl.tagFilter.tagName" ng-click="$ctrl.removeTag()">x</span>
+  </span>
+  <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
+</div>
+
+<div class="container">
+
+    <div class="row">
+      <div class="col s12">
+        <ul tabs reload="allTabContentLoaded">
+          <li class="tab col s3"><a class="active" href="#{{$ctrl.tabsList[0].view}}">{{$ctrl.tabsList[0].label}}</a></li>
+          <li class="tab col s3"><a href="#{{$ctrl.tabsList[1].view}}">{{$ctrl.tabsList[1].label}}</a></li>
+          <li class="tab col s3"><a href="#{{$ctrl.tabsList[2].view}}">{{$ctrl.tabsList[2].label}}</a></li>
+          <li class="tab col s3"><a href="#{{$ctrl.tabsList[3].view}}">{{$ctrl.tabsList[3].label}}</a></li>
+        </ul>
+      </div>
+
+      <div ng-repeat="aTab in $ctrl.tabsList" id="{{aTab.view}}" class="col s12">
+
+        <div class="panel" ng-repeat="question in $ctrl.questions | filter : $ctrl.model.query | orderBy : aTab.sort">
+          <div id="left">
+            <div id="votes" ng-bind="question.votes"></div>
+            <div id="answers">
+              Réponses
+            </div>
+            <div ng-bind="question.views"></div>
+          </div>
+
+          <a ui-sref="questionSpec({questionId : question.id})">
+            <div id="center">
+              <h1 class="header" ng-bind="question.title"></h1>
+              <div ng-bind="question.body"></div>
+            </div>
+          </a>
+
+          <div id="right">
+            <img ng-src="{{question.user.avatar}}" alt="avatar">
+            <div ng-bind="question.date"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>

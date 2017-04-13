@@ -15,7 +15,7 @@ WEA.config(function ($stateProvider) {
             url: '/questions',
             component: 'questionsList',
             resolve: {
-                
+
             }
         })
 
@@ -57,8 +57,8 @@ WEA.config(function ($stateProvider) {
 
         .state({
             name: 'tags',
-            url: '/questionscomplet/:tagId/:tagName',
-            component: 'questionsComplet',
+            url: '/tabtest/:tagId/:tagName',
+            component: 'questionsTabTest',
             resolve: {
                 tagFilter: function ($stateParams) {
                     return {
@@ -95,11 +95,12 @@ WEA.config(function ($stateProvider) {
         })
 
         .state({
-            name: 'userprofile',
-            url: '/userprofile',
-            component: 'profil',
+            name: 'tabtest',
+            url: '/tabtest',
+            component: 'questionsTabTest',
             resolve: {}
-        });
+        })
+
 
 });
 
