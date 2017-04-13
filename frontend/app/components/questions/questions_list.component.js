@@ -74,7 +74,7 @@ COMPNT
       };
 
       this.removeTag = () => {
-        $state.go('questionscomplet');
+        $state.go('questions');
       };
 
     }]
