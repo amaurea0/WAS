@@ -5,7 +5,7 @@
  */
 COMPNT.component("questionPost", {
 
-  templateUrl: '/app/components/questions/question_post.html',
+  templateUrl: '/frontend/app/components/questions/question_post.html',
 
   bindings: {
     info: '<'

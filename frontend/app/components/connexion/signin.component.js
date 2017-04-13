@@ -5,7 +5,7 @@
  */
 COMPNT.component('userLogin', {
 
-    templateUrl: '/app/components/connexion/signin.html',
+    templateUrl: '/frontend/app/components/connexion/signin.html',
 
     bindings: {
 

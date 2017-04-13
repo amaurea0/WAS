@@ -1,0 +1,17 @@
+<head>
+  <link rel="stylesheet" href="/frontend/app/components/questions/index.css">
+</head>
+
+<header>
+  <h1>Questions list</h1>
+  <a ui-sref="questionPost" ui-sref-active="select">Poser une question</a>
+</header>
+<div>
+  <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
+  <span>{{$ctrl.tagFilter.tagName}}
+    <span ng-if="$ctrl.tagFilter.tagName" ng-click="$ctrl.removeTag()">x</span>
+  </span>
+</div>
+
+<tabs query="{{$ctrl.model.query}}" tag-filter="$ctrl.tagFilter">
+</tabs>
