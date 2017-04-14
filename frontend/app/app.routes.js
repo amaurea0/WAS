@@ -7,8 +7,17 @@ WEA.config(function ($stateProvider) {
             name: 'questions',
             url: '/questions',
             component: 'questionsList',
-            resolve: {
+            resolve: {}
+        })
 
+        .state({
+            name: 'users',
+            url: '/users',
+            component: 'usersList',
+            resolve: {
+                users: function ($rootScope, UsersService) {
+                    return UsersService.getUsers();
+                }
             }
         })
 
@@ -21,18 +30,7 @@ WEA.config(function ($stateProvider) {
                     return {
                         tagId: $stateParams.tagId,
                         tagName: $stateParams.tagName
-                    };
-                }
-            }
-        })
-
-        .state({
-            name: 'users',
-            url: '/users',
-            component: 'usersList',
-            resolve: {
-                users: function ($rootScope, UsersService, $transition$) {
-                    return UsersService.getUsers($transition$.params().personId);
+                    }
                 }
             }
         })
@@ -62,6 +60,16 @@ WEA.config(function ($stateProvider) {
             resolve: {}
         })
 
+        .state({
+            name: 'questionSpec',
+            url: '/questions/{idQuestion}',
+            component: 'questionFull',
+            resolve: {
+                question: function ($rootScope, QuestionsService, $transition$) {
+                    return QuestionsService.getSpecificQuestion($transition$.params().idQuestion);
+                }
+            }
+        })
 
         .state({
             name: 'addUser',
@@ -71,22 +79,16 @@ WEA.config(function ($stateProvider) {
         })
 
         .state({
-            name: 'questionSpec',
-            url: '/questions/{questionId}',
-            component: 'questionFull',
-            resolve: {
-                question: function ($rootScope, QuestionsService, $transition$) {
-                    return QuestionsService.getSpecificQuestion($transition$.params().questionId);
-                }
-            }
-        })
-
-        .state({
             name: 'logUser',
             url: '/logUser',
             component: 'userLogin',
             resolve: {}
         })
 
+        .state({
+            name: 'questionSpec.postAnswer',
+            url: '/newAnswer',
+            component: 'answerPost',
+            resolve: {}
+        })
 });
-
