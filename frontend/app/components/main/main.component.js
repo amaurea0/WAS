@@ -12,13 +12,19 @@ COMPNT
 
       function ($scope, INFO) {
 
-        this.info= {};
+        this.info = {};
 
         $scope.$on(INFO.userId, (event, key) => {
           this.info.userId = key;
-          console.log("éh la"+key)
+          console.log("éh la" + key)
         });
 
 
+        this.$onInit = () => {
+          this.rebindDropDowns = function () {
+            $('.dropdown-button').dropdown({ hover: true });
+          };
+        };
       }]
   });
+
