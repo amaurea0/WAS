@@ -110,4 +110,5 @@ WEA.config(function ($stateProvider) {
                 }
             }
         })
+
 });

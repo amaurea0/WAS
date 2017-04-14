@@ -6,7 +6,6 @@ COMPNT.component("answerPost", {
   templateUrl: '/frontend/app/components/answer_post/answer_post.html',
 
   bindings: {
-
   },
 
   controller: function (QuestionsService, $scope, $http, $rootScope, $state) {
