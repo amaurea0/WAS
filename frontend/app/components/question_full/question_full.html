@@ -30,9 +30,9 @@
     <div id="answers" ng-repeat="answer in $ctrl.question.answers | filter : $ctrl.model.query">
         <table>
             <tr>
+                <td ng-bind="answer.title"></td>
+                <td ng-bind="answer.content"></td>
                 <td ng-bind="answer.date"></td>
-                <td ng-bind="answer.body"></td>
-                <td ng-bind="answer.views"></td>
                 <td ng-bind="answer.votes"></td>
             </tr>
         </table>

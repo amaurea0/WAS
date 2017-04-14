@@ -5,34 +5,35 @@ COMPNT.component("answerPost", {
 
   templateUrl: '/app/components/answer_post/answer_post.html',
 
-  bindings: {},
+  bindings: {
 
-  controller: ['QuestionsService', '$scope',
+  },
 
-    function (QuestionsService, $scope, $rootScope) {
+  controller: function (QuestionsService, $scope, $http, $rootScope, $state) {
+
+    var currentId = $scope.$parent.$ctrl.question.id;
+
+    this.saveAnswer = () => {
+      var new_answer = {
+        "title": this.answer.title,
+        "content": this.answer.content,
+        "nb_views": "",
+        "votes": "",
+        "date": new Date(),
+        // "userId": this.details.user.id,
+        "questionId": currentId
+      }
+
+      QuestionsService.postAnswer(new_answer).then((response) => {
+        console.log('POST :' + response + 'is posted');
+        $state.go('questionSpec', {
+          idQuestion: currentId
+        });
+      }).catch((err) => {
+        alert("ERROR :" + err);
+      });
 
 
-      // console.log($rootScope);
-      // console.log($scope.$parent);
-      // Save the new answer
-      this.saveAnswer = () => {
-        var new_answer = {
-          "title": this.answer.title,
-          "content": this.answer.content,
-          "nb_views": "",
-          "votes": "",
-          "date": new Date(),
-          // "userId": this.details.user.id,
-          "questionId": $scope.$parent.$ctrl.question.id
-        }
-
-        console.log(this);
-
-        QuestionsService.postAnswer(new_answer).then((items) => {
-          // $state.go('list');
-          console.log('yeeeah');
-        }).catch((err) => {});
-      };
     }
-  ]
-});
+  }
+})

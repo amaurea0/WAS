@@ -1,6 +1,5 @@
 {
-  "questions": [
-    {
+  "questions": [{
       "title": "q69 votes 100 ",
       "content": "q",
       "nb_views": 69,
@@ -44,10 +43,27 @@
       "date": "2017-04-08T09:25:09.366Z",
       "userId": 1,
       "id": 23
+    },
+    {
+      "title": "comment on fait ?",
+      "content": "blablabla",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-13T09:24:16.081Z",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "title": "comment on fait ?",
+      "content": "blablabla",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-13T09:24:18.533Z",
+      "userId": 3,
+      "id": 3
     }
   ],
-  "users": [
-    {
+  "users": [{
       "email": "laetitiadervaux33@gmail.com",
       "pass": "passWCS",
       "id": 1,
@@ -70,8 +86,7 @@
       "id": 4
     }
   ],
-  "tags": [
-    {
+  "tags": [{
       "id": 1,
       "name": "Javascript",
       "school id": "5",
@@ -108,8 +123,7 @@
       "promotion id": "Février 2017"
     }
   ],
-  "taglinks": [
-    {
+  "taglinks": [{
       "questionId": 23,
       "tagId": 2,
       "id": 1
@@ -143,6 +157,218 @@
       "questionId": 15,
       "tagId": 2,
       "id": 7
+    }
+  ],
+  "answers": [{
+      "title": "Responsive div/container - Fixed Soze",
+      "content": "utouytiut",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-12T09:50:23.819Z",
+      "id": 1,
+      "questionId": 1
+    },
+    {
+      "title": "Responsive div/container - Fixed Soze",
+      "content": "utouytiut",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-12T09:50:23.819Z",
+      "id": 2,
+      "questionId": 2
+    },
+    {
+      "title": "hiuoiuo",
+      "content": "utouytiut",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-12T09:51:03.968Z",
+      "id": 3,
+      "questionId": 3
+    },
+    {
+      "title": "Responsive div/container - Fixed Soze",
+      "content": "utouytiut",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-12T09:54:21.521Z",
+      "id": 4,
+      "questionId": 1
+    },
+    {
+      "title": "Responsive div/container - Fixed Soze",
+      "content": "utouytiut",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-12T09:55:44.042Z",
+      "id": 5,
+      "questionId": 2
+    },
+    {
+      "title": "spokclvjdslk",
+      "content": "smldkfsmldkfmldskf",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-12T11:37:56.086Z",
+      "id": 6,
+      "questionId": 3
+    },
+    {
+      "title": "Responsive div/container - Fixed Soze",
+      "content": "utouytiut",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-12T11:48:03.147Z",
+      "id": 7,
+      "questionId": 1
+    },
+    {
+      "title": "fuck you",
+      "content": "you're a beast Enzzzo",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-12T13:01:06.044Z",
+      "id": 8,
+      "questionId": 2
+    },
+    {
+      "title": "essaie décisif",
+      "content": "ma vie se joue la dessus",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-12T13:01:26.350Z",
+      "postId": 4,
+      "id": 9,
+      "questionId": 3
+    },
+    {
+      "title": "sldkfjs",
+      "content": "sdlkfdsfjds",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-12T13:06:07.016Z",
+      "postId": 4,
+      "id": 10,
+      "questionId": 1
+    },
+    {
+      "title": "smldfkjmldsqkjf",
+      "content": "sqmlkdfjmsqldkfjsq",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-12T13:12:17.694Z",
+      "postId": 4,
+      "id": 11,
+      "questionId": 2
+    },
+    {
+      "title": "smldfkjmldsqkjf",
+      "content": "sqmlkdfjmsqldkfjsq",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-12T13:12:19.061Z",
+      "postId": 4,
+      "id": 12,
+      "questionId": 3
+    },
+    {
+      "title": "smldfkjmldsqkjf",
+      "content": "sqmlkdfjmsqldkfjsq",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-12T13:12:24.897Z",
+      "questionId": 4,
+      "id": 13
+    },
+    {
+      "title": "smldfkjmldsqkjf",
+      "content": "sqmlkdfjmsqldkfjsq",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-12T13:12:25.364Z",
+      "questionId": 4,
+      "id": 14
+    },
+    {
+      "title": "smldfkjmldsqkjf",
+      "content": "sqmlkdfjmsqldkfjsq",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-12T13:12:25.547Z",
+      "questionId": 4,
+      "id": 15
+    },
+    {
+      "title": "test bastien",
+      "content": "test de ouf bastien",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-13T19:09:28.514Z",
+      "questionId": 1,
+      "id": 16
+    },
+    {
+      "title": "test2",
+      "content": "blabla",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-13T19:11:26.001Z",
+      "questionId": 1,
+      "id": 17
+    },
+    {
+      "title": "allo",
+      "content": "allo",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-13T19:12:13.311Z",
+      "questionId": 2,
+      "id": 18
+    },
+    {
+      "title": "Responsive div/container - Fixed Soze",
+      "content": "utouytiut",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-13T19:12:59.631Z",
+      "questionId": 3,
+      "id": 19
+    },
+    {
+      "title": "test 3",
+      "content": "test3",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-13T19:16:40.214Z",
+      "questionId": 3,
+      "id": 20
+    },
+    {
+      "title": "test final",
+      "content": "test final",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-13T19:17:29.206Z",
+      "questionId": 1,
+      "id": 21
+    },
+    {
+      "title": "fuck you",
+      "content": "utouytiut",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-13T19:19:36.013Z",
+      "questionId": 1,
+      "id": 22
+    },
+    {
+      "title": "test aurore",
+      "content": "test sacha",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-14T07:41:46.952Z",
+      "questionId": 3,
+      "id": 23
     }
   ]
 }

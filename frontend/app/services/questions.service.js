@@ -1,6 +1,7 @@
 'use strict';
 
 const QST_URL = "http://localhost:3000/questions";
+const ASW_URL = "http://localhost:3000/answers";
 
 
 SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $log, $q) {
@@ -17,6 +18,20 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
             }
         );
         return deferred.promise;
+    };
+
+    this.postAnswer = function (answer) {
+        var defer = $q.defer();
+        $http.post(ASW_URL, answer).then(
+            function (response) {
+                defer.resolve(response.data);
+            },
+            function (error) {
+                defer.reject(error);
+                $log.error(error);
+            }
+        );
+        return defer.promise;
     };
 
     this.getQuestions = () => {
@@ -75,4 +90,18 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
 
         return defer.promise;
     };
+
+    // this.saveContent = (param) => {
+
+    //     var defer = $q.defer();
+
+    //     $http.patch(QST_URL + '/' + param).then((response) => {
+    //         defer.resolve(response.data);
+    //     }).catch((error) => {
+    //         $log.debug(`SVC: ERROR!!! ${err}`);
+    //         defer.reject(error);
+    //     });
+
+    //     return defer.promise;
+    // };
 }]);
