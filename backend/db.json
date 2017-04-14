@@ -44,26 +44,9 @@
       "date": "2017-04-08T09:25:09.366Z",
       "userId": 1,
       "id": 23
-    },
-    {
-      "title": "comment on fait ?",
-      "content": "blablabla",
-      "nb_views": "",
-      "votes": "",
-      "date": "2017-04-13T09:24:16.081Z",
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "title": "comment on fait ?",
-      "content": "blablabla",
-      "nb_views": "",
-      "votes": "",
-      "date": "2017-04-13T09:24:18.533Z",
-      "userId": 3,
-      "id": 3
     }
   ],
+  
   "users": [
     {
       "email": "laetitiadervaux33@gmail.com",
@@ -228,7 +211,7 @@
       "questionId": 1
     },
     {
-      "title": "fuck you",
+      "title": "Haloooo",
       "content": "you're a beast Enzzzo",
       "nb_views": "",
       "votes": "",
@@ -358,7 +341,7 @@
       "id": 21
     },
     {
-      "title": "fuck you",
+      "title": "foukiou",
       "content": "utouytiut",
       "nb_views": "",
       "votes": "",
