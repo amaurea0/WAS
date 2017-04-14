@@ -91,4 +91,15 @@ WEA.config(function ($stateProvider) {
             component: 'answerPost',
             resolve: {}
         })
+
+        .state({
+            name: 'editPost',
+            url: '/edit/{postId}',
+            component: 'editPost',
+            resolve: {
+                post: function ($rootScope, QuestionsService, $transition$) {
+                    return QuestionsService.getSpecificQuestion($transition$.params().postId);
+                }
+            }
+        })
 });

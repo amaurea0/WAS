@@ -2,26 +2,33 @@
 
 COMPNT.component("editPost", {
 
-    templateUrl: '/app/components/question_post/question_post.html',
+    templateUrl: '/frontend/app/components/edit_post/edit_post.html',
 
     bindings: {
-        info: '<'
+        post: '<'
     },
 
-    controller: function (QuestionsService, $scope) {
+    controller: function (QuestionsService, $scope, $state) {
 
-        this.editContent = () => {
-            new_content = {
-                "title": content.title,
-                "body": content.body
+        this.editContent = (post) => {
+
+            var currentId = this.post.id;
+
+            var new_content = {
+                "title": this.post.title,
+                "content": this.post.content
             };
 
-            if (USER_AUTHENTICATED) {
-                EditServices.saveContent(new_content).then((items) => {
-                    // $state.go('list');
-                    console.log('yeeeah');
-                }).catch((err) => {});
-            };
+            console.log(new_content);
+
+            QuestionsService.updateContent(currentId, new_content).then((response) => {
+                console.log('POST :' + response + 'is updated !');
+                $state.go('questionSpec', {
+                    idQuestion: currentId
+                });
+            }).catch((err) => {
+                alert("ERROR :" + err);
+            })
         }
     }
 });
