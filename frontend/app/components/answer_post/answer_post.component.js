@@ -3,7 +3,7 @@
 
 COMPNT.component("answerPost", {
 
-  templateUrl: '/app/components/answer_post/answer_post.html',
+  templateUrl: '/frontend/app/components/answer_post/answer_post.html',
 
   bindings: {
 
