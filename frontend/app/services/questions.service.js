@@ -91,6 +91,18 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         return defer.promise;
     };
 
+this.updateContent = (id, content) => {
+    var defer = $q.defer();
+
+    $http.patch(QST_URL + '/' + id, content).then((response) => {
+        defer.resolve(response.data);
+    }).catch((error) => {
+        $log.debug(`SVC: ERROR!!! ${err}`);
+        defer.reject(error);
+    });
+
+    return defer.promise;
+};
     // this.saveContent = (param) => {
 
     //     var defer = $q.defer();
