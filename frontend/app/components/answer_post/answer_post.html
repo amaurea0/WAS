@@ -1,0 +1,16 @@
+<h3>Nouvelle Réponse</h3>
+<form ng-submit="$ctrl.saveAnswer($ctrl.answer)" novalidate>
+    <div class="form-group">
+        <label for="title">Titre réponse</label>
+        <input type="text" class="form-control" id="title" ng-model="$ctrl.answer.title" />
+    </div>
+    <div class="form-group">
+        <label for="content">Content</label>
+        <input type="text" class="form-control" id="content" ng-model="$ctrl.answer.content" />
+    </div>
+    <div class="item-actions">
+
+        <input class="btn btn-success" type="submit" value="Valider" />
+
+    </div>
+</form>

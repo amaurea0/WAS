@@ -14,7 +14,8 @@
     </div>
     <div id="center">
         <div ng-bind="$ctrl.question.title"></div>
-        <div ng-bind="$ctrl.question.body"></div>
+        <div ng-bind="$ctrl.question.content"></div>
+        <button ui-sref="editPost({postId : $ctrl.question.id})">EDITION</button>
     </div>
     <div id="right">
         <img ng-src="{{$ctrl.question.user.avatar}}" alt="avatar">
@@ -22,13 +23,20 @@
     </div>
 
 </div>
+
+
+<a ui-sref="questionSpec.postAnswer"><button type="">Nouvelle Réponse</button></a>
+
+<ui-view></ui-view>
+
+
 <div ng-if="$ctrl.question.answers.length > 0">
     <div id="answers" ng-repeat="answer in $ctrl.question.answers | filter : $ctrl.model.query">
         <table>
             <tr>
+                <td ng-bind="answer.title"></td>
+                <td ng-bind="answer.content"></td>
                 <td ng-bind="answer.date"></td>
-                <td ng-bind="answer.body"></td>
-                <td ng-bind="answer.views"></td>
                 <td ng-bind="answer.votes"></td>
             </tr>
         </table>

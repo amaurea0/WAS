@@ -9,7 +9,6 @@
     list-style: none;
 }
 
-
 .msg {
     display: block;
     color: red;
@@ -18,10 +17,11 @@
 input {
     width: 200px;
     height: 30px;
-    margin : 20px;
+    margin: 20px;
     border: 1px solid grey;
     border-radius: 4px;
 }
+
 button[type=submit] {
     font-size: 1.2em;
     background-color: orange;
@@ -80,7 +80,7 @@ button[type=submit] {
     padding: 10px;
     display: flex;
     flex-direction: row;
-    background: #FBA858;
+    margin: 10px;
 }
 
 #center {
@@ -88,6 +88,7 @@ button[type=submit] {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: solid black 2px;
 }
 
 #votes {
