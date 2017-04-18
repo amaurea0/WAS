@@ -3,14 +3,12 @@
     <input class="form-control" placeholder="Rechercher..." ng-model="$ctrl.nuage.query" />
 
     <table class="table">
-        <tr ng-repeat="tag in $ctrl.nuage.list">
-            <td>
-                <!--<button ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">{{tag.name}}
-            </button>-->
+        <ul ng-repeat="tag in $ctrl.nuage.list">
+            <li>
                 <button class="chip" ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">
                     {{tag.name}}
                 </button>
-            </td>
-        </tr>
+            </li>
+        </ul>
     </table>
 </div>

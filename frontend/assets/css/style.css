@@ -49,7 +49,7 @@ img {
 }
 
 /*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
-
+/*
 #user {
     display: flex;
     flex-direction: row;
@@ -58,10 +58,10 @@ img {
     padding: 10px;
 }
 
-#user img {
+#user img {*/
     /*width: 150px;
     height: 150px;*/
-}
+/*}
 
 #bio {
     display: flex;
@@ -85,7 +85,7 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
+}*/
 
 
 /*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS*/
@@ -112,4 +112,16 @@ img {
 
 #answers {
     color: blue;
+}
+
+/*ICI VIENT LE STYLE DU FOOTER*/
+
+.page-footer {
+    background-color: #455a64 !important;
+    max-height: 70px;
+}
+
+.page-footer img {
+    max-height: 80px;
+    padding-bottom:40px;
 }
