@@ -32,6 +32,7 @@ WEA.config(function ($stateProvider) {
                         tagName: $stateParams.tagName
                     }
                 }
+
             }
         })
 
@@ -66,7 +67,14 @@ WEA.config(function ($stateProvider) {
             component: 'questionFull',
             resolve: {
                 question: function ($rootScope, QuestionsService, $transition$) {
-                    return QuestionsService.getSpecificQuestion($transition$.params().idQuestion);
+                    var nb_view;
+                    var id_question = $transition$.params().idQuestion;
+                    QuestionsService.getSpecificQuestion(id_question).then((resp) => {
+                        nb_view = resp.nb_views + 1;
+                        QuestionsService.viewQuestion(id_question, {"nb_views": nb_view}).then((rep) => {
+                            return QuestionsService.getSpecificQuestion(id_question);
+                        })
+                    }).catch((err) => { });;
                 }
             }
         })

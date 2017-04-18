@@ -51,7 +51,7 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
 
     this.getQuestionsTag = (tagid) => {
         var deferred = $q.defer();
-        $http.get(QST_URL + '?tagsId='+tagid+'&_expand=user').then(
+        $http.get(QST_URL + '?tagsId=' + tagid + '&_expand=user').then(
             function (response) {
                 deferred.resolve(response.data);
             },
@@ -65,7 +65,7 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
 
     this.getQuestionId = (id) => {
         var deferred = $q.defer();
-        $http.get(QST_URL + '?id='+id+'&_expand=user').then(
+        $http.get(QST_URL + '?id=' + id + '&_expand=user').then(
             function (response) {
                 deferred.resolve(response.data);
             },
@@ -91,18 +91,33 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         return defer.promise;
     };
 
-this.updateContent = (id, content) => {
-    var defer = $q.defer();
+    this.updateContent = (id, content) => {
+        var defer = $q.defer();
 
-    $http.patch(QST_URL + '/' + id, content).then((response) => {
-        defer.resolve(response.data);
-    }).catch((error) => {
-        $log.debug(`SVC: ERROR!!! ${err}`);
-        defer.reject(error);
-    });
+        $http.patch(QST_URL + '/' + id, content).then((response) => {
+            defer.resolve(response.data);
+        }).catch((error) => {
+            $log.debug(`SVC: ERROR!!! ${err}`);
+            defer.reject(error);
+        });
 
-    return defer.promise;
-};
+        return defer.promise;
+    };
+
+    this.viewQuestion = (question_id, view) => {
+
+        var defer = $q.defer();
+
+        $http.patch(QST_URL + '/' + question_id, view).then((response) => {
+            defer.resolve(response.data);
+        }).catch((err) => {
+            $log.debug(`SVC: ERROR!!! ${err}`);
+            defer.reject(err);
+        });
+
+        return defer.promise;
+    };
+
     // this.saveContent = (param) => {
 
     //     var defer = $q.defer();
