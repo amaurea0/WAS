@@ -1,15 +1,17 @@
-<h1>Connecte toi</h1>
-<div class ="log">
-    <form name="loginUserForm" novalidate>
-        <label for="email">Ton email</label><br />
-        <input type="email" name="email" id="email" ng-model="$ctrl.user.email" required /><br />
+<div class="container">
+    <h1>Connecte toi</h1>
+    <div class="log">
+        <form name="loginUserForm" novalidate>
+            <label for="email">Ton email</label><br />
+            <input type="email" name="email" id="email" ng-model="$ctrl.user.email" required /><br />
 
 
-        <label for="pass">Ton mot de passe</label><br />
-        <input type="password" name="pass" id="pass" ng-model="$ctrl.user.password" required /><br />
-         
+            <label for="pass">Ton mot de passe</label><br />
+            <input type="password" name="pass" id="pass" ng-model="$ctrl.user.password" required /><br />
 
-        <button type="submit" ng-click="$ctrl.login()">LOG</button>
-        <a href="#/addUser" class="btn btn-link">créer un compte</a>
-    </form>
+
+            <button type="submit" ng-click="$ctrl.login()">LOG</button>
+            <a href="#/addUser" class="btn btn-link">créer un compte</a>
+        </form>
+    </div>
 </div>

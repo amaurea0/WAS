@@ -1,51 +1,46 @@
-<header>
+<div class="container">
+  
   <h1>Questions list</h1>
-  <a ui-sref="questionPost" ui-sref-active="select">Poser une question</a>
-</header>
+  <a class="btn-floating btn-large waves-effect waves-light red" ui-sref="questionPost" ui-sref-active="select"><i class="material-icons">add</i></a>
+</div>
 <div ng-if="$ctrl.questions.length > 0">
-
-    <span>{{$ctrl.tagFilter.tagName}}
-    <span ng-if="$ctrl.tagFilter.tagName" ng-click="$ctrl.removeTag()">x</span>
-  </span>
-  <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
+  <div class="chip" ng-show="$ctrl.tagFilter.tagName.length >0">
+    {{$ctrl.tagFilter.tagName}}
+    <i class="close material-icons" ng-if="$ctrl.tagFilter.tagName" ng-click="$ctrl.removeTag()">close</i>
+  </div>
 </div>
 
 <div class="container">
 
-    <div class="row">
-      <div class="col s12">
-        <ul tabs reload="allTabContentLoaded">
-          <li class="tab col s3"><a class="active" href="#{{$ctrl.tabsList[0].view}}">{{$ctrl.tabsList[0].label}}</a></li>
-          <li class="tab col s3"><a href="#{{$ctrl.tabsList[1].view}}">{{$ctrl.tabsList[1].label}}</a></li>
-          <li class="tab col s3"><a href="#{{$ctrl.tabsList[2].view}}">{{$ctrl.tabsList[2].label}}</a></li>
-          <li class="tab col s3"><a href="#{{$ctrl.tabsList[3].view}}">{{$ctrl.tabsList[3].label}}</a></li>
-        </ul>
-      </div>
-
-      <div ng-repeat="aTab in $ctrl.tabsList" id="{{aTab.view}}" class="col s12">
-
-        <div class="panel" ng-repeat="question in $ctrl.questions | filter : $ctrl.model.query | orderBy : aTab.sort">
-          <div id="left">
-            <div id="votes" ng-bind="question.votes"></div>
-            <div id="answers">
-              Réponses
-            </div>
-            <div ng-bind="question.views"></div>
-          </div>
-
-          <a ui-sref="questionSpec({idQuestion : question.id})">
-            <div id="center">
-              <h1 class="header" ng-bind="question.title"></h1>
-              <div ng-bind="question.body"></div>
-            </div>
-          </a>
-
-          <div id="right">
-            <img ng-src="{{question.user.avatar}}" alt="avatar">
-            <div ng-bind="question.date"></div>
-          </div>
-        </div>
-      </div>
+  <div class="row">
+    <div class="col s12">
+      <ul tabs reload="allTabContentLoaded">
+        <li class="tab col s3"><a class="active" href="#{{$ctrl.tabsList[0].view}}">{{$ctrl.tabsList[0].label}}</a></li>
+        <li class="tab col s3"><a href="#{{$ctrl.tabsList[1].view}}">{{$ctrl.tabsList[1].label}}</a></li>
+        <li class="tab col s3"><a href="#{{$ctrl.tabsList[2].view}}">{{$ctrl.tabsList[2].label}}</a></li>
+        <li class="tab col s3"><a href="#{{$ctrl.tabsList[3].view}}">{{$ctrl.tabsList[3].label}}</a></li>
+      </ul>
     </div>
 
-  </div>
+    <div ng-repeat="aTab in $ctrl.tabsList" id="{{aTab.view}}" class="col s12">
+
+      <div class="panel" ng-repeat="question in $ctrl.questions | filter : $ctrl.model.query | orderBy : aTab.sort">
+        <div class="col s12 m7" ui-sref="questionSpec({idQuestion : question.id})">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img ng-src="{{question.user.avatar}}" alt="avatar">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h2 ng-bind="question.title"></h2>
+                <p ng-bind="question.body"></p>
+              </div>
+              <div class="card-action">
+                <a ng-bind="question.date" </a>
+                  <a ng-bind="question.tag" </a>
+                    <a ng-bind="question.votes"</a>
+                      <a ng-bind="question.views"</a>
+              </div>
+            </div>
+          </div>
+        </div>

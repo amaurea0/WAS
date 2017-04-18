@@ -71,6 +71,24 @@
       "date": "2017-04-14T11:56:17.597Z",
       "userId": 1,
       "id": 26
+    },
+    {
+      "title": "Navbar bootstrap avec angular",
+      "content": "Je souhaite mettre en place une navbar bootstrap mais j'ai un problème de compatibilité avec angular.",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-17T15:28:44.873Z",
+      "userId": 1,
+      "id": 27
+    },
+    {
+      "title": "Je souhaite poser cette question, comment faire ?",
+      "content": "Pierre Test 2",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-17T17:51:13.675Z",
+      "userId": 1,
+      "id": 28
     }
   ],
   "users": [
@@ -180,6 +198,11 @@
       "questionId": 25,
       "tagId": 2,
       "id": 9
+    },
+    {
+      "questionId": 28,
+      "tagId": 3,
+      "id": 10
     }
   ],
   "answers": [

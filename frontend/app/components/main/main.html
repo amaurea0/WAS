@@ -1,33 +1,54 @@
-<header class="navbar-fixed">
-    <nav class="header">
-        <ul class="nav menu nav-wrapper">
+<!--Trigger du DropDown-button-->
+<ul id="administracion" class="dropdown-content">
+    <li ng-init="$ctrl.rebindDropDowns()">
+        <a ui-sref="logUser" ui-sref-active="select">Connexion</a>
+    </li>
+    <li class="divider"></li>
+    <li ng-init="$ctrl.rebindDropDowns()">
+        <a ui-sref="userprofile" ui-sref-active="select">Profile</a>
+    </li>
+</ul>
+
+<!--Barre de Nav-->
+<nav>
+    <div class="nav-wrapper container">
+        <a class="brand-logo"><img src="frontend/assets/img/logo_orange_pastille.png" alt="logo"></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-small-only" data-activates="mobile-demo">
+            <li>
+                <form method="get" action="/search" id="search">
+                    <input name="q" type="text" size="40" placeholder="Search..." />
+                </form>
+            </li>
+            <li><a ui-sref="questions" ui-sref-active="select"><i class="material-icons">view list</i></a></li>
+            <li><a ui-sref="users" ui-sref-active="select"><i class="material-icons">group</i></a></li>
+            <li><a ui-sref="jobs" ui-sref-active="select"><i class="material-icons">work</i></a></li>
+            <li><a ui-sref="tips" ui-sref-active="select"><i class="material-icons">lightbulb_outline</i></a></li>
+            <li><a ui-sref="nuage" ui-sref-active="select"><i class="material-icons">code_tags</i></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="administracion"><i class="material-icons">face</i></a></li>
+        </ul>
+
+        <!--Barre de nav 'sidebar' version mobile-->
+        <ul class="side-nav" id="mobile-demo">
             <li><a ui-sref="questions" ui-sref-active="select">Questions</a></li>
             <li><a ui-sref="users" ui-sref-active="select">Users</a></li>
             <li><a ui-sref="jobs" ui-sref-active="select">Jobs</a></li>
-            <li><a ui-sref="nuage" ui-sref-active="select">Nuage</a></li>
             <li><a ui-sref="tips" ui-sref-active="select">Tips</a></li>
-            <li><a ui-sref="userprofile" ui-sref-active="select">Profile</a></li>
-            <li><a ui-sref="logUser" ui-sref-active="select">Se connecter</a></li>
-            <login></login>
-
-            <!--<li class="dropdown-button" data-activates="administracion">
-                Ola
-                <ul id="administracion" class="dropdown-content">
-                    <li ng-init="$ctrl.rebindDropDowns()">
-                        <a ng-href="">test1</a>
-                    </li>
-                    <li ng-init="$$ctrl.rebindDropDowns()">
-                        <a ng-href="">test2</a>
-                    </li>
-                </ul>
-            </li>-->
+            <li><a ui-sref="nuage" ui-sref-active="select">Tags</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="administracion"><i class="material-icons">face</i></a></li>
         </ul>
-    </nav>
-</header>
+    </div>
+</nav>
 
+<!--Effet parallax Materialize-->
+<div class="parallax-container">
+    <div parallax ng-init="$ctrl.parallax()"><img src="frontend/assets/img/header_background.jpg"></div>
+</div>
 
 
 <ui-view info=$ctrl.info></ui-view>
+
+
 
 <footer>
     <ul>

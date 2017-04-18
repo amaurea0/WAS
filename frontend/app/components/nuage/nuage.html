@@ -1,11 +1,16 @@
-<h1>NUAGE</h1>
-<input class="form-control" placeholder="Rechercher..." ng-model="$ctrl.nuage.query" />
+<div class="container">
+    <h1>NUAGE</h1>
+    <input class="form-control" placeholder="Rechercher..." ng-model="$ctrl.nuage.query" />
 
-<table class="table">
-    <tr ng-repeat="tag in $ctrl.nuage.list">
-        <td>
-            <button ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select" >{{tag.name}}
-            </button>
-        </td>
-    </tr>
-</table>
+    <table class="table">
+        <tr ng-repeat="tag in $ctrl.nuage.list">
+            <td>
+                <!--<button ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">{{tag.name}}
+            </button>-->
+                <button class="chip" ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">
+                    {{tag.name}}
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>

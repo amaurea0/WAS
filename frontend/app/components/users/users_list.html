@@ -1,16 +1,17 @@
-<header>
-    <h1>Users list</h1>
-    <div><a ui-sref="addUser" ui-sref-active="select">S'enregistrer</a></div>
+<div class="container">
+    <header>
+        <h1>Users list</h1>
+        <div><a ui-sref="addUser" ui-sref-active="select">S'enregistrer</a></div>
 
-</header>
-<div ng-if="$ctrl.users.length > 0">
-    <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
-    <div id="user" ng-repeat="user in $ctrl.users | filter : $ctrl.model.query">
-        <a ui-sref="person({personId : user.id})"> <img ng-src="{{user.avatar}}" alt="photo">
-            <div id="bio">
-                <div id="head"><span ng-bind="user.first_name"></span> <span ng-bind="user.last_name"></span></div>
-                <div id="body">
-                    <div><span ng-bind="user.pseudo"></div>
+    </header>
+    <div ng-if="$ctrl.users.length > 0">
+        <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
+        <div id="user" ng-repeat="user in $ctrl.users | filter : $ctrl.model.query">
+            <a ui-sref="person({personId : user.id})"> <img ng-src="{{user.avatar}}" alt="photo">
+                <div id="bio">
+                    <div id="head"><span ng-bind="user.first_name"></span> <span ng-bind="user.last_name"></span></div>
+                    <div id="body">
+                        <div><span ng-bind="user.pseudo"></div>
             <div>Job</div>
             <div><span ng-bind="user.ville"></div>
         </div>
@@ -20,5 +21,6 @@
             <div><button type="">Full Profile</button></div>
         </div>
     </div></a>
+</div>
 </div>
 </div>
