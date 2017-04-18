@@ -1,19 +1,21 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
-<div class="row">
-  <form class="col s12">
-    <div class="row">
-      <div class="col s5">
-        <div class="imgavatar" ng-style="{'background-image': 'url(' + $ctrl.userProfil.avatar + ')'}"></div>
-      </div>
-      <a href="#" ng-click="$ctrl.identify()">Je m'identifie à la va vite hh</a>
-      <div class="col s7">
-        <div class="input-field col s6">
-          <input id="1" type="text" class="validate">
-          <label for="1" ng-bind="$ctrl.userProfil.nom"></label>
+<div class="container">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="col s5">
+          <div class="imgavatar" ng-style="{'background-image': 'url(' + $ctrl.userProfil.avatar + ')'}"></div>
         </div>
-        <div class="input-field col s6">
-          <input id="2" type="text" class="validate">
-          <label for="2" ng-bind="$ctrl.userProfil.prenom">
+        <a href="#" ng-click="$ctrl.identify()">Je m'identifie à la va vite hh</a>
+        <div class="col s7">
+          <div class="input-field col s6">
+            <input id="1" type="text" class="validate">
+            <label for="1" ng-bind="$ctrl.userProfil.nom"></label>
+          </div>
+          <div class="input-field col s6">
+            <input id="2" type="text" class="validate">
+            <label for="2" ng-bind="$ctrl.userProfil.prenom">
+        </div>
         </div>
       <div class="row">
         <div class="input-field col s6">
@@ -29,21 +31,22 @@
         <div class="input-field col s12">
           <input id="email" type="email" class="validate">
           <label for="email" ng-bind="$ctrl.userProfil.facebook"></label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email" ng-bind="$ctrl.userProfil.twitter"></label>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email" ng-bind="$ctrl.userProfil.twitter"></label>
+          </div>
         </div>
+    </form>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <blockquote>
+          <div ng-bind="$ctrl.userProfil.resumer"></div>
+        </blockquote>
       </div>
-  </form>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col s12">
-    <blockquote>
-      <div ng-bind="$ctrl.userProfil.resumer"></div>
-    </blockquote>
-  </div>
-</div>

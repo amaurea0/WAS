@@ -23,6 +23,8 @@ COMPNT
         this.$onInit = () => {
           this.rebindDropDowns = function () {
             $('.dropdown-button').dropdown({ hover: true });
+            $('.button-collapse').sideNav();
+            $('.parallax').parallax();
           };
         };
       }]
