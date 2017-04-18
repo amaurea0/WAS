@@ -111,4 +111,18 @@ WEA.config(function ($stateProvider) {
             }
         })
 
+
+        .state({
+            name: 'tips',
+            url: '/tips',
+            component: 'tips',
+            resolve: {}
+        })
+
+        .state({
+            name: 'tips.postTip',
+            url: '/post',
+            component: 'postTip',
+            resolve: {}
+        })
 });

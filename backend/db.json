@@ -21,7 +21,7 @@
     {
       "title": "Hello ?",
       "content": "a",
-      "nb_views": 49,
+      "nb_views": 50,
       "votes": 871,
       "date": "2017-04-08T01:51:51.436Z",
       "userId": 3,
@@ -574,6 +574,48 @@
       "date": "2017-04-14T13:45:04.959Z",
       "questionId": 14,
       "id": 28
+    }
+  ],
+  "tips": [
+    {
+      "id": 0,
+      "content": "on pense à bien indenter son code !",
+      "url": "http://mrbool.com/importance-of-code-indentation/29079"
+    },
+    {
+      "id": 1,
+      "content": "ne pas se répéter...",
+      "url": "https://en.wikipedia.org/wiki/Don%27t_repeat_yourself"
+    },
+    {
+      "content": "le Dieu Google...",
+      "url": "www.google.fr",
+      "id": 2
+    },
+    {
+      "content": "lolilol",
+      "url": "www.google.fr",
+      "id": 3
+    },
+    {
+      "content": "coucou Pierre",
+      "url": "www.pierre.com",
+      "id": 4
+    },
+    {
+      "content": "bleu",
+      "url": "www.bleu.fr",
+      "id": 5
+    },
+    {
+      "content": "julien",
+      "url": "http://www.google.fr",
+      "id": 6
+    },
+    {
+      "content": "t-nation",
+      "url": "http://www.t-nation.com",
+      "id": 7
     }
   ]
 }

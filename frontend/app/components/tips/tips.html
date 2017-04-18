@@ -1,0 +1,9 @@
+<button type="submit" ui-sref="tips.postTip">Poste une nouvelle astuce !</button>
+
+<ui-view></ui-view>
+
+<div ng-if="$ctrl.tips.length > 0">
+    <div ng-repeat="tip in $ctrl.tips">
+        <span ng-bind="tip.content"></span> <a target="_blank" href="{{tip.url}}"><span>&#9758;</span></a>
+    </div>
+</div>
