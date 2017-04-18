@@ -44,6 +44,10 @@ img {
       margin-left: -8px;
     }
 
+.chip {
+    border-style: none;
+}
+
 /*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
 
 #user {
