@@ -33,8 +33,8 @@ COMPNT.component("questionPost", {
         var new_question = {
           "title": question.title,
           "content": question.content,
-          "nb_views": "",
-          "votes": "",
+          "nb_views": 0,
+          "votes": 0,
           "date": new Date(),
           // "userId": this.info.userId
           "userId": 1
