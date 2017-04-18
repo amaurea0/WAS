@@ -47,7 +47,7 @@
     },
     {
       "title": "comment on fait ?",
-      "content": "blablabla",
+      "content": "test de ouf pierre",
       "nb_views": "",
       "votes": "",
       "date": "2017-04-13T09:24:16.081Z",
@@ -383,6 +383,48 @@
       "date": "2017-04-14T08:25:03.295Z",
       "questionId": 2,
       "id": 24
+    }
+  ],
+  "tips": [
+    {
+      "id": 0,
+      "content": "on pense à bien indenter son code !",
+      "url": "http://mrbool.com/importance-of-code-indentation/29079"
+    },
+    {
+      "id": 1,
+      "content": "ne pas se répéter...",
+      "url": "https://en.wikipedia.org/wiki/Don%27t_repeat_yourself"
+    },
+    {
+      "content": "le Dieu Google...",
+      "url": "www.google.fr",
+      "id": 2
+    },
+    {
+      "content": "lolilol",
+      "url": "www.google.fr",
+      "id": 3
+    },
+    {
+      "content": "coucou Pierre",
+      "url": "www.pierre.com",
+      "id": 4
+    },
+    {
+      "content": "bleu",
+      "url": "www.bleu.fr",
+      "id": 5
+    },
+    {
+      "content": "julien",
+      "url": "http://www.google.fr",
+      "id": 6
+    },
+    {
+      "content": "t-nation",
+      "url": "http://www.t-nation.com",
+      "id": 7
     }
   ]
 }

@@ -2,6 +2,7 @@
 
 const QST_URL = "http://localhost:3000/questions";
 const ASW_URL = "http://localhost:3000/answers";
+const TIPS_URL = "http://localhost:3000/tips";
 
 
 SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $log, $q) {
@@ -51,21 +52,18 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
 
     this.getQuestionsTag = (tagid) => {
         var deferred = $q.defer();
-        $http.get(QST_URL + '?tagsId='+tagid+'&_expand=user').then(
-            function (response) {
-                deferred.resolve(response.data);
-            },
-            function (error) {
-                deferred.reject(error);
-                $log.error(error);
-            }
-        );
+        $http.get(QST_URL + '?tagsId=' + tagid + '&_expand=user').then((response) => {
+            deferred.resolve(response.data);
+        }).catch((error) => {
+            deferred.reject(error);
+            $log.error(error);
+        });
         return deferred.promise;
     };
 
     this.getQuestionId = (id) => {
         var deferred = $q.defer();
-        $http.get(QST_URL + '?id='+id+'&_expand=user').then(
+        $http.get(QST_URL + '?id=' + id + '&_expand=user').then(
             function (response) {
                 deferred.resolve(response.data);
             },
