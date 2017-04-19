@@ -5,7 +5,7 @@
  */
 COMPNT.component('userCreate', {
 
-    templateUrl: '/app/components/connexion/signup.html',
+    templateUrl: '/frontend/app/components/connexion/signup.html',
 
     bindings: {
         user: '<'

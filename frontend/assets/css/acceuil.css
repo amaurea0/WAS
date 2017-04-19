@@ -1,0 +1,114 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+p {
+  line-height: 2rem;
+}
+.button-collapse {
+  color: #26A69A;
+}
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+.parallax-container .section {
+  width: 100%;
+}
+.parallax img {
+  width: 100%;
+}
+@media only screen and (max-width: 1250 px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+  .icon-block #question .vote {
+    display: none;
+  }
+}
+.container h1.text-lighten-2 {
+  margin-top: 117px;
+  font-size: 82px;
+}
+@media only screen and (min-width: 1800px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+  .icon-block #question .vote {
+  }
+}
+@media only screen and (max-width: 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+footer.page-footer {
+  margin: 0;
+}
+/* questions */
+#question {
+  display: flex;
+  padding-left: 13px;
+  background-color: rgba(229, 229, 229, 0.116);
+  border-bottom: 1px solid rgba(239, 236, 236, 0.619);
+  margin: 0 0 8px 0;
+  border-radius: 5px 5px 0px 0px;
+  border: 1px solid #EEECEC;
+}
+.vote {
+  display: flex;
+  width: 20%;
+}
+.vote p {
+  text-align: center;
+  margin-top: 0;
+  margin-right: 17px;
+}
+.text p {
+  font-size: 1.3em;
+  margin: 0;
+  padding: 0;
+}
+.text span {
+  font-size: 0.7em;
+  margin: 17px 13px 0 0;
+  float: right;
+  background-color: rgba(225, 225, 225, 0.274);
+  border: 1px solid #E5E5E5;
+  padding: 7px;
+  border-radius: 5px;
+  border-bottom: 2px solid #C7C7C7;
+}
+.tag span {
+  float: left;
+  border-radius: 4px;
+  padding: 5px 15px 5px 16px;
+  margin-left: -8px;
+  font-size: 13px;
+  border: 1px solid #BBAAAA;
+  background-color: rgba(223, 168, 110, 0.846);
+  color: rgba(255, 255, 255, 0.863);
+}

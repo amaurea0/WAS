@@ -1,25 +1,36 @@
-<nav id="navbar">
-    <ul>
-        <li><a ui-sref="questions" ui-sref-active="select">Questions</a></li>
-        <li><a ui-sref="users" ui-sref-active="select">Users</a></li>
-        <li><a ui-sref="jobs" ui-sref-active="select">Jobs</a></li>
-        <li><a ui-sref="nuage" ui-sref-active="select">Nuage</a></li>
-        <li><a ui-sref="tips" ui-sref-active="select">Tips</a></li>
-        <li><a ui-sref="userprofile" ui-sref-active="select">Profile</a></li>
-        <!--<li><a ui-sref="addUser" ui-sref-active="select">S'enregistrer</a></li>-->
-        <li><a ui-sref="logUser" ui-sref-active="select">Se connecter</a></li>
-        <li><a ui-sref="questionid" ui-sref-active="select">Test QuestionSpe</a></li>
-        <li><a ui-sref="questionscomplet" ui-sref-active="select">Questions tags complet</a></li>
+<header class="navbar-fixed">
+    <nav class="header">
+        <ul class="nav menu nav-wrapper">
+            <li><a ui-sref="questions" ui-sref-active="select">Questions</a></li>
+            <li><a ui-sref="users" ui-sref-active="select">Users</a></li>
+            <li><a ui-sref="jobs" ui-sref-active="select">Jobs</a></li>
+            <li><a ui-sref="nuage" ui-sref-active="select">Nuage</a></li>
+            <li><a ui-sref="tips" ui-sref-active="select">Tips</a></li>
+            <li><a ui-sref="userprofile" ui-sref-active="select">Profile</a></li>
+            <li><a ui-sref="logUser" ui-sref-active="select">Se connecter</a></li>
+            <login></login>
+
+            <!--<li class="dropdown-button" data-activates="administracion">
+                Ola
+                <ul id="administracion" class="dropdown-content">
+                    <li ng-init="$ctrl.rebindDropDowns()">
+                        <a ng-href="">test1</a>
+                    </li>
+                    <li ng-init="$$ctrl.rebindDropDowns()">
+                        <a ng-href="">test2</a>
+                    </li>
+                </ul>
+            </li>-->
+        </ul>
+    </nav>
+</header>
 
 
-        <login></login>
-    </ul>
-</nav>
 
 <ui-view info=$ctrl.info></ui-view>
 
 <footer>
     <ul>
-        <li> Mentions légales</li>
+        <!--<li> Mentions légales</li>-->
     </ul>
 </footer>

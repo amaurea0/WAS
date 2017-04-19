@@ -1,21 +1,50 @@
 'use strict';
 
-WEA.config(function ($stateProvider) {
+WEA.config(function ($stateProvider, UsersServiceProvider, $windowProvider) {
+    var $window = $windowProvider.$get();
+    var $cookies;
+    angular.injector(['ngCookies']).invoke(['$cookies', function (_$cookies_) {
+        $cookies = _$cookies_;
+    }]);
+    function VerificationConnection(userid, token) {
+        if (!userid) {
+            DeleteCookie();
+        }
+        if (!token) {
+            DeleteCookie();
+        }
+        UsersServiceProvider.$get().verifToken(userid, token).then((response) => {
+            if (response.data['0'].tokenSecure != token && response.data['0'].id != userid) {
+                DeleteCookie();
+
+            }
+
+        }).catch((response) => {
+            DeleteCookie();
+        });
+    }
+
+    function DeleteCookie() { // on envoye le cookie avec l'id de connexion
+        $cookies.remove('id');
+        $cookies.remove('tokenSecure');
+        $window.location.href = '/';
+    };
     $stateProvider
+        .state('home', {
+            url: '',
+            component: 'userLogin',
+            resolve: {
 
-        .state({
-            name: 'questionscomplet',
-            url: '/questionscomplet',
-            component: 'questionsComplet',
-            resolve: {}
+            },
         })
-
         .state({
             name: 'questions',
             url: '/questions',
             component: 'questionsList',
             resolve: {
-                
+                login: function (UsersService, $cookies) {
+                    VerificationConnection($cookies.get('id'), $cookies.get('tokenSecure'));
+                }
             }
         })
 
@@ -24,8 +53,27 @@ WEA.config(function ($stateProvider) {
             url: '/users',
             component: 'usersList',
             resolve: {
-                users: function ($rootScope, UsersService, $transition$) {
-                    return UsersService.getUsers($transition$.params().personId);
+                login: function (UsersService, $cookies) {
+                    VerificationConnection($cookies.get('id'), $cookies.get('tokenSecure'));
+                }
+
+            }
+        })
+
+        .state({
+            name: 'tags',
+            url: '/questions/:tagId/:tagName',
+            component: 'questionsList',
+            resolve: {
+                login: function (UsersService, $cookies) {
+                    VerificationConnection($cookies.get('id'), $cookies.get('tokenSecure'));
+                },
+
+                tagFilter: function ($stateParams) {
+                    return {
+                        tagId: $stateParams.tagId,
+                        tagName: $stateParams.tagName
+                    }
                 }
             }
         })
@@ -35,8 +83,12 @@ WEA.config(function ($stateProvider) {
             url: '/users/{personId}',
             component: 'userProfile',
             resolve: {
+                login: function (UsersService, $cookies) {
+                    VerificationConnection($cookies.get('id'), $cookies.get('tokenSecure'));
+                },
+
                 person: function ($rootScope, UsersService, $transition$) {
-                    return UsersService.getPerson($transition$.params().personId);
+                    return UsersServiceProvider.$get().getPerson($transition$.params().personId);
                 }
             }
         })
@@ -45,26 +97,40 @@ WEA.config(function ($stateProvider) {
             name: 'questionPost',
             url: '/post',
             component: 'questionPost',
-            resolve: {}
+            resolve: {
+                login: function (UsersService, $cookies) {
+                    VerificationConnection($cookies.get('id'), $cookies.get('tokenSecure'));
+                }
+
+            }
         })
 
         .state({
             name: 'nuage',
             url: '/nuage',
             component: 'nuage',
-            resolve: {}
+            resolve: {
+                login: function (UsersService, $cookies) {
+                    VerificationConnection($cookies.get('id'), $cookies.get('tokenSecure'));
+                }
+
+            }
         })
 
         .state({
-            name: 'tags',
-            url: '/questions/:tagId/:tagName',
-            component: 'questionsList',
+            name: 'questionSpec',
+            url: '/questions/{idQuestion}',
+            component: 'questionFull',
             resolve: {
-                tagFilter: function ($stateParams) {
-                    return {
-                        tagId: $stateParams.tagId,
-                        tagName: $stateParams.tagName
-                    };
+                question: function ($rootScope, QuestionsService, $transition$) {
+                    return QuestionsService.getSpecificQuestion($transition$.params().idQuestion);
+                },
+                controller: function (Auth, $state) {
+                    if (someCondition) {
+                        $state.go('state1');
+                    } else {
+                        $state.go('state2');
+                    }
                 }
             }
         })
@@ -77,29 +143,24 @@ WEA.config(function ($stateProvider) {
         })
 
         .state({
-            name: 'questionSpec',
-            url: '/questions/{questionId}',
-            component: 'questionFull',
+            name: 'logUser',
+            url: '/logUser',
+            component: 'userLogin',
             resolve: {
-                question: function ($rootScope, QuestionsService, $transition$) {
-                    return QuestionsService.getSpecificQuestion($transition$.params().questionId);
+                users: function ($rootScope, UsersService) {
                 }
             }
         })
 
         .state({
-            name: 'logUser',
-            url: '/logUser',
-            component: 'userLogin',
-            resolve: {}
+            name: 'questionSpec.postAnswer',
+            url: '/newAnswer',
+            component: 'answerPost',
+            resolve: {
+                login: function (UsersService, $cookies) {
+                    VerificationConnection($cookies.get('id'), $cookies.get('tokenSecure'));
+                }
+
+            }
         })
-
-        .state({
-            name: 'userprofile',
-            url: '/userprofile',
-            component: 'profil',
-            resolve: {}
-        });
-
 });
-

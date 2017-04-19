@@ -1,0 +1,23 @@
+.tabs>.tabs_list {
+  list-style: none;
+}
+
+.tabs>.tabs_list>span {
+  background-color: #ccc;
+  border: 1px solid transparent;
+  border-bottom-color: #ccc;
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.tabs>.tabs_list>span.selected {
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+
+.tabs>.tabs_content {
+  border: 1px solid #ccc;
+  background-color: #eee;
+  padding: 20px;
+}

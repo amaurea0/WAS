@@ -4,5 +4,5 @@
  * The AngularJS WeatherMood app constants
  */
 WEA.constant('INFO', {
-    userId: 'userId'
+    userId: '1'
   });

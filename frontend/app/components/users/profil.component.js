@@ -2,7 +2,7 @@
 
 COMPNT.component("profil", {
 
-	templateUrl: './app/components/users/profil.html',
+	templateUrl: '/frontend/app/components/users/profil.html',
 
 	controller: ['UsersService',
 

@@ -6,7 +6,7 @@
 COMPNT
     .component("questionFull", {
 
-        templateUrl: '/app/components/questions/question_full.html',
+        templateUrl: '/frontend/app/components/questions/question_full.html',
 
         bindings: {
             question: '<'

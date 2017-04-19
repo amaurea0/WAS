@@ -2,7 +2,7 @@
 
 COMPNT.component('nuage', {
 
-  templateUrl: '/app/components/nuage/nuage.html',
+  templateUrl: '/frontend/app/components/nuage/nuage.html',
 
   bindings: {
     list: '<',

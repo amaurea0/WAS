@@ -1,0 +1,151 @@
+{
+  "questions": [
+    {
+      "title": "q69 votes 100 ",
+      "content": "q",
+      "nb_views": 69,
+      "votes": 100,
+      "date": "2017-04-08T01:47:18.815Z",
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "title": "a6 votes 521 symphony angular",
+      "content": "a",
+      "nb_views": 6,
+      "votes": 521,
+      "date": "2017-04-08T01:49:44.615Z",
+      "userId": 1,
+      "id": 13
+    },
+    {
+      "title": "a 48 votes 871 javascript",
+      "content": "a",
+      "nb_views": 48,
+      "votes": 871,
+      "date": "2017-04-08T01:51:51.436Z",
+      "userId": 1,
+      "id": 14
+    },
+    {
+      "title": "a 9 votes 98 php angular",
+      "content": "a",
+      "nb_views": 9,
+      "votes": 98,
+      "date": "2017-04-08T01:53:23.566Z",
+      "userId": 1,
+      "id": 15
+    },
+    {
+      "title": "vsdfs 5 votes 745 symphony angular",
+      "content": "sdf",
+      "nb_views": 5,
+      "votes": 745,
+      "date": "2017-04-08T09:25:09.366Z",
+      "userId": 1,
+      "id": 23
+    }
+  ],
+  "users": [
+    {
+      "email": "laetitiadervaux33@gmail.com",
+      "pass": "passWCS",
+      "id": 1,
+      "name": "toto",
+      "tokenSecure": 5789.833944236906
+    },
+    {
+      "tokenSecure": 723.3780543055839,
+      "id": 2
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "www",
+      "id": 3
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "www",
+      "id": 4
+    },
+    {
+      "tokenSecure": 4415.549028080528,
+      "id": 5
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "Javascript",
+      "school id": "5",
+      "posts id": "4",
+      "users id": "3",
+      "jobs id": "2",
+      "promotion id": "Juillet 2017"
+    },
+    {
+      "id": 2,
+      "name": "AngularJS",
+      "school id": "3",
+      "posts id": "2",
+      "users id": "1",
+      "jobs id": "7",
+      "promotion id": "Juin 2017"
+    },
+    {
+      "id": 3,
+      "name": "PHP",
+      "school id": "2",
+      "posts id": "1",
+      "users id": "7",
+      "jobs id": "4",
+      "promotion id": "Août 2017"
+    },
+    {
+      "id": 4,
+      "name": "Symfony",
+      "school id": "5",
+      "posts id": "4",
+      "users id": "3",
+      "jobs id": "2",
+      "promotion id": "Février 2017"
+    }
+  ],
+  "taglinks": [
+    {
+      "questionId": 23,
+      "tagId": 2,
+      "id": 1
+    },
+    {
+      "questionId": 23,
+      "tagId": 4,
+      "id": 2
+    },
+    {
+      "questionId": 13,
+      "tagId": 2,
+      "id": 3
+    },
+    {
+      "questionId": 13,
+      "tagId": 4,
+      "id": 4
+    },
+    {
+      "questionId": 14,
+      "tagId": 1,
+      "id": 5
+    },
+    {
+      "questionId": 15,
+      "tagId": 3,
+      "id": 6
+    },
+    {
+      "questionId": 15,
+      "tagId": 2,
+      "id": 7
+    }
+  ]
+}
