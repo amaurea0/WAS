@@ -1,14 +1,15 @@
 'use strict';
 
-COMPNT.component("editPost", {
+COMPNT
+  .component("editPost", {
 
     templateUrl: '/frontend/app/components/edit_post/edit_post.html',
 
     bindings: {
-        post: '<'
+      post: '<'
     },
 
-    controller: function (QuestionsService, $scope, $state) {
+    controller: ['QuestionsService', '$state', function (QuestionsService, $state) {
 
         this.editContent = (post) => {
 
@@ -30,5 +31,5 @@ COMPNT.component("editPost", {
                 alert("ERROR :" + err);
             })
         }
-    }
-});
+    }]
+  });

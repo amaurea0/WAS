@@ -6,10 +6,9 @@ COMPNT.component("answerPost", {
   templateUrl: '/frontend/app/components/answer_post/answer_post.html',
 
   bindings: {
-
   },
 
-  controller: function (QuestionsService, $scope, $http, $rootScope, $state) {
+  controller: ['QuestionsService', '$scope', '$state', function (QuestionsService, $scope, $state) {
 
     var currentId = $scope.$parent.$ctrl.question.id;
 
@@ -17,8 +16,8 @@ COMPNT.component("answerPost", {
       var new_answer = {
         "title": this.answer.title,
         "content": this.answer.content,
-        "nb_views": "",
-        "votes": "",
+        "nb_views": 0,
+        "votes": 0,
         "date": new Date(),
         // "userId": this.details.user.id,
         "questionId": currentId
@@ -35,5 +34,5 @@ COMPNT.component("answerPost", {
 
 
     }
-  }
+  }]
 })

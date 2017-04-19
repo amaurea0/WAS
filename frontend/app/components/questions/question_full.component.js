@@ -12,4 +12,7 @@ COMPNT
             question: '<'
         },
 
+        controller: function () {
+            console.log(this.question);
+        }
     });

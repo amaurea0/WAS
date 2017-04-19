@@ -74,7 +74,7 @@ WEA.config(function ($stateProvider) {
                         QuestionsService.viewQuestion(id_question, {"nb_views": nb_view}).then((rep) => {
                             return QuestionsService.getSpecificQuestion(id_question);
                         })
-                    }).catch((err) => { });;
+                    }).catch((err) => {});
                 }
             }
         })
@@ -109,5 +109,20 @@ WEA.config(function ($stateProvider) {
                     return QuestionsService.getSpecificQuestion($transition$.params().postId);
                 }
             }
+        })
+
+
+        .state({
+            name: 'tips',
+            url: '/tips',
+            component: 'tips',
+            resolve: {}
+        })
+
+        .state({
+            name: 'tips.postTip',
+            url: '/post',
+            component: 'postTip',
+            resolve: {}
         })
 });
