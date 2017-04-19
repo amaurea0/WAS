@@ -71,10 +71,12 @@ WEA.config(function ($stateProvider) {
                     var id_question = $transition$.params().idQuestion;
                     QuestionsService.getSpecificQuestion(id_question).then((resp) => {
                         nb_view = resp.nb_views + 1;
-                        QuestionsService.viewQuestion(id_question, {"nb_views": nb_view}).then((rep) => {
-                            return QuestionsService.getSpecificQuestion(id_question);
-                        })
+                        QuestionsService.viewQuestion(id_question, {
+                            "nb_views": nb_view
+                        }).then((rep) => {})
                     }).catch((err) => {});
+
+                    return QuestionsService.getSpecificQuestion(id_question);
                 }
             }
         })
