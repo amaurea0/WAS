@@ -12,7 +12,7 @@ COMPNT
             question: '<'
         },
 
-        controller: function ($scope) {
-            console.log($scope);
+        controller: function () {
+            console.log(this.question);
         }
     });

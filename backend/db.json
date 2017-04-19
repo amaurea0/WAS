@@ -3,7 +3,7 @@
     {
       "title": "Comment faire?",
       "content": "q",
-      "nb_views": 69,
+      "nb_views": 75,
       "votes": 100,
       "date": "2017-04-08T01:47:18.815Z",
       "userId": 1,
@@ -19,9 +19,9 @@
       "id": 13
     },
     {
-      "title": "Hello ?",
-      "content": "a",
-      "nb_views": 50,
+      "title": "coucou a nouveau",
+      "content": "aaae yeah ça marche",
+      "nb_views": 62,
       "votes": 871,
       "date": "2017-04-08T01:51:51.436Z",
       "userId": 3,
@@ -46,9 +46,9 @@
       "id": 23
     },
     {
-      "title": "jhdzjhq Bonjour Pierre ?",
-      "content": "shajdkz Youloulou",
-      "nb_views": 1,
+      "title": "comment on fait ?",
+      "content": "test de ouf pierre",
+      "nb_views": 13,
       "votes": 0,
       "date": "2017-04-14T11:12:55.705Z",
       "userId": 6,
@@ -84,7 +84,7 @@
     {
       "title": "Je souhaite poser cette question, comment faire ?",
       "content": "Pierre Test 2",
-      "nb_views": 0,
+      "nb_views": 1,
       "votes": 0,
       "date": "2017-04-17T17:51:13.675Z",
       "userId": 5,
@@ -574,6 +574,24 @@
       "date": "2017-04-14T13:45:04.959Z",
       "questionId": 14,
       "id": 28
+    },
+    {
+      "title": "Un titre",
+      "content": "Test",
+      "nb_views": "",
+      "votes": "",
+      "date": "2017-04-19T13:41:36.464Z",
+      "questionId": 14,
+      "id": 29
+    },
+    {
+      "title": "une nouvelle réponse",
+      "content": "test2",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-19T13:48:35.319Z",
+      "questionId": 14,
+      "id": 30
     }
   ],
   "tips": [
