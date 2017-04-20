@@ -48,7 +48,7 @@
     {
       "title": "comment on fait ?",
       "content": "test de ouf pierre",
-      "nb_views": 13,
+      "nb_views": 14,
       "votes": 0,
       "date": "2017-04-14T11:12:55.705Z",
       "userId": 6,
@@ -199,6 +199,17 @@
       "avatar": "",
       "profile": "",
       "id": 11
+    },
+    {
+      "email": "chatagnier@gmail.com",
+      "pass": "aserrzfs",
+      "last_name": "",
+      "first_name": "",
+      "pseudo": "ssdsd",
+      "date": "2017-04-20T15:02:29.530Z",
+      "avatar": "",
+      "profile": "",
+      "id": 12
     }
   ],
   "jobs": [
