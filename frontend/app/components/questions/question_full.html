@@ -16,7 +16,7 @@
         <div id="center">
             <div ng-bind="$ctrl.question.title"></div>
             <div ng-bind="$ctrl.question.content"></div>
-            <button ui-sref="editPost({postId : $ctrl.question.id})">EDITION</button>
+            <button ng-if="$ctrl.myQuestion" ui-sref="editPost({postId : $ctrl.question.id})">EDITION</button>
         </div>
         <div id="right">
             <img ng-src="{{$ctrl.question.user.avatar}}" alt="avatar">

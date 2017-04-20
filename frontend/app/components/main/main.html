@@ -31,12 +31,12 @@
                 <li><a ui-sref="jobs" ui-sref-active="select"><i class="material-icons">work</i></a></li>
                 <li><a ui-sref="tips" ui-sref-active="select"><i class="material-icons">lightbulb_outline</i></a></li>
                 <li><a ui-sref="nuage" ui-sref-active="select"><i class="material-icons">code_tags</i></a></li>
-                <li ng-hide="ctrl.isAuthenticated"><a class="dropdown-button" data-activates="administracion"><i class="material-icons">face</i></a></li>
+                <!--<li ng-hide="ctrl.isAuthenticated"><a class="dropdown-button" data-activates="administracion"><i class="material-icons">face</i></a></li>-->
+                <li ng-hide="ctrl.isAuthenticated"><a class="waves-effect waves-light btn" ui-sref="login" ui-sref-active="select">Connexion</a></li>
+
+                <li ng-if="ctrl.isAuthenticated"><a ui-sref="userprofile" ui-sref-active="select"><i class="material-icons">face</i></a></li>
                 <li ng-if="ctrl.isAuthenticated"><a class="waves-effect waves-light btn" ng-click="ctrl.disconnect()">Disconnect</a></li>
 
-                <!--<li ng-if="ctrl.isAuthenticated">
-                    <button class="btn btn-default navbar-btn" ng-click="ctrl.disconnect()">Disconnect</button>
-                </li>-->
             </ul>
 
             <!--Barre de nav 'sidebar' version mobile-->
