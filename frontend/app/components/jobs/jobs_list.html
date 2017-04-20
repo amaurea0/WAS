@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>JOBS</h1>
+    <div ng-if="$ctrl.jobs.length > 0">
+        <div id="jobs" ng-repeat="job in $ctrl.jobs">
+            <div id="jobTitle" ng-bind="job.title"></div>
+            <div class="">
+                <span class="society" ng-bind="job.society"></span>
+                <span class="lieu" ng-bind="job.place"></span>
+            </div>
+            <div class="tags"></div>
+        </div>
+    </div>
+</div>

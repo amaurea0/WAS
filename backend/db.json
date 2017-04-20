@@ -578,8 +578,8 @@
     {
       "title": "Un titre",
       "content": "Test",
-      "nb_views": "",
-      "votes": "",
+      "nb_views": 0,
+      "votes": 0,
       "date": "2017-04-19T13:41:36.464Z",
       "questionId": 14,
       "id": 29
@@ -635,5 +635,25 @@
       "url": "http://www.t-nation.com",
       "id": 7
     }
-  ]
+  ],
+   "jobs": [
+    {
+      "title": "Developer Frontend - angular 2",
+      "content": "Bla bla bla",
+      "place": "Alpha du centaure",
+      "society": "USS Enterprise",
+      "date": "2017-04-08T01:47:18.815Z",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "title": "Developer Backend - PHP",
+      "content": "Bla bla bla",
+      "place": "Lille",
+      "society": "Nemesis",
+      "date": "2017-04-08T01:47:18.815Z",
+      "userId": 3,
+      "id": 2
+    }
+   ]  
 }

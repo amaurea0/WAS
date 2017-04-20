@@ -1,3 +1,12 @@
+body {
+    background-color: #f1f1f1;
+}
+
+.page {
+    background-color: white;
+}
+
+
 /*ICI VIENT LE STYLE DE LA BARRE DE NAV ET DU PARALLAX MAIN.HTML*/
 
 img {
@@ -25,19 +34,21 @@ img {
     -moz-transition: all 0.7s ease 0s;
     -o-transition: all 0.7s ease 0s;
     transition: all 0.7s ease 0s;
-    }
+}
 
 #search input[type="text"]:focus {
     width: 200px;
 }
 
-.dropdown-content li > a, .dropdown-content li > span {
+.dropdown-content li>a,
+.dropdown-content li>span {
     color: #455a64 !important;
 }
 
 .parallax-container {
-      margin-left: -8px;
-    }
+    margin-left: -8px;
+}
+
 
 /*ICI VIENT LE STYLE DU NUAGE*/
 
@@ -45,10 +56,11 @@ img {
     border-style: none;
 }
 
+
 /*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
 
 .input-field input:focus {
-     border-bottom-color: orange;
+    border-bottom-color: orange;
 }
 
 li {
@@ -59,7 +71,7 @@ li {
 
 #noms {
     width: 300px;
-    padding:0px 20px 0px 40px;
+    padding: 0px 20px 0px 40px;
     font-size: 18px;
 }
 
@@ -101,29 +113,40 @@ li {
 }
 
 
-/*#question {
-    border: solid 2px black;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
+/*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS (Laetitia)*/
+
+.entete {
+    height: 65px;
+    margin: 0;
+    border-bottom: 5px solid #f1f1f1;
+    padding: 10px 15px 10px 15px;
 }
 
-#center {
-    flex-grow: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: solid black 2px;
+.entete h1 {
+    color: #455a64;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    float: right;
 }
 
-#votes {
-    color: green;
+#question {
+    display: flex;
+    color: black;
+    border-bottom: 1px dotted #ffdea5;
+    margin: 0;
+    padding-top: 15px;
+}
+
+.counters {
+    display: flex;
+    width: 20%;
 }
 
 #answers {
     color: blue;
-}*/
+}
 
 /*ICI VIENT LE STYLE DU FOOTER*/
 
@@ -134,5 +157,51 @@ li {
 
 .page-footer img {
     max-height: 80px;
-    padding-bottom:40px;
+    padding-bottom: 40px;
 }
+
+.counters>div {
+    margin: 10px;
+    width: 50%;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.4em;
+    color: #455a64;
+}
+
+.counters>div:first-child {
+    background: url(/frontend/assets/img/heart.png) no-repeat center;
+    background-size: 30px;
+}
+
+.counters>div:last-child {
+    background: url(/frontend/assets/img/eye.png) no-repeat center;
+    background-size: 30px;
+}
+
+.contenu {
+    width: 90%;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.contenu h3 {
+    font-size: 1.3em;
+    color: #35383a;
+    margin: 0;
+    padding: 0;
+}
+
+.contenu span {
+    font-size: 0.9em;
+    color: #80cbc4;
+    margin: 0;
+    padding: 0;
+}
+
+.contenu p {
+    color: #7b7b7b;
+    font-size: 1em;
+}
+

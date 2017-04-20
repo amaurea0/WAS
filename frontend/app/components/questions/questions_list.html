@@ -1,47 +1,65 @@
-<div class="container">
-  <div id="questionsFlex">
-    <a class="btn-floating btn-large waves-effect waves-light red" ui-sref="questionPost" ui-sref-active="select"><i class="material-icons">add</i></a>
+<div class="container page">
+  <div class="entete">
+    <a class="btn btn-floating pulse orange" ui-sref="questionPost" ui-sref-active="select"><i class="material-icons">add</i></a>
+    <h1>Questions</h1>
+  </div>
 
-    <div ng-if="$ctrl.questions.length > 0" id="chip">
-      <div class="chip" ng-show="$ctrl.tagFilter.tagName.length >0">
-        {{$ctrl.tagFilter.tagName}}
-        <i class="close material-icons" ng-if="$ctrl.tagFilter.tagName" ng-click="$ctrl.removeTag()">close</i>
-      </div>
+
+
+  <div ng-if="$ctrl.questions.length > 0">
+    <div class="chip" ng-show="$ctrl.tagFilter.tagName.length >0">
+      {{$ctrl.tagFilter.tagName}}
+      <i class="close material-icons" ng-if="$ctrl.tagFilter.tagName" ng-click="$ctrl.removeTag()">close</i>
     </div>
   </div>
 
   <div class="input-field">
     <input class="validate" type="text" placeholder="Rechercher..." ng-model="$ctrl.model.query">
   </div>
-</div>
 
-<div class="container">
 
-  <div class="row">
-    <div class="col s12">
-      <ul tabs reload="allTabContentLoaded">
-        <li class="tab col s3"><a class="active" href="#{{$ctrl.tabsList[0].view}}">{{$ctrl.tabsList[0].label}}</a></li>
-        <li class="tab col s3"><a href="#{{$ctrl.tabsList[1].view}}">{{$ctrl.tabsList[1].label}}</a></li>
-        <li class="tab col s3"><a href="#{{$ctrl.tabsList[2].view}}">{{$ctrl.tabsList[2].label}}</a></li>
-        <li class="tab col s3"><a href="#{{$ctrl.tabsList[3].view}}">{{$ctrl.tabsList[3].label}}</a></li>
-      </ul>
-    </div>
+  <div class="bloc_center">
 
-    <div ng-repeat="aTab in $ctrl.tabsList" id="{{aTab.view}}" class="col s12">
-      <div class="panel" ng-repeat="question in $ctrl.questions | filter : $ctrl.model.query | orderBy : aTab.sort">
-        <div class="col s12" ui-sref="questionSpec({idQuestion : question.id})">
-          
-          <ul class="collection">
-            <li class="collection-item avatar" ui-sref="questionSpec({idQuestion : question.id})">
-              <img class="circle" ng-src="{{question.user.avatar}}" alt="user's picture">
-              <P id="questionsTags">{{question.tag}} {{question.views}}</br><span id="pseudo">{{question.title}}</span></p>
-              <p class="flow-text">{{question.content}}</p>
-              <!--<a class="secondary-content"><i class="material-icons">grade</i></a>-->
-            </li>
-          </ul>
+    <div class="row">
 
+      <div class="col s12">
+        <ul tabs reload="allTabContentLoaded">
+          <li class="tab col s3"><a class="active" href="#{{$ctrl.tabsList[0].view}}">{{$ctrl.tabsList[0].label}}</a></li>
+          <li class="tab col s3"><a href="#{{$ctrl.tabsList[1].view}}">{{$ctrl.tabsList[1].label}}</a></li>
+          <li class="tab col s3"><a href="#{{$ctrl.tabsList[2].view}}">{{$ctrl.tabsList[2].label}}</a></li>
+          <li class="tab col s3"><a href="#{{$ctrl.tabsList[3].view}}">{{$ctrl.tabsList[3].label}}</a></li>
+        </ul>
+      </div>
+
+      <div ng-repeat="aTab in $ctrl.tabsList" id="{{aTab.view}}" class="col s12">
+        <div id="question" ng-repeat="question in $ctrl.questions | filter : $ctrl.model.query | orderBy : aTab.sort">
+
+          <div class="counters">
+            <div ng-bind="question.votes"></div>
+            <div ng-bind="question.nb_views"></div>
+          </div>
+
+          <div class="contenu">
+            <a ui-sref="questionSpec({idQuestion : question.id})">
+              <h3 class="title" ng-bind="question.title"></h3>
+             <!-- <span class="answers" ng-bind="question.answers"></span>-->
+              <span>25 answers</span>
+              <P id="questionsTags">{{question.tag}}</p>
+              <p class="content" ng-bind="question.content"></p>
+              <div ng-bind="question.tag"></div>
+            </a>
+          </div>
+
+          <div class="infos">
+            <!--<img ng-src="{{question.user.avatar}}" alt="avatar">-->
+            <img class="circle" ng-src="{{question.user.avatar}}" alt="user's picture">
+            <div>{{question.date | date:"MM/dd/yyyy"}}</div>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
+  <!-- FIN bloc_center -->
 </div>
+<!-- FIN container -->
