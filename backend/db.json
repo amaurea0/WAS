@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "title": "q69 votes 100 ",
+      "title": "Comment faire?",
       "content": "q",
       "nb_views": 75,
       "votes": 100,
@@ -15,7 +15,7 @@
       "nb_views": 6,
       "votes": 521,
       "date": "2017-04-08T01:49:44.615Z",
-      "userId": 1,
+      "userId": 2,
       "id": 13
     },
     {
@@ -24,25 +24,25 @@
       "nb_views": 64,
       "votes": 871,
       "date": "2017-04-08T01:51:51.436Z",
-      "userId": 1,
+      "userId": 3,
       "id": 14
     },
     {
-      "title": "a 9 votes 98 php angular",
+      "title": "Yess ?",
       "content": "a",
       "nb_views": 9,
       "votes": 98,
       "date": "2017-04-08T01:53:23.566Z",
-      "userId": 1,
+      "userId": 4,
       "id": 15
     },
     {
-      "title": "test modifs",
+      "title": "Coucou ?",
       "content": "liste de courses pour le repas chez mamie",
       "nb_views": 5,
       "votes": 745,
       "date": "2017-04-08T09:25:09.366Z",
-      "userId": 1,
+      "userId": 5,
       "id": 23
     },
     {
@@ -51,20 +51,20 @@
       "nb_views": 13,
       "votes": 0,
       "date": "2017-04-14T11:12:55.705Z",
-      "userId": 1,
+      "userId": 6,
       "id": 24
     },
     {
-      "title": "nouvelle question",
+      "title": "nouvelle question?",
       "content": "test live demo woohoo",
       "nb_views": 0,
       "votes": 0,
       "date": "2017-04-14T11:55:23.473Z",
-      "userId": 1,
+      "userId": 7,
       "id": 25
     },
     {
-      "title": "teste live",
+      "title": "teste live?",
       "content": "nouveau contenu",
       "nb_views": 0,
       "votes": 0,
@@ -73,12 +73,12 @@
       "id": 26
     },
     {
-      "title": "Navbar bootstrap avec angular",
+      "title": "Navbar bootstrap avec angular?",
       "content": "Je souhaite mettre en place une navbar bootstrap mais j'ai un problème de compatibilité avec angular.",
       "nb_views": 0,
       "votes": 0,
       "date": "2017-04-17T15:28:44.873Z",
-      "userId": 1,
+      "userId": 6,
       "id": 27
     },
     {
@@ -87,32 +87,145 @@
       "nb_views": 1,
       "votes": 0,
       "date": "2017-04-17T17:51:13.675Z",
-      "userId": 1,
+      "userId": 5,
       "id": 28
     }
   ],
   "users": [
     {
       "email": "laetitiadervaux33@gmail.com",
-      "pass": "passWCS",
+      "pass": "laetPSW",
       "id": 1,
-      "name": "toto"
+      "last_name": "Dervaux",
+      "first_name": "Laetitia",
+      "pseudo": "Letitbe",
+      "jobId": 1,
+      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990501.jpg",
+      "profile": "je suis passionnée d'informatique, de graphisme. Je suis également fan des Beattles, d'où mon pseudo Hihihi"
     },
     {
-      "email": "laetitiadervaux33@gmail.com",
-      "pass": "blabla",
+      "email": "pierrevicq@hotmail.fr",
+      "pass": "pierPSW",
       "id": 2,
-      "name": "toto"
+      "last_name": "Vicq",
+      "first_name": "Pierre",
+      "pseudo": "Piotr",
+      "jobId": 2,
+      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990500.jpg",
+      "profile": "Je suis passionné d'angular, mais vraiment vraiment trop...et ça se voit quand je code: mes 'Get' sont resplendissants, même si mes 'Post', un peu moins..."
     },
     {
       "email": "lderv68@gmail.com",
-      "password": "www",
-      "id": 3
+      "password": "lderPSW",
+      "id": 3,
+      "last_name": "Vauder",
+      "first_name": "Letty",
+      "pseudo": "Lettyyyyy",
+      "jobId": 3,
+      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990499.jpg",
+      "profile": "je suis passionnée d'informatique et de graphisme, tout comme Laetitia. C'est drôle parce qu'on a presque le même prénom en plus. Par contre, moi, les Beattles, j'peux pas les encadrer... j'suis bien contente qu'ils soient morts !"
     },
     {
-      "email": "lderv68@gmail.com",
-      "password": "www",
-      "id": 4
+      "email": "sasha@gmail.com",
+      "password": "sashaPSW",
+      "id": 4,
+      "last_name": "Grasso",
+      "first_name": "Sasha",
+      "pseudo": "Sash",
+      "jobId": 4,
+      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990497.jpg",
+      "profile": "je suis passionné d'angular, je surkiffe... j'adore ma barbe aussi, elle fait tomber toutes les minettes... et la soupe aussi, avec un peu de lait dedans hahahah"
+    },
+    {
+      "email": "aurore@gmail.com",
+      "pass": "aurorePSW",
+      "id": 5,
+      "last_name": "Chataigner",
+      "first_name": "Aurore",
+      "pseudo": "Aur",
+      "jobId": 5,
+      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990496.jpg",
+      "profile": "je suis passionnée d'angular, je surkiffe aussi, tout comme Sash (dont j'adore la barbe moelleuse)... Sinon, me fais pas trop iech ou j'te fais un fatal Ushiro-Geri! Hiiiiiaaaaouuuu"
+    },
+    {
+      "email": "julien@gmail.com",
+      "pass": "juPSW",
+      "id": 6,
+      "last_name": "Rousset",
+      "first_name": "Julien",
+      "pseudo": "Ju",
+      "jobId": 6,
+      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990495.jpg",
+      "profile": "Salut, moi ca va... hier, le dojo c'était sympathique. Voilà quoi hahah"
+    },
+    {
+      "email": "julienRousset@hotmail.com",
+      "pass": "juPSW",
+      "id": 7,
+      "last_name": "Roussetto",
+      "first_name": "Juliano",
+      "pseudo": "Julian",
+      "jobId": 7,
+      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990498.jpg",
+      "profile": "Salut, moi ca va aussi... hier, Prison Break, c'était pas mal. Si t'as un problème avec angular, j'peux t'aider: tu prends cette variable, tu la mets dans le truc là, et bâaaam ! Voilà ! hahah"
+    }
+  ],
+  "jobs": [
+    {
+      "id": 1,
+      "ville": "Bordeaux",
+      "poste": "DRH",
+      "entreprise": "Ajx",
+      "site": "www.ajx.com",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "ville": "San-Bernardino",
+      "poste": "CEO",
+      "entreprise": "Apple",
+      "site": "www.apple.com",
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "ville": "Melun",
+      "poste": "Secrétaire",
+      "entreprise": "Chez René",
+      "site": "www.chezrené.fr",
+      "userId": 3
+    },
+    {
+      "id": 4,
+      "ville": "Bologne",
+      "poste": "Responsable Marketing",
+      "entreprise": "Nutella",
+      "site": "www.nutella.com",
+      "userId": 4
+    },
+    {
+      "id": 5,
+      "ville": "Bordeaux",
+      "poste": "employé libre-service",
+      "entreprise": "Carrouf",
+      "site": "www.carrefour.com",
+      "userId": 5
+    },
+    {
+      "id": 6,
+      "ville": "Biarritz",
+      "poste": "Responsable qualité",
+      "entreprise": "Oackley",
+      "site": "www.oackley.com",
+      "userId": 6
+    },
+    {
+      "id": 7,
+      "ville": "Saint-Georges-sous-Clisson",
+      "poste": "PDG",
+      "entreprise": "Charcuterie Balloche",
+      "site": "en cours",
+      "userId": 7
     }
   ],
   "tags": [

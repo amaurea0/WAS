@@ -1,12 +1,17 @@
 <div class="container">
-  
-  <h1>Questions list</h1>
-  <a class="btn-floating btn-large waves-effect waves-light red" ui-sref="questionPost" ui-sref-active="select"><i class="material-icons">add</i></a>
-</div>
-<div ng-if="$ctrl.questions.length > 0">
-  <div class="chip" ng-show="$ctrl.tagFilter.tagName.length >0">
-    {{$ctrl.tagFilter.tagName}}
-    <i class="close material-icons" ng-if="$ctrl.tagFilter.tagName" ng-click="$ctrl.removeTag()">close</i>
+  <div id="questionsFlex">
+    <a class="btn-floating btn-large waves-effect waves-light red" ui-sref="questionPost" ui-sref-active="select"><i class="material-icons">add</i></a>
+
+    <div ng-if="$ctrl.questions.length > 0" id="chip">
+      <div class="chip" ng-show="$ctrl.tagFilter.tagName.length >0">
+        {{$ctrl.tagFilter.tagName}}
+        <i class="close material-icons" ng-if="$ctrl.tagFilter.tagName" ng-click="$ctrl.removeTag()">close</i>
+      </div>
+    </div>
+  </div>
+
+  <div class="input-field">
+    <input class="validate" type="text" placeholder="Rechercher..." ng-model="$ctrl.model.query">
   </div>
 </div>
 
@@ -23,24 +28,20 @@
     </div>
 
     <div ng-repeat="aTab in $ctrl.tabsList" id="{{aTab.view}}" class="col s12">
-
       <div class="panel" ng-repeat="question in $ctrl.questions | filter : $ctrl.model.query | orderBy : aTab.sort">
-        <div class="col s12 m7" ui-sref="questionSpec({idQuestion : question.id})">
-          <div class="card horizontal">
-            <div class="card-image">
-              <img ng-src="{{question.user.avatar}}" alt="avatar">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <h2 ng-bind="question.title"></h2>
-                <p ng-bind="question.body"></p>
-              </div>
-              <div class="card-action">
-                <a ng-bind="question.date" </a>
-                  <a ng-bind="question.tag" </a>
-                    <a ng-bind="question.votes"</a>
-                      <a ng-bind="question.views"</a>
-              </div>
-            </div>
-          </div>
+        <div class="col s12" ui-sref="questionSpec({idQuestion : question.id})">
+          
+          <ul class="collection">
+            <li class="collection-item avatar" ui-sref="questionSpec({idQuestion : question.id})">
+              <img class="circle" ng-src="{{question.user.avatar}}" alt="user's picture">
+              <P id="questionsTags">{{question.tag}} {{question.views}}</br><span id="pseudo">{{question.title}}</span></p>
+              <p class="flow-text">{{question.content}}</p>
+              <!--<a class="secondary-content"><i class="material-icons">grade</i></a>-->
+            </li>
+          </ul>
+
         </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,10 +1,5 @@
 /*ICI VIENT LE STYLE DE LA BARRE DE NAV ET DU PARALLAX MAIN.HTML*/
 
-nav {
-    background-color: #455a64 !important;
-    border-bottom-color: orange !important;
-}
-
 img {
     max-height: 60px;
     vertical-align: middle;
@@ -44,53 +39,69 @@ img {
       margin-left: -8px;
     }
 
+/*ICI VIENT LE STYLE DU NUAGE*/
+
 .chip {
     border-style: none;
 }
 
 /*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
 
-#user {
+.input-field input:focus {
+     border-bottom-color: orange;
+}
+
+li {
     display: flex;
-    flex-direction: row;
-    border: solid 2px black;
-    width: 750px;
-    padding: 10px;
+    direction: row;
+    color: #455a64;
 }
 
-#user img {
-    /*width: 150px;
-    height: 150px;*/
+#noms {
+    width: 300px;
+    padding:0px 20px 0px 40px;
+    font-size: 18px;
 }
 
-#bio {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: stretch;
-    width: 100%;
+#pseudo {
+    color: orange;
+    font-size: 20px;
 }
 
-#head {
-    text-align: center;
+.flow-text {
+    font-size: 12px;
+    width: 600px;
 }
 
-#body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-#tail {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.secondary-content {
+    color: orange !important;
 }
 
 
 /*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS*/
 
-#question {
+#questionsFlex {
+    display: flex;
+    direction: row;
+}
+
+.btn-floating {
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+#chip {
+    padding-top: 12px;
+    margin: 5px 30px;
+}
+
+#questionsTags {
+    width: 600px;
+    padding: 0px 20px 0px 40px;
+}
+
+
+/*#question {
     border: solid 2px black;
     padding: 10px;
     display: flex;
@@ -112,4 +123,16 @@ img {
 
 #answers {
     color: blue;
+}*/
+
+/*ICI VIENT LE STYLE DU FOOTER*/
+
+.page-footer {
+    background-color: #455a64 !important;
+    max-height: 70px;
+}
+
+.page-footer img {
+    max-height: 80px;
+    padding-bottom:40px;
 }

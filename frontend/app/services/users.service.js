@@ -71,6 +71,21 @@ SERVICES.service('UsersService', ['$http', '$log', '$q',
             return deferred.promise;
         }
 
+
+// Fonction de Pierre qu'il doit terminer
+
+    //     this.getUserJob = (user) => {
+    //     var deferred = $q.defer();
+
+    //     $http.get(USER_URL + '?jobId=' + tag).then(function (response) {
+    //         deferred.resolve(response.data);
+    //     }, function (error) {
+    //         deferred.reject(error);
+    //         $log.error(error);
+    //     });
+    //     return deferred.promise;
+    // };
+
     }
 
 ]);
