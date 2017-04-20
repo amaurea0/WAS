@@ -180,6 +180,17 @@
       "email": "teste",
       "password": "aaa",
       "id": 9
+    },
+    {
+      "email": "test",
+      "pass": "test",
+      "last_name": "",
+      "first_name": "",
+      "pseudo": "amaurea",
+      "date": "2017-04-20T11:54:56.356Z",
+      "avatar": "",
+      "profile": "",
+      "id": 10
     }
   ],
   "jobs": [
