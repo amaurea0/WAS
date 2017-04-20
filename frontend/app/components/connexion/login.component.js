@@ -18,13 +18,13 @@ WEA.component('login', {
         this.submitConnexion = (user) => {
             console.log(user)
 
-            this.errorMessage = '';
+            this.errorMessage1 = '';
 
             AuthService.connect(user.email, user.password).then(() => {
                 console.log(this.redirect)
                 $state.go(this.redirect ? this.redirect : 'questions');
             }).catch(() => {
-                this.errorMessage = `Utilisateur introuvable ou mot de passe invalide`;
+                this.errorMessage1 = `Utilisateur introuvable ou mot de passe invalide`;
             });
 
         };
@@ -32,7 +32,7 @@ WEA.component('login', {
         this.submitCreation = (user) => {
             console.log(user)
 
-            this.errorMessage = '';
+            this.errorMessage2 = '';
 
             var new_user = {
                 "email": user.email,
@@ -47,8 +47,8 @@ WEA.component('login', {
 
             AuthService.createUser(new_user).then(() => {
                 $state.go(this.redirect ? this.redirect : 'questions');
-            }).catch(() => {
-                this.errorMessage = `Une erreur s'est produite`;
+            }).catch((error) => {
+                this.errorMessage2 = error;
             });
 
         };
