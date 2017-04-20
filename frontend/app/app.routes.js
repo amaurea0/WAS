@@ -113,7 +113,6 @@ WEA.config(function ($stateProvider) {
             }
         })
 
-
         .state({
             name: 'tips',
             url: '/tips',
@@ -125,6 +124,12 @@ WEA.config(function ($stateProvider) {
             name: 'tips.postTip',
             url: '/post',
             component: 'postTip',
+            resolve: {}
+        })
+        .state({
+            name: 'jobs',
+            url: '/jobs',
+            component: 'jobsList',
             resolve: {}
         })
 });
