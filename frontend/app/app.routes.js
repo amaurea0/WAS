@@ -1,8 +1,13 @@
 'use strict';
 
-WEA.config(function ($stateProvider) {
+WEA.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 
+        .state('home', {
+            url: '/',
+            component: 'home',
+            resolve: {}
+        })
         .state({
             name: 'questions',
             url: '/questions',
@@ -144,6 +149,8 @@ WEA.config(function ($stateProvider) {
                     return $state.transition._targetState._params.redirect;
                 }
             }
-        })
+        });
+
+    $urlRouterProvider.otherwise('/');
 
 });

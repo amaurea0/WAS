@@ -117,4 +117,18 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         return defer.promise;
     };
 
+    this.QuestionHome = () => {
+
+        var defer = $q.defer();
+
+        $http.get(QST_URL + '?_sort=id&_order=DESC&_end=2').then((response) => {
+            defer.resolve(response.data);
+        }).catch((err) => {
+            $log.debug(`SVC: ERROR!!! ${err}`);
+            defer.reject(err);
+        });
+
+        return defer.promise;
+    };
+
 }]);
