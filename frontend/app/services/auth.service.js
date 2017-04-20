@@ -51,7 +51,7 @@ WEA.service('AuthService', function ($rootScope, $q, $http, $window) {
 
       var defer = $q.defer();
 
-      $http.get(API_URL + `?email=${email}&password=${pwd}`).then((response) => {
+      $http.get(API_URL + `?email=${email}&pass=${pwd}`).then((response) => {
         if (response.data.length > 0) {
           $window.localStorage.setItem(KEY, angular.toJson(response.data[0]));
           $rootScope.$emit('AUTH', true);
@@ -60,6 +60,7 @@ WEA.service('AuthService', function ($rootScope, $q, $http, $window) {
           defer.reject();
         }
       }).catch((response) => {
+          console.log(response)
         defer.reject();
       });
 

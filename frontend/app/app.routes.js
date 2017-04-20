@@ -51,6 +51,7 @@ WEA.config(function ($stateProvider) {
             name: 'questionPost',
             url: '/post',
             component: 'questionPost',
+            authenticate: true,
             resolve: {}
         })
 
@@ -99,6 +100,7 @@ WEA.config(function ($stateProvider) {
             name: 'questionSpec.postAnswer',
             url: '/newAnswer',
             component: 'answerPost',
+            authenticate: true,
             resolve: {}
         })
 
@@ -124,6 +126,7 @@ WEA.config(function ($stateProvider) {
             name: 'tips.postTip',
             url: '/post',
             component: 'postTip',
+            authenticate: true,
             resolve: {}
         })
         .state({
@@ -132,4 +135,15 @@ WEA.config(function ($stateProvider) {
             component: 'jobsList',
             resolve: {}
         })
+
+        .state('login', {
+            url: '/login',
+            component: 'login',
+            resolve: {
+                redirect: function ($state) {
+                    return $state.transition._targetState._params.redirect;
+                }
+            }
+        })
+
 });
