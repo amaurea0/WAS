@@ -22,13 +22,14 @@ WEA.component('login', {
 
         if (typeof user.name != 'undefined') {
           AuthService.createUser(user).then(() => {
-            $state.go(this.redirect ? this.redirect : 'main');
+            $state.go(this.redirect ? this.redirect : 'questions');
           }).catch(() => {
             this.errorMessage = `Une erreur s'est produite`;
           });
         } else {
           AuthService.connect(user.email, user.password).then(() => {
-
+            console.log(this.redirect)
+            $state.go(this.redirect ? this.redirect : 'questions');
           }).catch(() => {
             this.errorMessage = `Utilisateur introuvable ou mot de passe invalide`;
           });

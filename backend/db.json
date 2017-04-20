@@ -168,64 +168,38 @@
       "jobId": 7,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990498.jpg",
       "profile": "Salut, moi ca va aussi... hier, Prison Break, c'était pas mal. Si t'as un problème avec angular, j'peux t'aider: tu prends cette variable, tu la mets dans le truc là, et bâaaam ! Voilà ! hahah"
+    },
+    {
+      "name": "chatagnier",
+      "email": "aurore.chatagnier@gmail.com",
+      "password": "aaa",
+      "id": 8
+    },
+    {
+      "name": "tot",
+      "email": "teste",
+      "password": "aaa",
+      "id": 9
     }
   ],
   "jobs": [
     {
-      "id": 1,
-      "ville": "Bordeaux",
-      "poste": "DRH",
-      "entreprise": "Ajx",
-      "site": "www.ajx.com",
-      "userId": 1
+      "title": "Developer Frontend - angular 2",
+      "content": "Bla bla bla",
+      "place": "Alpha du centaure",
+      "society": "USS Enterprise",
+      "date": "2017-04-08T01:47:18.815Z",
+      "userId": 1,
+      "id": 1
     },
     {
-      "id": 2,
-      "ville": "San-Bernardino",
-      "poste": "CEO",
-      "entreprise": "Apple",
-      "site": "www.apple.com",
-      "userId": 2
-    },
-    {
-      "id": 3,
-      "ville": "Melun",
-      "poste": "Secrétaire",
-      "entreprise": "Chez René",
-      "site": "www.chezrené.fr",
-      "userId": 3
-    },
-    {
-      "id": 4,
-      "ville": "Bologne",
-      "poste": "Responsable Marketing",
-      "entreprise": "Nutella",
-      "site": "www.nutella.com",
-      "userId": 4
-    },
-    {
-      "id": 5,
-      "ville": "Bordeaux",
-      "poste": "employé libre-service",
-      "entreprise": "Carrouf",
-      "site": "www.carrefour.com",
-      "userId": 5
-    },
-    {
-      "id": 6,
-      "ville": "Biarritz",
-      "poste": "Responsable qualité",
-      "entreprise": "Oackley",
-      "site": "www.oackley.com",
-      "userId": 6
-    },
-    {
-      "id": 7,
-      "ville": "Saint-Georges-sous-Clisson",
-      "poste": "PDG",
-      "entreprise": "Charcuterie Balloche",
-      "site": "en cours",
-      "userId": 7
+      "title": "Developer Backend - PHP",
+      "content": "Bla bla bla",
+      "place": "Lille",
+      "society": "Nemesis",
+      "date": "2017-04-08T01:47:18.815Z",
+      "userId": 3,
+      "id": 2
     }
   ],
   "tags": [
@@ -635,25 +609,5 @@
       "url": "http://www.t-nation.com",
       "id": 7
     }
-  ],
-   "jobs": [
-    {
-      "title": "Developer Frontend - angular 2",
-      "content": "Bla bla bla",
-      "place": "Alpha du centaure",
-      "society": "USS Enterprise",
-      "date": "2017-04-08T01:47:18.815Z",
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "title": "Developer Backend - PHP",
-      "content": "Bla bla bla",
-      "place": "Lille",
-      "society": "Nemesis",
-      "date": "2017-04-08T01:47:18.815Z",
-      "userId": 3,
-      "id": 2
-    }
-   ]  
+  ]
 }
