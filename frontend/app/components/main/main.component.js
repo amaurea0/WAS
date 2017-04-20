@@ -3,7 +3,7 @@
 COMPNT
   .component("main", {
 
-    templateUrl: '/app/components/main/main.html',
+    templateUrl: '/frontend/app/components/main/main.html',
 
     bindings: {
     },
@@ -12,13 +12,22 @@ COMPNT
 
       function ($scope, INFO) {
 
-        this.info= {};
+        this.info = {};
 
         $scope.$on(INFO.userId, (event, key) => {
           this.info.userId = key;
-          console.log("éh la"+key)
+          console.log("éh la" + key)
         });
 
 
+        this.$onInit = () => {
+          this.rebindDropDowns = function () {
+            $('.dropdown-button').dropdown({ hover: true });
+            $('.dropdown-button').dropdown('close');
+            $('.button-collapse').sideNav();
+            $('.collapsible').collapsible();
+          };
+        };
       }]
   });
+

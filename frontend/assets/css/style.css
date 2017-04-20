@@ -1,99 +1,182 @@
-#navbar {
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 15px;
+body {
+    background-color: #f1f1f1;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-#navbar li {
-    display: inline-block;
-    list-style: none;
+#ppl {
+    flex: 1 0 auto;
+  }
+
+/*ICI VIENT LE STYLE DE LA BARRE DE NAV ET DU PARALLAX MAIN.HTML*/
+
+img {
+    max-height: 60px;
+    vertical-align: middle;
 }
 
-
-.msg {
-    display: block;
-    color: red;
+#search input[type="text"] {
+    background: url(/frontend/assets/img/search-white.png) no-repeat 10px 6px #fcfcfc;
+    height: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #455a64;
+    width: 100px;
+    padding: 6px 15px 6px 35px;
+    outline: none;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
 }
 
-input {
+#search input[type="text"]:focus {
     width: 200px;
-    height: 30px;
-    margin : 20px;
-    border: 1px solid grey;
-    border-radius: 4px;
 }
-button[type=submit] {
-    font-size: 1.2em;
-    background-color: orange;
-    border: none;
-    color: white;
-    padding: 10px 10px;
-    text-decoration: none;
-    cursor: pointer;
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: #455a64 !important;
+}
+
+.parallax-container {
+    margin-left: -8px;
+}
+
+
+/*ICI VIENT LE STYLE DU NUAGE*/
+
+.chip {
+    border-style: none;
 }
 
 
 /*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
 
-#user {
+li {
     display: flex;
-    flex-direction: row;
-    border: solid 2px black;
-    width: 750px;
-    padding: 10px;
+    direction: row;
+    color: #455a64;
 }
 
-#user img {
-    /*width: 150px;
-    height: 150px;*/
+i.icon-orange {
+    color: #ffb74d;
 }
 
-#bio {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: stretch;
-    width: 100%;
+#noms {
+    width: 300px;
+    padding: 0px 20px 0px 40px;
+    font-size: 18px;
 }
 
-#head {
-    text-align: center;
+#pseudo {
+    color: #f4a443;
+    font-size: 20px;
 }
 
-#body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.flow-text {
+    font-size: 12px;
+    width: 600px;
 }
 
-#tail {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+/*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS (Laetitia)*/
+
+.entete {
+    height: 65px;
+    margin: 0;
+    border-bottom: 5px solid #f1f1f1;
+    padding: 10px 15px 10px 15px;
 }
 
+.entete a{
+    float: right;
+}
 
-/*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS*/
+.entete h1 {
+    color: #455a64;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    float: left;
+}
 
 #question {
-    border: solid 2px black;
-    padding: 10px;
+    background-color: white;
     display: flex;
-    flex-direction: row;
-    background: #FBA858;
+    color: black;
+    border-bottom: 1px dotted #ffdea5;
+    margin: 0;
+    padding-top: 15px;
 }
 
-#center {
-    flex-grow: 3;
+.counters {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 20%;
 }
 
-#votes {
-    color: green;
+.counters>div {
+    margin: 10px;
+    width: 50%;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.4em;
+    color: #455a64;
 }
 
-#answers {
-    color: blue;
+.counters.view>div:first-child {
+    background: url(/frontend/assets/img/heart.png) no-repeat center;
+    background-size: 30px;
 }
+
+.counters.view>div:last-child {
+    background: url(/frontend/assets/img/eye.png) no-repeat center;
+    background-size: 30px;
+}
+
+.contenu {
+    width: 90%;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.contenu h3 {
+    font-size: 1.3em;
+    color: #35383a;
+    margin: 0;
+    padding: 0;
+}
+
+.contenu span {
+    font-size: 0.9em;
+    color: #80cbc4;
+    margin: 0;
+    padding: 0;
+}
+
+.contenu p {
+    color: #7b7b7b;
+    font-size: 1em;
+}
+
+/*ICI VIENT LE STYLE DU FOOTER*/
+
+.page-footer {
+    background-color: #455a64 !important;
+    max-height: 70px;
+}
+
+.page-footer img {
+    max-height: 80px;
+    padding-bottom: 40px;
+}
+

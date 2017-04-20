@@ -4,19 +4,10 @@ WEA.config(function ($stateProvider) {
     $stateProvider
 
         .state({
-            name: 'questionscomplet',
-            url: '/questionscomplet',
-            component: 'questionsComplet',
-            resolve: {}
-        })
-
-        .state({
             name: 'questions',
             url: '/questions',
             component: 'questionsList',
-            resolve: {
-                
-            }
+            resolve: {}
         })
 
         .state({
@@ -24,9 +15,24 @@ WEA.config(function ($stateProvider) {
             url: '/users',
             component: 'usersList',
             resolve: {
-                users: function ($rootScope, UsersService, $transition$) {
-                    return UsersService.getUsers($transition$.params().personId);
+                users: function ($rootScope, UsersService) {
+                    return UsersService.getUsers();
                 }
+            }
+        })
+
+        .state({
+            name: 'tags',
+            url: '/questions/:tagId/:tagName',
+            component: 'questionsList',
+            resolve: {
+                tagFilter: function ($stateParams) {
+                    return {
+                        tagId: $stateParams.tagId,
+                        tagName: $stateParams.tagName
+                    }
+                }
+
             }
         })
 
@@ -56,15 +62,21 @@ WEA.config(function ($stateProvider) {
         })
 
         .state({
-            name: 'tags',
-            url: '/questions/:tagId/:tagName',
-            component: 'questionsList',
+            name: 'questionSpec',
+            url: '/questions/{idQuestion}',
+            component: 'questionFull',
             resolve: {
-                tagFilter: function ($stateParams) {
-                    return {
-                        tagId: $stateParams.tagId,
-                        tagName: $stateParams.tagName
-                    };
+                question: function ($rootScope, QuestionsService, $transition$) {
+                    var nb_view;
+                    var id_question = $transition$.params().idQuestion;
+                    QuestionsService.getSpecificQuestion(id_question).then((resp) => {
+                        nb_view = resp.nb_views + 1;
+                        QuestionsService.viewQuestion(id_question, {
+                            "nb_views": nb_view
+                        }).then((rep) => {})
+                    }).catch((err) => {});
+
+                    return QuestionsService.getSpecificQuestion(id_question);
                 }
             }
         })
@@ -77,17 +89,6 @@ WEA.config(function ($stateProvider) {
         })
 
         .state({
-            name: 'questionSpec',
-            url: '/questions/{questionId}',
-            component: 'questionFull',
-            resolve: {
-                question: function ($rootScope, QuestionsService, $transition$) {
-                    return QuestionsService.getSpecificQuestion($transition$.params().questionId);
-                }
-            }
-        })
-
-        .state({
             name: 'logUser',
             url: '/logUser',
             component: 'userLogin',
@@ -95,11 +96,40 @@ WEA.config(function ($stateProvider) {
         })
 
         .state({
-            name: 'userprofile',
-            url: '/userprofile',
-            component: 'profil',
+            name: 'questionSpec.postAnswer',
+            url: '/newAnswer',
+            component: 'answerPost',
             resolve: {}
-        });
+        })
 
+        .state({
+            name: 'editPost',
+            url: '/edit/{postId}',
+            component: 'editPost',
+            resolve: {
+                post: function ($rootScope, QuestionsService, $transition$) {
+                    return QuestionsService.getSpecificQuestion($transition$.params().postId);
+                }
+            }
+        })
+
+        .state({
+            name: 'tips',
+            url: '/tips',
+            component: 'tips',
+            resolve: {}
+        })
+
+        .state({
+            name: 'tips.postTip',
+            url: '/post',
+            component: 'postTip',
+            resolve: {}
+        })
+        .state({
+            name: 'jobs',
+            url: '/jobs',
+            component: 'jobsList',
+            resolve: {}
+        })
 });
-

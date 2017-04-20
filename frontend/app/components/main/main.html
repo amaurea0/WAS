@@ -1,25 +1,63 @@
-<nav id="navbar">
-    <ul>
-        <li><a ui-sref="questions" ui-sref-active="select">Questions</a></li>
-        <li><a ui-sref="users" ui-sref-active="select">Users</a></li>
-        <li><a ui-sref="jobs" ui-sref-active="select">Jobs</a></li>
-        <li><a ui-sref="nuage" ui-sref-active="select">Nuage</a></li>
-        <li><a ui-sref="tips" ui-sref-active="select">Tips</a></li>
-        <li><a ui-sref="userprofile" ui-sref-active="select">Profile</a></li>
-        <!--<li><a ui-sref="addUser" ui-sref-active="select">S'enregistrer</a></li>-->
-        <li><a ui-sref="logUser" ui-sref-active="select">Se connecter</a></li>
-        <li><a ui-sref="questionid" ui-sref-active="select">Test QuestionSpe</a></li>
-        <li><a ui-sref="questionscomplet" ui-sref-active="select">Questions tags complet</a></li>
+
+<header>
+    
+
+<!--Trigger du DropDown-button-->
 
 
-        <login></login>
-    </ul>
+<ul id="administracion" class="dropdown-content" ng-init="$ctrl.rebindDropDowns()">
+    <li>
+        <a ui-sref="logUser" ui-sref-active="select">Connexion</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+        <a ui-sref="userprofile" ui-sref-active="select">Profile</a>
+    </li>
+</ul>
+
+
+<!--Barre de Nav-->
+<nav class="#455a64 blue-grey darken-2">
+    <div class="nav-wrapper container">
+        <a class="brand-logo"><img src="frontend/assets/img/logo_orange_pastille.png" alt="logo"></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-small-only" data-activates="mobile-demo">
+            <li>
+                <form method="get" action="/search" id="search">
+                    <input name="q" type="text" size="40" placeholder="Search..." />
+                </form>
+            </li>
+            <li><a ui-sref="questions" ui-sref-active="select"><i class="material-icons">view list</i></a></li>
+            <li><a ui-sref="users" ui-sref-active="select"><i class="material-icons">group</i></a></li>
+            <li><a ui-sref="jobs" ui-sref-active="select"><i class="material-icons">work</i></a></li>
+            <li><a ui-sref="tips" ui-sref-active="select"><i class="material-icons">lightbulb_outline</i></a></li>
+            <li><a ui-sref="nuage" ui-sref-active="select"><i class="material-icons">code_tags</i></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="administracion"><i class="material-icons">face</i></a></li>
+        </ul>
+
+        <!--Barre de nav 'sidebar' version mobile-->
+        <ul class="side-nav" id="mobile-demo">
+            <li><a ui-sref="questions" ui-sref-active="select">Questions</a></li>
+            <li><a ui-sref="users" ui-sref-active="select">Users</a></li>
+            <li><a ui-sref="jobs" ui-sref-active="select">Jobs</a></li>
+            <li><a ui-sref="tips" ui-sref-active="select">Tips</a></li>
+            <li><a ui-sref="nuage" ui-sref-active="select">Tags</a></li>
+            <!--<li><a class="dropdown-button" href="#!" data-activates="administracion"><i class="material-icons">face</i></a></li>-->
+        </ul>
+    </div>
 </nav>
+</header>
+<body>
+<ppl id="ppl">
 
 <ui-view info=$ctrl.info></ui-view>
 
-<footer>
-    <ul>
-        <li> Mentions légales</li>
-    </ul>
+
+</ppl>
+</body>
+<footer class="page-footer">
+        <div class="container">
+            <img src="frontend/assets/img/Logo/Logo WAS blanc.png" alt="">
+            <a class="grey-text text-lighten-4 right">© 2016 Copyright Text</a>
+        </div>
 </footer>

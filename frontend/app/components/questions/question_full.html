@@ -1,34 +1,44 @@
-<header>
-    <h1>CECI N'EST PAS UNE QUESTION</h1>
-    <a ui-sref="questionPost" ui-sref-active="select">Poser une question</a>
-</header>
+<div class="container">
+    <header>
+        <h1>Question et réponses</h1>
+        <a ui-sref="questionPost" ui-sref-active="select">Poser une question</a>
+    </header>
 
-<input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
-<div id="question">
-    <div id="left">
-        <div id="votes" ng-bind="$ctrl.question.votes"></div>
-        <div id="answers">
-            Réponses
+    <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
+    <div id="question">
+        <div id="left">
+            <div id="votes" ng-bind="$ctrl.question.votes"></div>
+            <div id="answers">
+                Réponses
+            </div>
+            <div ng-bind="$ctrl.question.views"></div>
         </div>
-        <div ng-bind="$ctrl.question.views"></div>
-    </div>
-    <div id="center">
-        <div ng-bind="$ctrl.question.title"></div>
-        <div ng-bind="$ctrl.question.body"></div>
-    </div>
-    <div id="right">
-        <img ng-src="{{$ctrl.question.user.avatar}}" alt="avatar">
-        <div ng-bind="$ctrl.question.date"></div>
-    </div>
+        <div id="center">
+            <div ng-bind="$ctrl.question.title"></div>
+            <div ng-bind="$ctrl.question.content"></div>
+            <button ui-sref="editPost({postId : $ctrl.question.id})">EDITION</button>
+        </div>
+        <div id="right">
+            <img ng-src="{{$ctrl.question.user.avatar}}" alt="avatar">
+            <div ng-bind="$ctrl.question.date"></div>
+        </div>
 
+    </div>
 </div>
+
+
+<a ui-sref="questionSpec.postAnswer"><button type="">Nouvelle Réponse</button></a>
+
+<ui-view></ui-view>
+
+
 <div ng-if="$ctrl.question.answers.length > 0">
     <div id="answers" ng-repeat="answer in $ctrl.question.answers | filter : $ctrl.model.query">
         <table>
             <tr>
+                <td ng-bind="answer.title"></td>
+                <td ng-bind="answer.content"></td>
                 <td ng-bind="answer.date"></td>
-                <td ng-bind="answer.body"></td>
-                <td ng-bind="answer.views"></td>
                 <td ng-bind="answer.votes"></td>
             </tr>
         </table>
