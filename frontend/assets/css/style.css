@@ -1,11 +1,13 @@
 body {
     background-color: #f1f1f1;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-.page {
-    background-color: white;
-}
-
+#ppl {
+    flex: 1 0 auto;
+  }
 
 /*ICI VIENT LE STYLE DE LA BARRE DE NAV ET DU PARALLAX MAIN.HTML*/
 
@@ -59,14 +61,14 @@ img {
 
 /*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
 
-.input-field input:focus {
-    border-bottom-color: orange;
-}
-
 li {
     display: flex;
     direction: row;
     color: #455a64;
+}
+
+i.icon-orange {
+    color: #ffb74d;
 }
 
 #noms {
@@ -76,7 +78,7 @@ li {
 }
 
 #pseudo {
-    color: orange;
+    color: #f4a443;
     font-size: 20px;
 }
 
@@ -84,34 +86,6 @@ li {
     font-size: 12px;
     width: 600px;
 }
-
-.secondary-content {
-    color: orange !important;
-}
-
-
-/*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS*/
-
-#questionsFlex {
-    display: flex;
-    direction: row;
-}
-
-.btn-floating {
-    padding-top: 5px;
-    margin-top: 5px;
-}
-
-#chip {
-    padding-top: 12px;
-    margin: 5px 30px;
-}
-
-#questionsTags {
-    width: 600px;
-    padding: 0px 20px 0px 40px;
-}
-
 
 /*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS (Laetitia)*/
 
@@ -122,16 +96,21 @@ li {
     padding: 10px 15px 10px 15px;
 }
 
+.entete a{
+    float: right;
+}
+
 .entete h1 {
     color: #455a64;
     font-size: 2.5em;
     margin: 0;
     padding: 0;
     text-transform: uppercase;
-    float: right;
+    float: left;
 }
 
 #question {
+    background-color: white;
     display: flex;
     color: black;
     border-bottom: 1px dotted #ffdea5;
@@ -144,22 +123,6 @@ li {
     width: 20%;
 }
 
-#answers {
-    color: blue;
-}
-
-/*ICI VIENT LE STYLE DU FOOTER*/
-
-.page-footer {
-    background-color: #455a64 !important;
-    max-height: 70px;
-}
-
-.page-footer img {
-    max-height: 80px;
-    padding-bottom: 40px;
-}
-
 .counters>div {
     margin: 10px;
     width: 50%;
@@ -169,12 +132,12 @@ li {
     color: #455a64;
 }
 
-.counters>div:first-child {
+.counters.view>div:first-child {
     background: url(/frontend/assets/img/heart.png) no-repeat center;
     background-size: 30px;
 }
 
-.counters>div:last-child {
+.counters.view>div:last-child {
     background: url(/frontend/assets/img/eye.png) no-repeat center;
     background-size: 30px;
 }
@@ -203,5 +166,17 @@ li {
 .contenu p {
     color: #7b7b7b;
     font-size: 1em;
+}
+
+/*ICI VIENT LE STYLE DU FOOTER*/
+
+.page-footer {
+    background-color: #455a64 !important;
+    max-height: 70px;
+}
+
+.page-footer img {
+    max-height: 80px;
+    padding-bottom: 40px;
 }
 

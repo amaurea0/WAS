@@ -1,4 +1,10 @@
+
+<header>
+    
+
 <!--Trigger du DropDown-button-->
+
+
 <ul id="administracion" class="dropdown-content" ng-init="$ctrl.rebindDropDowns()">
     <li>
         <a ui-sref="logUser" ui-sref-active="select">Connexion</a>
@@ -40,16 +46,18 @@
         </ul>
     </div>
 </nav>
-
+</header>
+<body>
+<ppl id="ppl">
 
 <ui-view info=$ctrl.info></ui-view>
 
-
-
-
+</ppl>
+    
 <footer class="page-footer">
         <div class="container">
             <img src="frontend/assets/img/Logo/Logo WAS blanc.png" alt="">
             <a class="grey-text text-lighten-4 right">© 2016 Copyright Text</a>
         </div>
 </footer>
+</body>
