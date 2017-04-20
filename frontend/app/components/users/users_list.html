@@ -1,44 +1,19 @@
-<div class="container">
+<div class="container" id="test">
     <header>
-        <h1>Users list</h1>
-        <div><a ui-sref="addUser" ui-sref-active="select">S'enregistrer</a></div>
-
+        <a class="waves-effect waves-light btn-large #90a4ae blue-grey lighten-2" ui-sref="addUser" ui-sref-active="select">S'enregistrer</a>
     </header>
 
     <div ng-if="$ctrl.users.length > 0">
-        <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
-
-        <ul ng-repeat="user in $ctrl.users | filter : $ctrl.model.query" class="collection" >
+        <div class="input-field">
+            <input class="validate" type="text" placeholder="Rechercher..." ng-model="$ctrl.model.query">
+        </div>
+        <ul ng-repeat="user in $ctrl.users | filter : $ctrl.model.query" class="collection">
             <li class="collection-item avatar" ui-sref="person({personId : user.id})">
-                <img ng-src="{{user.avatar}}" alt="photo" class="circle">
-
-                <span class="title" ng-bind="user.pseudo"></span>
-                <p>{{user.first_name}}<br> {{user.last_name}}
-                    <br> {{user.ville}}
-                </p>
-                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                <img class="circle" ng-src="{{user.avatar}}" alt="user's picture">
+                <P id="noms">{{user.first_name}} {{user.last_name}}</br> Aka <span id="pseudo">{{user.pseudo}}</span></p>
+                <p class="flow-text">{{user.profile}}</p>
+                <!--<a class="secondary-content"><i class="material-icons">grade</i></a>-->
             </li>
         </ul>
-
-
-
-
-        <!--
-        <div id="user" ng-repeat="user in $ctrl.users | filter : $ctrl.model.query">
-            <a ui-sref="person({personId : user.id})"> <img ng-src="{{user.avatar}}" alt="photo">
-                <div id="bio">
-                    <div id="head"><span ng-bind="user.first_name"></span> <span ng-bind="user.last_name"></span></div>
-                    <div id="body">
-                        <div><span ng-bind="user.pseudo"></div>
-            <div>Job</div>
-            <div><span ng-bind="user.ville"></div>
-        </div>
-        <div id="tail">
-            <div>Rèp:ThugLife</div>
-            <div>#HashTags###</div>
-            <div><button type="">Full Profile</button></div>
-        </div>
-    </div></a>
+    </div>
 </div>
-</div>
-</div>-->

@@ -26,7 +26,6 @@ COMPNT
             $('.dropdown-button').dropdown('close');
             $('.button-collapse').sideNav();
             $('.collapsible').collapsible();
-            $('.parallax').parallax();
           };
         };
       }]
