@@ -3,7 +3,7 @@
     {
       "title": "Comment faire?",
       "content": "q",
-      "nb_views": 75,
+      "nb_views": 80,
       "votes": 100,
       "date": "2017-04-08T01:47:18.815Z",
       "userId": 1,
@@ -21,7 +21,7 @@
     {
       "title": "coucou a nouveau",
       "content": "aaae yeah ça marche",
-      "nb_views": 64,
+      "nb_views": 65,
       "votes": 871,
       "date": "2017-04-08T01:51:51.436Z",
       "userId": 3,
@@ -39,7 +39,7 @@
     {
       "title": "Coucou ?",
       "content": "liste de courses pour le repas chez mamie",
-      "nb_views": 5,
+      "nb_views": 6,
       "votes": 745,
       "date": "2017-04-08T09:25:09.366Z",
       "userId": 5,
@@ -89,6 +89,15 @@
       "date": "2017-04-17T17:51:13.675Z",
       "userId": 5,
       "id": 28
+    },
+    {
+      "title": "nouvelle question",
+      "content": "test",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-20T16:40:08.951Z",
+      "userId": 13,
+      "id": 29
     }
   ],
   "users": [
@@ -210,6 +219,17 @@
       "avatar": "",
       "profile": "",
       "id": 12
+    },
+    {
+      "email": "aurorecha@gmail.com",
+      "pass": "auroreas",
+      "last_name": "",
+      "first_name": "",
+      "pseudo": "aurorea",
+      "date": "2017-04-20T16:16:31.741Z",
+      "avatar": "",
+      "profile": "",
+      "id": 13
     }
   ],
   "jobs": [
