@@ -1,0 +1,55 @@
+<div class="bloc_center">
+
+    <div class="row">
+
+        <div class="col s12">
+            <ul tabs reload="allTabContentLoaded">
+                <li class="tab col s6"><a class="active" href="#connexion">Connexion</a></li>
+                <li class="tab col s6"><a href="#creation">Create count</a></li>
+            </ul>
+        </div>
+
+        <div id="connexion" class="col s12">
+            <form name="myForm1" ng-submit="$ctrl.submitConnexion($ctrl.user)" novalidate>
+                <div ng-show="$ctrl.errorMessage1" class="alert alert-danger">
+                    {{$ctrl.errorMessage1}}
+                </div>
+
+                <div class="form-group">
+                    <input name="email" ng-model="$ctrl.user.email" placeholder="Adresse mail" type="email" class="form-control" required />
+                    <span ng-show="myForm1.$error.email" class="error">Email non valide</span>
+                </div>
+                <div class="form-group">
+                    <input name="password" ng-model="$ctrl.user.password" placeholder="Mot de passe" type="password" class="form-control" required
+                        ng-minlength="8" />
+                    <span ng-show="myForm1.password.$error.minlength" class="error">Password is too short </span>
+                </div>
+                <hr />
+                <button class="btn btn-primary" type="submit" ng-disabled="myForm1.$invalid">Valider</button>
+            </form>
+        </div>
+
+        <div id="creation" class="col s12">
+            <form name="myForm2" ng-submit="$ctrl.submitCreation($ctrl.user)" novalidate>
+                <div class="alert alert-danger" ng-show="$ctrl.errorMessage2">
+                    {{$ctrl.errorMessage2}}
+                </div>
+                <div class="form-group">
+                    <input name="pseudo" ng-model=" $ctrl.user.pseudo" placeholder="Pseudo" type="text" class="form-control" required ng-minlength="5" />
+                    <span ng-show="myForm2.pseudo.$error.minlength" class="error">Pseudo is too short </span>
+                </div>
+                <div class="form-group">
+                    <input name="email" ng-model="$ctrl.user.email" placeholder="Adresse mail" type="email" class="form-control" required />
+                    <span ng-show="myForm2.$error.email" class="error">Email non valide</span>
+                </div>
+                <div class="form-group">
+                    <input name="password" ng-model="$ctrl.user.password" placeholder="Mot de passe" type="password" class="form-control" required ng-minlength="8"
+                    />
+                    <span ng-show="myForm2.password.$error.minlength" class="error">Password is too short </span>
+                </div>
+                <hr />
+                <button class="btn btn-primary" type="submit" ng-disabled="myForm2.$invalid">Valider</button>
+            </form>
+        </div>
+    </div>
+</div>

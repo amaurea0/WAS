@@ -42,7 +42,9 @@
           <div class="contenu">
             <a ui-sref="questionSpec({idQuestion : question.id})">
               <h3 class="title" ng-bind="question.title"></h3>
-              <span>25 answers</span>
+
+             <!-- <span class="answers" ng-bind="question.answers"></span>-->
+              <span>{{question.answers.length}} Réponses</span>
               <P id="questionsTags">{{question.tag}}</p>
               <p class="content" ng-bind="question.content"></p>
               <div ng-bind="question.tag"></div>

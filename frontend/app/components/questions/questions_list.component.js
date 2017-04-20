@@ -29,13 +29,13 @@ COMPNT
         },
         {
           "view": "view3",
-          "label": "Plus vues",
-          "sort": "-nb_views"
+          "label": "Latest",
+          "sort": "-date"
         },
         {
           "view": "view4",
-          "label": "Plus vues",
-          "sort": "-nb_views"
+          "label": "Less answers",
+          "sort": "answers"
         }
       ];
 

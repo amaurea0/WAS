@@ -40,7 +40,7 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         var defer = $q.defer();
 
 
-        $http.get(QST_URL + '?_expand=user').then((response) => {
+        $http.get(QST_URL + '?_expand=user&_embed=answers').then((response) => {
             defer.resolve(response.data);
         }).catch((err) => {
             $log.debug(`SVC: ERROR!!! ${err}`);
@@ -64,7 +64,7 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
 
     this.getQuestionId = (id) => {
         var deferred = $q.defer();
-        $http.get(QST_URL + '?id=' + id + '&_expand=user').then(
+        $http.get(QST_URL + '?id=' + id + '&_expand=user&_embed=answers').then(
             function (response) {
                 deferred.resolve(response.data);
             },

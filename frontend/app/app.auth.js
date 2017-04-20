@@ -1,54 +1,74 @@
 'use strict';
 
-WEA.config(function ($authProvider) {
+WEA.service('AuthService', function ($rootScope, $q, $http, $window) {
 
-    $authProvider.httpInterceptor = function () {
-        return true;
+    const API_URL = 'http://localhost:3000/users';
+    const KEY = 'app-auth';
+
+    this.isAuthenticated = () => {
+      var user = angular.fromJson($window.localStorage.getItem(KEY));
+      return user && typeof user.id != 'undefined';
     };
-    $authProvider.withCredentials = false;
-    $authProvider.tokenRoot = null;
-    $authProvider.baseUrl = '/';
-    $authProvider.loginUrl = '/auth/login';
-    $authProvider.signupUrl = '/auth/signup';
-    $authProvider.unlinkUrl = '/auth/unlink/';
-    $authProvider.tokenName = 'token';
-    $authProvider.tokenPrefix = 'satellizer';
-    $authProvider.tokenHeader = 'Authorization';
-    $authProvider.tokenType = 'Bearer';
-    $authProvider.storageType = 'localStorage';
 
-    // Facebook
-    $authProvider.facebook({
-        name: 'facebook',
-        url: '/auth/facebook',
-        authorizationEndpoint: 'https://www.facebook.com/v2.5/dialog/oauth',
-        redirectUri: window.location.origin + '/',
-        requiredUrlParams: ['display', 'scope'],
-        scope: ['email'],
-        scopeDelimiter: ',',
-        display: 'popup',
-        oauthType: '2.0',
-        popupOptions: {
-            width: 580,
-            height: 400
-        }
-    });
+    this.getCurrentUser = () => {
+      return angular.fromJson($window.localStorage.getItem(KEY));
+    };
 
-    // Google
-    $authProvider.google({
-        url: '/auth/google',
-        authorizationEndpoint: 'https://accounts.google.com/o/oauth2/auth',
-        redirectUri: window.location.origin,
-        requiredUrlParams: ['scope'],
-        optionalUrlParams: ['display'],
-        scope: ['profile', 'email'],
-        scopePrefix: 'openid',
-        scopeDelimiter: ' ',
-        display: 'popup',
-        oauthType: '2.0',
-        popupOptions: {
-            width: 452,
-            height: 633
+    this.getUserByEmail = (email) => {
+      var defer = $q.defer();
+
+      $http.get(API_URL + `?email=${email}`).then((response) => {
+        if (response.data.length > 0) {
+          defer.resolve(response.data);
+        } else {
+          defer.reject();
         }
-    });
-});
+      }).catch(() => {
+        defer.reject();
+      });
+
+      return defer.promise;
+    };
+
+    this.createUser = (user) => {
+
+      var defer = $q.defer();
+
+      this.getUserByEmail(user.email).then(() => {
+        defer.reject();
+      }).catch(() => {
+        $http.post(API_URL, user).then((response) => {
+          $window.localStorage.setItem(KEY, angular.toJson(response.data));
+          $rootScope.$emit('AUTH', true);
+          defer.resolve();
+        });
+      });
+
+      return defer.promise;
+    };
+
+    this.connect = (email, pwd) => {
+
+      var defer = $q.defer();
+
+      $http.get(API_URL + `?email=${email}&password=${pwd}`).then((response) => {
+        if (response.data.length > 0) {
+          $window.localStorage.setItem(KEY, angular.toJson(response.data[0]));
+          $rootScope.$emit('AUTH', true);
+          defer.resolve();
+        } else {
+          defer.reject();
+        }
+      }).catch((response) => {
+        defer.reject();
+      });
+
+      return defer.promise;
+    };
+
+    this.disconnect = () => {
+      $window.localStorage.removeItem(KEY);
+      $rootScope.$emit('AUTH', false);
+    };
+
+  });
