@@ -16,9 +16,10 @@ COMPNT
             this.$onInit = () => {
                 console.log(this.question);
                 this.myQuestion = false;
-                if (this.question.userId == AuthService.getCurrentUser().id) this.myQuestion = true;
-                console.log(this.myQuestion);
+                if (AuthService.getCurrentUser().id){
+                    if (this.question.userId == AuthService.getCurrentUser().id) this.myQuestion = true;
 
+                }
 
                 var updatedCount = {
                     "nb_views": this.question.nb_views + 1
