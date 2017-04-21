@@ -8,6 +8,7 @@
     <div id="question">
         <div class="counters view">
             <div ng-bind="$ctrl.question.votes"></div>
+
             <div ng-bind="$ctrl.question.nb_views + 1"></div>
         </div>
         <div class="contenu">
@@ -29,7 +30,7 @@
 
 
         <div ng-if="$ctrl.question.answers.length > 0">
-            <div  id="answer" ng-repeat="answer in $ctrl.question.answers | filter : $ctrl.model.query">
+            <div id="answer" ng-repeat="answer in $ctrl.question.answers | filter : $ctrl.model.query">
 
                 <div class="counters view">
                     <div ng-bind="answer.votes"></div>
@@ -40,7 +41,7 @@
                     <span>{{answer.date | date:"MM/dd/yyyy"}}</span>
                     <p ng-bind="answer.content"></p>
                 </div>
-                
+
             </div>
         </div>
     </div>

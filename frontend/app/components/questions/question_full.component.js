@@ -14,15 +14,13 @@ COMPNT
 
         controller: ['AuthService', 'QuestionsService', '$log', function (AuthService, QuestionsService, $log) {
             this.$onInit = () => {
-                console.log(this.question);
-                this.myQuestion = false;
-                if (AuthService.getCurrentUser()){
-                    if (this.question.userId == AuthService.getCurrentUser().id) this.myQuestion = true;
-
-                }
 
                 var updatedCount = {
                     "nb_views": this.question.nb_views + 1
+                }
+                this.myQuestion = false;
+                if (AuthService.getCurrentUser()) {
+                    if (this.question.userId == AuthService.getCurrentUser().id) this.myQuestion = true;
                 }
 
                 QuestionsService.viewQuestion(this.question.id, updatedCount).then((response) => {
@@ -35,8 +33,6 @@ COMPNT
                 }).catch((error) => {
                     $log.error('en fait non');
                 });
-
             };
         }]
-
     });
