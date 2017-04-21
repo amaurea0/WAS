@@ -3,6 +3,8 @@
 const QST_URL = "http://localhost:3000/questions";
 const ASW_URL = "http://localhost:3000/answers";
 const TIPS_URL = "http://localhost:3000/tips";
+const VOTE_QST_URL = "http://localhost:3000/votes_question";
+const VOTE_ASW_URL = "http://localhost:3000/votes_answer";
 
 
 SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $log, $q) {
@@ -111,6 +113,84 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         return defer.promise;
     };
 
+    this.updateVoteQuestion = (question_id, paramVote) => {
+        var defer = $q.defer();
+
+        $http.patch(QST_URL + '/' + question_id, paramVote).then((response) => {
+            defer.resolve(response.data);
+        }).catch((err) => {
+            $log.debug(`SVC: ERROR!!! ${err}`);
+            defer.reject(err);
+        });
+
+        return defer.promise;
+    };
+
+    this.updateVoteAnswer = (answer_id, paramVote) => {
+        var defer = $q.defer();
+
+        $http.patch(ASW_URL + '/' + answer_id, paramVote).then((response) => {
+            defer.resolve(response.data);
+        }).catch((err) => {
+            $log.debug(`SVC: ERROR!!! ${err}`);
+            defer.reject(err);
+        });
+
+        return defer.promise;
+    };
+
+    this.postVoteQuestionUser = function (vote) {
+        var defer = $q.defer();
+        $http.post(VOTE_QST_URL, vote).then((response) => {
+            defer.resolve(response.data);
+        }).catch((error) => {
+            defer.reject(error);
+            $log.error(error);
+        });
+
+        return defer.promise;
+    };
+
+    this.postVoteAnswerUser = function (vote) {
+        var defer = $q.defer();
+        $http.post(VOTE_ASW_URL, vote).then((response) => {
+            defer.resolve(response.data);
+        }).catch((error) => {
+            defer.reject(error);
+            $log.error(error);
+        });
+
+        return defer.promise;
+    };
+
+    this.voteQstExist = (questionid, userid) => {
+        var defer = $q.defer();
+
+        $http.get(VOTE_QST_URL + '?userId=' + userid + '&questionId=' + questionid).then((response) => {
+            defer.resolve(response.data);
+        }).catch((error) => {
+            $log.warn(`${error} : service couldn't reach server !`)
+            defer.reject(error);
+        });
+
+        return defer.promise;
+
+    }
+
+    this.voteAswExist = (answerid, userid) => {
+        var defer = $q.defer();
+
+        $http.get(VOTE_ASW_URL + '?userId=' + userid + '&answerId=' + answerid).then((response) => {
+            defer.resolve(response.data);
+        }).catch((error) => {
+            $log.warn(`${error} : service couldn't reach server !`)
+            defer.reject(error);
+        });
+
+        return defer.promise;
+
+    }
+
     this.QuestionHome = () => {
 
         var defer = $q.defer();
@@ -138,4 +218,5 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
 
         return defer.promise;
     }
+
 }]);
