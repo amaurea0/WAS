@@ -2,6 +2,7 @@ body {
     background-color: #f1f1f1;
 }
 
+
 .bloc_center h2 {
     font-size: 2em;
 }
@@ -10,6 +11,7 @@ body {
     padding-left: 20px;
     font-size: 1.3em;
 }
+
 
 /* titraille globale*/
 
@@ -56,6 +58,7 @@ h1 {
     color: #455a64 !important;
 }
 
+
 /*ICI VIENT LE STYLE DU NUAGE*/
 
 .chip {
@@ -97,6 +100,7 @@ i.icon-orange {
     color: #f4a443;
 }
 
+
 /*ICI VIENT LE STYLE DE LA LISTE DES JOBS*/
 
 #society {
@@ -110,8 +114,9 @@ i.icon-orange {
 
 #tagJob {
     font-size: 0.7em;
-    color:#26a69a;
+    color: #26a69a;
 }
+
 
 /*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS (Laetitia)*/
 
@@ -193,12 +198,12 @@ i.icon-orange {
 }
 
 .counters.view>div:first-child {
-    background: url(/frontend/assets/img/heart.png) no-repeat center;
+    background: url(/frontend/assets/img/eye.png) no-repeat center;
     background-size: 30px;
 }
 
 .counters.view>div:last-child {
-    background: url(/frontend/assets/img/eye.png) no-repeat center;
+    background: url(/frontend/assets/img/heart.png) no-repeat center;
     background-size: 30px;
 }
 
@@ -258,6 +263,7 @@ i.icon-orange {
     padding-bottom: 40px;
 }
 
+
 /*///// HOME PAGE JULIEN/////*/
 
 nav ul a,
@@ -307,7 +313,7 @@ p {
     }
 }
 
-.nav-wrapper.container .brand-logo img {
+.nav-wrapper .brand-logo img {
     height: 54px;
     width: 55px;
     margin-top: 5px;
@@ -344,7 +350,9 @@ p {
 }
 
 footer.page-footer {
+    bottom: 0;
     margin: 0;
+    width: 100%;
 }
 
 

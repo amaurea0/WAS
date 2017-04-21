@@ -21,8 +21,8 @@
     {
       "title": "How can I prevent SQL injection in PHP?",
       "content": "If user input is inserted without modification into an SQL query, then the application becomes vulnerable to SQL injection, like in the following example:",
-      "nb_views": 231,
-      "votes": 871,
+      "nb_views": 275,
+      "votes": 900,
       "date": "2017-04-08T01:51:51.436Z",
       "userId": 3,
       "id": 3
@@ -89,6 +89,16 @@
       "date": "2017-04-17T17:51:13.675Z",
       "userId": 5,
       "id": 10
+    },
+    {
+      "userId": 1,
+      "questionId": 3,
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "questionId": 3,
+      "id": 12
     }
   ],
   "users": [
@@ -168,9 +178,21 @@
       "jobId": 7,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990498.jpg",
       "profile": "Salut, moi ca va aussi... hier, Prison Break, c'était pas mal. Si t'as un problème avec angular, j'peux t'aider: tu prends cette variable, tu la mets dans le truc là, et bâaaam ! Voilà ! hahah"
+    },
+    {
+      "email": "toto",
+      "pass": "toto",
+      "id": 8,
+      "last_name": "Roussetto",
+      "first_name": "Juliano",
+      "pseudo": "Julian",
+      "jobId": 7,
+      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990498.jpg",
+      "profile": "Salut, moi ca va aussi... hier, Prison Break, c'était pas mal. Si t'as un problème avec angular, j'peux t'aider: tu prends cette variable, tu la mets dans le truc là, et bâaaam ! Voilà ! hahah"
     }
   ],
-  "tags": [{
+  "tags": [
+    {
       "id": 1,
       "name": "Javascript"
     },
@@ -280,7 +302,7 @@
       "title": "Responsive div/container - Fixed Soze",
       "content": "utouytiut",
       "nb_views": 0,
-      "votes": 0,
+      "votes": 1,
       "date": "2017-04-12T09:55:44.042Z",
       "id": 5,
       "questionId": 5
@@ -460,7 +482,7 @@
       "title": "Hahah",
       "content": "Yeahhhhh",
       "nb_views": 0,
-      "votes": 0,
+      "votes": 1,
       "date": "2017-04-14T11:13:21.836Z",
       "questionId": 5,
       "id": 25
@@ -657,6 +679,60 @@
       "date": "2017-04-21T09:26:11.776Z",
       "site": "www.ubisoft.fr",
       "id": 17
+    }
+  ],
+  "votes_question": [
+    {
+      "userId": 1,
+      "questionId": 1,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "questionId": 6,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "questionId": 3,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "questionId": 5,
+      "id": 4
+    }
+  ],
+  "votes_answer": [
+    {
+      "userId": 1,
+      "answerId": 1,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "answerId": 6,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "answerIde": 3,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "answerId": 5,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "answerId": 15,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "answerId": 25,
+      "id": 6
     }
   ]
 }
