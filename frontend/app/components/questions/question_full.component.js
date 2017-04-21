@@ -12,7 +12,12 @@ COMPNT
             question: '<'
         },
 
-        controller: function () {
-            console.log(this.question);
-        }
+        controller: ['AuthService', function (AuthService) {
+            this.$onInit = () => {
+                console.log(this.question);
+                this.myQuestion = false;
+                if (this.question.userId == AuthService.getCurrentUser().id) this.myQuestion = true;
+                console.log(this.myQuestion);
+            };
+        }]
     });
