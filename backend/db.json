@@ -12,7 +12,7 @@
     {
       "title": "a6 votes 521 symphony angular",
       "content": "bonjour aurore",
-      "nb_views": 6,
+      "nb_views": 14,
       "votes": 521,
       "date": "2017-04-08T01:49:44.615Z",
       "userId": 2,
@@ -57,7 +57,7 @@
     {
       "title": "nouvelle question?",
       "content": "test live demo woohoo",
-      "nb_views": 0,
+      "nb_views": 1,
       "votes": 0,
       "date": "2017-04-14T11:55:23.473Z",
       "userId": 7,
@@ -75,7 +75,7 @@
     {
       "title": "Navbar bootstrap avec angular?",
       "content": "Je souhaite mettre en place une navbar bootstrap mais j'ai un problème de compatibilité avec angular.",
-      "nb_views": 0,
+      "nb_views": 8,
       "votes": 0,
       "date": "2017-04-17T15:28:44.873Z",
       "userId": 6,
@@ -84,7 +84,7 @@
     {
       "title": "Je souhaite poser cette question, comment faire ?",
       "content": "Pierre Test 2",
-      "nb_views": 1,
+      "nb_views": 8,
       "votes": 0,
       "date": "2017-04-17T17:51:13.675Z",
       "userId": 5,
@@ -177,70 +177,6 @@
       "jobId": 7,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990498.jpg",
       "profile": "Salut, moi ca va aussi... hier, Prison Break, c'était pas mal. Si t'as un problème avec angular, j'peux t'aider: tu prends cette variable, tu la mets dans le truc là, et bâaaam ! Voilà ! hahah"
-    },
-    {
-      "name": "chatagnier",
-      "email": "aurore.chatagnier@gmail.com",
-      "password": "aaa",
-      "id": 8
-    },
-    {
-      "name": "tot",
-      "email": "teste",
-      "password": "aaa",
-      "id": 9
-    },
-    {
-      "email": "test",
-      "pass": "test",
-      "last_name": "",
-      "first_name": "",
-      "pseudo": "amaurea",
-      "date": "2017-04-20T11:54:56.356Z",
-      "avatar": "",
-      "profile": "",
-      "id": 10
-    },
-    {
-      "last_name": "",
-      "first_name": "",
-      "date": "2017-04-20T13:09:57.723Z",
-      "avatar": "",
-      "profile": "",
-      "id": 11
-    },
-    {
-      "email": "chatagnier@gmail.com",
-      "pass": "aserrzfs",
-      "last_name": "",
-      "first_name": "",
-      "pseudo": "ssdsd",
-      "date": "2017-04-20T15:02:29.530Z",
-      "avatar": "",
-      "profile": "",
-      "id": 12
-    },
-    {
-      "email": "aurorecha@gmail.com",
-      "pass": "auroreas",
-      "last_name": "",
-      "first_name": "",
-      "pseudo": "aurorea",
-      "date": "2017-04-20T16:16:31.741Z",
-      "avatar": "",
-      "profile": "",
-      "id": 13
-    },
-    {
-      "email": "test@mail",
-      "pass": "testmail",
-      "last_name": "",
-      "first_name": "",
-      "pseudo": "test1",
-      "date": "2017-04-20T18:56:32.388Z",
-      "avatar": "",
-      "profile": "",
-      "id": 14
     }
   ],
   "jobs": [
@@ -669,6 +605,26 @@
       "content": "t-nation",
       "url": "http://www.t-nation.com",
       "id": 7
+    },
+    {
+      "content": "Git : les commandes usuelles à connaitre",
+      "url": "http://http://tilap.net/gitliste-des-commandes-a-connaitre/",
+      "id": 8
+    },
+    {
+      "content": "Git : les commandes usuelles à connaitre",
+      "url": "http://http://tilap.net/gitliste-des-commandes-a-connaitre/",
+      "id": 9
+    },
+    {
+      "content": "reddit a voir",
+      "url": "http://https://www.reddit.com/",
+      "id": 10
+    },
+    {
+      "content": "reddit",
+      "url": "http://www.reddit.com/",
+      "id": 11
     }
   ]
 }

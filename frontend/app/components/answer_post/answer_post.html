@@ -1,6 +1,6 @@
-<div class="container">
-    <h3>Nouvelle Réponse</h3>
-    <form ng-submit="$ctrl.saveAnswer($ctrl.answer)" novalidate>
+<div class="bloc_center">
+    <h2>Poster une nouvelle réponse</h2>
+    <form class="formulaire" ng-submit="$ctrl.saveAnswer($ctrl.answer)" novalidate>
         <div class="form-group">
             <label for="title">Titre réponse</label>
             <input type="text" class="form-control" id="title" ng-model="$ctrl.answer.title" />
