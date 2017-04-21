@@ -28,6 +28,9 @@ COMPNT.component("questionPost", {
       this.removeTag = (tag) => {
         this.new_tags.splice(this.new_tags.indexOf(tag), 1);
       };
+      this.cancel = () => {
+          $state.go('questions');
+      }
 
       this.save = (question) => {
         
