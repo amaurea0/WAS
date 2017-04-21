@@ -2,10 +2,6 @@ body {
     background-color: #f1f1f1;
 }
 
-#ppl {
-    flex: 1 0 auto;
-}
-
 .bloc_center h2 {
     font-size: 2em;
 }
@@ -90,8 +86,6 @@ i.icon-orange {
     width: 600px;
 }
 
-/*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
-
 #personRight {
     display: flex;
     direction: row;
@@ -111,7 +105,7 @@ i.icon-orange {
 
 #flexJob {
     display: flex;
-    direction: column;
+    flex-direction: column;
 }
 
 #tagJob {
@@ -264,20 +258,6 @@ i.icon-orange {
     padding-bottom: 40px;
 }
 
-
-/*ICI VIENT LE STYLE DU FOOTER*/
-
-.page-footer {
-    background-color: #455a64 !important;
-    max-height: 70px;
-}
-
-.page-footer img {
-    max-height: 80px;
-    padding-bottom: 40px;
-}
-
-
 /*///// HOME PAGE JULIEN/////*/
 
 nav ul a,
@@ -330,7 +310,7 @@ p {
 .nav-wrapper.container .brand-logo img {
     height: 54px;
     width: 55px;
-    margin-top: -5px;
+    margin-top: 5px;
 }
 
 .container h1.text-lighten-2 {
@@ -373,7 +353,6 @@ footer.page-footer {
 #questionhome {
     display: flex;
     padding-left: 13px;
-    background-color: rgba(229, 229, 229, 0.116);
     border-bottom: 1px solid rgba(239, 236, 236, 0.619);
     margin: 0 0 8px 0;
     border-radius: 5px 5px 0px 0px;
