@@ -1,5 +1,6 @@
 {
-  "questions": [{
+  "questions": [
+    {
       "title": "How do JavaScript closures work?",
       "content": "How would you explain JavaScript closures to someone with a knowledge of the concepts they consist of (for example functions, variables and the like), but does not understand closures themselves?",
       "nb_views": 75,
@@ -38,7 +39,7 @@
     {
       "title": "What does 'use strict' do in JavaScript, and what is the reasoning behind it?",
       "content": "Recently, I ran some of my JavaScript code through Crockford's JSLint, and it gave the following error:",
-      "nb_views": 16,
+      "nb_views": 17,
       "votes": 745,
       "date": "2017-04-08T09:25:09.366Z",
       "userId": 5,
@@ -90,7 +91,8 @@
       "id": 10
     }
   ],
-  "users": [{
+  "users": [
+    {
       "email": "laetitiadervaux33@gmail.com",
       "pass": "laetPSW",
       "id": 1,
@@ -114,7 +116,7 @@
     },
     {
       "email": "lderv68@gmail.com",
-      "password": "lderPSW",
+      "pass": "lderPSW",
       "id": 3,
       "last_name": "Vauder",
       "first_name": "Letty",
@@ -125,14 +127,14 @@
     },
     {
       "email": "sasha@gmail.com",
-      "password": "sashaPSW",
+      "pass": "sashaPSW",
       "id": 4,
       "last_name": "Grasso",
       "first_name": "Sasha",
       "pseudo": "Sash",
       "jobId": 4,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990497.jpg",
-      "profile": "je suis passionné d'angular, je surkiffe... j'adore ma barbe aussi, elle fait tomber toutes les minettes... et la soupe aussi, avec un peu de lait dedans hahahah"
+      "profile": "je suis passionné d'angular, je surkiffe... j'adore ma barbe aussi, elle fait tomber toutes les minettes... et la soupe aussi, avec un peu de lait dedans hahahaha"
     },
     {
       "email": "aurore@gmail.com",
@@ -185,7 +187,8 @@
       "name": "Symfony"
     }
   ],
-  "taglinks": [{
+  "taglinks": [
+    {
       "questionId": 1,
       "tagId": 1,
       "id": 1
@@ -236,7 +239,8 @@
       "id": 10
     }
   ],
-  "answers": [{
+  "answers": [
+    {
       "title": "Responsive div/container - Fixed Soze",
       "content": "utouytiut",
       "nb_views": 0,
@@ -516,7 +520,8 @@
       "id": 31
     }
   ],
-  "tips": [{
+  "tips": [
+    {
       "id": 0,
       "content": "on pense à bien indenter son code !",
       "url": "http://mrbool.com/importance-of-code-indentation/29079"
@@ -535,10 +540,16 @@
       "content": "t-nation",
       "url": "http://www.t-nation.com",
       "id": 7
-    }, {
+    },
+    {
       "content": "le nouveau dieu google",
       "url": "http://www.google.fr",
       "id": 8
+    },
+    {
+      "content": "ksqjfmq",
+      "url": "http://mlskdjfqs",
+      "id": 9
     }
   ],
   "jobs": [
