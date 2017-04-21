@@ -103,11 +103,11 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         return defer.promise;
     };
 
-    this.viewQuestion = (question_id, view) => {
+    this.viewQuestion = (question_id, paramView) => {
 
         var defer = $q.defer();
 
-        $http.patch(QST_URL + '/' + question_id, view).then((response) => {
+        $http.patch(QST_URL + '/' + question_id, paramView).then((response) => {
             defer.resolve(response.data);
         }).catch((err) => {
             $log.debug(`SVC: ERROR!!! ${err}`);
