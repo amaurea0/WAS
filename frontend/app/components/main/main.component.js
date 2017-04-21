@@ -5,14 +5,15 @@ COMPNT
 
     templateUrl: '/frontend/app/components/main/main.html',
 
-    bindings: {
-    },
+    bindings: {},
 
-    controller: ['$scope', 'INFO',
+    controller: ['$scope', 'INFO', '$state',
 
-      function ($scope, INFO) {
+      function ($scope, INFO, $state) {
 
-        this.info = {};
+        this.info = '';
+
+        this.searchQuery = '';
 
         $scope.$on(INFO.userId, (event, key) => {
           this.info.userId = key;
@@ -22,12 +23,22 @@ COMPNT
 
         this.$onInit = () => {
           this.rebindDropDowns = function () {
-            $('.dropdown-button').dropdown({ hover: true });
+            $('.dropdown-button').dropdown({
+              hover: true
+            });
             $('.dropdown-button').dropdown('close');
             $('.button-collapse').sideNav();
             $('.collapsible').collapsible();
           };
         };
-      }]
-  });
 
+        this.getSearchQuestions = () => {
+          var queryAsArray = this.searchQuery.split(' ');
+          var queryAsString = queryAsArray.join('+');
+          $state.go('questions', {
+            queryParam: queryAsString
+          });
+        }
+      }
+    ]
+  });

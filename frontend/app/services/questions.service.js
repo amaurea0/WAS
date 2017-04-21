@@ -9,29 +9,25 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
 
     this.save = function (question) {
         var deferred = $q.defer();
-        $http.post(QST_URL, question).then(
-            function (response) {
-                deferred.resolve(response.data);
-            },
-            function (error) {
-                deferred.reject(error);
-                $log.error(error);
-            }
-        );
+        $http.post(QST_URL, question).then((response) => {
+            deferred.resolve(response.data);
+        }).catch((error) => {
+            deferred.reject(error);
+            $log.error(error);
+        });
+
         return deferred.promise;
     };
 
     this.postAnswer = function (answer) {
         var defer = $q.defer();
-        $http.post(ASW_URL, answer).then(
-            function (response) {
-                defer.resolve(response.data);
-            },
-            function (error) {
-                defer.reject(error);
-                $log.error(error);
-            }
-        );
+        $http.post(ASW_URL, answer).then((response) => {
+            defer.resolve(response.data);
+        }).catch((error) => {
+            defer.reject(error);
+            $log.error(error);
+        });
+
         return defer.promise;
     };
 
@@ -64,15 +60,14 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
 
     this.getQuestionId = (id) => {
         var deferred = $q.defer();
-        $http.get(QST_URL + '?id=' + id + '&_expand=user&_embed=answers').then(
-            function (response) {
-                deferred.resolve(response.data);
-            },
-            function (error) {
-                deferred.reject(error);
-                $log.error(error);
-            }
-        );
+
+        $http.get(QST_URL + '?id=' + id + '&_expand=user&_embed=answers').then((response) => {
+            deferred.resolve(response.data);
+        }).catch((error) => {
+            deferred.reject(error);
+            $log.error(error);
+        })
+
         return deferred.promise;
     };
 
@@ -104,7 +99,6 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
     };
 
     this.viewQuestion = (question_id, paramView) => {
-
         var defer = $q.defer();
 
         $http.patch(QST_URL + '/' + question_id, paramView).then((response) => {
@@ -131,4 +125,17 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         return defer.promise;
     };
 
+
+    this.searchQuestions = (param) => {
+        var defer = $q.defer();
+
+        $http.get(QST_URL + '?q=' + param).then((response) => {
+            defer.resolve(response.data);
+        }).catch((error) => {
+            $log.warn(`${error} : service couldn't reach server !`)
+            defer.reject(error);
+        });
+
+        return defer.promise;
+    }
 }]);
