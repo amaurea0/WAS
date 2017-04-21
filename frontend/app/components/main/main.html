@@ -1,4 +1,5 @@
 <body>
+
     <header>
 
         <!--Trigger du DropDown-button-->
@@ -21,8 +22,8 @@
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-small-only" data-activates="mobile-demo">
                     <li>
-                        <form method="get" action="/search" id="search">
-                            <input name="q" type="text" size="40" placeholder="Search..." />
+                        <form ng-submit="$ctrl.getSearchQuestions()" id="search">
+                            <input name="q" type="text" size="40" placeholder="Search..." ng-model="$ctrl.searchQuery" />
                         </form>
                     </li>
                     <li><a ui-sref="questions" ui-sref-active="select"><i class="material-icons">view list</i></a></li>
@@ -60,4 +61,5 @@
             <a class="grey-text text-lighten-4 right">© 2016 Copyright Text</a>
         </div>
     </footer>
+
 </body>

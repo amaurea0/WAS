@@ -12,7 +12,14 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
             name: 'questions',
             url: '/questions',
             component: 'questionsList',
-            resolve: {}
+            params: {
+                queryParam: null
+            },
+            resolve: {
+                search: function($stateParams){
+                    return $stateParams.queryParam;
+                }
+            }
         })
 
         .state({
@@ -35,7 +42,7 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
                     return {
                         tagId: $stateParams.tagId,
                         tagName: $stateParams.tagName
-                    }
+                    };
                 }
 
             }
