@@ -1,6 +1,6 @@
 'use strict';
 
-const JOB_URL = "http://localhost:3000/jobs";
+const JOB_URL = "http://localhost:3000/jobsSearch";
 
 
 SERVICES.service('JobService', ['$http', '$log', '$q',
@@ -18,6 +18,20 @@ SERVICES.service('JobService', ['$http', '$log', '$q',
             return deferred.promise;
         };
 
+        this.addJob = function (job) {
+        var deferred = $q.defer();
+        $http.post(JOB_URL, job).then(
+            function (response) {
+                deferred.resolve(response.data);
+            },
+            function (error) {
+                deferred.reject(error);
+                $log.error(error);
+            }
+        );
+        return deferred.promise;
+    };
+
        /* this.addJob = function (job) {
             var deferred = $q.defer();
             (recipe.id ?
@@ -30,7 +44,7 @@ SERVICES.service('JobService', ['$http', '$log', '$q',
                     $log.error(error);
                 });
             return deferred.promise;
-        };*/
+        }; */
     }
 ]
 );

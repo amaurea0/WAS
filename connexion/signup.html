@@ -1,5 +1,8 @@
 <div class="container">
-    <h1>Crée ton compte utilisateur</h1>
+    <div class="entete">
+        <h1>Create your Wild Exchange Account</h1>
+    </div>
+  
     <form name="createUserForm" novalidate>
         <span class="msg" ng-show="$ctrl.messageAll.length > 0">{{$ctrl.messageAll}}</span>
         <!--<span ng-show ="$ctrl.message.length > 0"></span>-->
@@ -15,7 +18,6 @@
         <input type="password" name="pass_confirm" id="pass_confirm" ng-model="$ctrl.user.passwordConfirm" required /><br
         />
         <span class="msg" ng-show="$ctrl.messagePass.length > 0">{{$ctrl.messagePass}}</span>
-        <button type="submit" ng-click="$ctrl.verif($ctrl.user)">valider</button>
-
+        <a ng-click="$ctrl.verif($ctrl.user)" class="waves-effect waves-light btn"><i class="material-icons left">create</i>Sign Up</a>
     </form>
 </div>
