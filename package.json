@@ -16,5 +16,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "WAS"
+  "author": "WAS",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amaurea0/WAS.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amaurea0/WAS/issues"
+  },
+  "homepage": "https://github.com/amaurea0/WAS#readme"
 }
