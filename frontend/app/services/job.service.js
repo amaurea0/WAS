@@ -1,6 +1,6 @@
 'use strict';
 
-const JOB_URL = "http://localhost:3000/jobsSearch";
+const JOB_URL = "http://localhost:3000/jobs";
 
 
 SERVICES.service('JobService', ['$http', '$log', '$q',
