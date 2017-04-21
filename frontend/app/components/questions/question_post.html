@@ -3,7 +3,7 @@
         <h1>Post Your Question</h1>
     </div>
 
-    <form name="myForm" ng-submit="$ctrl.save($ctrl.question)" novalidate>
+    <form name="myForm" ng-submit="$ctrl.save()" novalidate>
         <div class="form-group">
             <label for="title">Titre question</label> <br>
             <input name="title" type="text" class="form-control" id="title" required ng-model="$ctrl.question.title" />

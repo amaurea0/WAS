@@ -35,7 +35,7 @@ COMPNT.component("questionPost", {
       this.save = (question) => {
         
         var new_question = {
-          "title": question.title,
+          "title": this.question.title,
           "content": question.content,
           "nb_views": 0,
           "votes": 0,

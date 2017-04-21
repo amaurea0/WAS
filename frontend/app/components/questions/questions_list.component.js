@@ -44,18 +44,22 @@ COMPNT
         tagQuestionId: [],
         query: ''
       };
-      // this.searchQuery = $stateParams.queryParam;
+      this.currentPage = 1;
+      this.pageSize = 2;
       this.questions = [];
 
       this.$onInit = () => {
         if (this.search) {
-          console.log(this.search);
           this.getQueries(this.search);
         } else if (this.tagFilter) {
           this.getTagedItems();
         } else {
           this.getAllItems();
         }
+      };
+
+      this.pageChangeHandler = function (num) {
+        console.log('going to page ' + num);
       };
 
       this.getTagedItems = () => {
