@@ -60,25 +60,14 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
 
     this.getQuestionId = (id) => {
         var deferred = $q.defer();
-<<<<<<< d8632f411f28f0642c264cf3b3ae8e8da25f3fda
-        $http.get(QST_URL + '?id=' + id + '&_expand=user&_embed=answers').then(
-            function (response) {
-                deferred.resolve(response.data);
-            },
-            function (error) {
-                deferred.reject(error);
-                $log.error(error);
-            }
-        );
-=======
-        $http.get(QST_URL + '?id=' + id + '&_expand=user').then((response) => {
+
+        $http.get(QST_URL + '?id=' + id + '&_expand=user&_embed=answers').then((response) => {
             deferred.resolve(response.data);
         }).catch((error) => {
             deferred.reject(error);
             $log.error(error);
         })
 
->>>>>>> champion du monde
         return deferred.promise;
     };
 
