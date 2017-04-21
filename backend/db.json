@@ -21,7 +21,7 @@
     {
       "title": "How can I prevent SQL injection in PHP?",
       "content": "If user input is inserted without modification into an SQL query, then the application becomes vulnerable to SQL injection, like in the following example:",
-      "nb_views": 211,
+      "nb_views": 208,
       "votes": 871,
       "date": "2017-04-08T01:51:51.436Z",
       "userId": 3,
@@ -91,85 +91,7 @@
       "id": 10
     }
   ],
-  "users": [
-    {
-      "email": "laetitiadervaux33@gmail.com",
-      "pass": "laetPSW",
-      "id": 1,
-      "last_name": "Dervaux",
-      "first_name": "Laetitia",
-      "pseudo": "Letitbe",
-      "jobId": 1,
-      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990501.jpg",
-      "profile": "je suis passionnée d'informatique, de graphisme. Je suis également fan des Beattles, d'où mon pseudo Hihihi"
-    },
-    {
-      "email": "pierrevicq@hotmail.fr",
-      "pass": "pierPSW",
-      "id": 2,
-      "last_name": "Vicq",
-      "first_name": "Pierre",
-      "pseudo": "Piotr",
-      "jobId": 2,
-      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990500.jpg",
-      "profile": "Je suis passionné d'angular, mais vraiment vraiment trop...et ça se voit quand je code: mes 'Get' sont resplendissants, même si mes 'Post', un peu moins..."
-    },
-    {
-      "email": "lderv68@gmail.com",
-      "password": "lderPSW",
-      "id": 3,
-      "last_name": "Vauder",
-      "first_name": "Letty",
-      "pseudo": "Lettyyyyy",
-      "jobId": 3,
-      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990499.jpg",
-      "profile": "je suis passionnée d'informatique et de graphisme, tout comme Laetitia. C'est drôle parce qu'on a presque le même prénom en plus. Par contre, moi, les Beattles, j'peux pas les encadrer... j'suis bien contente qu'ils soient morts !"
-    },
-    {
-      "email": "sasha@gmail.com",
-      "password": "sashaPSW",
-      "id": 4,
-      "last_name": "Grasso",
-      "first_name": "Sasha",
-      "pseudo": "Sash",
-      "jobId": 4,
-      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990497.jpg",
-      "profile": "je suis passionné d'angular, je surkiffe... j'adore ma barbe aussi, elle fait tomber toutes les minettes... et la soupe aussi, avec un peu de lait dedans hahahah"
-    },
-    {
-      "email": "aurore@gmail.com",
-      "pass": "aurorePSW",
-      "id": 5,
-      "last_name": "Chataigner",
-      "first_name": "Aurore",
-      "pseudo": "Aur",
-      "jobId": 5,
-      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990496.jpg",
-      "profile": "je suis passionnée d'angular, je surkiffe aussi, tout comme Sash (dont j'adore la barbe moelleuse)... Sinon, me fais pas trop iech ou j'te fais un fatal Ushiro-Geri! Hiiiiiaaaaouuuu"
-    },
-    {
-      "email": "julien@gmail.com",
-      "pass": "juPSW",
-      "id": 6,
-      "last_name": "Rousset",
-      "first_name": "Julien",
-      "pseudo": "Ju",
-      "jobId": 6,
-      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990495.jpg",
-      "profile": "Salut, moi ca va... hier, le dojo c'était sympathique. Voilà quoi hahah"
-    },
-    {
-      "email": "julienRousset@hotmail.com",
-      "pass": "juPSW",
-      "id": 7,
-      "last_name": "Roussetto",
-      "first_name": "Juliano",
-      "pseudo": "Julian",
-      "jobId": 7,
-      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990498.jpg",
-      "profile": "Salut, moi ca va aussi... hier, Prison Break, c'était pas mal. Si t'as un problème avec angular, j'peux t'aider: tu prends cette variable, tu la mets dans le truc là, et bâaaam ! Voilà ! hahah"
-    }
-  ],
+
   "tags": [
     {
       "id": 1,
@@ -188,6 +110,7 @@
       "name": "Symfony"
     }
   ],
+
   "taglinks": [
     {
       "questionId": 1,
@@ -525,6 +448,85 @@
       "id": 31
     }
   ],
+  "users": [
+    {
+      "email": "laetitiadervaux33@gmail.com",
+      "pass": "laetPSW",
+      "id": 1,
+      "last_name": "Dervaux",
+      "first_name": "Laetitia",
+      "pseudo": "Letitbe",
+      "jobId": 1,
+      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990501.jpg",
+      "profile": "je suis passionnée d'informatique, de graphisme. Je suis également fan des Beattles, d'où mon pseudo Hihihi"
+    },
+    {
+      "email": "pierrevicq@hotmail.fr",
+      "pass": "pierPSW",
+      "id": 2,
+      "last_name": "Vicq",
+      "first_name": "Pierre",
+      "pseudo": "Piotr",
+      "jobId": 2,
+      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990500.jpg",
+      "profile": "Je suis passionné d'angular, mais vraiment vraiment trop...et ça se voit quand je code: mes 'Get' sont resplendissants, même si mes 'Post', un peu moins..."
+    },
+    {
+      "email": "lderv68@gmail.com",
+      "password": "lderPSW",
+      "id": 3,
+      "last_name": "Vauder",
+      "first_name": "Letty",
+      "pseudo": "Lettyyyyy",
+      "jobId": 3,
+      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990499.jpg",
+      "profile": "je suis passionnée d'informatique et de graphisme, tout comme Laetitia. C'est drôle parce qu'on a presque le même prénom en plus. Par contre, moi, les Beattles, j'peux pas les encadrer... j'suis bien contente qu'ils soient morts !"
+    },
+    {
+      "email": "sasha@gmail.com",
+      "password": "sashaPSW",
+      "id": 4,
+      "last_name": "Grasso",
+      "first_name": "Sasha",
+      "pseudo": "Sash",
+      "jobId": 4,
+      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990497.jpg",
+      "profile": "je suis passionné d'angular, je surkiffe... j'adore ma barbe aussi, elle fait tomber toutes les minettes... et la soupe aussi, avec un peu de lait dedans hahahah"
+    },
+    {
+      "email": "aurore@gmail.com",
+      "pass": "aurorePSW",
+      "id": 5,
+      "last_name": "Chataigner",
+      "first_name": "Aurore",
+      "pseudo": "Aur",
+      "jobId": 5,
+      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990496.jpg",
+      "profile": "je suis passionnée d'angular, je surkiffe aussi, tout comme Sash (dont j'adore la barbe moelleuse)... Sinon, me fais pas trop iech ou j'te fais un fatal Ushiro-Geri! Hiiiiiaaaaouuuu"
+    },
+    {
+      "email": "julien@gmail.com",
+      "pass": "juPSW",
+      "id": 6,
+      "last_name": "Rousset",
+      "first_name": "Julien",
+      "pseudo": "Ju",
+      "jobId": 6,
+      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990495.jpg",
+      "profile": "Salut, moi ca va... hier, le dojo c'était sympathique. Voilà quoi hahah"
+    },
+    {
+      "email": "julienRousset@hotmail.com",
+      "pass": "juPSW",
+      "id": 7,
+      "last_name": "Roussetto",
+      "first_name": "Juliano",
+      "pseudo": "Julian",
+      "jobId": 7,
+      "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990498.jpg",
+      "profile": "Salut, moi ca va aussi... hier, Prison Break, c'était pas mal. Si t'as un problème avec angular, j'peux t'aider: tu prends cette variable, tu la mets dans le truc là, et bâaaam ! Voilà ! hahah"
+    }
+  ],
   "tips": [
     {
       "id": 0,
@@ -570,6 +572,15 @@
   "jobs": [
     {
       "title": "Developer Backend - PHP",
+      "content": "Bla bla bla",
+      "place": "Bordeaux",
+      "society": "Nemesis",
+      "date": "2017-04-08T01:47:18.815Z",
+      "userId": 3,
+      "id": 2
+    },
+    {
+      "title": "DRH - javascript",
       "content": "Bla bla bla",
       "place": "Bordeaux",
       "society": "Nemesis",

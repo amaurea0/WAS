@@ -17,15 +17,6 @@ body {
     padding-left: 20px;
     font-size: 1.3em;
 }
-nav .nav-wrapper {
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -ms-sticky;
-  position: -o-sticky;
-  position: fixed;
-  z-index: 100;
-}
-
 
 /* titraille globale*/
 
@@ -120,6 +111,8 @@ i.icon-orange {
 #society {
     color: #ffa726;
 }
+
+
 
 /*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS (Laetitia)*/
 
