@@ -11,21 +11,26 @@
 
 
         <div id="question" ng-repeat="job in $ctrl.jobs | filter : $ctrl.model.query" class="collection">
-            <div class="counters">
-                <div><a class="material-icons #ffe0b2 orange-text lighten-4" href="mailto:{{job.email}}">email</a></div>
-                <div><a class="material-icons #ffe0b2 orange-text lighten-4" href="{{job.site}}" target="_blank">http</a></div>
+            <div class="counters" id="flexJob">
+                <div>
+                    <a class="material-icons #ffe0b2 orange-text lighten-4" href="mailto:{{job.email}}">email</a>
+                    <a class="material-icons #ffe0b2 orange-text lighten-4" href="{{job.site}}" target="_blank">http</a>
+                    <a id="tagJob">{{job.tag}}</a>
+                </div>
             </div>
 
             <div class="contenu">
                 <a>
                     <h3 class="title" ng-bind="job.title"></h3>
                     <p class="content flow-text">{{job.content}}</p>
+                    <a class="#1de9b6 teal-text accent-3" href="{{job.annonce}}" target="_blank">{{job.annonce}}</a>
                 </a>
             </div>
 
             <div class="collection-item avatar">
                 <h3 id="society" class="title" ng-bind="job.society"></h3>
-                <p>{{job.place}}</p><br /><p>{{job.date}}</p>
+                <p>{{job.place}}</p><br />
+                <p>{{job.date | date:"MM/dd/yyyy"}}</p>
             </div>
         </div>
     </div>

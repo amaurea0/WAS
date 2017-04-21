@@ -138,6 +138,7 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
             component: 'jobsList',
             resolve: {}
         })
+
         .state({
             name: 'jobPost',
             url: '/jobs/post',

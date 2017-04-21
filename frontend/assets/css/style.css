@@ -1,8 +1,5 @@
 body {
     background-color: #f1f1f1;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
 }
 
 #ppl {
@@ -17,15 +14,6 @@ body {
     padding-left: 20px;
     font-size: 1.3em;
 }
-nav .nav-wrapper {
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -ms-sticky;
-  position: -o-sticky;
-  position: fixed;
-  z-index: 100;
-}
-
 
 /* titraille globale*/
 
@@ -119,6 +107,16 @@ i.icon-orange {
 
 #society {
     color: #ffa726;
+}
+
+#flexJob {
+    display: flex;
+    direction: column;
+}
+
+#tagJob {
+    font-size: 0.7em;
+    color:#26a69a;
 }
 
 /*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS (Laetitia)*/
