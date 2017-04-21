@@ -316,7 +316,7 @@ p {
     #index-banner .section {
         top: 10%;
     }
-    .icon-block #question .vote {
+    .icon-block #questionhome .vote {
         display: none;
     }
 }
@@ -346,7 +346,7 @@ p {
     #index-banner .section {
         top: 10%;
     }
-    .icon-block #question .vote {}
+    .icon-block #questionhome .vote {}
 }
 
 @media only screen and (max-width: 600px) {
@@ -370,7 +370,7 @@ footer.page-footer {
 
 /* questions */
 
-#question {
+#questionhome {
     display: flex;
     padding-left: 13px;
     background-color: rgba(229, 229, 229, 0.116);
