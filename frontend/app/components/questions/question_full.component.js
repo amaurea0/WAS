@@ -16,7 +16,7 @@ COMPNT
             this.$onInit = () => {
                 console.log(this.question);
                 this.myQuestion = false;
-                if (AuthService.getCurrentUser().id){
+                if (AuthService.getCurrentUser()){
                     if (this.question.userId == AuthService.getCurrentUser().id) this.myQuestion = true;
 
                 }
