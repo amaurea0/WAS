@@ -53,6 +53,13 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
         })
 
         .state({
+            name: 'profil',
+            url: '/profil',
+            component: 'profil',
+            resolve: {}
+        })
+
+        .state({
             name: 'questionPost',
             url: '/post',
             component: 'questionPost',
@@ -138,6 +145,12 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
             name: 'jobs',
             url: '/jobs',
             component: 'jobsList',
+            resolve: {}
+        })
+        .state({
+            name: 'jobPost',
+            url: '/jobs/post',
+            component: 'jobPost',
             resolve: {}
         })
 

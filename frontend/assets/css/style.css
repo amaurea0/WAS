@@ -17,6 +17,14 @@ body {
     padding-left: 20px;
     font-size: 1.3em;
 }
+nav .nav-wrapper {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: fixed;
+  z-index: 100;
+}
 
 
 /* titraille globale*/
@@ -64,11 +72,6 @@ h1 {
     color: #455a64 !important;
 }
 
-.parallax-container {
-    margin-left: -8px;
-}
-
-
 /*ICI VIENT LE STYLE DU NUAGE*/
 
 .chip {
@@ -94,16 +97,29 @@ i.icon-orange {
     font-size: 18px;
 }
 
-#pseudo {
-    color: #f4a443;
-    font-size: 20px;
-}
-
 .flow-text {
     font-size: 12px;
     width: 600px;
 }
 
+/*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
+
+#personRight {
+    display: flex;
+    direction: row;
+    float: right;
+    justify-content: center;
+}
+
+#pseudo {
+    color: #f4a443;
+}
+
+/*ICI VIENT LE STYLE DE LA LISTE DES JOBS*/
+
+#society {
+    color: #ffa726;
+}
 
 /*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS (Laetitia)*/
 
