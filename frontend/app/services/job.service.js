@@ -20,15 +20,12 @@ SERVICES.service('JobService', ['$http', '$log', '$q',
 
         this.addJob = function (job) {
         var deferred = $q.defer();
-        $http.post(JOB_URL, job).then(
-            function (response) {
+        $http.post(JOB_URL, job).then((response) => {
                 deferred.resolve(response.data);
-            },
-            function (error) {
+            }).catch((error) => {
                 deferred.reject(error);
                 $log.error(error);
-            }
-        );
+            });
         return deferred.promise;
     };
 

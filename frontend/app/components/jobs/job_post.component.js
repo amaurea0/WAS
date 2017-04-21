@@ -12,9 +12,10 @@ COMPNT.component("jobPost", {
   },
 
 
-controller: ['JobService', 'TagsService', '$scope', '$state',
-        function (JobService, TagsService, $scope, $state) {
+  controller: ['JobService', 'TagsService', '$scope', '$state',
+    function (JobService, TagsService, $scope, $state) {
 
+      this.job = {};
 
       //get Tags for the input datalist
       TagsService.getTags().then((data) => {
@@ -23,30 +24,30 @@ controller: ['JobService', 'TagsService', '$scope', '$state',
 
       this.new_tags = [];
       this.saveTag = (tag) => {
-        if(this.new_tags.indexOf(tag) == -1) this.new_tags.push(tag);
+        if (this.new_tags.indexOf(tag) == -1) this.new_tags.push(tag);
         this.SelectedTag = "";
       };
       this.removeTag = (tag) => {
-        this.new_tags.splice(this.new_tags.indexOf(tag),1);
+        this.new_tags.splice(this.new_tags.indexOf(tag), 1);
       };
 
-      this.save = (job) => {
+      this.saveJob = () => {
         var new_job = {
-          "title": job.title,
-          "content": job.content,
-          "place": job.place,
-          "society": job.society,
+          "title": this.job.title,
+          "content": this.job.content,
+          "place": this.job.place,
+          "society": this.job.society,
           "date": new Date(),
-          "email": job.email,
-          "site": job.site,
-          "annonce": job.annonce,
-          "tag": job.tag
+          "email": this.job.email,
+          "site": this.job.site,
+          "annonce": this.job.annonce,
+          "tag": this.new_tags
         }
 
         console.log(new_job);
 
         // Save the new question
-        JobService.addJob(new_job).then((items) => {
+        JobService.addJob(new_job).then(() => {
           console.log('new job posted');
 
           // Save the tags
