@@ -14,7 +14,11 @@
   </div>
 
   <div class="input-field">
-    <input class="validate" type="text" placeholder="Rechercher..." ng-model="$ctrl.model.query">
+    <input class="validate" type="text" placeholder="Rechercher..." ng-model="q">
+  </div>
+  <div>
+    <label for="search">items per page:</label>
+    <input type="number" min="1" max="100" class="form-control" ng-model="$ctrl.pageSize">
   </div>
 
 
@@ -32,7 +36,8 @@
       </div>
 
       <div ng-repeat="aTab in $ctrl.tabsList" id="{{aTab.view}}" class="col s12">
-        <div id="question" ng-repeat="question in $ctrl.questions | filter : $ctrl.model.query | orderBy : aTab.sort">
+        <div id="question" dir-paginate="question in $ctrl.questions | filter:q | orderBy : aTab.sort | itemsPerPage: $ctrl.pageSize"
+          current-page="$ctrl.currentPage">
 
           <div class="counters view">
             <div ng-bind="question.votes"></div>
@@ -46,18 +51,18 @@
               <!-- <span class="answers" ng-bind="question.answers"></span>-->
               <span>{{question.answers.length}} Réponses</span>
               <span>{{question.date | date:"MM/dd/yyyy"}}</span>
-               <p ng-bind="question.content"></p>
-               <span id="questionsTags">{{question.tag}}</span>
+              <p ng-bind="question.content"></p>
+              <span id="questionsTags">{{question.tag}}</span>
               <div ng-bind="question.tag"></div>
             </a>
           </div>
 
-            <div class="collection-item avatar">
-                <img class="circle" ng-src="{{question.user.avatar}}" alt="user's picture">
-            </div>
+          <div class="collection-item avatar">
+            <img class="circle" ng-src="{{question.user.avatar}}" alt="user's picture">
+          </div>
 
         </div>
-
+        <dir-pagination-controls boundary-links="true" on-page-change="$ctrl.pageChangeHandler(newPageNumber)" template-url="node_modules/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
       </div>
     </div>
   </div>
