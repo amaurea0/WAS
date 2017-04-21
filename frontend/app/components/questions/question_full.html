@@ -1,46 +1,47 @@
 <div class="container">
-    <header>
+    <div class="entete">
         <h1>Question et réponses</h1>
-        <a ui-sref="questionPost" ui-sref-active="select">Poser une question</a>
-    </header>
+        <a class="btn btn-floating pulse orange" ui-sref="questionPost" ui-sref-active="select"><i class="material-icons">add</i></a>
+    </div>
 
     <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
     <div id="question">
-        <div id="left">
-            <div id="votes" ng-bind="$ctrl.question.votes"></div>
-            <div id="answers">
-                Réponses
-            </div>
-            <div ng-bind="$ctrl.question.views"></div>
+        <div class="counters view">
+            <div ng-bind="$ctrl.question.votes"></div>
+            <div ng-bind="$ctrl.question.nb_views"></div>
         </div>
-        <div id="center">
-            <div ng-bind="$ctrl.question.title"></div>
-            <div ng-bind="$ctrl.question.content"></div>
+        <div class="contenu">
+            <h3 ng-bind="$ctrl.question.title"></h3>
             <button ng-if="$ctrl.myQuestion" ui-sref="editPost({postId : $ctrl.question.id})">EDITION</button>
+            <span>{{$ctrl.question.date | date:"MM/dd/yyyy"}}</span>
+            <p ng-bind="$ctrl.question.content"></p>
         </div>
-        <div id="right">
-            <img ng-src="{{$ctrl.question.user.avatar}}" alt="avatar">
-            <div ng-bind="$ctrl.question.date"></div>
+        <div class="collection-item avatar">
+            <img class="circle" ng-src="{{$ctrl.question.user.avatar}}" alt="avatar">
         </div>
-
     </div>
-</div>
+
+    <a class="waves-effect waves-light btn orange lighten-2" ui-sref="questionSpec.postAnswer">
+        <i class="material-icons left">add</i>Nouvelle Réponse</a>
+
+    <div>
+        <ui-view></ui-view>
 
 
-<a ui-sref="questionSpec.postAnswer"><button type="">Nouvelle Réponse</button></a>
+        <div ng-if="$ctrl.question.answers.length > 0">
+            <div  id="answer" ng-repeat="answer in $ctrl.question.answers | filter : $ctrl.model.query">
 
-<ui-view></ui-view>
-
-
-<div ng-if="$ctrl.question.answers.length > 0">
-    <div id="answers" ng-repeat="answer in $ctrl.question.answers | filter : $ctrl.model.query">
-        <table>
-            <tr>
-                <td ng-bind="answer.title"></td>
-                <td ng-bind="answer.content"></td>
-                <td ng-bind="answer.date"></td>
-                <td ng-bind="answer.votes"></td>
-            </tr>
-        </table>
+                <div class="counters view">
+                    <div ng-bind="answer.votes"></div>
+                </div>
+                <div class="contenu">
+                    <h3 ng-bind="answer.title"></h3>
+                    <!--<button class="lien" ui-sref="editPost({postId : answer.id})">edit</button>-->
+                    <span>{{answer.date | date:"MM/dd/yyyy"}}</span>
+                    <p ng-bind="answer.content"></p>
+                </div>
+                
+            </div>
+        </div>
     </div>
 </div>

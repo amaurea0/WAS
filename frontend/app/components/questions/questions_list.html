@@ -1,4 +1,4 @@
-<div class="container page">
+<div class="container">
   <div class="entete">
     <a class="btn btn-floating pulse orange" ui-sref="questionPost" ui-sref-active="select"><i class="material-icons">add</i></a>
     <h1>Questions</h1>
@@ -41,12 +41,13 @@
 
           <div class="contenu">
             <a ui-sref="questionSpec({idQuestion : question.id})">
-              <h3 class="title" ng-bind="question.title"></h3>
 
-             <!-- <span class="answers" ng-bind="question.answers"></span>-->
+              <h3 ng-bind="question.title"></h3>
+              <!-- <span class="answers" ng-bind="question.answers"></span>-->
               <span>{{question.answers.length}} Réponses</span>
-              <P id="questionsTags">{{question.tag}}</p>
-              <p class="content" ng-bind="question.content"></p>
+              <span>{{question.date | date:"MM/dd/yyyy"}}</span>
+               <p ng-bind="question.content"></p>
+               <span id="questionsTags">{{question.tag}}</span>
               <div ng-bind="question.tag"></div>
             </a>
           </div>
@@ -54,6 +55,7 @@
             <div class="collection-item avatar">
                 <img class="circle" ng-src="{{question.user.avatar}}" alt="user's picture">
             </div>
+
         </div>
 
       </div>
