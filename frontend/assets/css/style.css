@@ -50,7 +50,7 @@ h1 {
 }
 
 #search input[type="text"]:focus {
-    width: 200px;
+    width: 150px;
 }
 
 .dropdown-content li>a,
