@@ -1,0 +1,67 @@
+<div class="container page">
+    <div class="entete">
+        <h1>Post Your Job Ad</h1>
+    </div>
+
+    <form name="myForm" ng-submit="$ctrl.saveJob()" novalidate>
+        <div class="form-group">
+            <label for="title">Job Title</label> <br>
+            <input name="title" type="text" class="form-control" id="title" required ng-model="$ctrl.job.title" />
+            <!--<p ng-show="myForm.title.$invalid">Champ requis</p>-->
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label> <br>
+            <input name="content" size="10" type="text" class="form-control" id="content" required ng-model="$ctrl.job.content"
+            />
+            <!--<p ng-show="myForm.content.$invalid">Champ requis</p>-->
+        </div>
+        <div class="form-group">
+            <label for="content">Compagny</label> <br>
+            <input name="content" size="10" type="text" class="form-control" id="content" required ng-model="$ctrl.job.society"
+            />
+            <!--<p ng-show="myForm.content.$invalid">Champ requis</p>-->
+        </div>
+
+        <div class="form-group">
+            <label for="content">Web Site</label> <br>
+            <input name="content" size="10" type="text" class="form-control" id="content" required ng-model="$ctrl.job.site"
+            />
+            <!--<p ng-show="myForm.content.$invalid">Champ requis</p>-->
+        </div>
+
+        <div class="form-group">
+            <label for="content">Place</label> <br>
+            <input name="content" size="10" type="text" class="form-control" id="content" required ng-model="$ctrl.job.place"
+            />
+            <!--<p ng-show="myForm.content.$invalid">Champ requis</p>-->
+        </div>
+
+        <div class="form-group">
+            <label for="content">Email Contact</label> <br>
+            <input name="content" size="10" type="text" class="form-control" id="content" required ng-model="$ctrl.job.email"
+            />
+            <!--<p ng-show="myForm.content.$invalid">Champ requis</p>-->
+        </div>
+
+        <div class="form-group">
+            <label for="content">External ad link</label> <br>
+            <input name="content" size="10" type="text" class="form-control" id="content" required ng-model="$ctrl.job.annonce"
+            />
+            <!--<p ng-show="myForm.content.$invalid">Champ requis</p>-->
+        </div>
+
+        <div class="form-group">
+            <label>Tag : <span ng-repeat="eachTag in $ctrl.new_tags"> {{eachTag}} <span ng-click="$ctrl.removeTag(eachTag)">x</span></span>
+        </label> <br>
+            <input id="tag" list="testList" type="" ng-model="$ctrl.SelectedTag" />
+            <datalist id="testList">
+                <option ng-repeat="newtag in $ctrl.tags | orderBy:'name' " value="{{newtag.name}}">
+            </datalist>
+            <input type="button" ng-click="$ctrl.saveTag($ctrl.SelectedTag)" value="ajouter" />
+        </div>
+
+        <div class="item-actions">
+            <a ng-click="$ctrl.saveJob()" class="waves-effect waves-light btn"><i class="material-icons left">done</i>Valider</a>
+        </div>
+    </form>
+</div>

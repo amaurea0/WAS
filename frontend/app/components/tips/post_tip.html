@@ -1,0 +1,16 @@
+<h2>Poster une nouvelle astuce</h2>
+<form class="formulaire" ng-submit="$ctrl.saveTip($ctrl.tip)" novalidate>
+    <div class="form-group">
+        <label for="content">#PostTonTip</label>
+        <input type="text" class="form-control" maxlength="140" ng-model="$ctrl.tip.content" />
+    </div>
+    <div class="form-group">
+        <label for="content">#TonLienDeTonTip</label>
+        <input type="text" class="form-control" ng-model="$ctrl.tip.url" />
+    </div>
+    <div class="item-actions">
+
+        <input class="btn btn-success" type="submit" value="Valider" />
+
+    </div>
+</form>

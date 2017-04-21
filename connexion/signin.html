@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="entete">
+        <a class="btn btn-floating #ffb74d orange lighten-2" href="#/addUser" ui-sref-active="select"><i class="material-icons">add</i></a>
+        <h1>Sign In</h1>
+    </div>
+    
+    <div class="log">
+        <form name="loginUserForm" novalidate>
+            <label for="email">Ton email</label><br />
+            <input type="email" name="email" id="email" ng-model="$ctrl.user.email" required /><br />
+
+
+            <label for="pass">Ton mot de passe</label><br />
+            <input type="password" name="pass" id="pass" ng-model="$ctrl.user.password" required /><br />
+
+            <a ng-click="$ctrl.login()" class="waves-effect waves-light btn"><i class="material-icons left">fingerprint</i>Sign In</a>
+        </form>
+    </div>
+</div>

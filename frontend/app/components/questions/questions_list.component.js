@@ -6,26 +6,56 @@
 COMPNT
   .component("questionsList", {
 
-    templateUrl: '/app/components/questions/questions_list.html',
+    templateUrl: '/frontend/app/components/questions/questions_list.html',
 
     bindings: {
       list: '<',
       query: '@',
-      tagFilter: '<'
+      tagFilter: '<',
+      info: '<',
+      search: '@'
     },
 
-    controller: ['QuestionsService', 'TaglinkService', function (QuestionsService, TaglinkService) {
+    controller: ['TaglinkService', '$state', '$stateParams', 'QuestionsService', function (TaglinkService, $state, $stateParams, QuestionsService) {
+
+      this.tabsList = [{
+          "view": "view1",
+          "label": "Plus populaire",
+          "sort": "-votes"
+        },
+        {
+          "view": "view2",
+          "label": "Plus vues",
+          "sort": "-nb_views"
+        },
+        {
+          "view": "view3",
+          "label": "Latest",
+          "sort": "-date"
+        },
+        {
+          "view": "view4",
+          "label": "Less answers",
+          "sort": "answers"
+        }
+      ];
 
       this.model = {
         tagQuestionId: [],
         query: ''
       };
+      // this.searchQuery = $stateParams.queryParam;
       this.questions = [];
 
       this.$onInit = () => {
-        if (this.tagFilter) this.getTagedItems();
-        else this.getAllItems();
-
+        if (this.search) {
+          console.log(this.search);
+          this.getQueries(this.search);
+        } else if (this.tagFilter) {
+          this.getTagedItems();
+        } else {
+          this.getAllItems();
+        }
       };
 
       this.getTagedItems = () => {
@@ -34,21 +64,29 @@ COMPNT
 
           angular.forEach(this.model.tagQuestionId, (value, key) => {
             QuestionsService.getQuestionId(value.questionId).then((question) => {
-
               this.questions.push(question[0]);
-
-            }).catch((err) => { });
+            }).catch((err) => {});
           });
 
-        }).catch((err) => { });
+        }).catch((err) => {});
       };
 
       this.getAllItems = () => {
-        QuestionsService.getQuestions('nb_views').then((items) => {
+        QuestionsService.getQuestions().then((items) => {
           this.questions = items;
           console.log(items);
-        }).catch((err) => { });
+        }).catch((err) => {});
       };
 
+      this.removeTag = () => {
+        $state.go('questions');
+      };
+
+      this.getQueries = (param) => {
+        QuestionsService.searchQuestions(param).then((items) => {
+          this.questions = items;
+          console.log(this.questions);
+        }).catch((error) => {})
+      }
     }]
   });

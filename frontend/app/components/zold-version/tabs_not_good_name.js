@@ -12,18 +12,19 @@ let tabs = {
           </span>
         </div>
         <div class="tabs_content">
-            <tab label={{$ctrl.tabsList[0].label}} selection="$ctrl.tabsList[0].sort" tabs="$ctrl.tabs" aquery={{$ctrl.query}}>
+            <tab label={{$ctrl.tabsList[0].label}} selection="$ctrl.tabsList[0].sort" tabs="$ctrl.tabs" aquery="{{$ctrl.query}}" tag-filter="$ctrl.tagFilter">
             </tab>
-            <tab label={{$ctrl.tabsList[1].label}} selection="$ctrl.tabsList[1].sort" tabs="$ctrl.tabs" aquery={{$ctrl.query}}>
+            <tab label={{$ctrl.tabsList[1].label}} selection="$ctrl.tabsList[1].sort" tabs="$ctrl.tabs" aquery="{{$ctrl.query}}" tag-filter="$ctrl.tagFilter">
             </tab>
-            <tab label={{$ctrl.tabsList[0].label}} selection="$ctrl.tabsList[0].sort" tabs="$ctrl.tabs" aquery={{$ctrl.query}}>
+            <tab label={{$ctrl.tabsList[0].label}} selection="$ctrl.tabsList[0].sort" tabs="$ctrl.tabs" aquery="{{$ctrl.query}}" tag-filter="$ctrl.tagFilter">
             </tab>
         </div>
       </div>
     `,
 
     bindings: {
-        query:'@'
+        query: '@',
+        tagFilter: '<'
     },
 
     controller: function () {
@@ -41,6 +42,8 @@ let tabs = {
 
         this.$onInit = () => {
             this.tabs = [];
+            console.log(this.tagFilter)
+            console.log(this.query)
         }
 
         this.addTab = (tab) => {
@@ -61,7 +64,7 @@ let tab = {
 
     template: `
     <div ng-if="$ctrl.tab.selected">
-        <div class="panel" ng-repeat="question in $ctrl.questions | filter : $ctrl.aquery">
+        <div class="panel" ng-repeat="question in $ctrl.questions | orderBy : $ctrl.selection | filter : $ctrl.aquery">
             <div id="left">
                 <div id="votes" ng-bind="question.votes"></div>
                 <div id="answers">
@@ -91,16 +94,19 @@ let tab = {
         selection: '<',
         tabs: '<',
         selected: '@',
-        aquery: '@'
+        aquery: '@',
+        tagFilter: '<'
     },
 
     require: {
         tabs: '^^tabs'
     },
 
-    controller: ['QuestionsService', function (QuestionsService) {
+    controller: ['QuestionsService', 'TaglinkService', function (QuestionsService, TaglinkService) {
 
         this.$onInit = () => {
+
+            this.selection='-'+this.selection;
 
             this.tab = {
                 label: this.label,
@@ -108,7 +114,29 @@ let tab = {
             };
 
             this.tabs.addTab(this.tab);
-            this.getAllItems();
+
+            this.model = {
+                tagQuestionId: [],
+                query: ''
+            };
+            this.questions = [];
+            if (this.tagFilter) this.getTagedItems();
+            else this.getAllItems();
+        };
+
+        this.getTagedItems = () => {
+            TaglinkService.getQuestionsTag(this.tagFilter.tagId).then((items) => {
+                this.model.tagQuestionId = items;
+
+                angular.forEach(this.model.tagQuestionId, (value, key) => {
+                    QuestionsService.getQuestionId(value.questionId).then((question) => {
+
+                        this.questions.push(question[0]);
+
+                    }).catch((err) => { });
+                });
+
+            }).catch((err) => { });
         };
 
         this.getAllItems = () => {
@@ -117,10 +145,6 @@ let tab = {
             }).catch((err) => { });
         };
 
-        // this.$onChanges = (changes) => {
-        //   console.log(changes)
-        //   console.log(this.tabs)
-        // }
     }]
 };
 

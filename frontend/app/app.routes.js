@@ -1,21 +1,24 @@
 'use strict';
 
-WEA.config(function ($stateProvider) {
+WEA.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 
-        .state({
-            name: 'questionscomplet',
-            url: '/questionscomplet',
-            component: 'questionsComplet',
+        .state('home', {
+            url: '/',
+            component: 'home',
             resolve: {}
         })
-
         .state({
             name: 'questions',
             url: '/questions',
             component: 'questionsList',
+            params: {
+                queryParam: null
+            },
             resolve: {
-                
+                search: function($stateParams){
+                    return $stateParams.queryParam;
+                }
             }
         })
 
@@ -24,9 +27,24 @@ WEA.config(function ($stateProvider) {
             url: '/users',
             component: 'usersList',
             resolve: {
-                users: function ($rootScope, UsersService, $transition$) {
-                    return UsersService.getUsers($transition$.params().personId);
+                users: function ($rootScope, UsersService) {
+                    return UsersService.getUsers();
                 }
+            }
+        })
+
+        .state({
+            name: 'tags',
+            url: '/questions/:tagId/:tagName',
+            component: 'questionsList',
+            resolve: {
+                tagFilter: function ($stateParams) {
+                    return {
+                        tagId: $stateParams.tagId,
+                        tagName: $stateParams.tagName
+                    };
+                }
+
             }
         })
 
@@ -42,9 +60,17 @@ WEA.config(function ($stateProvider) {
         })
 
         .state({
+            name: 'profil',
+            url: '/profil',
+            component: 'profil',
+            resolve: {}
+        })
+
+        .state({
             name: 'questionPost',
             url: '/post',
             component: 'questionPost',
+            authenticate: true,
             resolve: {}
         })
 
@@ -56,15 +82,12 @@ WEA.config(function ($stateProvider) {
         })
 
         .state({
-            name: 'tags',
-            url: '/questions/:tagId/:tagName',
-            component: 'questionsList',
+            name: 'questionSpec',
+            url: '/questions/{idQuestion}',
+            component: 'questionFull',
             resolve: {
-                tagFilter: function ($stateParams) {
-                    return {
-                        tagId: $stateParams.tagId,
-                        tagName: $stateParams.tagName
-                    };
+                question: function ($rootScope, QuestionsService, $transition$) {
+                    return QuestionsService.getSpecificQuestion($transition$.params().idQuestion);
                 }
             }
         })
@@ -77,17 +100,6 @@ WEA.config(function ($stateProvider) {
         })
 
         .state({
-            name: 'questionSpec',
-            url: '/questions/{questionId}',
-            component: 'questionFull',
-            resolve: {
-                question: function ($rootScope, QuestionsService, $transition$) {
-                    return QuestionsService.getSpecificQuestion($transition$.params().questionId);
-                }
-            }
-        })
-
-        .state({
             name: 'logUser',
             url: '/logUser',
             component: 'userLogin',
@@ -95,11 +107,62 @@ WEA.config(function ($stateProvider) {
         })
 
         .state({
-            name: 'userprofile',
-            url: '/userprofile',
-            component: 'profil',
+            name: 'questionSpec.postAnswer',
+            url: '/newAnswer',
+            component: 'answerPost',
+            authenticate: true,
             resolve: {}
+        })
+
+        .state({
+            name: 'editPost',
+            url: '/edit/{postId}',
+            component: 'editPost',
+            resolve: {
+                post: function ($rootScope, QuestionsService, $transition$) {
+                    return QuestionsService.getSpecificQuestion($transition$.params().postId);
+                }
+            }
+        })
+
+        .state({
+            name: 'tips',
+            url: '/tips',
+            component: 'tips',
+            resolve: {}
+        })
+
+        .state({
+            name: 'tips.postTip',
+            url: '/post',
+            component: 'postTip',
+            authenticate: true,
+            resolve: {}
+        })
+        .state({
+            name: 'jobs',
+            url: '/jobs',
+            component: 'jobsList',
+            resolve: {}
+        })
+
+        .state({
+            name: 'jobPost',
+            url: '/jobs/post',
+            component: 'jobPost',
+            resolve: {}
+        })
+
+        .state('login', {
+            url: '/login',
+            component: 'login',
+            resolve: {
+                redirect: function ($state) {
+                    return $state.transition._targetState._params.redirect;
+                }
+            }
         });
 
-});
+    $urlRouterProvider.otherwise('/');
 
+});

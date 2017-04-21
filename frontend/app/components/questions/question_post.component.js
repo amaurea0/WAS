@@ -5,39 +5,42 @@
  */
 COMPNT.component("questionPost", {
 
-  templateUrl: '/app/components/questions/question_post.html',
+  templateUrl: '/frontend/app/components/questions/question_post.html',
 
   bindings: {
     info: '<'
   },
 
-  controller: ['QuestionsService', 'TagsService', 'TaglinkService', '$scope', '$state',
+  controller: ['QuestionsService', 'TagsService', 'TaglinkService', 'AuthService', '$scope', '$state',
 
-    function (QuestionsService, TagsService, TaglinkService, $scope, $state) {
+    function (QuestionsService, TagsService, TaglinkService, AuthService, $scope, $state) {
 
       //get Tags for the input datalist
       TagsService.getTags().then((data) => {
         this.tags = data;
-      }).catch((err) => { });
+      }).catch((err) => {});
 
       this.new_tags = [];
       this.saveTag = (tag) => {
-        if(this.new_tags.indexOf(tag) == -1) this.new_tags.push(tag);
+        if (this.new_tags.indexOf(tag) == -1) this.new_tags.push(tag);
         this.SelectedTag = "";
       };
       this.removeTag = (tag) => {
-        this.new_tags.splice(this.new_tags.indexOf(tag),1);
+        this.new_tags.splice(this.new_tags.indexOf(tag), 1);
       };
+      this.cancel = () => {
+          $state.go('questions');
+      }
 
       this.save = (question) => {
+        
         var new_question = {
           "title": question.title,
           "content": question.content,
-          "nb_views": "",
-          "votes": "",
+          "nb_views": 0,
+          "votes": 0,
           "date": new Date(),
-          // "userId": this.info.userId
-          "userId": 1
+          "userId": AuthService.getCurrentUser().id
         }
 
         // Save the new question
@@ -54,11 +57,11 @@ COMPNT.component("questionPost", {
               TaglinkService.saveTaglink(new_link).then((resp) => {
                 console.log("new_link posted");
 
-              }).catch((err) => { });
-            }).catch((err) => { });
+              }).catch((err) => {});
+            }).catch((err) => {});
           });
           $state.go('questions');
-        }).catch((err) => { });
+        }).catch((err) => {});
       };
     }
   ]

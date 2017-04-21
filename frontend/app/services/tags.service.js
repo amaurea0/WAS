@@ -30,4 +30,18 @@ SERVICES.service('TagsService', ['$http', '$log', '$q', function ($http, $log, $
         return deferred.promise;
     };
 
+    this.saveTag = function (tag) {
+        var deferred = $q.defer();
+        $http.post(TAG_URL, question).then(
+            function (response) {
+                deferred.resolve(response.data);
+            },
+            function (error) {
+                deferred.reject(error);
+                $log.error(error);
+            }
+        );
+        return deferred.promise;
+    };
+
 }]);
