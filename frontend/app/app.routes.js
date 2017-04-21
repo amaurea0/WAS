@@ -132,4 +132,11 @@ WEA.config(function ($stateProvider) {
             component: 'jobsList',
             resolve: {}
         })
+
+        .state({
+            name: 'jobPost',
+            url: '/jobs/post',
+            component: 'jobPost',
+            resolve: {}
+        })
 });

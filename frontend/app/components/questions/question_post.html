@@ -1,7 +1,6 @@
 <div class="container page">
     <div class="entete">
-    <h1> <span class="orange-text"><i class="small material-icons">forward</i></span> Poser une question</h1>
-   
+        <h1>Post Your Question</h1>
     </div>
 
     <form name="myForm" ng-submit="$ctrl.save($ctrl.question)" novalidate>
@@ -27,8 +26,8 @@
         </div>
 
         <div class="item-actions">
-            <input class="btn btn-success" type="submit" value="Valider" ng-disabled="myForm.$invalid" />
-            <a class="btn btn-default" ui-sref="list">Annuler</a>
+            <a ng-click="$ctrl.login()" class="waves-effect waves-light btn"><i class="material-icons left">done</i>Valider</a>
+            <a ng-click="" class="waves-effect waves-light btn"><i class="material-icons left">backspace</i>Annuler</a>
         </div>
     </form>
 </div>
