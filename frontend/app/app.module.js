@@ -1,6 +1,8 @@
 'use strict';
 
-var WEA = angular.module('WildExchange', ['wild.components', 'wild.services', 'ui.router', 'ui.materialize', 'angularUtils.directives.dirPagination']);
+
+var WEA = angular.module('WildExchange', ['wild.components', 'wild.services', 'ui.router', 'ui.materialize', 'angularUtils.directives.dirPagination','ngCookies']);
+
 
 const COMPNT = angular.module('wild.components', []);
 

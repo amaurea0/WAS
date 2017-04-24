@@ -1,18 +1,15 @@
 'use strict';
 
-WEA.controller('main', function (AuthService, $rootScope, $state) {
+WEA.controller('main', function (authService, $rootScope, $state) {
 
-    this.isAuthenticated = AuthService.isAuthenticated();
+    this.isAuthenticated = authService.VerificationConnection() == true;
 
     $rootScope.$on('AUTH', (event, connected) => {
-      this.isAuthenticated = connected;
-      if (!connected) {
+          this.isAuthenticated = authService.VerificationConnection() == true;
+      if (!isAuthenticated) {
         $state.go('home');
       }
     });
 
-    this.disconnect = () => {
-      AuthService.disconnect();
-    };
 
   });
