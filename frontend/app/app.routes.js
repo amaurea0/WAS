@@ -97,7 +97,7 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
                 edition: function ($stateParams) {
                     return $stateParams.edition;
                 },
-                myanswer: function ($stateParams, QuestionsService) {
+                answer: function ($stateParams, QuestionsService) {
                     if ($stateParams.answer) {
                         return QuestionsService.getSpecificAnswer($stateParams.answer);
                     }

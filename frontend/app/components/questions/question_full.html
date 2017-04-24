@@ -29,14 +29,14 @@
 
         <div ng-if="$ctrl.edition" class="bloc_center">
             <h2>Edit response</h2>
-            <form class="formulaire" ng-submit="$ctrl.editContentAnswer($ctrl.myanswer)" novalidate>
+            <form class="formulaire" ng-submit="$ctrl.editContentAnswer($ctrl.answer)" novalidate>
                 <div class="form-group">
                     <label for="title">Titre réponse</label>
-                    <input type="text" class="form-control" id="title" ng-model="$ctrl.myanswer.title" />
+                    <input type="text" class="form-control" id="title" ng-model="$ctrl.answer.title" />
                 </div>
                 <div class="form-group">
                     <label for="content">Content</label>
-                    <input type="text" class="form-control" id="content" ng-model="$ctrl.myanswer.content" />
+                    <input type="text" class="form-control" id="content" ng-model="$ctrl.answer.content" />
                 </div>
                 <div class="item-actions">
 
@@ -54,7 +54,7 @@
                 </div>
                 <div class="contenu">
                     <h3 ng-bind="answer.title"></h3>
-                    <button class="lien" ui-sref="questionSpec({idQuestion : $ctrl.question.id, edition: true, answer: answer.id})">edit</button>
+                    <button ng-if="answer.myAnswer" class="lien" ui-sref="questionSpec({idQuestion : $ctrl.question.id, edition: true, answer: answer.id})">edit</button>
 
                     <span>{{answer.date | date:"MM/dd/yyyy"}}</span>
                     <p ng-bind="answer.content"></p>
