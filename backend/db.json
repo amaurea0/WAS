@@ -3,17 +3,17 @@
     {
       "title": "How do JavaScript closures work?",
       "content": "How would you explain JavaScript closures to someone with a knowledge of the concepts they consist of (for example functions, variables and the like), but does not understand closures themselves?",
-      "nb_views": 75,
-      "votes": 100,
-      "date": "2017-04-08T01:47:18.815Z",
+      "nb_views": 678,
+      "votes": 106,
+      "date": "2017-03-08T01:47:18.815Z",
       "userId": 1,
       "id": 1
     },
     {
       "title": "AngularJS: Service vs provider vs factory",
       "content": "What are the differences between a Service, Provider and Factory in AngularJS?",
-      "nb_views": 15,
-      "votes": 521,
+      "nb_views": 345,
+      "votes": 178,
       "date": "2017-04-08T01:49:44.615Z",
       "userId": 2,
       "id": 2
@@ -21,9 +21,9 @@
     {
       "title": "How can I prevent SQL injection in PHP?",
       "content": "If user input is inserted without modification into an SQL query, then the application becomes vulnerable to SQL injection, like in the following example:",
-      "nb_views": 413,
-      "votes": 900,
-      "date": "2017-04-08T01:51:51.436Z",
+      "nb_views": 246,
+      "votes": 871,
+      "date": "2016-12-15T14:51:51.436Z",
       "userId": 3,
       "id": 3
     },
@@ -32,7 +32,7 @@
       "content": "I'm aware of questions like this, where people tend to discuss the general Symfony 2 concept of bundle. The thing is, in a specific application, like, for instance, a twitter-like application, should everything really be inside a generic bundle, like the official docs say?",
       "nb_views": 36,
       "votes": 98,
-      "date": "2017-04-08T01:53:23.566Z",
+      "date": "2016-01-23T12:43:23.566Z",
       "userId": 4,
       "id": 4
     },
@@ -41,7 +41,7 @@
       "content": "Recently, I ran some of my JavaScript code through Crockford's JSLint, and it gave the following error:",
       "nb_views": 26,
       "votes": 745,
-      "date": "2017-04-08T09:25:09.366Z",
+      "date": "2017-02-21T09:25:09.366Z",
       "userId": 5,
       "id": 5
     },
@@ -50,25 +50,25 @@
       "content": "I would like to access my $scope variable in Chrome's JavaScript console. How do I do that? I can neither see $scope nor the name of my module myapp in the console as variables.",
       "nb_views": 15,
       "votes": 0,
-      "date": "2017-04-14T11:12:55.705Z",
+      "date": "2017-01-27T11:12:55.705Z",
       "userId": 6,
       "id": 6
     },
     {
       "title": "How does PHP 'foreach' actually work?",
       "content": "Let me prefix this by saying that I know what foreach is, does and how to use it.",
-      "nb_views": 14,
-      "votes": 0,
-      "date": "2017-04-14T11:55:23.473Z",
+      "nb_views": 1500,
+      "votes": 102,
+      "date": "2017-02-02T17:55:23.473Z",
       "userId": 7,
       "id": 7
     },
     {
       "title": "How to get the request parameters in symfony2?",
       "content": "I am very new to symfony. In other languages like java and others I can use request.getParameter('parmeter name') to get the value.",
-      "nb_views": 3,
-      "votes": 0,
-      "date": "2017-04-14T11:56:17.597Z",
+      "nb_views": 278,
+      "votes": 20,
+      "date": "2017-04-22T14:56:17.597Z",
       "userId": 1,
       "id": 8
     },
@@ -76,17 +76,17 @@
       "title": "Why are C# 4 optional parameters defined on interface not enforced on implementing class?",
       "content": "I noticed that with the optional parameters in C# 4 if you specify a parameter as optional on an interface you DON'T have to make that parameter optional on any implementing class: public interface",
       "nb_views": 20,
-      "votes": 0,
-      "date": "2017-04-17T15:28:44.873Z",
+      "votes": 2,
+      "date": "2016-11-17T15:28:44.873Z",
       "userId": 6,
       "id": 9
     },
     {
       "title": "How to use a filter in a controller?",
       "content": "I have written a filter function which will return data based on the argument you are passing. I want the same functionality in my controller.",
-      "nb_views": 3,
-      "votes": 0,
-      "date": "2017-04-17T17:51:13.675Z",
+      "nb_views": 375,
+      "votes": 79,
+      "date": "2016-12-15T23:59:13.675Z",
       "userId": 5,
       "id": 10
     }
@@ -118,7 +118,13 @@
       "pseudo": "Piotr",
       "jobId": 2,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990500.jpg",
-      "profile": "Je suis passionné d'angular, mais vraiment vraiment trop...et ça se voit quand je code: mes 'Get' sont resplendissants, même si mes 'Post', un peu moins..."
+      "profile": "Je suis passionné d'angular, mais vraiment vraiment trop...et ça se voit quand je code: mes 'Get' sont resplendissants, même si mes 'Post', un peu moins...",
+      "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
+      "instagram": "https://www.instagram.com/piotr____/",
+      "twitter": "https://twitter.com/hashtag/RadioLondres2017?src=hash",
+      "github": "https://github.com/Piotr-V?tab=repositories",
+      "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
+      "stack": "http://stackexchange.com/users/10499231/piotr"
     },
     {
       "email": "lderv68@gmail.com",
@@ -129,7 +135,13 @@
       "pseudo": "Lettyyyyy",
       "jobId": 3,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990499.jpg",
-      "profile": "je suis passionnée d'informatique et de graphisme, tout comme Laetitia. C'est drôle parce qu'on a presque le même prénom en plus. Par contre, moi, les Beattles, j'peux pas les encadrer... j'suis bien contente qu'ils soient morts !"
+      "profile": "je suis passionnée d'informatique et de graphisme, tout comme Laetitia. C'est drôle parce qu'on a presque le même prénom en plus. Par contre, moi, les Beattles, j'peux pas les encadrer... j'suis bien contente qu'ils soient morts !",
+      "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
+      "instagram": "https://www.instagram.com/piotr____/",
+      "twitter": "https://twitter.com/hashtag/RadioLondres2017?src=hash",
+      "github": "https://github.com/Piotr-V?tab=repositories",
+      "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
+      "stack": "http://stackexchange.com/users/10499231/piotr"
     },
     {
       "email": "sasha@gmail.com",
@@ -140,7 +152,13 @@
       "pseudo": "Sash",
       "jobId": 4,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990497.jpg",
-      "profile": "je suis passionné d'angular, je surkiffe... j'adore ma barbe aussi, elle fait tomber toutes les minettes... et la soupe aussi, avec un peu de lait dedans hahahaha"
+      "profile": "je suis passionné d'angular, je surkiffe... j'adore ma barbe aussi, elle fait tomber toutes les minettes... et la soupe aussi, avec un peu de lait dedans hahahaha",
+      "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
+      "instagram": "https://www.instagram.com/piotr____/",
+      "twitter": "https://twitter.com/hashtag/RadioLondres2017?src=hash",
+      "github": "https://github.com/Piotr-V?tab=repositories",
+      "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
+      "stack": "http://stackexchange.com/users/10499231/piotr"
     },
     {
       "email": "aurore@gmail.com",
@@ -151,7 +169,13 @@
       "pseudo": "Aur",
       "jobId": 5,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990496.jpg",
-      "profile": "je suis passionnée d'angular, je surkiffe aussi, tout comme Sash (dont j'adore la barbe moelleuse)... Sinon, me fais pas trop iech ou j'te fais un fatal Ushiro-Geri! Hiiiiiaaaaouuuu"
+      "profile": "je suis passionnée d'angular, je surkiffe aussi, tout comme Sash (dont j'adore la barbe moelleuse)... Sinon, me fais pas trop iech ou j'te fais un fatal Ushiro-Geri! Hiiiiiaaaaouuuu",
+      "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
+      "instagram": "https://www.instagram.com/piotr____/",
+      "twitter": "https://twitter.com/hashtag/RadioLondres2017?src=hash",
+      "github": "https://github.com/Piotr-V?tab=repositories",
+      "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
+      "stack": "http://stackexchange.com/users/10499231/piotr"
     },
     {
       "email": "julien@gmail.com",
@@ -162,7 +186,13 @@
       "pseudo": "Ju",
       "jobId": 6,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990495.jpg",
-      "profile": "Salut, moi ca va... hier, le dojo c'était sympathique. Voilà quoi hahah"
+      "profile": "Salut, moi ca va... hier, le dojo c'était sympathique. Voilà quoi hahah",
+      "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
+      "instagram": "https://www.instagram.com/piotr____/",
+      "twitter": "https://twitter.com/hashtag/RadioLondres2017?src=hash",
+      "github": "https://github.com/Piotr-V?tab=repositories",
+      "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
+      "stack": "http://stackexchange.com/users/10499231/piotr"
     },
     {
       "email": "julienRousset@hotmail.com",
@@ -173,7 +203,13 @@
       "pseudo": "Julian",
       "jobId": 7,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990498.jpg",
-      "profile": "Salut, moi ca va aussi... hier, Prison Break, c'était pas mal. Si t'as un problème avec angular, j'peux t'aider: tu prends cette variable, tu la mets dans le truc là, et bâaaam ! Voilà ! hahah"
+      "profile": "Salut, moi ca va aussi... hier, Prison Break, c'était pas mal. Si t'as un problème avec angular, j'peux t'aider: tu prends cette variable, tu la mets dans le truc là, et bâaaam ! Voilà ! hahah",
+      "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
+      "instagram": "https://www.instagram.com/piotr____/",
+      "twitter": "https://twitter.com/hashtag/RadioLondres2017?src=hash",
+      "github": "https://github.com/Piotr-V?tab=repositories",
+      "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
+      "stack": "http://stackexchange.com/users/10499231/piotr"
     },
     {
       "email": "toto",
@@ -184,7 +220,30 @@
       "pseudo": "Julian",
       "jobId": 7,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990498.jpg",
-      "profile": "Salut, moi ca va aussi... hier, Prison Break, c'était pas mal. Si t'as un problème avec angular, j'peux t'aider: tu prends cette variable, tu la mets dans le truc là, et bâaaam ! Voilà ! hahah"
+      "profile": "Salut, moi ca va aussi... hier, Prison Break, c'était pas mal. Si t'as un problème avec angular, j'peux t'aider: tu prends cette variable, tu la mets dans le truc là, et bâaaam ! Voilà ! hahah",
+      "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
+      "instagram": "https://www.instagram.com/piotr____/",
+      "twitter": "https://twitter.com/hashtag/RadioLondres2017?src=hash",
+      "github": "https://github.com/Piotr-V?tab=repositories",
+      "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
+      "stack": "http://stackexchange.com/users/10499231/piotr"
+    },
+    {
+      "email": "pierrevicq@gmail.com",
+      "pass": "titi",
+      "last_name": "",
+      "first_name": "",
+      "pseudo": "toto",
+      "date": "2017-04-24T14:13:42.504Z",
+      "avatar": "",
+      "profile": "",
+      "id": 9,
+      "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
+      "instagram": "https://www.instagram.com/piotr____/",
+      "twitter": "https://twitter.com/hashtag/RadioLondres2017?src=hash",
+      "github": "https://github.com/Piotr-V?tab=repositories",
+      "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
+      "stack": "http://stackexchange.com/users/10499231/piotr"
     }
   ],
   "tags": [
