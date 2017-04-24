@@ -1,7 +1,7 @@
 'use strict';
 
 COMPNT
-  .component("editPost", {
+  .component("editAnswer", {
 
     templateUrl: '/frontend/app/components/answer/edit_answer.html',
 
@@ -11,9 +11,10 @@ COMPNT
 
     controller: ['QuestionsService', '$state', function (QuestionsService, $state) {
 
-      this.editContent = (answer) => {
+      this.editContentAnswer = (answer) => {
 
         var currentId = this.currentAnswer.id;
+        console.log(currentId)
 
         var new_content = {
           "title": this.answer.title,
