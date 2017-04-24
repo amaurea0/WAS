@@ -128,19 +128,6 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
         })
 
         .state({
-            name: 'questionSpec.editAnswer',
-            url: '/editAnswer/{answerId}',
-            // url: '/editAnswer',
-            component: 'editAnswer',
-            resolve: {
-                currentAnswer: function ($rootScope, QuestionsService, $transition$) {
-                    console.log($transition$.params())
-                    return QuestionsService.getSpecificQuestion($transition$.params().answerId);
-                }
-            }
-        })
-
-        .state({
             name: 'editPost',
             url: '/edit/{postId}',
             component: 'editPost',
