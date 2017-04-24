@@ -4,8 +4,8 @@
 
         <div class="col s12">
             <ul tabs reload="allTabContentLoaded">
-                <li class="tab col s6"><a class="active" href="#connexion">Connexion</a></li>
-                <li class="tab col s6"><a href="#creation">Create count</a></li>
+                <li class="tab col s6"><a class="active" href="#connexion">Connection</a></li>
+                <li class="tab col s6"><a href="#creation">Create your account</a></li>
             </ul>
         </div>
 
@@ -22,7 +22,7 @@
                     <input name="password" ng-model="$ctrl.user.password" placeholder="Mot de passe" type="password" class="form-control" required />
                 </div>
                 <hr />
-                <button class="btn btn-primary" type="submit" ng-disabled="myForm1.$invalid">Valider</button>
+                <button class="btn btn-primary" type="submit" ng-disabled="myForm1.$invalid">Validate</button>
             </form>
         </div>
 
@@ -37,7 +37,7 @@
                 </div>
                 <div class="form-group">
                     <input name="email" ng-model="$ctrl.user.email" placeholder="Adresse mail" type="email" class="form-control" required />
-                    <span ng-show="myForm2.$error.email" class="error">Email non valide</span>
+                    <span ng-show="myForm2.$error.email" class="error">Email is non valid</span>
                 </div>
                 <div class="form-group">
                     <input name="password" ng-model="$ctrl.user.password" placeholder="Mot de passe" type="password" class="form-control" required ng-minlength="8"
@@ -45,7 +45,7 @@
                     <span ng-show="myForm2.password.$error.minlength" class="error">Password is too short </span>
                 </div>
                 <hr />
-                <button class="btn btn-primary" type="submit" ng-disabled="myForm2.$invalid">Valider</button>
+                <button class="btn btn-primary" type="submit" ng-disabled="myForm2.$invalid">Validate</button>
             </form>
         </div>
     </div>

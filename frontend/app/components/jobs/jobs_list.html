@@ -6,7 +6,7 @@
 
     <div ng-if="$ctrl.jobs.length > 0">
         <div class="input-field">
-            <input class="validate" type="text" placeholder="Rechercher..." ng-model="$ctrl.model.query">
+            <input class="validate" type="text" placeholder="Search..." ng-model="$ctrl.model.query">
         </div>
 
 
@@ -31,8 +31,8 @@
 
             <div class="collection-item avatar">
                 <h3 id="society" class="title" ng-bind="job.society"></h3>
-                <p>{{job.place}}</p><br />
-                <p>{{job.date | date:"MM/dd/yyyy"}}</p>
+                <p class="jobPlace">{{job.place}}</p><br />
+                <p class="jobPlace">{{job.date | date:"MM/dd/yyyy"}}</p>
             </div>
         </div>
     </div>

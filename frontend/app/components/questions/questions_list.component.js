@@ -20,12 +20,12 @@ COMPNT
 
       this.tabsList = [{
           "view": "view1",
-          "label": "Plus populaire",
+          "label": "Most Popular",
           "sort": "-votes"
         },
         {
           "view": "view2",
-          "label": "Plus vues",
+          "label": "Most Viewed",
           "sort": "-nb_views"
         },
         {
@@ -35,7 +35,7 @@ COMPNT
         },
         {
           "view": "view4",
-          "label": "Less answers",
+          "label": "Least Answered",
           "sort": "answers"
         }
       ];

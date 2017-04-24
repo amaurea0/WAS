@@ -24,6 +24,10 @@ h1 {
     text-transform: uppercase;
 }
 
+#logo {
+    position: relative;
+    float: left;
+}
 
 /*ICI VIENT LE STYLE DE LA BARRE DE NAV ET DU PARALLAX MAIN.HTML*/
 
@@ -50,7 +54,7 @@ h1 {
 }
 
 #search input[type="text"]:focus {
-    width: 200px;
+    width: 150px;
 }
 
 .dropdown-content li>a,
@@ -63,14 +67,13 @@ h1 {
 
 .chip {
     border-style: none;
+    margin: 20px 20px;
 }
 
 
 /*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
 
 li {
-    display: flex;
-    direction: row;
     color: #455a64;
 }
 
@@ -90,14 +93,50 @@ i.icon-orange {
 }
 
 #personRight {
+    max-width: 250px;
     display: flex;
-    direction: row;
+    flex-direction: column;
     float: right;
-    justify-content: center;
+    margin: 10px;
+    overflow: hidden;
 }
 
 #pseudo {
     color: #f4a443;
+}
+
+
+.collection .collection-item.avatar {
+    width: 400px;
+}
+
+.collection .collection-item.avatar {
+    width: 400px;
+}
+
+.jobPlace {
+    font-size: 15px;
+    color: #455a64;
+}
+
+/*ICI VIENT LE STYLE DE LA LISTE DU PROFILE*/
+
+#personRight td{
+    max-width: 80px;
+}
+
+#personRight td * {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.icons {
+    max-width: 24px;
+    height: auto;
+}
+
+#avatar {
+    max-width: 60px;
 }
 
 
@@ -114,7 +153,7 @@ i.icon-orange {
 
 #tagJob {
     font-size: 0.7em;
-    color: #26a69a;
+    color: #455a64;
 }
 
 
@@ -243,6 +282,10 @@ i.icon-orange {
     border: none;
 }
 
+.pagination li.active {
+    background-color: #80cbc4 !important;
+}
+
 
 /*ICI VIENT LE STYLE DES FORRMULAIRES*/
 
@@ -305,9 +348,17 @@ p {
     .icon-block #questionhome .vote {
         display: none;
     }
+    #search input[type="text"] {
+    width: 100px;
+    padding: 2px 2px 2px 2px;
+    font-size: 9px;
+}
+    #search input[type="text"]:focus {
+    width: 60px;
+    }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 980px) {
     .container ul.right.hide-on-small-only {
         display: none;
     }

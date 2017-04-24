@@ -16,18 +16,35 @@
                     </div>
                     <div class="col s12 l6">
                         <div class="card-content white-text" id="personRight">
-                            <div class="card-content white-text">
-                                <a class="material-icons #ffb74d orange-text lighten-2" href="mailto:{{user.email}}">email</a>
-                                <p ng-bind="$ctrl.person.ville"></p>
-                            </div>
-                            <div class="collection-item avatar">
-                                <img class="circle" ng-src="{{$ctrl.person.avatar}}" alt="user's picture">
-                            </div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="collection-item avatar">
+                                            <img class="circle" id="avatar" ng-src="{{$ctrl.person.avatar}}" alt="user's picture"></br>
+                                            <a class="material-icons #ffb74d orange-text lighten-2" href="mailto:{{$ctrl.person.email}}">email</a>
+                                        </div>
+                                        <div id="icons">
+                                            <a href="{{$ctrl.person.github}}" target="_blank"><img class="icons" src="/frontend/assets/img/github.png" alt="github icon"></a>
+                                            <a href="{{$ctrl.person.stack}}" target="_blank"><img class="icons" src="/frontend/assets/img/stack.png" alt="github icon"></a>
+                                            <a href="{{$ctrl.person.twitter}}" target="_blank"><img class="icons" src="/frontend/assets/img/twitter.png" alt="twitter icon"></a>
+                                            <a href="{{$ctrl.person.facebook}}" target="_blank"><img class="icons" src="/frontend/assets/img/facebook.png" alt="facebook icon"></a>
+                                            <a href="{{$ctrl.person.linkedin}}" target="_blank"><img class="icons" src="/frontend/assets/img/linkedin.png" alt="linkedin icon"></a>
+                                            <a href="{{$ctrl.person.instagram}}" target="_blank"><img class="icons" src="/frontend/assets/img/instagram.png" alt="instagram icon"></a>
+                                            <p ng-bind="$ctrl.person.ville"></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>
                 <div class="card-action">
                     <a id="questionsTags">{{question.tag}}</a>
+                    <a>hdghzhhhhhhhhhdghzhhhhh</a>
+                    <a>hdghzhhhhhhhhhdghzhhhhh</a>
+                    <a>hdghzhhhhhhhhhdghzhhhhh</a>
+                    <a>hdghzhhhhhhhhhdghzhhhhh</a>
+                    <a>hdghzhhhhhhhhhdghzhhhhh</a>
                 </div>
             </div>
         </div>
