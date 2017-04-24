@@ -119,6 +119,14 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
         })
 
         .state({
+            name: 'editAnswer',
+            url: '/editAnswer',
+            component: 'answerPost',
+            authenticate: true,
+            resolve: {}
+        })
+
+        .state({
             name: 'editPost',
             url: '/edit/{postId}',
             component: 'editPost',

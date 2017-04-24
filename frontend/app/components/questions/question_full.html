@@ -38,6 +38,7 @@
                 <div class="contenu">
                     <h3 ng-bind="answer.title"></h3>
                     <button class="lien" ui-sref="questionSpec({idQuestion : question.id, edition: 'true'})">edit</button>
+
                     <span>{{answer.date | date:"MM/dd/yyyy"}}</span>
                     <p ng-bind="answer.content"></p>
                 </div>
