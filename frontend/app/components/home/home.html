@@ -27,31 +27,105 @@
       <div class="col s12 m12">
         <div class="icon-block">
           <h2 class="center brown-text"><i class="material-icons">remove_red_eye</i></h2>
-          <h5 class="center">TOP QUESTIONS</h5>
-          <div ng-repeat="questions in $ctrl.questions">
-           <div id="questionhome">
-            <div class="vote">
-              <p>{{questions.votes}}<br />votes</p>
-              <p>{{questions.nb_views}}<br />vues</p>
-              <p>{{questions.reponse}}<br />réponses</p>
+          <h5 class="center"> LAST QUESTIONS</h5>
+          <div class="question" ng-repeat="question in $ctrl.questions">
+
+            <div class="counters view">
+              <div ng-bind="question.nb_views"></div>
+              <div ng-bind="question.votes"></div>
             </div>
-            <div class="text">
-              <p>{{questions.title}}
-              </p>
-              <span>par {{questions.userId}}<i> créé le {{questions.date}}</i></span>
-              <div class="tag"><span>json</span><span>json</span></div>
+
+            <div class="contenu">
+              <a ui-sref="questionSpec({idQuestion : question.id})">
+
+                <h3 ng-bind="question.title"></h3>
+                <!-- <span class="answers" ng-bind="question.answers"></span>-->
+                <span>{{question.answers.length}} Réponses</span>
+                <span>{{question.date | date:"MM/dd/yyyy"}}</span>
+                <p ng-bind="question.content"></p>
+                <span id="questionsTags">{{question.tag}}</span>
+                <div ng-bind="question.tag"></div>
+              </a>
+            </div>
+
+            <div class="collection-item avatar">
+              <img class="circle" ng-src="{{question.user.avatar}}" alt="user's picture">
+            </div>
+            <!--<div id="questionhome">
+              <div class="vote">
+                <p>{{questions.votes}}<br />votes</p>
+                <p>{{questions.nb_views}}<br />vues</p>
+                <p>{{questions.reponse}}<br />réponses</p>
+              </div>
+              <div class="text">
+                <p>{{questions.title}}
+                </p>
+                <span>par {{questions.userId}}<i> créé le {{questions.date}}</i></span>
+                <div class="tag"><span>json</span><span>json</span></div>
+              </div>
+            </div>-->
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <h5 class="header col s12 light">Apprendre et savoir apprendre sans chausette !</h5>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"> <img src="/frontend/assets/img/shutterstock_326764691.jpg" alt="Unsplashed background img 1">
+  </div>
+</div>
+
+<div class="container">
+  <div class="section">
+
+    <div class="row">
+      <div class="col s12 center">
+        <h3><i class="mdi-content-send brown-text"></i></h3>
+        <h4>Last jobs</h4>
+        <div class="question" ng-repeat="job in $ctrl.jobs">
+
+          <div class="counters" class="flexJob">
+            <div>
+              <a class="material-icons #ffe0b2 orange-text lighten-4" href="mailto:{{job.email}}">email</a>
+              <a class="material-icons #ffe0b2 orange-text lighten-4" href="{{job.site}}" target="_blank">http</a>
+            </div>
+            <div>
+              <a class="tagJob">{{job.tag}}</a>
             </div>
           </div>
+
+          <div class="contenu">
+            <a>
+              <h3 class="title" ng-bind="job.title"></h3>
+              <p class="content flow-text">{{job.content}}</p>
+              <a class="#1de9b6 teal-text accent-3" href="{{job.annonce}}" target="_blank">{{job.annonce}}</a>
+            </a>
+          </div>
+
+          <div class="collection-item avatar">
+            <h3 class="society" class="title" ng-bind="job.society"></h3>
+            <p>{{job.place}}</p><br />
+            <p>{{job.date | date:"MM/dd/yyyy"}}</p>
+          </div>
+
         </div>
       </div>
     </div>
 
-
   </div>
-
 </div>
-</div>
-
 
 <div class="parallax-container valign-wrapper">
   <div class="section no-pad-bot">

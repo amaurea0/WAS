@@ -6,6 +6,7 @@
 
     <input id="search" class="form-control" placeholder="Search..." ng-model="$ctrl.model.query" />
     <div id="question">
+
         <div class="counters view">
             <div ng-bind="$ctrl.question.nb_views + 1"></div>
             <div ng-bind="$ctrl.question.votes" ng-click="$ctrl.voteQst($ctrl.question.id)"></div>
