@@ -83,11 +83,15 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
 
         .state({
             name: 'questionSpec',
-            url: '/questions/{idQuestion}',
+            url: '/questions/:idQuestion?edition',
             component: 'questionFull',
             resolve: {
-                question: function ($rootScope, QuestionsService, $transition$) {
-                    return QuestionsService.getSpecificQuestion($transition$.params().idQuestion);
+                question: function ($stateParams, QuestionsService) {
+                    console.log($stateParams)
+                    return QuestionsService.getSpecificQuestion($stateParams.idQuestion);
+                },
+                edition: function($stateParams) {
+                    return $stateParams.edition;
                 }
             }
         })

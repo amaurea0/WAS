@@ -12,7 +12,7 @@
     {
       "title": "AngularJS: Service vs provider vs factory",
       "content": "What are the differences between a Service, Provider and Factory in AngularJS?",
-      "nb_views": 6,
+      "nb_views": 15,
       "votes": 521,
       "date": "2017-04-08T01:49:44.615Z",
       "userId": 2,
@@ -30,7 +30,7 @@
     {
       "title": "Should everything really be a bundle in Symfony 2.x?",
       "content": "I'm aware of questions like this, where people tend to discuss the general Symfony 2 concept of bundle. The thing is, in a specific application, like, for instance, a twitter-like application, should everything really be inside a generic bundle, like the official docs say?",
-      "nb_views": 9,
+      "nb_views": 12,
       "votes": 98,
       "date": "2017-04-08T01:53:23.566Z",
       "userId": 4,
@@ -66,7 +66,7 @@
     {
       "title": "How to get the request parameters in symfony2?",
       "content": "I am very new to symfony. In other languages like java and others I can use request.getParameter('parmeter name') to get the value.",
-      "nb_views": 0,
+      "nb_views": 3,
       "votes": 0,
       "date": "2017-04-14T11:56:17.597Z",
       "userId": 1,

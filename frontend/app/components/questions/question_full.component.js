@@ -9,11 +9,14 @@ COMPNT
         templateUrl: '/frontend/app/components/questions/question_full.html',
 
         bindings: {
-            question: '<'
+            question: '<',
+            edition: '@'
         },
 
-        controller: ['AuthService', 'QuestionsService', '$log', '$state', function (AuthService, QuestionsService, $log, $state) {
+        controller: ['AuthService', 'QuestionsService', '$log', '$state', '$location', function (AuthService, QuestionsService, $log, $state, $location) {
             this.$onInit = () => {
+
+                console.log(this.edition);
 
                 var updatedCount = {
                     "nb_views": this.question.nb_views + 1
@@ -97,5 +100,8 @@ COMPNT
 
                 }
             }
+
+
+            
         }]
     });
