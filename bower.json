@@ -1,0 +1,20 @@
+{
+  "name": "wild_exchange",
+  "description": "wild exchange forum application",
+  "main": "main.js",
+  "authors": [
+    "WAS"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/amaurea0/WAS",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-markdown-directive": "^0.3.1",
+  }
+}
