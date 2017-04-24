@@ -4,7 +4,7 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 
         .state('home', {
-            url: '/',
+            url: '',
             component: 'home',
             resolve: {}
         })
@@ -176,6 +176,6 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
             }
         });
 
-    $urlRouterProvider.otherwise('/');
+
 
 });

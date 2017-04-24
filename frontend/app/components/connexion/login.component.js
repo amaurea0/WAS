@@ -16,6 +16,7 @@ WEA.component('login', {
         };
 
         this.submitConnexion = (user) => {
+            
             console.log(user)
 
             this.errorMessage1 = '';
