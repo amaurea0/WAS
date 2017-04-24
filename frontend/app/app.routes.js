@@ -16,7 +16,7 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
                 queryParam: null
             },
             resolve: {
-                search: function($stateParams){
+                search: function ($stateParams) {
                     return $stateParams.queryParam;
                 }
             }
@@ -119,11 +119,14 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
         })
 
         .state({
-            name: 'editAnswer',
-            url: '/editAnswer',
-            component: 'answerPost',
-            authenticate: true,
-            resolve: {}
+            name: 'questionSpec.editAnswer',
+            url: '/editAnswer/{answerId}',
+            component: 'editAnswer',
+            resolve: {
+                currentAnswer: function ($rootScope, QuestionsService, $transition$) {
+                    return QuestionsService.getSpecificQuestion($transition$.params().answerId);
+                }
+            }
         })
 
         .state({
