@@ -36,7 +36,7 @@ COMPNT.component("questionPost", {
         
         var new_question = {
           "title": this.question.title,
-          "content": question.content,
+          "content": this.question.content,
           "nb_views": 0,
           "votes": 0,
           "date": new Date(),
