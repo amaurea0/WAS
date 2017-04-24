@@ -1,14 +1,23 @@
 <div class="container">
+    <div class="entete">
+        <h1>Categories</h1>
+    </div>
+
     <div class="input-field">
-        <input class="validate" type="text" placeholder="Rechercher..." ng-model="$ctrl.nuage.query">
+        <input class="validate" type="text" placeholder="Search..." ng-model="$ctrl.nuage.query">
     </div>
     <table class="table">
         <ul class="collection">
-            <li class="collection-item avatar">
+            <li>
                 <button ng-repeat="tag in $ctrl.nuage.list" class="chip" ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">
                     {{tag.name}}
                 </button>
             </li>
         </ul>
     </table>
+</div>
+
+<div id="wordsCloud">
+    <word-cloud words="appCtrl.words" width="appCtrl.width" height="appCtrl.height" padding="10" on-click="appCtrl.wordClicked">
+    </word-cloud>
 </div>

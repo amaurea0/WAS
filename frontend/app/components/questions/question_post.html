@@ -5,7 +5,7 @@
 
     <form name="myForm" ng-submit="$ctrl.save()" novalidate>
         <div class="form-group">
-            <label for="title">Titre question</label> <br>
+            <label for="title">Question Title</label> <br>
             <input name="title" type="text" class="form-control" id="title" required ng-model="$ctrl.question.title" />
             <!--<p ng-show="myForm.title.$invalid">Champ requis</p>-->
         </div>
@@ -26,7 +26,7 @@
         </div>
 
         <div class="item-actions">
-            <button type="submit" class="waves-effect waves-light btn" ng-disabled="myForm.$invalid"><i class="material-icons left">done</i>Valider</button>
+            <button type="submit" class="waves-effect waves-light btn" ng-disabled="myForm.$invalid"><i class="material-icons left">done</i>Validate</button>
         </div>
 
     </form>

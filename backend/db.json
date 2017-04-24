@@ -21,8 +21,8 @@
     {
       "title": "How can I prevent SQL injection in PHP?",
       "content": "If user input is inserted without modification into an SQL query, then the application becomes vulnerable to SQL injection, like in the following example:",
-      "nb_views": 275,
-      "votes": 900,
+      "nb_views": 246,
+      "votes": 871,
       "date": "2017-04-08T01:51:51.436Z",
       "userId": 3,
       "id": 3
@@ -73,8 +73,8 @@
       "id": 8
     },
     {
-      "title": "Detecting an undefined object property.",
-      "content": "What's the best way of checking if an object property in JavaScript is undefined?",
+      "title": "Why are C# 4 optional parameters defined on interface not enforced on implementing class?",
+      "content": "I noticed that with the optional parameters in C# 4 if you specify a parameter as optional on an interface you DON'T have to make that parameter optional on any implementing class: public interface",
       "nb_views": 20,
       "votes": 0,
       "date": "2017-04-17T15:28:44.873Z",
@@ -111,7 +111,13 @@
       "pseudo": "Letitbe",
       "jobId": 1,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990501.jpg",
-      "profile": "je suis passionnée d'informatique, de graphisme. Je suis également fan des Beattles, d'où mon pseudo Hihihi"
+      "profile": "je suis passionnée d'informatique, de graphisme. Je suis également fan des Beattles, d'où mon pseudo Hihihi",
+      "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
+      "instagram":"https://www.instagram.com/piotr____/",
+      "twitter":"https://twitter.com/hashtag/RadioLondres2017?src=hash",
+      "github":"https://github.com/Piotr-V?tab=repositories",
+      "linkedin":"https://www.linkedin.com/in/pierre-vicq-4a246b120",
+      "stack":"http://stackexchange.com/users/10499231/piotr"
     },
     {
       "email": "pierrevicq@hotmail.fr",
@@ -206,7 +212,91 @@
     },
     {
       "id": 4,
-      "name": "Symfony"
+      "name": "Java"
+    },
+    {
+      "id": 5,
+      "name": "C#"
+    },
+    {
+      "id": 6,
+      "name": "Jquery"
+    },
+    {
+      "id": 7,
+      "name": "Python"
+    },
+    {
+      "id": 8,
+      "name": "Ruby"
+    },
+    {
+      "id": 9,
+      "name": "Ajax"
+    },
+    {
+      "id": 10,
+      "name": "XML"
+    },
+    {
+      "id": 11,
+      "name": "Swift"
+    },
+    {
+      "id": 12,
+      "name": "Linux"
+    },
+    {
+      "id": 13,
+      "name": "Nodejs"
+    },
+    {
+      "id": 14,
+      "name": "Objective-C"
+    },
+    {
+      "id": 15,
+      "name": "HTML"
+    },
+    {
+      "id": 16,
+      "name": "CSS"
+    },
+    {
+      "id": 17,
+      "name": "Django"
+    },
+    {
+      "id": 18,
+      "name": "WordPress"
+    },
+    {
+      "id": 19,
+      "name": "Bootstrap"
+    },
+    {
+      "id": 20,
+      "name": "Material"
+    },
+    {
+      "id": 21,
+      "name": "Visual Studio"
+    },
+    {
+      "id": 22,
+      "name": "VBA"
+    },
+    {
+      "id": 23,
+      "name": "Google Map"
+    },
+    {
+      "id": 24,
+      "name": "JSP"
+    },
+    {
+      "id": 25,
+      "name": "Apache"
     }
   ],
   "taglinks": [
@@ -252,15 +342,240 @@
     },
     {
       "questionId": 9,
-      "tagId": 1,
+      "tagId": 5,
       "id": 9
     },
     {
       "questionId": 10,
-      "tagId": 2,
+      "tagId": 6,
       "id": 10
+    },
+    {
+      "questionId": 1,
+      "tagId": 7,
+      "id": 11
+    },
+    {
+      "questionId": 2,
+      "tagId": 8,
+      "id": 12
+    },
+    {
+      "questionId": 3,
+      "tagId": 5,
+      "id": 13
+    },
+    {
+      "questionId": 4,
+      "tagId": 6,
+      "id": 14
+    },
+    {
+      "questionId": 5,
+      "tagId": 7,
+      "id": 15
+    },
+    {
+      "questionId": 6,
+      "tagId": 8,
+      "id": 16
+    },
+    {
+      "questionId": 7,
+      "tagId": 9,
+      "id": 17
+    },
+    {
+      "questionId": 8,
+      "tagId": 10,
+      "id": 18
+    },
+    {
+      "questionId": 9,
+      "tagId": 11,
+      "id": 19
+    },
+    {
+      "questionId": 10,
+      "tagId": 12,
+      "id": 20
+    },
+    {
+      "questionId": 1,
+      "tagId": 9,
+      "id": 21
+    },
+    {
+      "questionId": 2,
+      "tagId": 10,
+      "id": 22
+    },
+    {
+      "questionId": 3,
+      "tagId": 11,
+      "id": 23
+    },
+    {
+      "questionId": 4,
+      "tagId": 12,
+      "id": 24
+    },
+    {
+      "questionId": 5,
+      "tagId": 13,
+      "id": 25
+    },
+    {
+      "questionId": 6,
+      "tagId": 14,
+      "id": 26
+    },
+    {
+      "questionId": 7,
+      "tagId": 15,
+      "id": 27
+    },
+    {
+      "questionId": 8,
+      "tagId": 16,
+      "id": 28
+    },
+    {
+      "questionId": 9,
+      "tagId": 13,
+      "id": 29
+    },
+    {
+      "questionId": 10,
+      "tagId": 14,
+      "id": 30
+    },{
+      "questionId": 1,
+      "tagId": 15,
+      "id": 31
+    },
+    {
+      "questionId": 2,
+      "tagId": 16,
+      "id": 32
+    },
+    {
+      "questionId": 3,
+      "tagId": 17,
+      "id": 33
+    },
+    {
+      "questionId": 4,
+      "tagId": 18,
+      "id": 34
+    },
+    {
+      "questionId": 5,
+      "tagId": 19,
+      "id": 35
+    },
+    {
+      "questionId": 6,
+      "tagId": 20,
+      "id": 36
+    },
+    {
+      "questionId": 7,
+      "tagId": 17,
+      "id": 37
+    },
+    {
+      "questionId": 8,
+      "tagId": 18,
+      "id": 38
+    },
+    {
+      "questionId": 9,
+      "tagId": 19,
+      "id": 39
+    },
+    {
+      "questionId": 10,
+      "tagId": 20,
+      "id": 40
+    },
+    {
+      "questionId": 6,
+      "tagId": 21,
+      "id": 41
+    },
+    {
+      "questionId": 7,
+      "tagId": 22,
+      "id": 42
+    },
+    {
+      "questionId": 8,
+      "tagId": 23,
+      "id": 43
+    },
+    {
+      "questionId": 9,
+      "tagId": 24,
+      "id": 44
+    },
+    {
+      "questionId": 10,
+      "tagId": 25,
+      "id": 45
+    },
+    {
+      "questionId": 1,
+      "tagId": 7,
+      "id": 46
+    },
+    {
+      "questionId": 2,
+      "tagId": 8,
+      "id": 47
+    },
+    {
+      "questionId": 3,
+      "tagId": 5,
+      "id": 48
+    },
+    {
+      "questionId": 4,
+      "tagId": 6,
+      "id": 49
+    },
+    {
+      "questionId": 5,
+      "tagId": 7,
+      "id": 50
+    },
+    {
+      "questionId": 6,
+      "tagId": 8,
+      "id": 51
+    },
+    {
+      "questionId": 7,
+      "tagId": 9,
+      "id": 52
+    },
+    {
+      "questionId": 8,
+      "tagId": 10,
+      "id": 53
+    },
+    {
+      "questionId": 9,
+      "tagId": 11,
+      "id": 54
+    },
+    {
+      "questionId": 10,
+      "tagId": 12,
+      "id": 55
     }
   ],
+  
   "answers": [
     {
       "title": "Responsive div/container - Fixed Soze",
@@ -624,8 +939,8 @@
       "id": 12
     },
     {
-      "title": "Commercia",
-      "content": "Leader dans son domaine, Chez Néné recherche un développeur ultra spécialisé en PHP pour vendre ses produits",
+      "title": "Administrateur Reseaux",
+      "content": "Leader dans son domaine, Chez Néné recherche un administrateur ultra spécialisé pour vendre ses produits",
       "place": "Melun",
       "society": "Chez Néné",
       "date": "2017-04-08T01:47:18.815Z",
@@ -651,10 +966,10 @@
       "title": "PDG",
       "content": "Besoin urgent d'un spécialiste Android pour développer l'application de notre entreprise afin d'accroitre notre CA dans une économie globalisée ultra concurrentielle et notamment à Saint-Georges-sous-Clisson",
       "place": "Saint-Georges-sous-Clisson",
-      "society": "Charcuterie Balloche",
+      "society": "Charcuterie Bouloche",
       "date": "2017-04-08T01:47:18.815Z",
       "email": "raymond@wanadoo.fr",
-      "site": "www.CharcuterieBalloche.com",
+      "site": "www.CharcuterieBoulloche.com",
       "annonce": "",
       "tag": "Android",
       "id": 15
@@ -665,7 +980,7 @@
       "place": "Biarritz",
       "society": "Oackley",
       "date": "2017-04-08T01:47:18.815Z",
-      "email": "surfandbedo@oackley.com",
+      "email": "surflife@oackley.com",
       "site": "www.oackley.com",
       "annonce": "",
       "tag": "PHP",
@@ -673,7 +988,7 @@
     },
     {
       "title": "CEO",
-      "content": "Cherche Jeune Developpeuse de la Wild Wild Code School",
+      "content": "Cherche Developpeur de la Wild Wild Code School uniquement",
       "place": "Bordeaux",
       "society": "Ubisoft",
       "date": "2017-04-21T09:26:11.776Z",

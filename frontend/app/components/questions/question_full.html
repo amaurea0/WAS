@@ -1,10 +1,10 @@
 <div class="container">
     <div class="entete">
-        <h1>Question et réponses</h1>
+        <h1>Questions and Answers</h1>
         <a class="btn btn-floating pulse orange" ui-sref="questionPost" ui-sref-active="select"><i class="material-icons">add</i></a>
     </div>
 
-    <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
+    <input id="search" class="form-control" placeholder="Search..." ng-model="$ctrl.model.query" />
     <div id="question">
         <div class="counters view">
             <div ng-bind="$ctrl.question.nb_views + 1"></div>
@@ -12,7 +12,7 @@
         </div>
         <div class="contenu">
             <h3 ng-bind="$ctrl.question.title"></h3>
-            <button ng-if="$ctrl.myQuestion" ui-sref="editPost({postId : $ctrl.question.id})">EDITION</button>
+            <button ng-if="$ctrl.myQuestion" ui-sref="editPost({postId : $ctrl.question.id})">Edit</button>
             <span>{{$ctrl.question.date | date:"MM/dd/yyyy"}}</span>
             <p ng-bind="$ctrl.question.content"></p>
         </div>
@@ -22,7 +22,7 @@
     </div>
 
     <a class="waves-effect waves-light btn orange lighten-2" ui-sref="questionSpec.postAnswer">
-        <i class="material-icons left">add</i>Nouvelle Réponse</a>
+        <i class="material-icons left">add</i>New Answer</a>
 
     <div>
         <ui-view></ui-view>
