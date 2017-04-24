@@ -9,10 +9,12 @@ COMPNT
         templateUrl: '/frontend/app/components/questions/question_full.html',
 
         bindings: {
-            question: '<'
+            question: '<',
+            edition: '<',
+            answer: '<'
         },
 
-        controller: ['AuthService', 'QuestionsService', '$log', '$state', function (AuthService, QuestionsService, $log, $state) {
+        controller: ['AuthService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', function (AuthService, QuestionsService, $log, $state, $stateParams, $location, $timeout) {
             this.$onInit = () => {
 
                 var updatedCount = {
@@ -20,13 +22,24 @@ COMPNT
                 }
                 this.myQuestion = false;
                 if (AuthService.getCurrentUser()) {
-                    if (this.question.userId == AuthService.getCurrentUser().id) this.myQuestion = true;
+                    if (this.question.userId == AuthService.getCurrentUser().id) {
+                        this.myQuestion = true;
+                    }
                 }
+                this.question.answers.forEach((answer) => {
+                    if (AuthService.getCurrentUser()) {
+
+                        if (answer.userId == AuthService.getCurrentUser().id) {
+                            answer.myAnswer = true;
+                        } else {
+                            answer.myAnswer = false;
+                        }
+                    }
+                });
 
                 QuestionsService.viewQuestion(this.question.id, updatedCount).then((response) => {
                     $log.log('views updated');
-                    QuestionsService.getSpecificQuestion(this.question.id).then((response) => {
-                    }).catch((error) => {
+                    QuestionsService.getSpecificQuestion(this.question.id).then((response) => {}).catch((error) => {
                         $log.error("couldn't retrieve updated views");
                     })
                 }).catch((error) => {
@@ -97,5 +110,30 @@ COMPNT
 
                 }
             }
+
+            this.editContentAnswer = (answer) => {
+
+                var currentId = this.answer.id;
+                console.log(currentId)
+
+                var new_content = {
+                    "title": this.answer.title,
+                    "content": this.answer.content
+                };
+
+                QuestionsService.updateContentAnswer(currentId, new_content).then((response) => {
+                    console.log('ANSWER :' + response.id + ' is updated !');
+                    $timeout($state.go('questionSpec', {
+                        idQuestion: this.question.id,
+                        edition: false
+                    }), 0);
+                    this.edition = false;
+
+
+                }).catch((err) => {
+                    alert("ERROR :" + err);
+                })
+            }
+
         }]
     });

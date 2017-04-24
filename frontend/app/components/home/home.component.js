@@ -8,7 +8,7 @@ WEA.component('home', {
 
   },
 
-  controller: ['UsersService', 'QuestionsService', function (UsersService, QuestionsService) {
+  controller: ['UsersService', 'QuestionsService', 'JobService', function (UsersService, QuestionsService, JobService) {
 
 
     var self = this;
@@ -25,8 +25,9 @@ WEA.component('home', {
     this.$onInit = () => {
       self.ajax(); // initialization du jquery
       self.getQuestion();
-    };
+      self.getJob();
 
+    };
 
     this.getQuestion = () => {
       QuestionsService.QuestionHome().then((response) => { // j'envoye l'id et le token qui va avec
@@ -34,7 +35,15 @@ WEA.component('home', {
       }).catch((response) => {
         self.error = response.statusText || "une erreur s'est produite pendant l'identification"; //en cas d'échec je marque un message d'erreur
       });
-    }
+    };
+
+    this.getJob = () => {
+      JobService.JobHome().then((response) => { // j'envoye l'id et le token qui va avec
+        self.jobs = response;
+      }).catch((response) => {
+        self.error = response.statusText || "une erreur s'est produite pendant l'identification"; //en cas d'échec je marque un message d'erreur
+      });
+    };
 
   }]
 

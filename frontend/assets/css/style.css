@@ -142,16 +142,16 @@ i.icon-orange {
 
 /*ICI VIENT LE STYLE DE LA LISTE DES JOBS*/
 
-#society {
+.society {
     color: #ffa726;
 }
 
-#flexJob {
+.flexJob {
     display: flex;
     flex-direction: column;
 }
 
-#tagJob {
+.tagJob {
     font-size: 0.7em;
     color: #455a64;
 }
@@ -204,7 +204,7 @@ i.icon-orange {
     background-color: #1fa597 !important;
 }
 
-#question,
+.question,
 #answer {
     background-color: white;
     display: flex;
@@ -213,7 +213,7 @@ i.icon-orange {
     padding-top: 15px;
 }
 
-#question {
+.question {
     background-color: white;
     border-bottom: 1px dotted #ffdea5;
 }

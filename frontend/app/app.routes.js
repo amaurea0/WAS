@@ -16,7 +16,7 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
                 queryParam: null
             },
             resolve: {
-                search: function($stateParams){
+                search: function ($stateParams) {
                     return $stateParams.queryParam;
                 }
             }
@@ -83,11 +83,24 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
 
         .state({
             name: 'questionSpec',
-            url: '/questions/{idQuestion}',
+            url: '/questions/:idQuestion',
             component: 'questionFull',
+            params: {
+                answer: null,
+                edition: null
+            },
             resolve: {
-                question: function ($rootScope, QuestionsService, $transition$) {
-                    return QuestionsService.getSpecificQuestion($transition$.params().idQuestion);
+                question: function ($stateParams, QuestionsService) {
+                    console.log($stateParams)
+                    return QuestionsService.getSpecificQuestion($stateParams.idQuestion);
+                },
+                edition: function ($stateParams) {
+                    return $stateParams.edition;
+                },
+                answer: function ($stateParams, QuestionsService) {
+                    if ($stateParams.answer) {
+                        return QuestionsService.getSpecificAnswer($stateParams.answer);
+                    }
                 }
             }
         })
