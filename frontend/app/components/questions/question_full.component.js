@@ -10,13 +10,12 @@ COMPNT
 
         bindings: {
             question: '<',
-            edition: '@'
+            edition: '<',
+            myanswer: '<'
         },
 
-        controller: ['AuthService', 'QuestionsService', '$log', '$state', '$location', function (AuthService, QuestionsService, $log, $state, $location) {
+        controller: ['AuthService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', function (AuthService, QuestionsService, $log, $state, $stateParams, $location, $timeout) {
             this.$onInit = () => {
-
-                console.log(this.edition);
 
                 var updatedCount = {
                     "nb_views": this.question.nb_views + 1
@@ -28,8 +27,7 @@ COMPNT
 
                 QuestionsService.viewQuestion(this.question.id, updatedCount).then((response) => {
                     $log.log('views updated');
-                    QuestionsService.getSpecificQuestion(this.question.id).then((response) => {
-                    }).catch((error) => {
+                    QuestionsService.getSpecificQuestion(this.question.id).then((response) => {}).catch((error) => {
                         $log.error("couldn't retrieve updated views");
                     })
                 }).catch((error) => {
@@ -101,7 +99,26 @@ COMPNT
                 }
             }
 
+            this.editContentAnswer = (answer) => {
 
-            
+                var currentId = this.myanswer.id;
+                console.log(currentId)
+
+                var new_content = {
+                    "title": this.myanswer.title,
+                    "content": this.myanswer.content
+                };
+
+                QuestionsService.updateContentAnswer(currentId, new_content).then((response) => {
+                    console.log('ANSWER :' + response.id + ' is updated !');
+                    $timeout($state.go('questionSpec',{idQuestion : this.question.id, edition: false}),0);
+                    this.edition = false;
+
+
+                }).catch((err) => {
+                    alert("ERROR :" + err);
+                })
+            }
+
         }]
     });

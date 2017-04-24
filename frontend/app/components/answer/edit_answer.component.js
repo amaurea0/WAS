@@ -11,24 +11,6 @@ COMPNT
 
     controller: ['QuestionsService', '$state', function (QuestionsService, $state) {
 
-      this.editContentAnswer = (answer) => {
 
-        var currentId = this.currentAnswer.id;
-        console.log(currentId)
-
-        var new_content = {
-          "title": this.answer.title,
-          "content": this.answer.content
-        };
-
-        QuestionsService.updateContentAnswer(currentId, new_content).then((response) => {
-          console.log('ANSWER :' + response.id + 'is updated !');
-          $state.go('questionSpec', {
-            idQuestion: response.questionId
-          });
-        }).catch((err) => {
-          alert("ERROR :" + err);
-        })
-      }
     }]
   });

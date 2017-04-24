@@ -26,8 +26,25 @@
         <i class="material-icons left">add</i>New Answer</a>
 
     <div>
-        <ui-view></ui-view>
 
+        <div ng-if="$ctrl.edition" class="bloc_center">
+            <h2>Edit response</h2>
+            <form class="formulaire" ng-submit="$ctrl.editContentAnswer($ctrl.myanswer)" novalidate>
+                <div class="form-group">
+                    <label for="title">Titre réponse</label>
+                    <input type="text" class="form-control" id="title" ng-model="$ctrl.myanswer.title" />
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <input type="text" class="form-control" id="content" ng-model="$ctrl.myanswer.content" />
+                </div>
+                <div class="item-actions">
+
+                    <input class="btn btn-success" type="submit" value="Valider" />
+
+                </div>
+            </form>
+        </div>
 
         <div ng-if="$ctrl.question.answers.length > 0">
             <div id="answer" ng-repeat="answer in $ctrl.question.answers | filter : $ctrl.model.query">
@@ -37,7 +54,7 @@
                 </div>
                 <div class="contenu">
                     <h3 ng-bind="answer.title"></h3>
-                    <button class="lien" ui-sref="questionSpec({idQuestion : question.id, edition: 'true'})">edit</button>
+                    <button class="lien" ui-sref="questionSpec({idQuestion : $ctrl.question.id, edition: true, answer: answer.id})">edit</button>
 
                     <span>{{answer.date | date:"MM/dd/yyyy"}}</span>
                     <p ng-bind="answer.content"></p>
@@ -46,4 +63,5 @@
             </div>
         </div>
     </div>
+    
 </div>
