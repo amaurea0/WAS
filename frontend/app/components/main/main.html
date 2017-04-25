@@ -50,7 +50,9 @@
                                 <i class="material-icons">face</i>
                             </a>
                         </li>
+                        <li ng-if="ctrl.isAuthenticated"><a class="waves-effect waves-light btn" ng-click="ctrl.disconnect()">Disconnect</a></li>
 
+                        
                         <!--Barre de nav 'sidebar' version mobile-->
                         <ul class="side-nav" id="mobile-demo">
                             <li><a ui-sref="questions" ui-sref-active="select">Questions</a></li>
@@ -63,8 +65,6 @@
                 </div>
             </nav>
         </div>
-
-        <li ng-if="ctrl.isAuthenticated"><a class="waves-effect waves-light btn" ng-click="ctrl.disconnect()">Disconnect</a></li>
 
         <ui-view info=$ctrl.info>
         </ui-view>

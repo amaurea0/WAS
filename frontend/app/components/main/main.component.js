@@ -7,13 +7,13 @@ COMPNT
 
     bindings: {},
 
-    controller: ['$scope', 'INFO', '$state',
+    controller: ['$scope', 'INFO', '$state', 'notify',
 
-      function ($scope, INFO, $state) {
+      function ($scope, INFO, $state, notify) {
 
         this.info = '';
-
         this.searchQuery = '';
+        this.newAnswers = 3;
 
         $scope.$on(INFO.userId, (event, key) => {
           this.info.userId = key;
@@ -30,6 +30,12 @@ COMPNT
             $('.button-collapse').sideNav();
             $('.collapsible').collapsible();
           };
+
+          notify({
+            message: 'Vous avez ' + this.newAnswers + ' nouvelles réponses',
+            classes: 'teal accent-3',
+            duration: 0
+          });
         };
 
         this.getSearchQuestions = () => {
@@ -39,6 +45,11 @@ COMPNT
             queryParam: queryAsString
           });
         }
+
+        notify.config({
+          position: 'right',
+          startTop: 68
+        })
       }
     ]
   });

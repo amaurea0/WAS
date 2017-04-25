@@ -19,6 +19,11 @@ COMPNT
             this.$onInit = () => {
 
                 this.connected = AuthService.getCurrentUser();
+                this.answers = this.question.answers;
+
+                var updatedCount = {
+                    "nb_views": this.question.nb_views + 1
+                }
 
                 this.myQuestion = false;
                 if (AuthService.getCurrentUser()) {

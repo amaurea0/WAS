@@ -15,7 +15,7 @@
             <h3 ng-bind="$ctrl.question.title"></h3>
             <button ng-if="$ctrl.myQuestion" ui-sref="editPost({postId : $ctrl.question.id})">Edit</button>
             <span>{{$ctrl.question.date | date:"MM/dd/yyyy"}}</span>
-            <p ng-bind="$ctrl.question.content"></p>
+            <p ng-bind-html="$ctrl.question.content"></p>
         </div>
         <div class="collection-item avatar">
             <img class="circle" ng-src="{{$ctrl.question.user.avatar}}" alt="avatar">
@@ -75,7 +75,7 @@
                     <button ng-if="answer.myAnswer" class="lien" ui-sref="questionSpec({idQuestion : $ctrl.question.id, edition: true, answer: answer.id})">edit</button>
 
                     <span>{{answer.date | date:"MM/dd/yyyy"}}</span>
-                    <p ng-bind="answer.content"></p>
+                    <p ng-bind-html="answer.content"></p>
                 </div>
 
             </div>
