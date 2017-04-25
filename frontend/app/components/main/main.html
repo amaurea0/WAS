@@ -115,7 +115,7 @@
 
 
                         <form ng-submit="$ctrl.getSearchQuestions()" id="search">
-
+                            <input name="q" type="text" placeholder="Search..." ng-model="$ctrl.searchQuery" />
                         </form>
                     </li>
                     <li><a ui-sref="questions" ui-sref-active="select"><i class="material-icons">reorder</i></a></li>
