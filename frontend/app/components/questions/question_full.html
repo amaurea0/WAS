@@ -1,18 +1,19 @@
 <div class="container">
     <div class="entete">
-        <h1>Question et réponses</h1>
+        <h1>Questions and Answers</h1>
         <a class="btn btn-floating pulse orange" ui-sref="questionPost" ui-sref-active="select"><i class="material-icons">add</i></a>
     </div>
 
-    <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
-    <div id="question">
+    <input id="search" class="form-control" placeholder="Search..." ng-model="$ctrl.model.query" />
+    <div class="question flex">
+
         <div class="counters view">
             <div ng-bind="$ctrl.question.nb_views + 1"></div>
             <div ng-bind="$ctrl.question.votes" ng-click="$ctrl.voteQst($ctrl.question.id)"></div>
         </div>
         <div class="contenu">
             <h3 ng-bind="$ctrl.question.title"></h3>
-            <button ng-if="$ctrl.myQuestion" ui-sref="editPost({postId : $ctrl.question.id})">EDITION</button>
+            <button ng-if="$ctrl.myQuestion" ui-sref="editPost({postId : $ctrl.question.id})">Edit</button>
             <span>{{$ctrl.question.date | date:"MM/dd/yyyy"}}</span>
             <p ng-bind="$ctrl.question.content"></p>
         </div>
@@ -21,22 +22,58 @@
         </div>
     </div>
 
-    <a class="waves-effect waves-light btn orange lighten-2" ui-sref="questionSpec.postAnswer">
-        <i class="material-icons left">add</i>Nouvelle Réponse</a>
+    <button class="waves-effect waves-light btn orange lighten-2" ui-sref="questionSpec({idQuestion : $ctrl.question.id, post: true})" ng-disabled="!$ctrl.connected">
+        <i class="material-icons left">add</i>New Answer</button>
 
     <div>
-        <ui-view></ui-view>
 
+        <div ng-if="$ctrl.edition" class="bloc_center">
+            <h2>Edit response</h2>
+            <form  name="myForm1" class="formulaire" ng-submit="$ctrl.editContentAnswer($ctrl.answer)" novalidate>
+                <div class="form-group">
+                    <label for="title">Titre réponse</label>
+                    <input type="text" class="form-control" id="title" required ng-model="$ctrl.answer.title" />
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <input type="text" class="form-control" id="content" required ng-model="$ctrl.answer.content" />
+                </div>
+                <div class="item-actions">
+
+                    <input class="btn btn-success" type="submit" value="Valider" ng-disabled="myForm1.$invalid"/>
+
+                </div>
+            </form>
+        </div>
+        <div ng-if="$ctrl.post" class="bloc_center">
+            <h2>Post a new answer</h2>
+            <form name="myForm2" class="formulaire" ng-submit="$ctrl.saveAnswer($ctrl.answer)" novalidate>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" required ng-model="$ctrl.answer.title" />
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <input type="text" class="form-control" id="content" required ng-model="$ctrl.answer.content" />
+                </div>
+                <div class="item-actions">
+
+                    <input class="btn btn-success" type="submit" value="Valider" ng-disabled="myForm2.$invalid"/>
+
+                </div>
+            </form>
+        </div>
 
         <div ng-if="$ctrl.question.answers.length > 0">
-            <div id="answer" ng-repeat="answer in $ctrl.question.answers | filter : $ctrl.model.query">
+            <div id="answer" class="question flex" ng-repeat="answer in $ctrl.question.answers | filter : $ctrl.model.query">
 
                 <div class="counters view">
                     <div ng-bind="answer.votes" ng-click="$ctrl.voteAsw(answer)"></div>
                 </div>
                 <div class="contenu">
                     <h3 ng-bind="answer.title"></h3>
-                    <!--<button class="lien" ui-sref="editPost({postId : answer.id})">edit</button>-->
+                    <button ng-if="answer.myAnswer" class="lien" ui-sref="questionSpec({idQuestion : $ctrl.question.id, edition: true, answer: answer.id})">edit</button>
+
                     <span>{{answer.date | date:"MM/dd/yyyy"}}</span>
                     <p ng-bind="answer.content"></p>
                 </div>
@@ -44,4 +81,5 @@
             </div>
         </div>
     </div>
+
 </div>

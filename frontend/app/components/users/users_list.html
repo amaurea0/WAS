@@ -6,11 +6,11 @@
 
     <div ng-if="$ctrl.users.length > 0">
         <div class="input-field">
-            <input class="validate" type="text" placeholder="Rechercher..." ng-model="$ctrl.model.query">
+            <input class="validate" type="text" placeholder="Search..." ng-model="$ctrl.model.query">
         </div>
 
 
-        <div id="question" ng-repeat="user in $ctrl.users | filter : $ctrl.model.query" class="collection">
+        <div class="question flex" ng-repeat="user in $ctrl.users | filter : $ctrl.model.query" class="collection">
             <div class="counters">
                 <div><a class="material-icons #ffe0b2 orange-text lighten-4" href="mailto:{{user.email}}">email</a></div>
             </div>

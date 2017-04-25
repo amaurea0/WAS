@@ -87,10 +87,37 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         return defer.promise;
     };
 
+    this.getSpecificAnswer = (param) => {
+
+        var defer = $q.defer();
+
+        $http.get(ASW_URL + '/' + param + '?_expand=user').then((response) => {
+            defer.resolve(response.data);
+        }).catch((err) => {
+            $log.debug(`SVC: ERROR!!! ${err}`);
+            defer.reject(err);
+        });
+
+        return defer.promise;
+    };
+
     this.updateContent = (id, content) => {
         var defer = $q.defer();
 
         $http.patch(QST_URL + '/' + id, content).then((response) => {
+            defer.resolve(response.data);
+        }).catch((error) => {
+            $log.debug(`SVC: ERROR!!! ${err}`);
+            defer.reject(error);
+        });
+
+        return defer.promise;
+    };
+
+    this.updateContentAnswer = (id, content) => {
+        var defer = $q.defer();
+
+        $http.patch(ASW_URL + '/' + id, content).then((response) => {
             defer.resolve(response.data);
         }).catch((error) => {
             $log.debug(`SVC: ERROR!!! ${err}`);
@@ -195,7 +222,7 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
 
         var defer = $q.defer();
 
-        $http.get(QST_URL + '?_sort=id&_order=DESC&_end=2').then((response) => {
+        $http.get(QST_URL + '?_expand=user&_embed=answers&_sort=id&_order=DESC&_end=4').then((response) => {
             defer.resolve(response.data);
         }).catch((err) => {
             $log.debug(`SVC: ERROR!!! ${err}`);

@@ -15,16 +15,16 @@ COMPNT.component('jobsList', {
         function (JobService, $state) {
 
             this.jobs = [];
+            this.query = '';
 
             this.$onInit = () => {
                 this.getAllItems();
             };
-                this.getAllItems = () => {
-      JobService.getJobs().then((items) => {
-        console.log(items);
-        this.jobs = items;
-      }).catch((err) => { });
-    };
+            this.getAllItems = () => {
+                JobService.getJobs().then((items) => {
+                    this.jobs = items;
+                }).catch((err) => {});
+            };
 
         }
     ]

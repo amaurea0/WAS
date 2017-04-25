@@ -20,12 +20,12 @@ COMPNT
 
       this.tabsList = [{
           "view": "view1",
-          "label": "Plus populaire",
+          "label": "Most Popular",
           "sort": "-votes"
         },
         {
           "view": "view2",
-          "label": "Plus vues",
+          "label": "Most Viewed",
           "sort": "-nb_views"
         },
         {
@@ -35,7 +35,7 @@ COMPNT
         },
         {
           "view": "view4",
-          "label": "Less answers",
+          "label": "Least Answered",
           "sort": "answers"
         }
       ];
@@ -91,6 +91,21 @@ COMPNT
           this.questions = items;
           console.log(this.questions);
         }).catch((error) => {})
+      }
+
+      this.countViews = (id) => {
+        var updatedCount = {}
+        QuestionsService.getQuestionId(id).then((response) => {
+          updatedCount.nb_views = response[0].nb_views + 1
+
+          QuestionsService.viewQuestion(id, updatedCount).then((response) => {
+            $log.log('views updated');
+          }).catch((error) => {});
+
+        }).catch((error) => {
+          $log.error('pb sur getQuestionId');
+        });
+
       }
     }]
   });

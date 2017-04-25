@@ -12,7 +12,7 @@
     {
       "title": "AngularJS: Service vs provider vs factory",
       "content": "What are the differences between a Service, Provider and Factory in AngularJS?",
-      "nb_views": 6,
+      "nb_views": 15,
       "votes": 521,
       "date": "2017-04-08T01:49:44.615Z",
       "userId": 2,
@@ -21,7 +21,7 @@
     {
       "title": "How can I prevent SQL injection in PHP?",
       "content": "If user input is inserted without modification into an SQL query, then the application becomes vulnerable to SQL injection, like in the following example:",
-      "nb_views": 275,
+      "nb_views": 413,
       "votes": 900,
       "date": "2017-04-08T01:51:51.436Z",
       "userId": 3,
@@ -30,7 +30,7 @@
     {
       "title": "Should everything really be a bundle in Symfony 2.x?",
       "content": "I'm aware of questions like this, where people tend to discuss the general Symfony 2 concept of bundle. The thing is, in a specific application, like, for instance, a twitter-like application, should everything really be inside a generic bundle, like the official docs say?",
-      "nb_views": 9,
+      "nb_views": 36,
       "votes": 98,
       "date": "2017-04-08T01:53:23.566Z",
       "userId": 4,
@@ -39,7 +39,7 @@
     {
       "title": "What does 'use strict' do in JavaScript, and what is the reasoning behind it?",
       "content": "Recently, I ran some of my JavaScript code through Crockford's JSLint, and it gave the following error:",
-      "nb_views": 17,
+      "nb_views": 26,
       "votes": 745,
       "date": "2017-04-08T09:25:09.366Z",
       "userId": 5,
@@ -48,7 +48,7 @@
     {
       "title": "How do I access the $scope variable in browser's console using AngularJS?",
       "content": "I would like to access my $scope variable in Chrome's JavaScript console. How do I do that? I can neither see $scope nor the name of my module myapp in the console as variables.",
-      "nb_views": 13,
+      "nb_views": 15,
       "votes": 0,
       "date": "2017-04-14T11:12:55.705Z",
       "userId": 6,
@@ -66,15 +66,15 @@
     {
       "title": "How to get the request parameters in symfony2?",
       "content": "I am very new to symfony. In other languages like java and others I can use request.getParameter('parmeter name') to get the value.",
-      "nb_views": 0,
+      "nb_views": 3,
       "votes": 0,
       "date": "2017-04-14T11:56:17.597Z",
       "userId": 1,
       "id": 8
     },
     {
-      "title": "Detecting an undefined object property.",
-      "content": "What's the best way of checking if an object property in JavaScript is undefined?",
+      "title": "Why are C# 4 optional parameters defined on interface not enforced on implementing class?",
+      "content": "I noticed that with the optional parameters in C# 4 if you specify a parameter as optional on an interface you DON'T have to make that parameter optional on any implementing class: public interface",
       "nb_views": 20,
       "votes": 0,
       "date": "2017-04-17T15:28:44.873Z",
@@ -84,21 +84,11 @@
     {
       "title": "How to use a filter in a controller?",
       "content": "I have written a filter function which will return data based on the argument you are passing. I want the same functionality in my controller.",
-      "nb_views": 1,
+      "nb_views": 3,
       "votes": 0,
       "date": "2017-04-17T17:51:13.675Z",
       "userId": 5,
       "id": 10
-    },
-    {
-      "userId": 1,
-      "questionId": 3,
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "questionId": 3,
-      "id": 12
     }
   ],
   "users": [
@@ -111,7 +101,13 @@
       "pseudo": "Letitbe",
       "jobId": 1,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990501.jpg",
-      "profile": "je suis passionnée d'informatique, de graphisme. Je suis également fan des Beattles, d'où mon pseudo Hihihi"
+      "profile": "je suis passionnée d'informatique, de graphisme. Je suis également fan des Beattles, d'où mon pseudo Hihihi",
+      "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
+      "instagram": "https://www.instagram.com/piotr____/",
+      "twitter": "https://twitter.com/hashtag/RadioLondres2017?src=hash",
+      "github": "https://github.com/Piotr-V?tab=repositories",
+      "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
+      "stack": "http://stackexchange.com/users/10499231/piotr"
     },
     {
       "email": "pierrevicq@hotmail.fr",
@@ -206,7 +202,91 @@
     },
     {
       "id": 4,
-      "name": "Symfony"
+      "name": "Java"
+    },
+    {
+      "id": 5,
+      "name": "C#"
+    },
+    {
+      "id": 6,
+      "name": "Jquery"
+    },
+    {
+      "id": 7,
+      "name": "Python"
+    },
+    {
+      "id": 8,
+      "name": "Ruby"
+    },
+    {
+      "id": 9,
+      "name": "Ajax"
+    },
+    {
+      "id": 10,
+      "name": "XML"
+    },
+    {
+      "id": 11,
+      "name": "Swift"
+    },
+    {
+      "id": 12,
+      "name": "Linux"
+    },
+    {
+      "id": 13,
+      "name": "Nodejs"
+    },
+    {
+      "id": 14,
+      "name": "Objective-C"
+    },
+    {
+      "id": 15,
+      "name": "HTML"
+    },
+    {
+      "id": 16,
+      "name": "CSS"
+    },
+    {
+      "id": 17,
+      "name": "Django"
+    },
+    {
+      "id": 18,
+      "name": "WordPress"
+    },
+    {
+      "id": 19,
+      "name": "Bootstrap"
+    },
+    {
+      "id": 20,
+      "name": "Material"
+    },
+    {
+      "id": 21,
+      "name": "Visual Studio"
+    },
+    {
+      "id": 22,
+      "name": "VBA"
+    },
+    {
+      "id": 23,
+      "name": "Google Map"
+    },
+    {
+      "id": 24,
+      "name": "JSP"
+    },
+    {
+      "id": 25,
+      "name": "Apache"
     }
   ],
   "taglinks": [
@@ -252,13 +332,238 @@
     },
     {
       "questionId": 9,
-      "tagId": 1,
+      "tagId": 5,
       "id": 9
     },
     {
       "questionId": 10,
-      "tagId": 2,
+      "tagId": 6,
       "id": 10
+    },
+    {
+      "questionId": 1,
+      "tagId": 7,
+      "id": 11
+    },
+    {
+      "questionId": 2,
+      "tagId": 8,
+      "id": 12
+    },
+    {
+      "questionId": 3,
+      "tagId": 5,
+      "id": 13
+    },
+    {
+      "questionId": 4,
+      "tagId": 6,
+      "id": 14
+    },
+    {
+      "questionId": 5,
+      "tagId": 7,
+      "id": 15
+    },
+    {
+      "questionId": 6,
+      "tagId": 8,
+      "id": 16
+    },
+    {
+      "questionId": 7,
+      "tagId": 9,
+      "id": 17
+    },
+    {
+      "questionId": 8,
+      "tagId": 10,
+      "id": 18
+    },
+    {
+      "questionId": 9,
+      "tagId": 11,
+      "id": 19
+    },
+    {
+      "questionId": 10,
+      "tagId": 12,
+      "id": 20
+    },
+    {
+      "questionId": 1,
+      "tagId": 9,
+      "id": 21
+    },
+    {
+      "questionId": 2,
+      "tagId": 10,
+      "id": 22
+    },
+    {
+      "questionId": 3,
+      "tagId": 11,
+      "id": 23
+    },
+    {
+      "questionId": 4,
+      "tagId": 12,
+      "id": 24
+    },
+    {
+      "questionId": 5,
+      "tagId": 13,
+      "id": 25
+    },
+    {
+      "questionId": 6,
+      "tagId": 14,
+      "id": 26
+    },
+    {
+      "questionId": 7,
+      "tagId": 15,
+      "id": 27
+    },
+    {
+      "questionId": 8,
+      "tagId": 16,
+      "id": 28
+    },
+    {
+      "questionId": 9,
+      "tagId": 13,
+      "id": 29
+    },
+    {
+      "questionId": 10,
+      "tagId": 14,
+      "id": 30
+    },
+    {
+      "questionId": 1,
+      "tagId": 15,
+      "id": 31
+    },
+    {
+      "questionId": 2,
+      "tagId": 16,
+      "id": 32
+    },
+    {
+      "questionId": 3,
+      "tagId": 17,
+      "id": 33
+    },
+    {
+      "questionId": 4,
+      "tagId": 18,
+      "id": 34
+    },
+    {
+      "questionId": 5,
+      "tagId": 19,
+      "id": 35
+    },
+    {
+      "questionId": 6,
+      "tagId": 20,
+      "id": 36
+    },
+    {
+      "questionId": 7,
+      "tagId": 17,
+      "id": 37
+    },
+    {
+      "questionId": 8,
+      "tagId": 18,
+      "id": 38
+    },
+    {
+      "questionId": 9,
+      "tagId": 19,
+      "id": 39
+    },
+    {
+      "questionId": 10,
+      "tagId": 20,
+      "id": 40
+    },
+    {
+      "questionId": 6,
+      "tagId": 21,
+      "id": 41
+    },
+    {
+      "questionId": 7,
+      "tagId": 22,
+      "id": 42
+    },
+    {
+      "questionId": 8,
+      "tagId": 23,
+      "id": 43
+    },
+    {
+      "questionId": 9,
+      "tagId": 24,
+      "id": 44
+    },
+    {
+      "questionId": 10,
+      "tagId": 25,
+      "id": 45
+    },
+    {
+      "questionId": 1,
+      "tagId": 7,
+      "id": 46
+    },
+    {
+      "questionId": 2,
+      "tagId": 8,
+      "id": 47
+    },
+    {
+      "questionId": 3,
+      "tagId": 5,
+      "id": 48
+    },
+    {
+      "questionId": 4,
+      "tagId": 6,
+      "id": 49
+    },
+    {
+      "questionId": 5,
+      "tagId": 7,
+      "id": 50
+    },
+    {
+      "questionId": 6,
+      "tagId": 8,
+      "id": 51
+    },
+    {
+      "questionId": 7,
+      "tagId": 9,
+      "id": 52
+    },
+    {
+      "questionId": 8,
+      "tagId": 10,
+      "id": 53
+    },
+    {
+      "questionId": 9,
+      "tagId": 11,
+      "id": 54
+    },
+    {
+      "questionId": 10,
+      "tagId": 12,
+      "id": 55
     }
   ],
   "answers": [
@@ -269,7 +574,8 @@
       "votes": 0,
       "date": "2017-04-12T09:50:23.819Z",
       "id": 1,
-      "questionId": 1
+      "questionId": 1,
+      "userId": 1
     },
     {
       "title": "Responsive div/container - Fixed Soze",
@@ -278,25 +584,28 @@
       "votes": 0,
       "date": "2017-04-12T09:50:23.819Z",
       "id": 2,
-      "questionId": 2
+      "questionId": 2,
+      "userId": 1
     },
     {
-      "title": "hiuoiuo",
-      "content": "utouytiut",
+      "title": "coucou papa",
+      "content": "test de la mort qui tue",
       "nb_views": 0,
       "votes": 0,
       "date": "2017-04-12T09:51:03.968Z",
       "id": 3,
-      "questionId": 3
+      "questionId": 3,
+      "userId": 1
     },
     {
       "title": "Responsive div/container - Fixed Soze",
-      "content": "utouytiut",
+      "content": "test",
       "nb_views": 0,
       "votes": 0,
       "date": "2017-04-12T09:54:21.521Z",
       "id": 4,
-      "questionId": 4
+      "questionId": 4,
+      "userId": 1
     },
     {
       "title": "Responsive div/container - Fixed Soze",
@@ -305,7 +614,8 @@
       "votes": 1,
       "date": "2017-04-12T09:55:44.042Z",
       "id": 5,
-      "questionId": 5
+      "questionId": 5,
+      "userId": 1
     },
     {
       "title": "spokclvjdslk",
@@ -314,7 +624,8 @@
       "votes": 0,
       "date": "2017-04-12T11:37:56.086Z",
       "id": 6,
-      "questionId": 6
+      "questionId": 6,
+      "userId": 1
     },
     {
       "title": "Responsive div/container - Fixed Soze",
@@ -323,7 +634,8 @@
       "votes": 0,
       "date": "2017-04-12T11:48:03.147Z",
       "id": 7,
-      "questionId": 7
+      "questionId": 8,
+      "userId": 1
     },
     {
       "title": "Haloooo",
@@ -332,7 +644,8 @@
       "votes": 0,
       "date": "2017-04-12T13:01:06.044Z",
       "id": 8,
-      "questionId": 8
+      "questionId": 7,
+      "userId": 1
     },
     {
       "title": "essaie décisif",
@@ -341,7 +654,8 @@
       "votes": 0,
       "date": "2017-04-12T13:01:26.350Z",
       "id": 9,
-      "questionId": 9
+      "questionId": 9,
+      "userId": 1
     },
     {
       "title": "sldkfjs",
@@ -350,7 +664,8 @@
       "votes": 0,
       "date": "2017-04-12T13:06:07.016Z",
       "id": 10,
-      "questionId": 10
+      "questionId": 10,
+      "userId": 1
     },
     {
       "title": "smldfkjmldsqkjf",
@@ -359,7 +674,8 @@
       "votes": 0,
       "date": "2017-04-12T13:12:17.694Z",
       "id": 11,
-      "questionId": 1
+      "questionId": 1,
+      "userId": 1
     },
     {
       "title": "smldfkjmldsqkjf",
@@ -368,16 +684,18 @@
       "votes": 0,
       "date": "2017-04-12T13:12:19.061Z",
       "id": 12,
-      "questionId": 2
+      "questionId": 2,
+      "userId": 1
     },
     {
       "title": "smldfkjmldsqkjf",
-      "content": "sqmlkdfjmsqldkfjsq",
+      "content": "et ça maaarche",
       "nb_views": 0,
       "votes": 0,
       "date": "2017-04-12T13:12:24.897Z",
       "questionId": 3,
-      "id": 13
+      "id": 13,
+      "userId": 1
     },
     {
       "title": "smldfkjmldsqkjf",
@@ -386,7 +704,8 @@
       "votes": 0,
       "date": "2017-04-12T13:12:25.364Z",
       "questionId": 4,
-      "id": 14
+      "id": 14,
+      "userId": 1
     },
     {
       "title": "smldfkjmldsqkjf",
@@ -395,7 +714,8 @@
       "votes": 0,
       "date": "2017-04-12T13:12:25.547Z",
       "questionId": 5,
-      "id": 15
+      "id": 15,
+      "userId": 1
     },
     {
       "title": "test bastien",
@@ -404,7 +724,8 @@
       "votes": 0,
       "date": "2017-04-13T19:09:28.514Z",
       "questionId": 6,
-      "id": 16
+      "id": 16,
+      "userId": 1
     },
     {
       "title": "test2",
@@ -413,7 +734,8 @@
       "votes": 0,
       "date": "2017-04-13T19:11:26.001Z",
       "questionId": 7,
-      "id": 17
+      "id": 17,
+      "userId": 1
     },
     {
       "title": "allo",
@@ -422,7 +744,8 @@
       "votes": 0,
       "date": "2017-04-13T19:12:13.311Z",
       "questionId": 8,
-      "id": 18
+      "id": 18,
+      "userId": 1
     },
     {
       "title": "Responsive div/container - Fixed Soze",
@@ -431,7 +754,8 @@
       "votes": 0,
       "date": "2017-04-13T19:12:59.631Z",
       "questionId": 9,
-      "id": 19
+      "id": 19,
+      "userId": 1
     },
     {
       "title": "test 3",
@@ -440,7 +764,8 @@
       "votes": 0,
       "date": "2017-04-13T19:16:40.214Z",
       "questionId": 10,
-      "id": 20
+      "id": 20,
+      "userId": 1
     },
     {
       "title": "test final",
@@ -449,7 +774,8 @@
       "votes": 0,
       "date": "2017-04-13T19:17:29.206Z",
       "questionId": 1,
-      "id": 21
+      "id": 21,
+      "userId": 1
     },
     {
       "title": "foukiou",
@@ -458,16 +784,18 @@
       "votes": 0,
       "date": "2017-04-13T19:19:36.013Z",
       "questionId": 2,
-      "id": 22
+      "id": 22,
+      "userId": 1
     },
     {
       "title": "test aurore",
-      "content": "test sacha",
+      "content": "sacha a droit à un cookie",
       "nb_views": 0,
       "votes": 0,
       "date": "2017-04-14T07:41:46.952Z",
       "questionId": 3,
-      "id": 23
+      "id": 23,
+      "userId": 1
     },
     {
       "title": "lksdgfmlkdsqjfmlqdsjf",
@@ -476,7 +804,8 @@
       "votes": 0,
       "date": "2017-04-14T08:25:03.295Z",
       "questionId": 4,
-      "id": 24
+      "id": 24,
+      "userId": 1
     },
     {
       "title": "Hahah",
@@ -485,7 +814,8 @@
       "votes": 1,
       "date": "2017-04-14T11:13:21.836Z",
       "questionId": 5,
-      "id": 25
+      "id": 25,
+      "userId": 1
     },
     {
       "title": "Hooooo",
@@ -494,7 +824,8 @@
       "votes": 0,
       "date": "2017-04-14T11:39:58.090Z",
       "questionId": 6,
-      "id": 26
+      "id": 26,
+      "userId": 1
     },
     {
       "title": "on pense aux gateaux",
@@ -503,7 +834,8 @@
       "votes": 0,
       "date": "2017-04-14T11:54:56.243Z",
       "questionId": 7,
-      "id": 27
+      "id": 27,
+      "userId": 1
     },
     {
       "title": "tes reponse",
@@ -512,7 +844,8 @@
       "votes": 0,
       "date": "2017-04-14T13:45:04.959Z",
       "questionId": 8,
-      "id": 28
+      "id": 28,
+      "userId": 1
     },
     {
       "title": "Un titre",
@@ -521,7 +854,8 @@
       "votes": 0,
       "date": "2017-04-19T13:41:36.464Z",
       "questionId": 9,
-      "id": 29
+      "id": 29,
+      "userId": 1
     },
     {
       "title": "une nouvelle réponse",
@@ -530,7 +864,8 @@
       "votes": 0,
       "date": "2017-04-19T13:48:35.319Z",
       "questionId": 10,
-      "id": 30
+      "id": 30,
+      "userId": 1
     },
     {
       "title": "on pense aussi",
@@ -539,7 +874,38 @@
       "votes": 0,
       "date": "2017-04-20T19:53:12.779Z",
       "questionId": 23,
-      "id": 31
+      "id": 31,
+      "userId": 1
+    },
+    {
+      "title": "Hello World",
+      "content": "test numéro 2",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T10:03:36.328Z",
+      "userId": 1,
+      "questionId": 3,
+      "id": 32
+    },
+    {
+      "title": "nouveau test",
+      "content": "nouvelle réponse",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T10:05:28.626Z",
+      "userId": 1,
+      "questionId": 3,
+      "id": 33
+    },
+    {
+      "title": "nouvelle réponse",
+      "content": "new response",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T10:23:05.367Z",
+      "userId": 1,
+      "questionId": 3,
+      "id": 34
     }
   ],
   "tips": [
@@ -624,8 +990,8 @@
       "id": 12
     },
     {
-      "title": "Commercia",
-      "content": "Leader dans son domaine, Chez Néné recherche un développeur ultra spécialisé en PHP pour vendre ses produits",
+      "title": "Administrateur Reseaux",
+      "content": "Leader dans son domaine, Chez Néné recherche un administrateur ultra spécialisé pour vendre ses produits",
       "place": "Melun",
       "society": "Chez Néné",
       "date": "2017-04-08T01:47:18.815Z",
@@ -651,10 +1017,10 @@
       "title": "PDG",
       "content": "Besoin urgent d'un spécialiste Android pour développer l'application de notre entreprise afin d'accroitre notre CA dans une économie globalisée ultra concurrentielle et notamment à Saint-Georges-sous-Clisson",
       "place": "Saint-Georges-sous-Clisson",
-      "society": "Charcuterie Balloche",
+      "society": "Charcuterie Bouloche",
       "date": "2017-04-08T01:47:18.815Z",
       "email": "raymond@wanadoo.fr",
-      "site": "www.CharcuterieBalloche.com",
+      "site": "www.CharcuterieBoulloche.com",
       "annonce": "",
       "tag": "Android",
       "id": 15
@@ -665,7 +1031,7 @@
       "place": "Biarritz",
       "society": "Oackley",
       "date": "2017-04-08T01:47:18.815Z",
-      "email": "surfandbedo@oackley.com",
+      "email": "surflife@oackley.com",
       "site": "www.oackley.com",
       "annonce": "",
       "tag": "PHP",
@@ -673,7 +1039,7 @@
     },
     {
       "title": "CEO",
-      "content": "Cherche Jeune Developpeuse de la Wild Wild Code School",
+      "content": "Cherche Developpeur de la Wild Wild Code School uniquement",
       "place": "Bordeaux",
       "society": "Ubisoft",
       "date": "2017-04-21T09:26:11.776Z",

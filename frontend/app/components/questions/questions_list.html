@@ -4,8 +4,6 @@
     <h1>Questions</h1>
   </div>
 
-
-
   <div ng-if="$ctrl.questions.length > 0">
     <div class="chip" ng-show="$ctrl.tagFilter.tagName.length >0">
       {{$ctrl.tagFilter.tagName}}
@@ -14,7 +12,7 @@
   </div>
 
   <div class="input-field">
-    <input class="validate" type="text" placeholder="Rechercher..." ng-model="q">
+    <input class="validate" type="text" placeholder="Search..." ng-model="q">
   </div>
   <div>
     <label for="search">items per page:</label>
@@ -36,16 +34,16 @@
       </div>
 
       <div ng-repeat="aTab in $ctrl.tabsList" id="{{aTab.view}}" class="col s12">
-        <div id="question" dir-paginate="question in $ctrl.questions | filter:q | orderBy : aTab.sort | itemsPerPage: $ctrl.pageSize"
+        <div class="question flex" dir-paginate="question in $ctrl.questions | filter:q | orderBy : aTab.sort | itemsPerPage: $ctrl.pageSize"
           current-page="$ctrl.currentPage">
 
           <div class="counters view">
-            <div ng-bind="question.votes"></div>
             <div ng-bind="question.nb_views"></div>
+            <div ng-bind="question.votes"></div>
           </div>
 
           <div class="contenu">
-            <a ui-sref="questionSpec({idQuestion : question.id})">
+            <a ng-click="$ctrl.countViews(question.id)" ui-sref="questionSpec({idQuestion : question.id})">
 
               <h3 ng-bind="question.title"></h3>
               <!-- <span class="answers" ng-bind="question.answers"></span>-->
