@@ -68,7 +68,7 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
 
         .state({
             name: 'questionPost',
-            url: '/post',
+            url: '/questionPost',
             component: 'questionPost',
             authenticate: true,
             resolve: {}

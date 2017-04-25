@@ -2,32 +2,49 @@
     <div class="bloc_center">
         <div class="row">
             <div id="connexion" class="col s12">
-                <div ng-show="$ctrl.user.lenght < 5">
-                    <div class="row">
-                        <div class="col s12">
-                            <div class="card-panel red darken-3">
-                                <span class="white-text">
-                                    Ton pseudo ou ton mot de passe est invalide.
-                                 </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="mail" type="text" ng-model="$ctrl.email" class="validate">
-                        <label for="password">Adresse mail</label>
+                        <input type="text" ng-value="$ctrl.person.first_name" ng-model="$ctrl.setting.nom" class="validate" placeholder="Nom">
+
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" type="password" ng-model="$ctrl.password" class="validate">
-                        <label for="password">Mot de passe</label>
+                        <input type="text" ng-value="$ctrl.person.last_name" ng-model="$ctrl.setting.prenom" class="validate" placeholder="Prenom">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.twitter" ng-model="$ctrl.setting.twitter" class="validate" placeholder="Twitter">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.facebook" ng-model="$ctrl.setting.facebook" class="validate" placeholder="Facebook">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.github" ng-model="$ctrl.setting.github" class="validate" placeholder="Github">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.ville" ng-model="$ctrl.setting.ville" class="validate" placeholder="Ville">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" ng-model="$ctrl.setting.profil" ng-value="$ctrl.person.profile"  class="materialize-textarea" placeholder="Résumer"></textarea>
+                        
                     </div>
                 </div>
                 <center>
-                    <a class="waves-effect waves-light btn-large settingstest" ng-click="$ctrl.connection($ctrl.email,$ctrl.password)"><i class="material-icons right">cloud</i>Se connectés</a>
+                    <a class="waves-effect waves-light btn-large settingstest" ng-click="$ctrl.pathSetting($ctrl.setting)"><i class="material-icons right">cloud</i>Enregistrer</a>
                 </center>
             </div>
         </div>
@@ -93,8 +110,8 @@
                 <li class="collection-header">
                     <h4>Reponse</h4>
                 </li>
-                <div ng-repeat="rep in $ctrl.reponse" >
-                <li  class="collection-item">{{rep.title}}</li>
+                <div ng-repeat="rep in $ctrl.reponse">
+                    <li class="collection-item">{{rep.title}}</li>
                 </div>
             </ul>
 
@@ -104,8 +121,8 @@
                 <li class="collection-header">
                     <h4>Question</h4>
                 </li>
-                <div ng-repeat="ques in $ctrl.question" >
-                <li  class="collection-item">{{ques.title}}</li>
+                <div ng-repeat="ques in $ctrl.question">
+                    <li class="collection-item">{{ques.title}}</li>
                 </div>
             </ul>
 

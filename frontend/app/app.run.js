@@ -15,6 +15,7 @@ WEA.run(function (authService, $log, $state, $transitions, $rootScope, $cookies)
             console.log("Aucun utilisateur");
             $rootScope.oldRouteUser = to.name
             console.log($rootScope.oldRouteUser);
+             $('#login').modal('open');
             return transition.router.stateService.target("home", {});
         }
     });
