@@ -66,17 +66,16 @@ h1 {
 /*ICI VIENT LE STYLE DU NUAGE*/
 
 #btnNuage {
-    border-radius: 30px;
+    border-radius: 100px;
     border-style: none;
-    margin: 20px 20px;
-    padding: 10px;
-   background-color: #f1f1f1;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
 }
 
-#btnNuage li {
-    color: #1fa597;
+#btnNuage #tagTitle {
+    font-size: 1.5em;
 }
-
 
 /*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
 
@@ -155,6 +154,7 @@ i.icon-orange {
 
 .society {
     color: #ffa726;
+    font-size: 1.3em;
 }
 
 .flexJob {
@@ -167,8 +167,19 @@ i.icon-orange {
     color: #1fa597;
 }
 
+#btnJob {
+    border-radius: 20px;
+    border-style: none;
+    margin: 10px 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    color: #1fa597;
+}
 
 /*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS (Laetitia)*/
+.chip {
+    color: #1fa597 !important;
+}
 
 .circle {
     max-height: 60px;
@@ -251,7 +262,7 @@ i.icon-orange {
 }
 
 .counters.view>div:last-child {
-    background: url(/frontend/assets/img/heart.png) no-repeat center;
+    background: url(/frontend/assets/img/heartOrange.png) no-repeat center;
     background-size: 30px;
 }
 
@@ -616,8 +627,6 @@ p {
     #index-banner .section {
         top: 10%;
     }
-    .icon-block #questionhome .vote {}
-}
 
 @media only screen and (max-width: 600px) {
     #index-banner .section {

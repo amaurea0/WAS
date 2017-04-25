@@ -690,7 +690,7 @@
       "title": "coucou papa",
       "content": "test de la mort qui tue",
       "nb_views": 0,
-      "votes": 0,
+      "votes": 1,
       "date": "2017-04-12T09:51:03.968Z",
       "id": 3,
       "questionId": 3,
@@ -790,7 +790,7 @@
       "title": "smldfkjmldsqkjf",
       "content": "et ça maaarche",
       "nb_views": 0,
-      "votes": 0,
+      "votes": 1,
       "date": "2017-04-12T13:12:24.897Z",
       "questionId": 3,
       "id": 13,
@@ -890,7 +890,7 @@
       "title": "test aurore",
       "content": "sacha a droit à un cookie",
       "nb_views": 0,
-      "votes": 0,
+      "votes": 1,
       "date": "2017-04-14T07:41:46.952Z",
       "questionId": 3,
       "id": 23,
@@ -980,7 +980,7 @@
       "title": "Hello World",
       "content": "test numéro 2",
       "nb_views": 0,
-      "votes": 0,
+      "votes": 1,
       "date": "2017-04-25T10:03:36.328Z",
       "userId": 1,
       "questionId": 3,
@@ -990,7 +990,7 @@
       "title": "nouveau test",
       "content": "nouvelle réponse",
       "nb_views": 0,
-      "votes": 0,
+      "votes": 1,
       "date": "2017-04-25T10:05:28.626Z",
       "userId": 1,
       "questionId": 3,
@@ -1000,7 +1000,7 @@
       "title": "nouvelle réponse",
       "content": "new response",
       "nb_views": 0,
-      "votes": 0,
+      "votes": 1,
       "date": "2017-04-25T10:23:05.367Z",
       "userId": 1,
       "questionId": 3,
@@ -1546,6 +1546,36 @@
       "userId": 1,
       "answerId": 25,
       "id": 6
+    },
+    {
+      "userId": 9,
+      "answerId": 23,
+      "id": 7
+    },
+    {
+      "userId": 9,
+      "answerId": 32,
+      "id": 8
+    },
+    {
+      "userId": 9,
+      "answerId": 13,
+      "id": 9
+    },
+    {
+      "userId": 9,
+      "answerId": 3,
+      "id": 10
+    },
+    {
+      "userId": 9,
+      "answerId": 33,
+      "id": 11
+    },
+    {
+      "userId": 9,
+      "answerId": 34,
+      "id": 12
     }
   ]
 }
