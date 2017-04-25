@@ -15,10 +15,23 @@ COMPNT
             post: '<'
         },
 
-        controller: ['AuthService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', function (AuthService, QuestionsService, $log, $state, $stateParams, $location, $timeout) {
+        controller: ['AuthService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', 'notify', function (AuthService, QuestionsService, $log, $state, $stateParams, $location, $timeout, notify) {
+
+            this.currentPage = 1;
+            this.pageSize = 3;
+
+            this.pageChangeHandler = function (num) {
+                console.log('going to page ' + num);
+            };
+
             this.$onInit = () => {
 
                 this.connected = AuthService.getCurrentUser();
+                this.answers = this.question.answers;
+
+                var updatedCount = {
+                    "nb_views": this.question.nb_views + 1
+                }
 
                 this.myQuestion = false;
                 if (AuthService.getCurrentUser()) {
@@ -26,19 +39,29 @@ COMPNT
                         this.myQuestion = true;
                     }
                 }
+
                 this.question.answers.forEach((answer) => {
                     if (AuthService.getCurrentUser()) {
-
                         if (answer.userId == AuthService.getCurrentUser().id) {
                             answer.myAnswer = true;
                         } else {
                             answer.myAnswer = false;
                         }
-                    }
+                    };
+                })
+
+                QuestionsService.updateContent(this.question.id, updatedCount).then((response) => {
+                    $log.log('ca a marché !');
+                    QuestionsService.getSpecificQuestion(this.question.id).then((response) => {
+                        $log.log(response.nb_views);
+                    }).catch((error) => {
+                        $log.error("couldn't retrieve updated views");
+                    })
+                }).catch((error) => {
+                    $log.error('en fait non');
                 });
+            }
 
-
-            };
 
             this.voteQst = (questionid) => {
                 if (AuthService.getCurrentUser()) {
@@ -54,7 +77,7 @@ COMPNT
                                 "questionId": questionid
                             };
 
-                            QuestionsService.updateVoteQuestion(this.question.id, updatedVote).then((rsp) => {
+                            QuestionsService.updateContent(this.question.id, updatedVote).then((rsp) => {
                                 $log.log("vote update");
                                 this.question.votes = rsp.votes;
                             }).catch((error) => {});
@@ -66,6 +89,7 @@ COMPNT
 
                 }
             }
+
             this.voteAsw = (answer) => {
                 if (AuthService.getCurrentUser()) {
                     var userid = AuthService.getCurrentUser().id;
@@ -107,7 +131,6 @@ COMPNT
             this.editContentAnswer = (answer) => {
 
                 var currentId = this.answer.id;
-                console.log(currentId)
 
                 var new_content = {
                     "title": this.answer.title,
@@ -137,15 +160,31 @@ COMPNT
                     "questionId": this.question.id
                 }
 
+                var newAnswersCount = {
+                    "answersCount": this.question.answersCount + 1
+                }
+
                 QuestionsService.postAnswer(new_answer).then((response) => {
-                    console.log('POST :' + response + 'is posted');
                     $timeout($state.go('questionSpec', {
                         idQuestion: this.question.id,
                         post: false
                     }), 0);
+                    notify({
+                        message: 'Votre réponse a été posté !',
+                        duration: 2500,
+                        classes: 'green darken-1'
+                    })
                 }).catch((err) => {
-                    alert("ERROR :" + err);
+                    notify({
+                        message: "Votre réponse n'a pas été posté !",
+                        duration: 2500,
+                        classes: 'red darken-1'
+                    })
                 });
+
+                QuestionsService.updateContent(this.question.id, newAnswersCount).then((response) => {
+                    console.log("did it work ?");
+                }).catch((error) => {})
 
             }
 

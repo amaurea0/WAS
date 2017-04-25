@@ -11,9 +11,9 @@ COMPNT.component("questionPost", {
     info: '<'
   },
 
-  controller: ['QuestionsService', 'TagsService', 'TaglinkService', 'AuthService', '$scope', '$state',
+  controller: ['QuestionsService', 'TagsService', 'TaglinkService', 'AuthService', '$scope', '$state', 'notify',
 
-    function (QuestionsService, TagsService, TaglinkService, AuthService, $scope, $state) {
+    function (QuestionsService, TagsService, TaglinkService, AuthService, $scope, $state, notify) {
 
       //get Tags for the input datalist
       TagsService.getTags().then((data) => {
@@ -29,17 +29,18 @@ COMPNT.component("questionPost", {
         this.new_tags.splice(this.new_tags.indexOf(tag), 1);
       };
       this.cancel = () => {
-          $state.go('questions');
+        $state.go('questions');
       }
 
       this.save = (question) => {
-        
+
         var new_question = {
           "title": this.question.title,
-          "content": question.content,
+          "content": this.question.content,
           "nb_views": 0,
           "votes": 0,
           "date": new Date(),
+          "answersCount": 0,
           "userId": AuthService.getCurrentUser().id
         }
 
@@ -61,7 +62,18 @@ COMPNT.component("questionPost", {
             }).catch((err) => {});
           });
           $state.go('questions');
-        }).catch((err) => {});
+          notify({
+            message: 'Votre question a été posté !',
+            duration: 2500,
+            classes: 'green darken-1'
+          })
+        }).catch((err) => {
+          notify({
+            message: "Votre question n'a pas été posté !",
+            duration: 2500,
+            classes: ' red darken-1'
+          })
+        });
       };
     }
   ]

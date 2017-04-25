@@ -74,7 +74,6 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
     };
 
     this.getSpecificQuestion = (param) => {
-
         var defer = $q.defer();
 
         $http.get(QST_URL + '/' + param + '?_expand=user&_embed=answers').then((response) => {
@@ -122,32 +121,6 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         }).catch((error) => {
             $log.debug(`SVC: ERROR!!! ${err}`);
             defer.reject(error);
-        });
-
-        return defer.promise;
-    };
-
-    this.viewQuestion = (question_id, paramView) => {
-        var defer = $q.defer();
-
-        $http.patch(QST_URL + '/' + question_id, paramView).then((response) => {
-            defer.resolve(response.data);
-        }).catch((err) => {
-            $log.debug(`SVC: ERROR!!! ${err}`);
-            defer.reject(err);
-        });
-
-        return defer.promise;
-    };
-
-    this.updateVoteQuestion = (question_id, paramVote) => {
-        var defer = $q.defer();
-
-        $http.patch(QST_URL + '/' + question_id, paramVote).then((response) => {
-            defer.resolve(response.data);
-        }).catch((err) => {
-            $log.debug(`SVC: ERROR!!! ${err}`);
-            defer.reject(err);
         });
 
         return defer.promise;
@@ -205,19 +178,20 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
     }
 
     this.voteAswExist = (answerid, userid) => {
-        var defer = $q.defer();
+            var defer = $q.defer();
 
-        $http.get(VOTE_ASW_URL + '?userId=' + userid + '&answerId=' + answerid).then((response) => {
-            defer.resolve(response.data);
-        }).catch((error) => {
-            $log.warn(`${error} : service couldn't reach server !`)
-            defer.reject(error);
-        });
+            $http.get(VOTE_ASW_URL + '?userId=' + userid + '&answerId=' + answerid).then((response) => {
+                defer.resolve(response.data);
+            }).catch((error) => {
+                $log.warn(`${error} : service couldn't reach server !`)
+                defer.reject(error);
+            });
 
-        return defer.promise;
+            return defer.promise;
 
-    }
+        }
 
+       
     this.QuestionHome = () => {
 
         var defer = $q.defer();
