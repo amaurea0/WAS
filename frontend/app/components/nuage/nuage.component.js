@@ -21,6 +21,9 @@ COMPNT.component('nuage', {
           query: ''
         };
       this.getAllItems();
+      this.initDrop = function() {
+    $('.modal-trigger').leanModal(); // Initialize the modals
+}
 
     };
 

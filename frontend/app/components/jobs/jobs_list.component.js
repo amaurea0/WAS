@@ -14,16 +14,24 @@ COMPNT.component('jobsList', {
     controller: ['JobService', '$state',
         function (JobService, $state) {
 
+            this.currentPage = 1;
             this.jobs = [];
             this.query = '';
 
             this.$onInit = () => {
                 this.getAllItems();
             };
+
+
+            this.pageChangeHandler = function (num) {
+                console.log('going to page ' + num);
+            };
+
             this.getAllItems = () => {
                 JobService.getJobs().then((items) => {
+                    console.log(items);
                     this.jobs = items;
-                }).catch((err) => {});
+                }).catch((err) => { });
             };
 
         }

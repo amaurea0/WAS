@@ -3,19 +3,19 @@
         <h1>Categories</h1>
     </div>
 
-    
-    <table class="table">
-        <ul class="collection">
-            <li>
-                <button ng-repeat="tag in $ctrl.nuage.list" class="chip" ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">
-                    {{tag.name}}
-                </button>
-            </li>
-        </ul>
-    </table>
+
+
+    <div class="collection">
+        <button ng-repeat="tag in $ctrl.nuage.list" class="chip" ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">{{tag.name}}
+        </button>
+    </div>
+
 </div>
-<!--
-<div id="wordsCloud">
-    <word-cloud words="$ctrl.words" width="$ctrl.width" height="$ctrl.height" padding="10" on-click="$ctrl.wordClicked()">
-    </word-cloud>
-</div>-->
+<div>
+    <ul ng-repeat="tag in $ctrl.nuage.list">
+        <button id=btnNuage>
+            <li ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">{{tag.name}}</li>
+            <li ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">test</li>
+        </button>
+    </ul>
+</div>
