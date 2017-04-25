@@ -18,6 +18,8 @@ COMPNT
         controller: ['AuthService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', function (AuthService, QuestionsService, $log, $state, $stateParams, $location, $timeout) {
             this.$onInit = () => {
 
+                this.connected = AuthService.getCurrentUser();
+
                 this.myQuestion = false;
                 if (AuthService.getCurrentUser()) {
                     if (this.question.userId == AuthService.getCurrentUser().id) {
