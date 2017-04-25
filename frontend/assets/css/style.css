@@ -65,9 +65,16 @@ h1 {
 
 /*ICI VIENT LE STYLE DU NUAGE*/
 
-.chip {
+#btnNuage {
+    border-radius: 30px;
     border-style: none;
     margin: 20px 20px;
+    padding: 10px;
+   background-color: #f1f1f1;
+}
+
+#btnNuage li {
+    color: #1fa597;
 }
 
 
@@ -153,11 +160,11 @@ i.icon-orange {
 .flexJob {
     display: flex;
     flex-direction: column;
-}
+    }
 
 .tagJob {
     font-size: 0.7em;
-    color: #455a64;
+    color: #1fa597;
 }
 
 

@@ -30,6 +30,7 @@
 
       <div ng-repeat="aTab in $ctrl.tabsList" id="{{aTab.view}}" class="col s12">
         <div class="question flex" dir-paginate="question in $ctrl.questions | filter:q | orderBy : aTab.sort | itemsPerPage: $ctrl.pageSize"
+
           current-page="$ctrl.currentPage">
 
           <div class="counters view">

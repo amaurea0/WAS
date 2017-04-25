@@ -15,13 +15,17 @@
             <!--<p ng-show="myForm.content.$invalid">Champ requis</p>-->
         </div>
         <div class="form-group">
-            <label>Tag : <span ng-repeat="eachTag in $ctrl.new_tags"> {{eachTag}} <span ng-click="$ctrl.removeTag(eachTag)">x</span></span>
-        </label> <br>
-            <input id="tag" list="testList" type="" ng-model="$ctrl.SelectedTag" />
+            <label>Tag : <span ng-repeat="eachTag in $ctrl.new_tags"> {{eachTag}} <span ng-click="$ctrl.removeTag(eachTag)">X</span></span>
+            </label> <br>
+            <button ng-repeat="newtag in $ctrl.tags | orderBy:'name' " class="chip"
+                ng-model="$ctrl.SelectedTag" ng-click="$ctrl.saveTag($ctrl.SelectedTag)">{{newtag.name}}
+            </button>
+
+            <!--<input id="tag" list="testList" type="" ng-model="$ctrl.SelectedTag" />
             <datalist id="testList">
                 <option ng-repeat="newtag in $ctrl.tags | orderBy:'name' " value="{{newtag.name}}">
             </datalist>
-            <input type="button" ng-click="$ctrl.saveTag($ctrl.SelectedTag)" value="ajouter" />
+            <input type="button" ng-click="$ctrl.saveTag($ctrl.SelectedTag)" value="ajouter" />-->
         </div>
 
         <div class="item-actions">
@@ -29,5 +33,5 @@
         </div>
 
     </form>
-    <button ng-click="$ctrl.cancel()" class="waves-effect waves-light btn"><i class="material-icons left">backspace</i>Annuler</button>
+    <!--<button ng-click="$ctrl.cancel()" class="waves-effect waves-light btn"><i class="material-icons left">backspace</i>Annuler</button>-->
 </div>
