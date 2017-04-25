@@ -153,8 +153,8 @@ h1 {
 /*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
 li {
 
-    display: flex;
-    direction: row;
+/*    display: flex;
+    direction: row;*/
     color: #455A64;
 }
 
@@ -318,12 +318,12 @@ i.icon-orange {
 
 
 .counters.view > div:first-child {
-    background: url(/frontend/assets/img/heart.png) no-repeat center;
+    background: url(/frontend/assets/img/eye.png) no-repeat center;
     background-size: 30px;
 }
 
 .counters.view > div:last-child {
-    background: url(/frontend/assets/img/eye.png) no-repeat center;
+    background: url(/frontend/assets/img/heart.png) no-repeat center;
     background-size: 30px;
 }
 
@@ -496,7 +496,7 @@ p {
 /* questions */
 
 
-#question {
+#questionhome {
     display: flex;
     padding-left: 13px;
     border-bottom: 1px solid rgba(239, 236, 236, 0.619);
