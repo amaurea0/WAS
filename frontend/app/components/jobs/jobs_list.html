@@ -10,7 +10,7 @@
         </div>
     </div>
 
-    <div class="question flex collection" dir-paginate="job in $ctrl.jobs | filter:q | filter : $ctrl.model.query | itemsPerPage: 4"
+    <div class="question flex collection" dir-paginate="job in $ctrl.jobs | filter:q | filter : $ctrl.query | itemsPerPage: 4"
         current-page="$ctrl.currentPage">
 
         <!--<div id="question" ng-repeat="job in $ctrl.jobs | filter : $ctrl.model.query" class="collection">-->
