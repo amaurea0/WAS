@@ -4,7 +4,7 @@
         <a class="btn btn-floating pulse orange" ui-sref="questionPost" ui-sref-active="select"><i class="material-icons">add</i></a>
     </div>
 
-    <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
+    <input id="search" class="form-control" placeholder="Rechercher..." ng-model="q" />
     <div id="question">
         <div class="counters view">
             <div ng-bind="$ctrl.question.votes"></div>
@@ -30,19 +30,22 @@
 
 
         <div ng-if="$ctrl.question.answers.length > 0">
-            <div id="answer" ng-repeat="answer in $ctrl.question.answers | filter : $ctrl.model.query">
+            <div id="answer" dir-paginate="answer in $ctrl.question.answers | filter : q | itemsPerPage: $ctrl.pageSize" current-page="$ctrl.currentPage" ">
 
-                <div class="counters view">
-                    <div ng-bind="answer.votes"></div>
+                <div class="counters view ">
+                    <div ng-bind="answer.votes "></div>
                 </div>
-                <div class="contenu">
-                    <h3 ng-bind="answer.title"></h3>
-                    <!--<button class="lien" ui-sref="editPost({postId : answer.id})">edit</button>-->
-                    <span>{{answer.date | date:"MM/dd/yyyy"}}</span>
-                    <p ng-bind-html="answer.content"></p>
+                <div class="contenu ">
+                    <h3 ng-bind="answer.title "></h3>
+                    <!--<button class="lien " ui-sref="editPost({postId : answer.id}) ">edit</button>-->
+                    <span>{{answer.date | date:"MM/dd/yyyy "}}</span>
+                    <p ng-bind-html="answer.content "></p>
                 </div>
 
             </div>
         </div>
+
+        <dir-pagination-controls boundary-links="true " on-page-change="$ctrl.pageChangeHandler(newPageNumber)
+                " template-url="node_modules/angular-utils-pagination/dirPagination.tpl.html "></dir-pagination-controls>
     </div>
 </div>

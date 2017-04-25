@@ -3,7 +3,7 @@
     {
       "title": "How do JavaScript closures work?",
       "content": "How would you explain JavaScript closures to someone with a knowledge of the concepts they consist of (for example functions, variables and the like), but does not understand closures themselves?",
-      "nb_views": 75,
+      "nb_views": 78,
       "votes": 100,
       "date": "2017-04-08T01:47:18.815Z",
       "answersCount": 0,
@@ -23,10 +23,10 @@
     {
       "title": "How can I prevent SQL injection in PHP?",
       "content": "If user input is inserted without modification into an SQL query, then the application becomes vulnerable to SQL injection, like in the following example:",
-      "nb_views": 232,
+      "nb_views": 235,
       "votes": 871,
       "date": "2017-04-08T01:51:51.436Z",
-      "answersCount": 0,
+      "answersCount": 2,
       "userId": 3,
       "id": 3
     },
@@ -103,10 +103,10 @@
     {
       "title": "coucou Quitterie Benoite",
       "content": "<div><!--block-->this is&nbsp;<strong>hello world</strong></div>",
-      "nb_views": 6,
+      "nb_views": 18,
       "votes": 0,
       "date": "2017-04-25T12:12:40.826Z",
-      "answersCount": 0,
+      "answersCount": 2,
       "userId": 8,
       "id": 11
     }
@@ -707,6 +707,76 @@
       "userId": 8,
       "questionId": 11,
       "id": 47
+    },
+    {
+      "title": "hello beau gosse",
+      "content": "<div><!--block-->on va voir si tu postes les trucs correctement</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T12:39:12.922Z",
+      "userId": 8,
+      "questionId": 11,
+      "id": 48
+    },
+    {
+      "title": "coucou mathias",
+      "content": "<div><!--block-->this is chasse&nbsp;<strong>sous-marine</strong></div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T12:57:00.930Z",
+      "userId": 8,
+      "questionId": 11,
+      "id": 49
+    },
+    {
+      "title": "salut julien",
+      "content": "<div><!--block-->beau gosse t'as vu get</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T13:00:19.673Z",
+      "userId": 8,
+      "questionId": 11,
+      "id": 50
+    },
+    {
+      "title": "salut sacha et julirn",
+      "content": "<div><!--block-->c'est la teuf</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T13:01:58.050Z",
+      "userId": 8,
+      "questionId": 11,
+      "id": 51
+    },
+    {
+      "title": "je test",
+      "content": "<div><!--block-->une nouvelle fois</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T13:02:47.039Z",
+      "userId": 8,
+      "questionId": 11,
+      "id": 52
+    },
+    {
+      "title": "test",
+      "content": "<div><!--block-->Quatrieme réponse</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T13:08:24.056Z",
+      "userId": 8,
+      "questionId": 3,
+      "id": 53
+    },
+    {
+      "title": "test 3",
+      "content": "<div><!--block-->est ce que ca marche vraiment ?</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T13:08:52.405Z",
+      "userId": 8,
+      "questionId": 3,
+      "id": 54
     }
   ],
   "tips": [

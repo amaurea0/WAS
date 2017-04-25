@@ -72,7 +72,6 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
     };
 
     this.getSpecificQuestion = (param) => {
-
         var defer = $q.defer();
 
         $http.get(QST_URL + '/' + param + '?_expand=user&_embed=answers').then((response) => {
@@ -93,19 +92,6 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         }).catch((error) => {
             $log.debug(`SVC: ERROR!!! ${err}`);
             defer.reject(error);
-        });
-
-        return defer.promise;
-    };
-
-    this.viewQuestion = (question_id, paramView) => {
-        var defer = $q.defer();
-
-        $http.patch(QST_URL + '/' + question_id, paramView).then((response) => {
-            defer.resolve(response.data);
-        }).catch((err) => {
-            $log.debug(`SVC: ERROR!!! ${err}`);
-            defer.reject(err);
         });
 
         return defer.promise;
