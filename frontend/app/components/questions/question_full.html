@@ -29,36 +29,36 @@
 
         <div ng-if="$ctrl.edition" class="bloc_center">
             <h2>Edit response</h2>
-            <form class="formulaire" ng-submit="$ctrl.editContentAnswer($ctrl.answer)" novalidate>
+            <form  name="myForm1" class="formulaire" ng-submit="$ctrl.editContentAnswer($ctrl.answer)" novalidate>
                 <div class="form-group">
                     <label for="title">Titre réponse</label>
-                    <input type="text" class="form-control" id="title" ng-model="$ctrl.answer.title" />
+                    <input type="text" class="form-control" id="title" required ng-model="$ctrl.answer.title" />
                 </div>
                 <div class="form-group">
                     <label for="content">Content</label>
-                    <input type="text" class="form-control" id="content" ng-model="$ctrl.answer.content" />
+                    <input type="text" class="form-control" id="content" required ng-model="$ctrl.answer.content" />
                 </div>
                 <div class="item-actions">
 
-                    <input class="btn btn-success" type="submit" value="Valider" />
+                    <input class="btn btn-success" type="submit" value="Valider" ng-disabled="myForm1.$invalid"/>
 
                 </div>
             </form>
         </div>
         <div ng-if="$ctrl.post" class="bloc_center">
             <h2>Post a new answer</h2>
-            <form class="formulaire" ng-submit="$ctrl.saveAnswer($ctrl.answer)" novalidate>
+            <form name="myForm2" class="formulaire" ng-submit="$ctrl.saveAnswer($ctrl.answer)" novalidate>
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <input type="text" class="form-control" id="title" ng-model="$ctrl.answer.title" />
+                    <input type="text" class="form-control" id="title" required ng-model="$ctrl.answer.title" />
                 </div>
                 <div class="form-group">
                     <label for="content">Content</label>
-                    <input type="text" class="form-control" id="content" ng-model="$ctrl.answer.content" />
+                    <input type="text" class="form-control" id="content" required ng-model="$ctrl.answer.content" />
                 </div>
                 <div class="item-actions">
 
-                    <input class="btn btn-success" type="submit" value="Valider" />
+                    <input class="btn btn-success" type="submit" value="Valider" ng-disabled="myForm2.$invalid"/>
 
                 </div>
             </form>
