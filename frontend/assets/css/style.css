@@ -240,12 +240,12 @@ i.icon-orange {
 }
 
 .counters.view>div:first-child {
-    background: url(/frontend/assets/img/heart.png) no-repeat center;
+    background: url(/frontend/assets/img/eye.png) no-repeat center;
     background-size: 30px;
 }
 
 .counters.view>div:last-child {
-    background: url(/frontend/assets/img/eye.png) no-repeat center;
+    background: url(/frontend/assets/img/heart.png) no-repeat center;
     background-size: 30px;
 }
 
