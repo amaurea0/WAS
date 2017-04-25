@@ -8,7 +8,8 @@ COMPNT.component('tips', {
 
     controller: function (TipsService) {
 
-        this.tips = []
+        this.tips = [];
+        this.query='';
 
         this.$onInit = () => {
             TipsService.getTips().then((items) => {

@@ -92,5 +92,20 @@ COMPNT
           console.log(this.questions);
         }).catch((error) => {})
       }
+
+      this.countViews = (id) => {
+        var updatedCount = {}
+        QuestionsService.getQuestionId(id).then((response) => {
+          updatedCount.nb_views = response[0].nb_views + 1
+
+          QuestionsService.viewQuestion(id, updatedCount).then((response) => {
+            $log.log('views updated');
+          }).catch((error) => {});
+
+        }).catch((error) => {
+          $log.error('pb sur getQuestionId');
+        });
+
+      }
     }]
   });

@@ -34,7 +34,7 @@
       </div>
 
       <div ng-repeat="aTab in $ctrl.tabsList" id="{{aTab.view}}" class="col s12">
-        <div class="question" dir-paginate="question in $ctrl.questions | filter:q | orderBy : aTab.sort | itemsPerPage: $ctrl.pageSize"
+        <div class="question flex" dir-paginate="question in $ctrl.questions | filter:q | orderBy : aTab.sort | itemsPerPage: $ctrl.pageSize"
           current-page="$ctrl.currentPage">
 
           <div class="counters view">
@@ -43,7 +43,7 @@
           </div>
 
           <div class="contenu">
-            <a ui-sref="questionSpec({idQuestion : question.id})">
+            <a ng-click="$ctrl.countViews(question.id)" ui-sref="questionSpec({idQuestion : question.id})">
 
               <h3 ng-bind="question.title"></h3>
               <!-- <span class="answers" ng-bind="question.answers"></span>-->

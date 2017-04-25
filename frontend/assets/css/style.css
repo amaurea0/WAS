@@ -2,7 +2,6 @@ body {
     background-color: #f1f1f1;
 }
 
-
 .bloc_center h2 {
     font-size: 2em;
 }
@@ -28,6 +27,7 @@ h1 {
     position: relative;
     float: left;
 }
+
 
 /*ICI VIENT LE STYLE DE LA BARRE DE NAV ET DU PARALLAX MAIN.HTML*/
 
@@ -105,7 +105,6 @@ i.icon-orange {
     color: #f4a443;
 }
 
-
 .collection .collection-item.avatar {
     width: 400px;
 }
@@ -119,9 +118,10 @@ i.icon-orange {
     color: #455a64;
 }
 
+
 /*ICI VIENT LE STYLE DE LA LISTE DU PROFILE*/
 
-#personRight td{
+#personRight td {
     max-width: 80px;
 }
 
@@ -203,18 +203,14 @@ i.icon-orange {
 .tabs .indicator {
     background-color: #1fa597 !important;
 }
-
-.question,
-#answer {
-    background-color: white;
+.flex{
     display: flex;
+}
+.question {
+    background-color: white;
     color: black;
     margin: 0;
     padding-top: 15px;
-}
-
-.question {
-    background-color: white;
     border-bottom: 1px dotted #ffdea5;
 }
 
@@ -271,7 +267,10 @@ i.icon-orange {
     color: #7b7b7b;
     font-size: 1em;
 }
-
+.flex_direction{
+    display: flex;
+    justify-content: space-between;
+}
 .lien {
     background-color: #80cbc4;
     border-radius: 20px;
@@ -296,14 +295,23 @@ i.icon-orange {
 
 /*ICI VIENT LE STYLE DU FOOTER*/
 
-.page-footer {
-    background-color: #455a64 !important;
-    max-height: 70px;
+.page-footer img {
+    max-height: 60px;
+    padding: 10px;
 }
 
-.page-footer img {
-    max-height: 80px;
-    padding-bottom: 40px;
+footer {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #455a64 !important;
+}
+
+#main {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 120px;
 }
 
 
@@ -349,12 +357,12 @@ p {
         display: none;
     }
     #search input[type="text"] {
-    width: 100px;
-    padding: 2px 2px 2px 2px;
-    font-size: 9px;
-}
+        width: 100px;
+        padding: 2px 2px 2px 2px;
+        font-size: 9px;
+    }
     #search input[type="text"]:focus {
-    width: 60px;
+        width: 60px;
     }
 }
 
@@ -398,12 +406,6 @@ p {
 
 .icon-block .material-icons {
     font-size: inherit;
-}
-
-footer.page-footer {
-    bottom: 0;
-    margin: 0;
-    width: 100%;
 }
 
 
