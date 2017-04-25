@@ -1,7 +1,7 @@
 'use strict';
 
 COMPNT
-  .component("main", {
+  .component("mainjs", {
 
     templateUrl: '/frontend/app/components/main/main.html',
 
