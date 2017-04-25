@@ -1,5 +1,5 @@
 'use strict';
-SERVICES.service('authService', ['$cookies', 'UsersService','$state', function ($cookies,UsersService,$state) {
+SERVICES.service('authService', ['$cookies', 'UsersService', '$state', function ($cookies, UsersService, $state) {
 
     this.VerificationConnection = () => {
         var userid = $cookies.get('id');
@@ -10,18 +10,19 @@ SERVICES.service('authService', ['$cookies', 'UsersService','$state', function (
         }
         if (!token) {
             DeleteCookie();
-             this.msg = false
+            this.msg = false
         }
+
         UsersService.verifToken(userid, token).then((response) => {
             if (response.data['0'].tokenSecure != token && response.data['0'].id != userid) {
                 DeleteCookie();
-                 this.msg = false
-            }else{
-                 this.msg = true;
+                this.msg = false
+            } else {
+                this.msg = true;
             }
         }).catch((response) => {
             DeleteCookie();
-             this.msg = false
+            this.msg = false
         });
 
         return this.msg;
@@ -31,4 +32,10 @@ SERVICES.service('authService', ['$cookies', 'UsersService','$state', function (
         $cookies.remove('id');
         $cookies.remove('tokenSecure');
     };
+
+    this.getCurrentUser = () => {
+        return {
+            id: $cookies.get('id')
+        }
+    }
 }]);

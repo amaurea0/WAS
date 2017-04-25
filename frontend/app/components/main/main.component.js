@@ -81,25 +81,27 @@ COMPNT
           var add = { // je crée une variable object pour l'ajouter dans ma db
             tokenSecure: self.tokenid
           }
-           //je crée ma colonne et son contenue
+          //je crée ma colonne et son contenue
           UsersService.userTokenAdd(self.user.id, add).then((response) => { // j'envoye l'id et le token qui va avec
-              SendCookie(self.user.id, self.tokenid); // j'envoye le cookie avec l'userId
-            }).catch((response) => {
-              self.error = response.statusText || "une erreur s'est produite pendant l'identification"; //en cas d'échec je marque un message d'erreur
-            });
-            //END SEND USERTOKEN
-
+            SendCookie(self.user.id, self.tokenid); // j'envoye le cookie avec l'userId
+            $state.go($rootScope.oldRouteUser ? $rootScope.oldRouteUser : 'questions');
+            $timeout(function () {
+              $state.go($rootScope.oldRouteUser ? $rootScope.oldRouteUser : 'questions');
+              $('#login').modal('close');
+            }, 0);
           }).catch((response) => {
             self.error = response.statusText || "une erreur s'est produite pendant l'identification"; //en cas d'échec je marque un message d'erreur
           });
+          //END SEND USERTOKEN
+
+        }).catch((response) => {
+          self.error = response.statusText || "une erreur s'est produite pendant l'identification"; //en cas d'échec je marque un message d'erreur
+        });
       }
 
       function SendCookie(id, token) { // on envoye le cookie avec l'id de connexion
         $cookies.put('id', '' + id + ''); // je crée mon cookie avec l'userId
         $cookies.put('tokenSecure', '' + token + ''); // je crée mon cookie avec l'userId
-        $state.go($rootScope.oldRouteUser ? $rootScope.oldRouteUser : 'questions');
-        $('#login').modal('close');
-        $timeout(function () { $state.go($rootScope.oldRouteUser ? $rootScope.oldRouteUser : 'questions'); }, 0);
         self.cookieUser = $cookies.get('id'); //je déclare mon cookie dans une variable pour pouvoir faire des conditions trql
         self.cookieToken = $cookies.get('tokenSecure'); //je déclare mon cookie dans une variable pour pouvoir faire des conditions trql
 
@@ -119,7 +121,6 @@ COMPNT
         this.cookieToken = $cookies.get('tokenSecure'); //je déclare mon cookie dans une variable pour pouvoir faire des conditions trql
 
         function ajax() {
-
           $('.modal').modal();
           $(document).on('click', '.loginpop', function (event) {
             $('#login').modal('open');
@@ -135,12 +136,12 @@ COMPNT
       }
 
 
-        this.getSearchQuestions = () => {
-          var queryAsArray = this.searchQuery.split(' ');
-          var queryAsString = queryAsArray.join('+');
-          $state.go('questions', {
-            queryParam: queryAsString
-          });
-        }
+      this.getSearchQuestions = () => {
+        var queryAsArray = this.searchQuery.split(' ');
+        var queryAsString = queryAsArray.join('+');
+        $state.go('questions', {
+          queryParam: queryAsString
+        });
+      }
     }]
   });

@@ -14,22 +14,22 @@ COMPNT
             answer: '<'
         },
 
-        controller: ['AuthService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', function (AuthService, QuestionsService, $log, $state, $stateParams, $location, $timeout) {
+        controller: ['authService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', function (authService, QuestionsService, $log, $state, $stateParams, $location, $timeout) {
             this.$onInit = () => {
 
                 var updatedCount = {
                     "nb_views": this.question.nb_views + 1
                 }
                 this.myQuestion = false;
-                if (AuthService.getCurrentUser()) {
-                    if (this.question.userId == AuthService.getCurrentUser().id) {
+                if (authService.getCurrentUser()) {
+                    if (this.question.userId == authService.getCurrentUser().id) {
                         this.myQuestion = true;
                     }
                 }
                 this.question.answers.forEach((answer) => {
-                    if (AuthService.getCurrentUser()) {
+                    if (authService.getCurrentUser()) {
 
-                        if (answer.userId == AuthService.getCurrentUser().id) {
+                        if (answer.userId == authService.getCurrentUser().id) {
                             answer.myAnswer = true;
                         } else {
                             answer.myAnswer = false;
@@ -48,8 +48,8 @@ COMPNT
             };
 
             this.voteQst = (questionid) => {
-                if (AuthService.getCurrentUser()) {
-                    var userid = AuthService.getCurrentUser().id;
+                if (authService.getCurrentUser()) {
+                    var userid = authService.getCurrentUser().id;
                     QuestionsService.voteQstExist(questionid, userid).then((response) => {
                         if (response.length == 0) {
 
@@ -74,8 +74,8 @@ COMPNT
                 }
             }
             this.voteAsw = (answer) => {
-                if (AuthService.getCurrentUser()) {
-                    var userid = AuthService.getCurrentUser().id;
+                if (authService.getCurrentUser()) {
+                    var userid = authService.getCurrentUser().id;
                     QuestionsService.voteAswExist(answer.id, userid).then((response) => {
 
 
