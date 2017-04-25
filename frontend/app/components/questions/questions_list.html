@@ -16,11 +16,6 @@
   <div class="input-field">
     <input class="validate" type="text" placeholder="Rechercher..." ng-model="q">
   </div>
-  <div>
-    <label for="search">items per page:</label>
-    <input type="number" min="1" max="100" class="form-control" ng-model="$ctrl.pageSize">
-  </div>
-
 
   <div class="bloc_center">
 
@@ -51,7 +46,7 @@
               <!-- <span class="answers" ng-bind="question.answers"></span>-->
               <span>{{question.answers.length}} Réponses</span>
               <span>{{question.date | date:"MM/dd/yyyy"}}</span>
-              <p ng-bind="question.content"></p>
+              <p ng-bind-html="question.content"></p>
               <span id="questionsTags">{{question.tag}}</span>
               <div ng-bind="question.tag"></div>
             </a>

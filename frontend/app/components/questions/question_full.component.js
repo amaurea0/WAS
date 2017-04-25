@@ -12,8 +12,10 @@ COMPNT
             question: '<'
         },
 
-        controller: ['AuthService', 'QuestionsService', '$log', function (AuthService, QuestionsService, $log) {
+        controller: ['AuthService', 'QuestionsService', '$log', function (AuthService, QuestionsService, $log, $scope) {
             this.$onInit = () => {
+
+                this.answers = this.question.answers;
 
                 var updatedCount = {
                     "nb_views": this.question.nb_views + 1

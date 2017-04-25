@@ -45,7 +45,7 @@ COMPNT
         query: ''
       };
       this.currentPage = 1;
-      this.pageSize = 2;
+      this.pageSize = 4;
       this.questions = [];
 
       this.$onInit = () => {
