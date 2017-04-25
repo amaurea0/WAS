@@ -174,7 +174,9 @@ i.icon-orange {
     padding: 10px;
     background-color: #f1f1f1;
     color: #1fa597;
+
 }
+
 
 /*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS (Laetitia)*/
 .chip {
@@ -600,15 +602,23 @@ p {
     .icon-block #questionhome .vote {
         display: none;
     }
+    #search input[type="text"] {
+        width: 100px;
+        padding: 2px 2px 2px 2px;
+        font-size: 9px;
+    }
+    #search input[type="text"]:focus {
+        width: 60px;
+    }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 980px) {
     .container ul.right.hide-on-small-only {
         display: none;
     }
 }
 
-.nav-wrapper.container .brand-logo img {
+.nav-wrapper .brand-logo img {
     height: 54px;
     width: 55px;
     margin-top: 5px;
@@ -641,8 +651,6 @@ p {
 .icon-block .material-icons {
     font-size: inherit;
 }
-
-
 
 
 /* questions */

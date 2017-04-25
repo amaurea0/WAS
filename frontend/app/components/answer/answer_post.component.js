@@ -7,11 +7,9 @@ COMPNT.component("answerPost", {
 
   bindings: {},
 
-  controller: ['QuestionsService', 'AuthService', '$scope', '$state', 'notify', function (QuestionsService, AuthService, $scope, $state, notify) {
+  controller: ['QuestionsService', 'authService', '$scope', '$state', function (QuestionsService, authService, $scope, $state) {
 
     var currentId = $scope.$parent.$ctrl.question.id;
-    var answers = $scope.$parent.$ctrl.question.answers;
-    var newCount = $scope.$parent.$ctrl.question.answersCount + 1;
 
     this.saveAnswer = () => {
       var new_answer = {
@@ -20,37 +18,19 @@ COMPNT.component("answerPost", {
         "nb_views": 0,
         "votes": 0,
         "date": new Date(),
-        "userId": AuthService.getCurrentUser().id,
+        "userId": authService.getCurrentUser().id,
         "questionId": currentId
       }
 
-      var newAnswersCount = {
-        "answersCount": newCount
-      }
-
       QuestionsService.postAnswer(new_answer).then((response) => {
-        console.log(response.data);
+        console.log('POST :' + response + 'is posted');
         $state.go('questionSpec', {
           idQuestion: currentId
         });
-        notify({
-          message: 'Votre réponse a été posté !',
-          duration: 2500,
-          classes: 'green darken-1'
-        })
       }).catch((err) => {
-        notify({
-          message: "Votre réponse n'a pas été posté !",
-          duration: 2500,
-          classes: 'red darken-1'
-        })
+        alert("ERROR :" + err);
       });
 
-      QuestionsService.updateContent(currentId, newAnswersCount).then((response) => {
-        console.log("did it work ?");
-      }).catch((error) => {})
-
-      answers.push(new_answer);
 
     }
   }]

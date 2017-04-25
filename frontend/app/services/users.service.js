@@ -70,21 +70,40 @@ SERVICES.service('UsersService', ['$http', '$log', '$q',
             });
             return deferred.promise;
         }
+        this.userConnect = (email, mdp) => {
+            return $http.get('http://127.0.0.1:3000/users?email=' + email + '&pass=' + mdp + '');
+        };
+        this.userTokenAdd = (id, add) => {
+            return $http.patch('http://127.0.0.1:3000/users/' + id + '', add);
+        };
+        this.patchSetting = (id, edit) => {
+            return $http.patch('http://127.0.0.1:3000/users/' + id + '', edit);
+        };
+        this.verifToken = (id, token) => {
+            return $http.get('http://127.0.0.1:3000/users?id=' + id + '&tokenSecure=' + token + '');
+        };
+        this.checkReponse = (id) => {
+            return $http.get('http://127.0.0.1:3000/answers?userId=' + id + '&_order=DESC&_end=5');
+        };
+        this.checkQuestion = (id) => {
+            return $http.get('http://127.0.0.1:3000/questions?userId=' + id + '&_order=DESC&_end=5');
+        };
 
 
-// Fonction de Pierre qu'il doit terminer
 
-    //     this.getUserJob = (user) => {
-    //     var deferred = $q.defer();
+        // Fonction de Pierre qu'il doit terminer
 
-    //     $http.get(USER_URL + '?jobId=' + tag).then(function (response) {
-    //         deferred.resolve(response.data);
-    //     }, function (error) {
-    //         deferred.reject(error);
-    //         $log.error(error);
-    //     });
-    //     return deferred.promise;
-    // };
+        //     this.getUserJob = (user) => {
+        //     var deferred = $q.defer();
+
+        //     $http.get(USER_URL + '?jobId=' + tag).then(function (response) {
+        //         deferred.resolve(response.data);
+        //     }, function (error) {
+        //         deferred.reject(error);
+        //         $log.error(error);
+        //     });
+        //     return deferred.promise;
+        // };
 
     }
 

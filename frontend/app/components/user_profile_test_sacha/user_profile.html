@@ -1,21 +1,77 @@
+<div id="setting" class="modal">
+    <div class="bloc_center">
+        <div class="row">
+            <div id="connexion" class="col s12">
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.first_name" ng-model="$ctrl.setting.nom" class="validate" placeholder="Nom">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.last_name" ng-model="$ctrl.setting.prenom" class="validate" placeholder="Prenom">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.twitter" ng-model="$ctrl.setting.twitter" class="validate" placeholder="Twitter">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.facebook" ng-model="$ctrl.setting.facebook" class="validate" placeholder="Facebook">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.github" ng-model="$ctrl.setting.github" class="validate" placeholder="Github">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.ville" ng-model="$ctrl.setting.ville" class="validate" placeholder="Ville">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" ng-model="$ctrl.setting.profil" ng-value="$ctrl.person.profile"  class="materialize-textarea" placeholder="Résumer"></textarea>
+                        
+                    </div>
+                </div>
+                <center>
+                    <a class="waves-effect waves-light btn-large settingstest" ng-click="$ctrl.pathSetting($ctrl.setting)"><i class="material-icons right">cloud</i>Enregistrer</a>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="entete">
         <h1>User Profile</h1>
+        <a ng-if="$ctrl.person.id == $ctrl.cookieUser" class="btn btn-floating #ffb74d orange lighten-2" ng-click="$ctrl.openmodal()"><i class="material-icons">mode_edit</i></a>
     </div>
-
     <div class="row">
         <div class="col s12">
             <div class="card blue-grey darken-1">
                 <div class="row">
-                    <div class="col s12 l6">
+                    <div class="col s6">
                         <div class="card-content white-text">
                             <h4 id="pseudo">{{$ctrl.person.pseudo}}</h4>
                             <h5>{{$ctrl.person.first_name}} {{$ctrl.person.last_name}}</h5>
                             <p>{{$ctrl.person.profile}}</p>
                         </div>
                     </div>
-                    <div class="col s12 l6">
+                    <div class="col s6">
                         <div class="card-content white-text" id="personRight">
+<<<<<<< b4df5b5af8d2d984220a2535737f9288130279ec
+=======
+
+>>>>>>> Final
                             <table>
                                 <tr>
                                     <td>
@@ -35,6 +91,7 @@
                                     </td>
                                 </tr>
                             </table>
+
                         </div>
                     </div>
                 </div>
@@ -47,6 +104,30 @@
                     <a>hdghzhhhhhhhhhdghzhhhhh</a>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s6">
+            <ul class="collection with-header">
+                <li class="collection-header">
+                    <h4>Reponse</h4>
+                </li>
+                <div ng-repeat="rep in $ctrl.reponse">
+                    <li class="collection-item">{{rep.title}}</li>
+                </div>
+            </ul>
+
+        </div>
+        <div class="col s6">
+            <ul class="collection with-header">
+                <li class="collection-header">
+                    <h4>Question</h4>
+                </li>
+                <div ng-repeat="ques in $ctrl.question">
+                    <li class="collection-item">{{ques.title}}</li>
+                </div>
+            </ul>
+
         </div>
     </div>
 </div>

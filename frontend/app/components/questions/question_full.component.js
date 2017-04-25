@@ -15,7 +15,7 @@ COMPNT
             post: '<'
         },
 
-        controller: ['AuthService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', 'notify', function (AuthService, QuestionsService, $log, $state, $stateParams, $location, $timeout, notify) {
+        controller: ['authService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', 'notify', function (authService, QuestionsService, $log, $state, $stateParams, $location, $timeout, notify) {
 
             this.currentPage = 1;
             this.pageSize = 3;
@@ -23,22 +23,21 @@ COMPNT
             this.pageChangeHandler = function (num) {
                 console.log('going to page ' + num);
             };
+            
+                        this.$onInit = () => {
 
-            this.$onInit = () => {
-
-                this.connected = AuthService.getCurrentUser();
+                this.connected = authService.getCurrentUser();
                 this.answers = this.question.answers;
 
                 this.myQuestion = false;
-                if (AuthService.getCurrentUser()) {
-                    if (this.question.userId == AuthService.getCurrentUser().id) {
+                if (authService.getCurrentUser()) {
+                    if (this.question.userId == authService.getCurrentUser().id) {
                         this.myQuestion = true;
                     }
                 }
-
                 this.question.answers.forEach((answer) => {
-                    if (AuthService.getCurrentUser()) {
-                        if (answer.userId == AuthService.getCurrentUser().id) {
+                    if (authService.getCurrentUser()) {
+                        if (answer.userId == authService.getCurrentUser().id) {
                             answer.myAnswer = true;
                         } else {
                             answer.myAnswer = false;
@@ -50,8 +49,8 @@ COMPNT
 
 
             this.voteQst = (questionid) => {
-                if (AuthService.getCurrentUser()) {
-                    var userid = AuthService.getCurrentUser().id;
+                if (authService.getCurrentUser()) {
+                    var userid = authService.getCurrentUser().id;
                     QuestionsService.voteQstExist(questionid, userid).then((response) => {
                         if (response.length == 0) {
 
@@ -77,8 +76,8 @@ COMPNT
             }
 
             this.voteAsw = (answer) => {
-                if (AuthService.getCurrentUser()) {
-                    var userid = AuthService.getCurrentUser().id;
+                if (authService.getCurrentUser()) {
+                    var userid = authService.getCurrentUser().id;
                     QuestionsService.voteAswExist(answer.id, userid).then((response) => {
 
 

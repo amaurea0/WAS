@@ -1,23 +1,23 @@
-'use strict';
-
-WEA.run(function (AuthService, $log, $state, $transitions) {
+WEA.run(function (authService, $log, $state, $transitions, $rootScope, $cookies) {
 
     // ui-router transitions
 
     $transitions.onBefore({}, (transition) => {
 
-      // Get the requested route
-      var to = transition.to();
+        // Get the requested route
+        var to = transition.to();
 
-      if (to.authenticate && !AuthService.isAuthenticated()) {
+        this.cookieUser = $cookies.get('id'); //je déclare mon cookie dans une variable pour pouvoir faire des conditions trql
+        this.cookieToken = $cookies.get('tokenSecure'); //je déclare mon cookie dans une variable pour pouvoir faire des conditions trql
 
-        // User isn’t authenticated, redirect to login page
-        $log.debug(to.url + ' need authentication');
+        if (to.authenticate && authService.VerificationConnection() == false) {
 
-        return transition.router.stateService.target("login", {
-          redirect: to.name
-        });
-      }
+            console.log("Aucun utilisateur");
+            $rootScope.oldRouteUser = to.name
+            console.log($rootScope.oldRouteUser);
+             $('#login').modal('open');
+            return transition.router.stateService.target("home", {});
+        }
     });
 
-  });
+});

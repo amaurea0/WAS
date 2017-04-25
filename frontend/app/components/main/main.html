@@ -1,11 +1,102 @@
 <div id="main">
+
+    <!-- Modal Structure -->
+    <div id="login" class="modal">
+        <div class="bloc_center">
+
+            <div class="row">
+                <div class="col s12">
+                    <ul tabs reload="allTabContentLoaded">
+                        <li class="tab col s6"><a class="active" href="#connexion">Connexion</a></li>
+                        <li class="tab col s6"><a href="#creation">Inscription</a></li>
+                    </ul>
+                </div>
+
+                <div id="connexion" class="col s12">
+                    <div ng-show="$ctrl.user.lenght < 5">
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="card-panel red darken-3">
+                                    <span class="white-text">
+                                    Ton pseudo ou ton mot de passe est invalide.
+                                 </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="mail" type="text" ng-model="$ctrl.email" class="validate">
+                            <label for="password">Adresse mail</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" ng-model="$ctrl.password" class="validate">
+                            <label for="password">Mot de passe</label>
+                        </div>
+                    </div>
+                    <center>
+                        <a class="waves-effect waves-light btn-large" ng-click="$ctrl.connection($ctrl.email,$ctrl.password)"><i class="material-icons right">cloud</i>Se connectés</a>
+                    </center>
+                </div>
+
+                <div id="creation" class="col s12">
+                    <form name="myForm2" ng-submit="$ctrl.submitCreation($ctrl.user)" novalidate>
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <input id="first_name" ng-model="$ctrl.user.nom" type="text" class="validate">
+                                        <label for="first_name">Nom</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input id="last_name" type="text" ng-model="$ctrl.user.prenom" class="validate">
+                                        <label for="last_name">Prenom</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <input id="email" type="text" ng-model="$ctrl.user.pseudo" class="validate">
+                                        <label for="email">Pseudo</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input id="password" type="password" ng-model="$ctrl.user.mdp" class="validate">
+                                        <label for="password">Mot de passe</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="email" type="email" ng-model="$ctrl.user.email" class="validate">
+                                        <label for="email">Adresse mail</label>
+
+                                    </div>
+                                    <div ng-show="$ctrl.user.email.toLowerCase().indexOf(('@gmail.com').toLowerCase()) == -1">
+                                        <center><small>Il te faut un gmail obligatoirement</small></center>
+                                    </div>
+                                </div>
+                                <center>
+                                    <button class="btn waves-effect waves-light" type="submit" name="action">Valider mon inscription
+                                    <i class="material-icons right">send</i>
+                                </button>
+                                </center>
+                            </form>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header>
 
         <!--Trigger du DropDown-button-->
 
         <ul id="administracion" class="dropdown-content" ng-init="$ctrl.rebindDropDowns()">
             <li>
-                <a ui-sref="login" ui-sref-active="select">Connection</a>
+                <a href="#login" class="loginpop">Connexion</a>
             </li>
             <li class="divider"></li>
             <li>
@@ -43,14 +134,16 @@
                         </li>
                         <!--<li ng-hide="ctrl.isAuthenticated"><a class="dropdown-button" data-activates="administracion"><i class="material-icons">face</i></a></li>-->
 
-                        <li id="loginBtn" ng-hide="ctrl.isAuthenticated"><a class="waves-effect waves-light btn" ui-sref="login" ui-sref-active="select">Connection</a></li>
-
-                        <li ng-if="ctrl.isAuthenticated">
+                        <!--<li id="loginBtn" ng-hide="ctrl.isAuthenticated"><a class="waves-effect waves-light btn" ui-sref="login" ui-sref-active="select">Connection</a></li>
+                                                <li ng-if="ctrl.isAuthenticated">
                             <a ui-sref="profile" ui-sref-active="select">
                                 <i class="material-icons">face</i>
                             </a>
                         </li>
-                        <li ng-if="ctrl.isAuthenticated"><a class="waves-effect waves-light btn" ng-click="ctrl.disconnect()">Disconnect</a></li>
+                        <li ng-if="ctrl.isAuthenticated"><a class="waves-effect waves-light btn" ng-click="ctrl.disconnect()">Disconnect</a></li>-->
+                        <li id="loginBtn" ng-show="$ctrl.cookieUser == null"><a class="waves-effect waves-light btn" ui-sref-active="select">Connection</a></li>
+                        <li ng-show="$ctrl.cookieUser != null"><a ui-sref="person({personId:$ctrl.cookieUser})" ui-sref-active="select"><i class="material-icons">face</i></a></li>
+                        <li ng-show="$ctrl.cookieUser != null"><a ng-click="$ctrl.deconnexion()" class="waves-effect waves-light btn" ui-sref-active="select">Disconnect</a></li>
 
                     </ul>
 
@@ -67,9 +160,7 @@
             </nav>
         </div>
     </header>
-    <ui-view info=$ctrl.info>
-    </ui-view>
-
+    <ui-view info=$ctrl.info></ui-view>
 
     <footer class="page-footer">
         <div class="container">
