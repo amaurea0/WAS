@@ -124,10 +124,10 @@
                     <li><a ui-sref="tips" ui-sref-active="select"><i class="material-icons">lightbulb_outline</i></a></li>
                     <li><a ui-sref="nuage" ui-sref-active="select"><i class="material-icons">pageview</i></a></li>
                     <!--<li ng-hide="ctrl.isAuthenticated"><a class="dropdown-button" data-activates="administracion"><i class="material-icons">face</i></a></li>-->
-                    <li id="loginBtn" ng-show="$ctrl.cookieUser == null"><a  class="loginpop" class="waves-effect waves-light btn" ui-sref-active="select">Connexion</a></li>
+                    <li id="loginBtn" ng-show="$ctrl.cookieUser == null"><a class="waves-effect waves-light btn" ui-sref-active="select">Connection</a></li>
 
                     <li ng-show="$ctrl.cookieUser != null"><a ui-sref="person({personId:$ctrl.cookieUser})" ui-sref-active="select"><i class="material-icons">face</i></a></li>
-                    <li ng-show="$ctrl.cookieUser != null"><a ng-click="$ctrl.deconnexion()" class="waves-effect waves-light btn" ui-sref-active="select">Déconnexion</a></li>
+                    <li ng-show="$ctrl.cookieUser != null"><a ng-click="$ctrl.deconnexion()" class="waves-effect waves-light btn" ui-sref-active="select">Disconnect</a></li>
 
                     </ul>
 
