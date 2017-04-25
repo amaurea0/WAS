@@ -29,7 +29,6 @@ COMPNT.component('jobsList', {
 
             this.getAllItems = () => {
                 JobService.getJobs().then((items) => {
-                    console.log(items);
                     this.jobs = items;
                 }).catch((err) => { });
             };
