@@ -29,7 +29,7 @@ COMPNT.component("answerPost", {
       }
 
       QuestionsService.postAnswer(new_answer).then((response) => {
-        console.log('POST :' + response + 'is posted');
+        console.log(response.data);
         $state.go('questionSpec', {
           idQuestion: currentId
         });

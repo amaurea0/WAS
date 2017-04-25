@@ -15,7 +15,7 @@ COMPNT
             post: '<'
         },
 
-        controller: ['AuthService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', function (AuthService, QuestionsService, $log, $state, $stateParams, $location, $timeout) {
+        controller: ['AuthService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', 'notify', function (AuthService, QuestionsService, $log, $state, $stateParams, $location, $timeout, notify) {
 
             this.currentPage = 1;
             this.pageSize = 3;
@@ -89,7 +89,7 @@ COMPNT
 
                 }
             }
-            
+
             this.voteAsw = (answer) => {
                 if (AuthService.getCurrentUser()) {
                     var userid = AuthService.getCurrentUser().id;
@@ -131,7 +131,6 @@ COMPNT
             this.editContentAnswer = (answer) => {
 
                 var currentId = this.answer.id;
-                console.log(currentId)
 
                 var new_content = {
                     "title": this.answer.title,
@@ -161,15 +160,31 @@ COMPNT
                     "questionId": this.question.id
                 }
 
+                var newAnswersCount = {
+                    "answersCount": this.question.answersCount + 1
+                }
+
                 QuestionsService.postAnswer(new_answer).then((response) => {
-                    console.log('POST :' + response + 'is posted');
                     $timeout($state.go('questionSpec', {
                         idQuestion: this.question.id,
                         post: false
                     }), 0);
+                    notify({
+                        message: 'Votre réponse a été posté !',
+                        duration: 2500,
+                        classes: 'green darken-1'
+                    })
                 }).catch((err) => {
-                    alert("ERROR :" + err);
+                    notify({
+                        message: "Votre réponse n'a pas été posté !",
+                        duration: 2500,
+                        classes: 'red darken-1'
+                    })
                 });
+
+                QuestionsService.updateContent(this.question.id, newAnswersCount).then((response) => {
+                    console.log("did it work ?");
+                }).catch((error) => {})
 
             }
 

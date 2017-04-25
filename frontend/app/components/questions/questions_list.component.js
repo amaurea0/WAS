@@ -16,7 +16,7 @@ COMPNT
       search: '@'
     },
 
-    controller: ['TaglinkService', '$state', '$stateParams', 'QuestionsService', function (TaglinkService, $state, $stateParams, QuestionsService) {
+    controller: ['TaglinkService', '$state', '$stateParams', 'QuestionsService', '$log', function (TaglinkService, $state, $stateParams, QuestionsService, $log) {
 
       this.tabsList = [{
           "view": "view1",

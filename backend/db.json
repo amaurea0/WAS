@@ -1,8 +1,9 @@
 {
-  "questions": [{
+  "questions": [
+    {
       "title": "How do JavaScript closures work?",
       "content": "How would you explain JavaScript closures to someone with a knowledge of the concepts they consist of (for example functions, variables and the like), but does not understand closures themselves?",
-      "nb_views": 78,
+      "nb_views": 87,
       "votes": 100,
       "date": "2017-04-08T01:47:18.815Z",
       "answersCount": 0,
@@ -22,7 +23,7 @@
     {
       "title": "How can I prevent SQL injection in PHP?",
       "content": "If user input is inserted without modification into an SQL query, then the application becomes vulnerable to SQL injection, like in the following example:",
-      "nb_views": 413,
+      "nb_views": 417,
       "votes": 900,
       "date": "2017-04-08T01:51:51.436Z",
       "answersCount": 2,
@@ -42,7 +43,7 @@
     {
       "title": "What does 'use strict' do in JavaScript, and what is the reasoning behind it?",
       "content": "Recently, I ran some of my JavaScript code through Crockford's JSLint, and it gave the following error:",
-      "nb_views": 26,
+      "nb_views": 27,
       "votes": 745,
       "date": "2017-04-08T09:25:09.366Z",
       "answersCount": 0,
@@ -108,9 +109,30 @@
       "answersCount": 2,
       "userId": 8,
       "id": 11
+    },
+    {
+      "title": "salut tout le monde",
+      "content": "<div><!--block--><strong>hello</strong></div>",
+      "nb_views": 5,
+      "votes": 0,
+      "date": "2017-04-25T14:32:05.211Z",
+      "answersCount": 0,
+      "userId": 8,
+      "id": 12
+    },
+    {
+      "title": "test notify",
+      "content": "<div><!--block-->salut les gens</div>",
+      "nb_views": 34,
+      "votes": 0,
+      "date": "2017-04-25T14:59:11.581Z",
+      "answersCount": 2,
+      "userId": 8,
+      "id": 13
     }
   ],
-  "users": [{
+  "users": [
+    {
       "email": "laetitiadervaux33@gmail.com",
       "pass": "laetPSW",
       "id": 1,
@@ -205,7 +227,8 @@
       "profile": "Salut, moi ca va aussi... hier, Prison Break, c'était pas mal. Si t'as un problème avec angular, j'peux t'aider: tu prends cette variable, tu la mets dans le truc là, et bâaaam ! Voilà ! hahah"
     }
   ],
-  "tags": [{
+  "tags": [
+    {
       "id": 1,
       "name": "Javascript"
     },
@@ -306,7 +329,8 @@
       "name": "Apache"
     }
   ],
-  "taglinks": [{
+  "taglinks": [
+    {
       "questionId": 1,
       "tagId": 1,
       "id": 1
@@ -582,7 +606,8 @@
       "id": 55
     }
   ],
-  "answers": [{
+  "answers": [
+    {
       "title": "Responsive div/container - Fixed Soze",
       "content": "utouytiut",
       "nb_views": 0,
@@ -923,143 +948,6 @@
       "id": 34
     },
     {
-      "title": "on va tester",
-      "content": "```ceci est du code```",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-24T12:36:55.483Z",
-      "userId": 8,
-      "questionId": 12,
-      "id": 32
-    },
-    {
-      "content": "test",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-24T12:37:15.126Z",
-      "userId": 8,
-      "questionId": 12,
-      "id": 33
-    },
-    {
-      "title": "test return carriage",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-24T12:41:47.713Z",
-      "userId": 8,
-      "questionId": 12,
-      "id": 34
-    },
-    {
-      "title": "coucou",
-      "content": "```\nceci est du code\n```",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-24T12:50:04.339Z",
-      "userId": 8,
-      "questionId": 12,
-      "id": 35
-    },
-    {
-      "title": "test deux",
-      "content": "si je commence à écrire\n\n### test titre 3\n\n```du code```",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-24T12:50:47.740Z",
-      "userId": 8,
-      "questionId": 12,
-      "id": 36
-    },
-    {
-      "title": "test final",
-      "content": "```\n   ceci est du code\n   ```",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-24T12:51:49.142Z",
-      "userId": 8,
-      "questionId": 12,
-      "id": 37
-    },
-    {
-      "content": "je veux te montrer un truc\n```bloc de code```",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-24T13:55:19.345Z",
-      "userId": 8,
-      "questionId": 17,
-      "id": 38
-    },
-    {
-      "title": "test get",
-      "content": "je suis une fonction\n   je fais plein de trucs cools\n   on verra\n\n## ceci est un titre",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-24T13:56:46.199Z",
-      "userId": 8,
-      "questionId": 17,
-      "id": 39
-    },
-    {
-      "title": "lkdsf",
-      "content": "`code block`",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-24T14:00:07.876Z",
-      "userId": 8,
-      "questionId": 17,
-      "id": 40
-    },
-    {
-      "title": "test",
-      "content": "## Markdown\n\n  **Code blocks**\n\n      This is <b>bold</b>\n\n  **Ampersands**\n\n  Star Trek & Star Wars",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-24T14:01:30.623Z",
-      "userId": 8,
-      "questionId": 17,
-      "id": 41
-    },
-    {
-      "title": "test final",
-      "content": "ceci est un bloc de code\n    je suis toujours une fonction",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-24T14:02:34.308Z",
-      "userId": 8,
-      "questionId": 17,
-      "id": 42
-    },
-    {
-      "title": "bmlabla",
-      "content": "**Code blocks**\n\n      This is <b>bold</b>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-24T14:03:10.169Z",
-      "userId": 8,
-      "questionId": 17,
-      "id": 43
-    },
-    {
-      "title": "julien",
-      "content": "This is <b>bold</b>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-24T14:06:06.906Z",
-      "userId": 8,
-      "questionId": 17,
-      "id": 44
-    },
-    {
-      "title": "coucou sacha",
-      "content": "<div><!--block-->This is&nbsp;<del>Goddbye World</del>&nbsp;!</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T12:15:06.255Z",
-      "userId": 8,
-      "questionId": 11,
-      "id": 45
-    },
-    {
       "title": "coucou Quitterie Benoite",
       "content": "<div><!--block--><em>c'est la teuf</em></div>",
       "nb_views": 0,
@@ -1148,9 +1036,140 @@
       "userId": 8,
       "questionId": 3,
       "id": 54
+    },
+    {
+      "title": "test notify answer",
+      "content": "<div><!--block-->salut les gens</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T14:59:32.870Z",
+      "userId": 8,
+      "questionId": 13,
+      "id": 55
+    },
+    {
+      "title": "test 2",
+      "content": "<div><!--block-->on verra bien<br><br></div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T15:00:15.852Z",
+      "userId": 8,
+      "questionId": 13,
+      "id": 56
+    },
+    {
+      "title": "test 3",
+      "content": "<div><!--block-->allo ?</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T15:01:03.813Z",
+      "userId": 8,
+      "questionId": 13,
+      "id": 57
+    },
+    {
+      "title": "salut",
+      "content": "<div><!--block-->hello</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T15:03:20.292Z",
+      "userId": 8,
+      "questionId": 13,
+      "id": 58
+    },
+    {
+      "title": "test bastien",
+      "content": "<div><!--block-->coucou maman</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T15:23:18.639Z",
+      "userId": 8,
+      "questionId": 13,
+      "id": 59
+    },
+    {
+      "title": "test",
+      "content": "<div><!--block-->hello</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T15:24:13.665Z",
+      "userId": 8,
+      "questionId": 13,
+      "id": 60
+    },
+    {
+      "title": "salut",
+      "content": "<div><!--block-->debuggage</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T15:25:56.399Z",
+      "userId": 8,
+      "questionId": 13,
+      "id": 61
+    },
+    {
+      "title": "salut",
+      "content": "<div><!--block-->hello world</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T15:28:11.697Z",
+      "userId": 8,
+      "questionId": 13,
+      "id": 62
+    },
+    {
+      "title": "fais chier",
+      "content": "<div><!--block-->fais chier</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T15:36:50.922Z",
+      "userId": 8,
+      "questionId": 13,
+      "id": 63
+    },
+    {
+      "title": "test",
+      "content": "<div><!--block-->test deux</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T15:37:42.305Z",
+      "userId": 8,
+      "questionId": 13,
+      "id": 64
+    },
+    {
+      "title": "on teste",
+      "content": "<div><!--block-->on teste</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T15:38:48.903Z",
+      "userId": 8,
+      "questionId": 13,
+      "id": 65
+    },
+    {
+      "title": "on teste",
+      "content": "<div><!--block-->on teste</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T15:43:12.040Z",
+      "userId": 8,
+      "questionId": 13,
+      "id": 66
+    },
+    {
+      "title": "nouvelle réponse",
+      "content": "<div><!--block-->Hello from the other side</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T15:43:41.310Z",
+      "userId": 8,
+      "questionId": 13,
+      "id": 67
     }
   ],
-  "tips": [{
+  "tips": [
+    {
       "id": 0,
       "content": "on pense à bien indenter son code !",
       "url": "http://mrbool.com/importance-of-code-indentation/29079"
@@ -1186,7 +1205,8 @@
       "id": 10
     }
   ],
-  "jobs": [{
+  "jobs": [
+    {
       "title": "Developer Frontend",
       "content": "Afin de réparer le réacteur de notre véhicule principal, recherchons personne motivée avec quelques connaissances en Angular 2 et spacio-mécanique thermonucléaire",
       "place": "Alpha du centaure",
@@ -1292,7 +1312,8 @@
       "id": 17
     }
   ],
-  "votes_question": [{
+  "votes_question": [
+    {
       "userId": 1,
       "questionId": 1,
       "id": 1
@@ -1313,7 +1334,8 @@
       "id": 4
     }
   ],
-  "votes_answer": [{
+  "votes_answer": [
+    {
       "userId": 1,
       "answerId": 1,
       "id": 1
