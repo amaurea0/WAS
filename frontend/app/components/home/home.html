@@ -42,7 +42,7 @@
                 <!-- <span class="answers" ng-bind="question.answers"></span>-->
                 <span>{{question.answers.length}} Réponses</span>
                 <span>{{question.date | date:"MM/dd/yyyy"}}</span>
-                <p ng-bind="question.content"></p>
+                <p ng-bind-html="question.content"></p>
                 <span id="questionsTags">{{question.tag}}</span>
                 <div ng-bind="question.tag"></div>
               </a>
