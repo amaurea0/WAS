@@ -10,8 +10,8 @@ COMPNT.component("answerPost", {
   controller: ['QuestionsService', 'AuthService', '$scope', '$state', 'notify', function (QuestionsService, AuthService, $scope, $state, notify) {
 
     var currentId = $scope.$parent.$ctrl.question.id;
-    var answers = $scope.$parent.$resolve.question.answers;
-    console.log($scope.$parent);
+    var answers = $scope.$parent.$ctrl.question.answers;
+    var newCount = $scope.$parent.$ctrl.question.answersCount + 1;
 
     this.saveAnswer = () => {
       var new_answer = {
@@ -25,7 +25,7 @@ COMPNT.component("answerPost", {
       }
 
       var newAnswersCount = {
-        "answersCount": $scope.$parent.$ctrl.question.answersCount
+        "answersCount": newCount
       }
 
       QuestionsService.postAnswer(new_answer).then((response) => {

@@ -4,9 +4,8 @@
         <a class="btn btn-floating pulse orange" ui-sref="questionPost" ui-sref-active="select"><i class="material-icons">add</i></a>
     </div>
 
-    <input id="search" class="form-control" placeholder="Search..." ng-model="$ctrl.model.query" />
+    <input id="search" class="form-control" placeholder="Search..." ng-model="q" />
     <div class="question flex">
-
         <div class="counters view">
             <div ng-bind="$ctrl.question.nb_views + 1"></div>
             <div ng-bind="$ctrl.question.votes" ng-click="$ctrl.voteQst($ctrl.question.id)"></div>
@@ -22,14 +21,15 @@
         </div>
     </div>
 
-    <button class="waves-effect waves-light btn orange lighten-2" ui-sref="questionSpec({idQuestion : $ctrl.question.id, post: true})" ng-disabled="!$ctrl.connected">
+    <button class="waves-effect waves-light btn orange lighten-2" ui-sref="questionSpec({idQuestion : $ctrl.question.id, post: true})"
+        ng-disabled="!$ctrl.connected">
         <i class="material-icons left">add</i>New Answer</button>
 
     <div>
 
         <div ng-if="$ctrl.edition" class="bloc_center">
             <h2>Edit response</h2>
-            <form  name="myForm1" class="formulaire" ng-submit="$ctrl.editContentAnswer($ctrl.answer)" novalidate>
+            <form name="myForm1" class="formulaire" ng-submit="$ctrl.editContentAnswer($ctrl.answer)" novalidate>
                 <div class="form-group">
                     <label for="title">Titre réponse</label>
                     <input type="text" class="form-control" id="title" required ng-model="$ctrl.answer.title" />
@@ -40,7 +40,7 @@
                 </div>
                 <div class="item-actions">
 
-                    <input class="btn btn-success" type="submit" value="Valider" ng-disabled="myForm1.$invalid"/>
+                    <input class="btn btn-success" type="submit" value="Valider" ng-disabled="myForm1.$invalid" />
 
                 </div>
             </form>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="item-actions">
 
-                    <input class="btn btn-success" type="submit" value="Valider" ng-disabled="myForm2.$invalid"/>
+                    <input class="btn btn-success" type="submit" value="Valider" ng-disabled="myForm2.$invalid" />
 
                 </div>
             </form>
@@ -76,10 +76,23 @@
 
                     <span>{{answer.date | date:"MM/dd/yyyy"}}</span>
                     <p ng-bind-html="answer.content"></p>
+                    <div id="answer" dir-paginate="answer in $ctrl.question.answers | filter : q | itemsPerPage: $ctrl.pageSize" current-page="$ctrl.currentPage">
+
+                        <div class="counters view ">
+                            <div ng-bind="answer.votes "></div>
+                        </div>
+                        <div class="contenu ">
+                            <h3 ng-bind="answer.title "></h3>
+                            <!--<button class="lien " ui-sref="editPost({postId : answer.id}) ">edit</button>-->
+                            <span>{{answer.date | date:"MM/dd/yyyy "}}</span>
+                            <p ng-bind-html="answer.content "></p>
+                        </div>
+
+                    </div>
                 </div>
 
+                <dir-pagination-controls boundary-links="true " on-page-change="$ctrl.pageChangeHandler(newPageNumber)
+                        " template-url="node_modules/angular-utils-pagination/dirPagination.tpl.html "></dir-pagination-controls>
             </div>
-        </div>
-    </div>
 
-</div>
+        </div>
