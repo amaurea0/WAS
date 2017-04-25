@@ -4,7 +4,7 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 
         .state('home', {
-            url: '',
+            url: '/',
             component: 'home',
             resolve: {}
         })
@@ -68,7 +68,7 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
 
         .state({
             name: 'questionPost',
-            url: '/questionPost',
+            url: '/question_post',
             component: 'questionPost',
             authenticate: true,
             resolve: {}
@@ -151,7 +151,7 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
 
         .state({
             name: 'tips.postTip',
-            url: '/post',
+            url: '/post_tip',
             component: 'postTip',
             authenticate: true,
             resolve: {}
@@ -180,6 +180,6 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
             }
         });
 
-
+    $urlRouterProvider.otherwise('/');
 
 });
