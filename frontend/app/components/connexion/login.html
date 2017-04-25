@@ -19,9 +19,9 @@
                     <input name="email" ng-model="$ctrl.user.email" placeholder="Adresse mail" type="email" class="form-control" required />
                 </div>
                 <div class="form-group">
-                    <input name="password" ng-model="$ctrl.user.password" placeholder="Mot de passe" type="password" class="form-control" required />
+                    <input name="password" ng-model="$ctrl.user.password" placeholder="Mot de passe" type="password" class="form-control" required/>
                 </div>
-                <hr />
+                <br />
                 <button class="btn btn-primary" type="submit" ng-disabled="myForm1.$invalid">Validate</button>
             </form>
         </div>
@@ -32,7 +32,7 @@
                     {{$ctrl.errorMessage2}}
                 </div>
                 <div class="form-group">
-                    <input name="pseudo" ng-model=" $ctrl.user.pseudo" placeholder="Pseudo" type="text" class="form-control" required ng-minlength="5" />
+                    <input name="pseudo" ng-model=" $ctrl.user.pseudo" placeholder="Pseudo" type="text" class="form-control" required ng-minlength="3" />
                     <span ng-show="myForm2.pseudo.$error.minlength" class="error">Pseudo is too short </span>
                 </div>
                 <div class="form-group">
@@ -40,11 +40,11 @@
                     <span ng-show="myForm2.$error.email" class="error">Email is non valid</span>
                 </div>
                 <div class="form-group">
-                    <input name="password" ng-model="$ctrl.user.password" placeholder="Mot de passe" type="password" class="form-control" required ng-minlength="8"
-                    />
+                    <input name="password" ng-model="$ctrl.user.password" placeholder="Mot de passe" type="password" class="form-control" required
+                        ng-minlength="4" />
                     <span ng-show="myForm2.password.$error.minlength" class="error">Password is too short </span>
                 </div>
-                <hr />
+                <br />
                 <button class="btn btn-primary" type="submit" ng-disabled="myForm2.$invalid">Validate</button>
             </form>
         </div>
