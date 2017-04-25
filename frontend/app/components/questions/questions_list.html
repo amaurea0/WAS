@@ -43,7 +43,7 @@
           </div>
 
           <div class="contenu">
-            <a ui-sref="questionSpec({idQuestion : question.id})">
+            <a ng-click="$ctrl.countViews(question.id)" ui-sref="questionSpec({idQuestion : question.id})">
 
               <h3 ng-bind="question.title"></h3>
               <!-- <span class="answers" ng-bind="question.answers"></span>-->

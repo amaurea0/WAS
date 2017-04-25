@@ -131,6 +131,8 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         var defer = $q.defer();
 
         $http.patch(QST_URL + '/' + question_id, paramView).then((response) => {
+            console.log(response.data.nb_views)
+            console.log(response.data)
             defer.resolve(response.data);
         }).catch((err) => {
             $log.debug(`SVC: ERROR!!! ${err}`);

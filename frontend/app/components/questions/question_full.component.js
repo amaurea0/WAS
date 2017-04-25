@@ -18,9 +18,6 @@ COMPNT
         controller: ['AuthService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', function (AuthService, QuestionsService, $log, $state, $stateParams, $location, $timeout) {
             this.$onInit = () => {
 
-                var updatedCount = {
-                    "nb_views": this.question.nb_views + 1
-                }
                 this.myQuestion = false;
                 if (AuthService.getCurrentUser()) {
                     if (this.question.userId == AuthService.getCurrentUser().id) {
@@ -38,14 +35,7 @@ COMPNT
                     }
                 });
 
-                QuestionsService.viewQuestion(this.question.id, updatedCount).then((response) => {
-                    $log.log('views updated');
-                    QuestionsService.getSpecificQuestion(this.question.id).then((response) => {}).catch((error) => {
-                        $log.error("couldn't retrieve updated views");
-                    })
-                }).catch((error) => {
-                    $log.error('en fait non');
-                });
+
             };
 
             this.voteQst = (questionid) => {
