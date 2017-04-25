@@ -10,7 +10,7 @@
         </div>
 
 
-        <div class="question" ng-repeat="job in $ctrl.jobs | filter : $ctrl.query" class="collection">
+        <div class="question flex" ng-repeat="job in $ctrl.jobs | filter : $ctrl.query" class="collection">
             <div class="counters flexJob" >
                 <div>
                     <a class="material-icons #ffe0b2 orange-text lighten-4" href="mailto:{{job.email}}">email</a>

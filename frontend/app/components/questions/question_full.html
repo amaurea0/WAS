@@ -5,7 +5,7 @@
     </div>
 
     <input id="search" class="form-control" placeholder="Search..." ng-model="$ctrl.model.query" />
-    <div class="question">
+    <div class="question flex">
 
         <div class="counters view">
             <div ng-bind="$ctrl.question.nb_views + 1"></div>
@@ -65,7 +65,7 @@
         </div>
 
         <div ng-if="$ctrl.question.answers.length > 0">
-            <div id="answer" ng-repeat="answer in $ctrl.question.answers | filter : $ctrl.model.query">
+            <div id="answer" class="question flex" ng-repeat="answer in $ctrl.question.answers | filter : $ctrl.model.query">
 
                 <div class="counters view">
                     <div ng-bind="answer.votes" ng-click="$ctrl.voteAsw(answer)"></div>

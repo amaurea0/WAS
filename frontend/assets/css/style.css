@@ -203,18 +203,14 @@ i.icon-orange {
 .tabs .indicator {
     background-color: #1fa597 !important;
 }
-
-.question,
-#answer {
-    background-color: white;
+.flex{
     display: flex;
+}
+.question {
+    background-color: white;
     color: black;
     margin: 0;
     padding-top: 15px;
-}
-
-.question {
-    background-color: white;
     border-bottom: 1px dotted #ffdea5;
 }
 
@@ -271,7 +267,10 @@ i.icon-orange {
     color: #7b7b7b;
     font-size: 1em;
 }
-
+.flex_direction{
+    display: flex;
+    justify-content: space-between;
+}
 .lien {
     background-color: #80cbc4;
     border-radius: 20px;

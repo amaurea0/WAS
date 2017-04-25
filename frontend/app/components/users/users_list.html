@@ -10,7 +10,7 @@
         </div>
 
 
-        <div class="question" ng-repeat="user in $ctrl.users | filter : $ctrl.model.query" class="collection">
+        <div class="question flex" ng-repeat="user in $ctrl.users | filter : $ctrl.model.query" class="collection">
             <div class="counters">
                 <div><a class="material-icons #ffe0b2 orange-text lighten-4" href="mailto:{{user.email}}">email</a></div>
             </div>
