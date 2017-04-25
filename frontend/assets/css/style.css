@@ -1,9 +1,9 @@
 body {
 
     background-color: #F1F1F1;
-//    display: flex;
-//    min-height: 100vh;
-//    flex-direction: column;
+/*    display: flex;
+    min-height: 100vh;
+    flex-direction: column;*/
 
 }
 
@@ -16,7 +16,7 @@ body {
     font-size: 1.3em;
 }
 
-
+/*  ju
 nav .nav-wrapper {
     position: -webkit-sticky;
     position: -moz-sticky;
@@ -84,7 +84,7 @@ nav .nav-wrapper {
 #setting::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.692);
     border: 1px solid #555555;
-}
+}*/
 
 /* titraille globale*/
 h1,
