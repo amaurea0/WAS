@@ -10,7 +10,7 @@
         </div>
     </div>
 
-    <div class="question flex collection" dir-paginate="job in $ctrl.jobs | filter:q | filter : $ctrl.model.query | itemsPerPage: 10"
+    <div class="question flex collection" dir-paginate="job in $ctrl.jobs | filter:q | filter : $ctrl.model.query | itemsPerPage: 4"
         current-page="$ctrl.currentPage">
 
         <!--<div id="question" ng-repeat="job in $ctrl.jobs | filter : $ctrl.model.query" class="collection">-->
@@ -32,7 +32,7 @@
                         <h3 class="title" ng-bind="job.title"></h3>
                         <p>{{job.content}}</p>
                         <!--<a class="waves-effect waves-light btn-large" href="{{job.annonce}}" target="_blank" value"Ad link"></a>-->
-                        <button ng-if="$ctrl.job.annonce" class="#1de9b6 teal-text accent-3" href="{{job.annonce}}" target="_blank">Ad Link</button>
+                        <button ng-if="job.annonce" class="#1de9b6 teal-text accent-3" href="{{job.annonce}}" target="_blank">Ad Link</button>
                     </a>
                 </div>
             <!--</div>-->

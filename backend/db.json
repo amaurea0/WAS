@@ -39,7 +39,7 @@
     {
       "title": "What does 'use strict' do in JavaScript, and what is the reasoning behind it?",
       "content": "Recently, I ran some of my JavaScript code through Crockford's JSLint, and it gave the following error:",
-      "nb_views": 26,
+      "nb_views": 27,
       "votes": 745,
       "date": "2017-02-21T09:25:09.366Z",
       "userId": 5,
