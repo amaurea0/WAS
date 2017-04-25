@@ -99,7 +99,6 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
                     return $stateParams.edition;
                 },
                 post: function ($stateParams) {
-                    console.log($stateParams.post)
                     return $stateParams.post;
                 },
                 answer: function ($stateParams, QuestionsService) {
