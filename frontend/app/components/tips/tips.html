@@ -16,10 +16,10 @@
         <div ng-if="$ctrl.tips.length > 0">
             <div class="question" ng-repeat="tip in $ctrl.tips | filter : $ctrl.query">
                 <div class="flex_direction">
-                    <p class="item">
-                        <span><i class="tiny material-icons orange-text">subdirectory_arrow_right</i><span ng-bind="tip.content"></span></span>
+                    <p>
+                        <i class="tiny material-icons orange-text">subdirectory_arrow_right</i><span ng-bind="tip.content"></span>
                     </p>
-                    <p class="item">
+                    <p>
                         <a target="_blank" href="{{tip.url}}"><span class="lien">link</span></a>
                     </p>
                 </div>
