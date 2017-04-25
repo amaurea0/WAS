@@ -87,7 +87,8 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
             component: 'questionFull',
             params: {
                 answer: null,
-                edition: null
+                edition: null,
+                post: null
             },
             resolve: {
                 question: function ($stateParams, QuestionsService) {
@@ -96,6 +97,10 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
                 },
                 edition: function ($stateParams) {
                     return $stateParams.edition;
+                },
+                post: function ($stateParams) {
+                    console.log($stateParams.post)
+                    return $stateParams.post;
                 },
                 answer: function ($stateParams, QuestionsService) {
                     if ($stateParams.answer) {

@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <a class="waves-effect waves-light btn orange lighten-2" ui-sref="questionSpec.postAnswer">
+    <a class="waves-effect waves-light btn orange lighten-2" ui-sref="questionSpec({idQuestion : $ctrl.question.id, post: true})">
         <i class="material-icons left">add</i>New Answer</a>
 
     <div>
@@ -32,6 +32,24 @@
             <form class="formulaire" ng-submit="$ctrl.editContentAnswer($ctrl.answer)" novalidate>
                 <div class="form-group">
                     <label for="title">Titre réponse</label>
+                    <input type="text" class="form-control" id="title" ng-model="$ctrl.answer.title" />
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <input type="text" class="form-control" id="content" ng-model="$ctrl.answer.content" />
+                </div>
+                <div class="item-actions">
+
+                    <input class="btn btn-success" type="submit" value="Valider" />
+
+                </div>
+            </form>
+        </div>
+        <div ng-if="$ctrl.post" class="bloc_center">
+            <h2>Post a new answer</h2>
+            <form class="formulaire" ng-submit="$ctrl.saveAnswer($ctrl.answer)" novalidate>
+                <div class="form-group">
+                    <label for="title">Title</label>
                     <input type="text" class="form-control" id="title" ng-model="$ctrl.answer.title" />
                 </div>
                 <div class="form-group">
@@ -63,5 +81,5 @@
             </div>
         </div>
     </div>
-    
+
 </div>

@@ -11,7 +11,8 @@ COMPNT
         bindings: {
             question: '<',
             edition: '<',
-            answer: '<'
+            answer: '<',
+            post: '<'
         },
 
         controller: ['AuthService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', function (AuthService, QuestionsService, $log, $state, $stateParams, $location, $timeout) {
@@ -127,12 +128,33 @@ COMPNT
                         idQuestion: this.question.id,
                         edition: false
                     }), 0);
-                    this.edition = false;
-
 
                 }).catch((err) => {
                     alert("ERROR :" + err);
                 })
+            }
+
+            this.saveAnswer = () => {
+                var new_answer = {
+                    "title": this.answer.title,
+                    "content": this.answer.content,
+                    "nb_views": 0,
+                    "votes": 0,
+                    "date": new Date(),
+                    "userId": AuthService.getCurrentUser().id,
+                    "questionId": this.question.id
+                }
+
+                QuestionsService.postAnswer(new_answer).then((response) => {
+                    console.log('POST :' + response + 'is posted');
+                    $timeout($state.go('questionSpec', {
+                        idQuestion: this.question.id,
+                        post: false
+                    }), 0);
+                }).catch((err) => {
+                    alert("ERROR :" + err);
+                });
+
             }
 
         }]
