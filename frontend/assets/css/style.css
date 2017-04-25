@@ -80,8 +80,8 @@ h1 {
 /*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
 
 li {
-    display: flex;
-    direction: row;
+/*    display: flex;
+    direction: row; */
     color: #455a64;
 }
 
@@ -642,9 +642,7 @@ p {
     font-size: inherit;
 }
 
-footer.page-footer {
-    margin: 0;
-}
+
 
 
 /* questions */

@@ -129,6 +129,16 @@
       "answersCount": 2,
       "userId": 8,
       "id": 13
+    },
+    {
+      "title": "sdfferfze",
+      "content": "<div><!--block-->test</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T17:22:52.010Z",
+      "answersCount": 0,
+      "userId": 1,
+      "id": 14
     }
   ],
   "users": [
