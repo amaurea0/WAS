@@ -28,7 +28,7 @@
         <div class="icon-block">
           <h2 class="center brown-text"><i class="material-icons">remove_red_eye</i></h2>
           <h5 class="center"> LAST QUESTIONS</h5>
-          <div class="question" ng-repeat="question in $ctrl.questions">
+          <div class="question flex" ng-repeat="question in $ctrl.questions">
 
             <div class="counters view">
               <div ng-bind="question.nb_views"></div>
@@ -42,7 +42,7 @@
                 <!-- <span class="answers" ng-bind="question.answers"></span>-->
                 <span>{{question.answers.length}} Réponses</span>
                 <span>{{question.date | date:"MM/dd/yyyy"}}</span>
-                <p ng-bind="question.content"></p>
+                <p ng-bind-html="question.content"></p>
                 <span id="questionsTags">{{question.tag}}</span>
                 <div ng-bind="question.tag"></div>
               </a>
@@ -94,7 +94,7 @@
       <div class="col s12 center">
         <h3><i class="mdi-content-send brown-text"></i></h3>
         <h4>Last jobs</h4>
-        <div class="question" ng-repeat="job in $ctrl.jobs">
+        <div class="question flex" ng-repeat="job in $ctrl.jobs">
 
           <div class="counters" class="flexJob">
             <div>

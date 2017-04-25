@@ -98,7 +98,7 @@ COMPNT
         QuestionsService.getQuestionId(id).then((response) => {
           updatedCount.nb_views = response[0].nb_views + 1
 
-          QuestionsService.viewQuestion(id, updatedCount).then((response) => {
+          QuestionsService.updateContent(id, updatedCount).then((response) => {
             $log.log('views updated');
           }).catch((error) => {});
 

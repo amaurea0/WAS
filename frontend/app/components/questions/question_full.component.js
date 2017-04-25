@@ -29,10 +29,6 @@ COMPNT
                 this.connected = AuthService.getCurrentUser();
                 this.answers = this.question.answers;
 
-                var updatedCount = {
-                    "nb_views": this.question.nb_views + 1
-                }
-
                 this.myQuestion = false;
                 if (AuthService.getCurrentUser()) {
                     if (this.question.userId == AuthService.getCurrentUser().id) {
@@ -50,16 +46,6 @@ COMPNT
                     };
                 })
 
-                QuestionsService.updateContent(this.question.id, updatedCount).then((response) => {
-                    $log.log('ca a marché !');
-                    QuestionsService.getSpecificQuestion(this.question.id).then((response) => {
-                        $log.log(response.nb_views);
-                    }).catch((error) => {
-                        $log.error("couldn't retrieve updated views");
-                    })
-                }).catch((error) => {
-                    $log.error('en fait non');
-                });
             }
 
 
