@@ -23,7 +23,7 @@
     </div>
 
     <button class="waves-effect waves-light btn orange lighten-2" ui-sref="questionSpec({idQuestion : $ctrl.question.id, post: true})"
-        ng-disabled="!$ctrl.connected">
+        ng-disabled="$ctrl.connected">
         <i class="material-icons left">add</i>New Answer
         </button>
 
