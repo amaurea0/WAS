@@ -12,8 +12,7 @@ COMPNT
             question: '<',
             edition: '<',
             answer: '<',
-            postAnswer: '<',
-            postComment: '<'
+            postAnswer: '<'
         },
 
         controller: ['authService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', 'notify', function (authService, QuestionsService, $log, $state, $stateParams, $location, $timeout, notify) {
@@ -91,12 +90,12 @@ COMPNT
                             QuestionsService.updateContent(this.question.id, updatedVote).then((rsp) => {
                                 $log.log("vote update");
                                 this.question.votes = rsp.votes;
-                            }).catch((error) => { });
+                            }).catch((error) => {});
 
-                            QuestionsService.postVoteQuestionUser(votes_question).then((rsp) => { }).catch((error) => { });
+                            QuestionsService.postVoteQuestionUser(votes_question).then((rsp) => {}).catch((error) => {});
 
                         }
-                    }).catch((error) => { })
+                    }).catch((error) => {})
 
                 }
             }
@@ -130,12 +129,12 @@ COMPNT
                                     }
                                 }
                                 this.question.answers[index].votes = rsp.votes;
-                            }).catch((error) => { });
+                            }).catch((error) => {});
 
-                            QuestionsService.postVoteAnswerUser(votes_answer).then((rsp) => { }).catch((error) => { });
+                            QuestionsService.postVoteAnswerUser(votes_answer).then((rsp) => {}).catch((error) => {});
 
                         }
-                    }).catch((error) => { })
+                    }).catch((error) => {})
 
                 }
             }
@@ -178,7 +177,7 @@ COMPNT
 
                 QuestionsService.updateContent(this.question.id, newAnswersCount).then((response) => {
                     console.log("did it work ?");
-                }).catch((error) => { })
+                }).catch((error) => {})
 
                 QuestionsService.postAnswer(new_answer).then((response) => {
                     notify({
@@ -201,15 +200,21 @@ COMPNT
             }
 
             // poster un nouveau commentaire
-            this.saveComment = () => {
-                var new_comment = { 
+            this.saveComment = (answerid) => {
+                var new_comment = {
                     "content": this.comment.content,
                     "date": new Date(),
-
-                    "answerId": this.question.id
+                    "answerId": answerid,
+                    "userId": authService.getCurrentUser().id
                 }
 
-                 QuestionsService.postComment(new_comment).then((response) => {
+                this.question.answers.forEach((answer) => {
+                    if(answer.id == answerid) {
+                        answer.coms.push(new_comment);
+                    }
+                })
+
+                QuestionsService.postComment(new_comment).then((response) => {
                     notify({
                         message: 'Votre réponse a été posté !',
                         duration: 2500,
@@ -223,12 +228,13 @@ COMPNT
                     })
                 });
 
-                $state.go('questionSpec', {
-                    idQuestion: this.question.id,
-                    postComment: false
-                })
+                // $state.go('questionSpec', {
+                //     idQuestion: this.question.id,
+                //     postComment: false
+                // })
 
             }
+
 
 
         }]

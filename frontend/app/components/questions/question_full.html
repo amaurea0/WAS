@@ -90,40 +90,38 @@
                 </div>
             </div>
 
+            <!-- bouton poster des commentaires-->
+            <button class="waves-effect waves-light btn grey lighten-2" ng-click="postComment = true" ng-disabled="!$ctrl.connected"><i class="material-icons left">add</i>New Comment</button>
+
+            <!--bouton affichage commentaires-->
+            <button class="waves-effect waves-light btn grey lighten-1" ng-click="">
+                    <i class="material-icons left">add</i>Comments</button>
+
             <!-- commentaires-->
             <!-- formulaire des commentaires-->
-            <div ng-if="$ctrl.postComment" class="bloc_center">
+            <div ng-show="postComment" class="bloc_center">
                 <h2>Post a new comment</h2>
-                <form name="myForm3" class="formulaire" ng-submit="$ctrl.saveComment ($ctrl.comment)" novalidate>
+                <form name="myForm3" class="formulaire" ng-submit="$ctrl.saveComment(answer.id)" novalidate>
                     <div class="form-group">
                         <label for="content">Content</label>
                         <textarea class="form-control" id="content" required ng-model="$ctrl.comment.content"></textarea>
 
                     </div>
                     <div class="item-actions">
-                        <input class="btn btn-success" type="submit" value="Valider" ng-disabled="myForm3.$invalid" />
+                        <input class="btn btn-success" ng-click="postComment = false" type="submit" value="Valider" ng-disabled="myForm3.$invalid"
+                        />
                     </div>
                 </form>
             </div>
-
-            <!-- bouton poster des commentaires-->
-            <button class="waves-effect waves-light btn grey lighten-2" ui-sref="questionSpec({idQuestion : $ctrl.question.id, postComment: true})"
-                ng-disabled="!$ctrl.connected"><i class="material-icons left">add</i>New Comment</button>
-
-            <!--bouton affichage commentaires-->
-            <button class="waves-effect waves-light btn grey lighten-1" ng-click="">
-                    <i class="material-icons left">add</i>Comments</button>
-
-                <!--display comments-->
-                <div id="answer">
-                    <div ng-if="answer.coms.length > 0">
-                        <div class="comment" ng-repeat="comment in answer.coms">
-                            <p ng-bind="comment.content"></p>
-                            <span>{{comment.date | date:"MM/dd/yyyy"}}</span>by<span>{{comment.pseudo.userId}}</span>
-
-                        </div>
+            <!--display comments-->
+            <div id="answer">
+                <div ng-if="answer.coms.length > 0">
+                    <div class="comment" ng-repeat="comment in answer.coms">
+                        <p ng-bind="comment.content"></p>
+                        <span>{{comment.date | date:"MM/dd/yyyy"}}</span>by<span>{{comment.pseudo.userId}}</span>
                     </div>
                 </div>
+            </div>
         </div>
 
 

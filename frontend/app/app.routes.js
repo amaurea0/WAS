@@ -106,7 +106,6 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
                     if ($stateParams.answer) {
                         return QuestionsService.getSpecificAnswer($stateParams.answer);
                     }
-                
                 },
                 postComment: function ($stateParams) {
                     return $stateParams.postComment;
