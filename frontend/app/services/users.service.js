@@ -70,6 +70,20 @@ SERVICES.service('UsersService', ['$http', '$log', '$q',
             });
             return deferred.promise;
         }
+
+        this.getUserQuestions = (userId) => {
+            var defer = $q.defer();
+
+            $http.get('http://127.0.0.1:3000/users/' + userId + '?_embed=questions').then((response) => {
+                defer.resolve(response.data);
+            }).catch((error) => {
+                defer.reject(error);
+            });
+
+            return defer.promise;
+        }
+
+
         this.userConnect = (email, mdp) => {
             return $http.get('http://127.0.0.1:3000/users?email=' + email + '&pass=' + mdp + '');
         };

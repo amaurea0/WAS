@@ -140,7 +140,6 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
     };
 
     this.updateContentAnswer = (id, content) => {
-
         var defer = $q.defer();
 
         $http.patch(ASW_URL + '/' + id, content).then((response) => {

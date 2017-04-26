@@ -15,7 +15,7 @@ COMPNT
             postAnswer: '<'
         },
 
-        controller: ['authService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', 'notify', function (authService, QuestionsService, $log, $state, $stateParams, $location, $timeout, notify) {
+        controller: ['authService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', 'notify', '$scope', function (authService, QuestionsService, $log, $state, $stateParams, $location, $timeout, notify, $scope) {
 
             this.currentPage = 1;
             this.pageSize = 3;
@@ -33,6 +33,9 @@ COMPNT
                 if (authService.getCurrentUser()) {
                     if (this.question.userId == authService.getCurrentUser().id) {
                         this.myQuestion = true;
+                        QuestionsService.updateContent(this.question.id, {
+                            "answersCount": 0
+                        });
                     }
                     QuestionsService.getIfMyVotedQuestion(this.question.id, authService.getCurrentUser().id).then((rsp) => {
                         if (rsp.length > 0) {
@@ -87,6 +90,7 @@ COMPNT
                     }
                 })
                 this.answers.splice(this.answers.indexOf(this.bestanswer), 1);
+
             }
 
             this.bestAnswer = (answer) => {
@@ -214,7 +218,7 @@ COMPNT
                         message: 'Votre réponse a été posté !',
                         duration: 2500,
                         classes: 'green darken-1'
-                    })
+                    });
                 }).catch((err) => {
                     notify({
                         message: "Votre réponse n'a pas été posté !",
@@ -223,11 +227,14 @@ COMPNT
                     })
                 });
 
+                this.question.answers.push(new_answer);
+                
                 $state.go('questionSpec', {
                     idQuestion: this.question.id,
                     postAnswer: false
                 })
             }
+
 
             // poster un nouveau commentaire
             this.saveComment = (answerid) => {
@@ -262,7 +269,6 @@ COMPNT
                 //     idQuestion: this.question.id,
                 //     postComment: false
                 // })
-
             }
 
 

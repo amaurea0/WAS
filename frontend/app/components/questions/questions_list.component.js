@@ -59,7 +59,7 @@ COMPNT
 
       };
 
-      this.pageChangeHandler = function (num) {
+      this.pageChangeHandler = (num) => {
         console.log('going to page ' + num);
       };
 

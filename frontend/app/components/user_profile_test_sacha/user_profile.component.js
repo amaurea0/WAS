@@ -41,7 +41,9 @@ COMPNT
 
         $timeout(function () {
           $state.transitionTo($state.current, $stateParams, {
-            reload: true, inherit: false, notify: true
+            reload: true,
+            inherit: false,
+            notify: true
           });
         }, 0);
       }
@@ -65,6 +67,8 @@ COMPNT
         this.getQuestion();
         this.cookieUser = $cookies.get('id'); //je déclare mon cookie dans une variable pour pouvoir faire des conditions trql
         this.cookieToken = $cookies.get('tokenSecure'); //je déclare mon cookie dans une variable pour pouvoir faire des conditions trql
+        this.uncheckedAnswers = [];
+
         function ajax() {
           $('.modal').modal();
         }
@@ -72,7 +76,21 @@ COMPNT
         UsersService.getPerson(this.cookieUser);
         ajax()
 
+        this.getNewAnswers(this.cookieUser);
+
       };
+
+      this.getNewAnswers = (userId) => {
+        UsersService.getUserQuestions(userId).then((items) => {
+          for (let i = 0; i < items.questions.length; i++) {
+            if (items.questions[i].answersCount != 0) {
+              this.uncheckedAnswers.push(items.questions[i])
+            }
+          }
+          console.log(this.uncheckedAnswers);
+        }).catch((error) => {})
+      }
+
 
     }]
   });
