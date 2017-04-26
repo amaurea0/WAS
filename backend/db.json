@@ -23,8 +23,8 @@
     {
       "title": "How can I prevent SQL injection in PHP?",
       "content": "If user input is inserted without modification into an SQL query, then the application becomes vulnerable to SQL injection, like in the following example:",
-      "nb_views": 424,
-      "votes": 901,
+      "nb_views": 420,
+      "votes": 900,
       "date": "2017-04-08T01:51:51.436Z",
       "answersCount": 10,
       "userId": 3,
@@ -198,7 +198,7 @@
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
       "stack": "http://stackexchange.com/users/10499231/piotr",
-      "tokenSecure": 1631.1051698987712
+      "tokenSecure": 1740.22893890307
     },
     {
       "email": "pierrevicq@hotmail.fr",
@@ -1327,15 +1327,6 @@
       "id": 69
     },
     {
-      "title": "test",
-      "content": "<div><!--block-->test</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-26T12:00:35.934Z",
-      "questionId": 3,
-      "id": 70
-    },
-    {
       "title": "eh bien",
       "content": "<div><!--block-->moi je sais le dire en&nbsp;<del>BASQUE</del>&nbsp;italien !!<br><br>buongiorno ;-)</div>",
       "nb_views": 0,
@@ -1965,8 +1956,8 @@
       "id": 4
     },
     {
-      "userId": "9",
-      "questionId": 3,
+      "userId": 12,
+      "questionId": 15,
       "id": 5
     }
   ],
@@ -2030,6 +2021,16 @@
       "userId": 9,
       "answerId": 34,
       "id": 12
+    },
+    {
+      "userId": 12,
+      "answerId": 72,
+      "id": 13
+    },
+    {
+      "userId": 12,
+      "answerId": 71,
+      "id": 14
     }
   ],
   "ressources": [

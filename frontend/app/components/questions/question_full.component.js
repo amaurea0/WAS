@@ -237,6 +237,7 @@ COMPNT
                 return _collection;
             }
 
+
             // poster un nouveau commentaire
             this.saveComment = (answerid) => {
                 var new_comment = {

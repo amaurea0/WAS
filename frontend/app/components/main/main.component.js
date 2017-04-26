@@ -73,7 +73,7 @@ COMPNT
       this.deconnexion = () => {
         notify({
           message: 'À bientôt ;-) !',
-          classes: 'teal accent-3',
+          classes: '#eceff1 blue-grey lighten-5',
           duration: 3000
         });
         this.DeleteCookie();
@@ -114,13 +114,13 @@ COMPNT
             if (this.newAnswers != 0) {
               notify({
                 message: 'Bienvenue ! Vous avez ' + this.newAnswers + ' nouvelles réponses',
-                classes: 'teal accent-3',
+                classes: '#eceff1 blue-grey lighten-5',
                 duration: 0
               });
             } else {
               notify({
                 message: 'Bienvenue !',
-                classes: 'teal accent-3',
+                classes: '#eceff1 blue-grey lighten-5',
                 duration: 0
               });
             }
@@ -160,15 +160,10 @@ COMPNT
         }
 
         notify.config({
-          position: 'right',
-          startTop: 68
-        })
+            position: 'right',
+            startTop: 68
+          })
 
-        notify({
-          message: 'You have ' + this.newAnswers + ' new answers',
-          classes: '#eceff1 blue-grey lighten-5',
-          duration: 0
-        });
         ajax()
         this.rebindDropDowns = function () {
           $('.dropdown-button').dropdown({
