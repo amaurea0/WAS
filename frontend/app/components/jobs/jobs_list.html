@@ -31,9 +31,8 @@
                 <div class="contenu">
                     <a>
                         <h3 class="title" ng-bind="job.title"></h3>
-                        <p>{{job.content}}</p>
-                        <button ng-if="job.annonce" href="{{job.annonce}}" target="_blank" id="btnJob">Ad Link</button>
-
+                        <p>{{job.content}}</p><br />           
+                        <a ng-if="job.annonce" href="{{job.annonce}}" target="_blank" id="btnJob">Ad Link</a><br />
                     </a>
                 </div>
             <!--</div>-->
