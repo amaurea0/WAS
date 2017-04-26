@@ -27,14 +27,23 @@ COMPNT
             this.$onInit = () => {
 
                 this.connected = authService.getCurrentUser();
+                console.log(this.connected)
                 this.answers = this.question.answers;
-
+                this.myQuestionVote = false;
                 this.myQuestion = false;
+
                 if (authService.getCurrentUser()) {
                     if (this.question.userId == authService.getCurrentUser().id) {
                         this.myQuestion = true;
                     }
+                    QuestionsService.getIfMyVotedQuestion(this.question.id, authService.getCurrentUser().id).then((rsp) => {
+                        if (rsp.length > 0) {
+                            this.myQuestionVote = true;
+                        }
+                    }).catch((error) => {});
+
                 }
+
                 this.question.answers.forEach((answer) => {
                     if (authService.getCurrentUser()) {
                         if (answer.userId == authService.getCurrentUser().id) {
@@ -42,6 +51,14 @@ COMPNT
                         } else {
                             answer.myAnswer = false;
                         }
+                        QuestionsService.getIfMyVotedAnswer(answer.id, authService.getCurrentUser().id).then((rsp) => {
+                            if (rsp.length > 0) {
+                                answer.myAnswerVote = true;
+                            } else {
+                                answer.myAnswerVote = false;
+                            }
+                        }).catch((error) => {});
+
                     };
                 })
 
@@ -51,6 +68,7 @@ COMPNT
             this.voteQst = (questionid) => {
                 if (authService.getCurrentUser()) {
                     var userid = authService.getCurrentUser().id;
+                    this.myQuestionVote = true;
                     QuestionsService.voteQstExist(questionid, userid).then((response) => {
                         if (response.length == 0) {
 
@@ -61,6 +79,7 @@ COMPNT
                                 "userId": userid,
                                 "questionId": questionid
                             };
+                            console.log(votes_question)
 
                             QuestionsService.updateContent(this.question.id, updatedVote).then((rsp) => {
                                 $log.log("vote update");
@@ -78,8 +97,9 @@ COMPNT
             this.voteAsw = (answer) => {
                 if (authService.getCurrentUser()) {
                     var userid = authService.getCurrentUser().id;
-                    QuestionsService.voteAswExist(answer.id, userid).then((response) => {
+                    answer.myAnswerVote = true;
 
+                    QuestionsService.voteAswExist(answer.id, userid).then((response) => {
 
                         if (response.length == 0) {
 

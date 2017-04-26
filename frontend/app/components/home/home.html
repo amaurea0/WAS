@@ -28,10 +28,14 @@
           <div class="question flex" ng-repeat="question in $ctrl.questions">
 
 
-            <div class="counters view">
+          <div class="counters view">
+            <div class="viewicon">
               <div ng-bind="question.nb_views"></div>
+            </div>
+            <div ng-class="{voted: question.myQuestionVote, notvoted: !question.myQuestionVote}">
               <div ng-bind="question.votes"></div>
             </div>
+          </div>
 
             <div class="contenu">
               <a ui-sref="questionSpec({idQuestion : question.id})">

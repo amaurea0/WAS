@@ -35,7 +35,7 @@ SERVICES.service('authService', ['$cookies', 'UsersService', '$state', function 
 
     this.getCurrentUser = () => {
         return {
-            id: $cookies.get('id')
+            id: parseFloat($cookies.get('id'))
         }
     }
 

@@ -258,12 +258,16 @@ i.icon-orange {
     color: #455a64;
 }
 
-.counters.view>div:first-child {
+.viewicon {
     background: url(/frontend/assets/img/eye.png) no-repeat center;
     background-size: 30px;
 }
 
-.counters.view>div:last-child {
+.notvoted{
+    background: url(/frontend/assets/img/heart.png) no-repeat center;
+    background-size: 30px;
+}
+.voted{
     background: url(/frontend/assets/img/heartOrange.png) no-repeat center;
     background-size: 30px;
 }
@@ -442,14 +446,6 @@ p {
         text-align: center;
         font-size: 1.4em;
         color: #455a64;
-    }
-    .counters.view>div:first-child {
-        background: url(/frontend/assets/img/heart.png) no-repeat center;
-        background-size: 30px;
-    }
-    .counters.view>div:last-child {
-        background: url(/frontend/assets/img/eye.png) no-repeat center;
-        background-size: 30px;
     }
     .contenu {
         width: 70%;

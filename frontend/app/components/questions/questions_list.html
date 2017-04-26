@@ -30,12 +30,15 @@
 
       <div ng-repeat="aTab in $ctrl.tabsList" id="{{aTab.view}}" class="col s12">
         <div class="question flex" dir-paginate="question in $ctrl.questions | filter:q | orderBy : aTab.sort | itemsPerPage: $ctrl.pageSize"
-
           current-page="$ctrl.currentPage">
 
           <div class="counters view">
-            <div ng-bind="question.nb_views"></div>
-            <div ng-bind="question.votes"></div>
+            <div class="viewicon">
+              <div ng-bind="question.nb_views"></div>
+            </div>
+            <div ng-class="{voted: question.myQuestionVote, notvoted: !question.myQuestionVote}">
+              <div ng-bind="question.votes"></div>
+            </div>
           </div>
 
           <div class="contenu">

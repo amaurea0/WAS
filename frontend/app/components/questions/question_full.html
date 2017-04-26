@@ -8,8 +8,12 @@
     <div class="question flex">
 
         <div class="counters view">
-            <div ng-bind="$ctrl.question.nb_views + 1"></div>
-            <div ng-bind="$ctrl.question.votes" ng-click="$ctrl.voteQst($ctrl.question.id)"></div>
+            <div class="viewicon">
+                <div ng-bind="$ctrl.question.nb_views + 1"></div>
+            </div>
+            <div ng-class="{voted: $ctrl.myQuestionVote, notvoted: !$ctrl.myQuestionVote}"  ng-click="$ctrl.voteQst($ctrl.question.id)">
+                <div ng-bind="$ctrl.question.votes" ng-model="$ctrl.myQuestionVote"></div>
+            </div>
         </div>
         <div class="contenu">
             <h3 ng-bind="$ctrl.question.title"></h3>
@@ -23,7 +27,7 @@
     </div>
 
     <button class="waves-effect waves-light btn orange lighten-2" ui-sref="questionSpec({idQuestion : $ctrl.question.id, post: true})"
-        ng-disabled="!$ctrl.connected">
+        ng-disabled="!$ctrl.connected.id">
         <i class="material-icons left">add</i>New Answer
         </button>
 
@@ -70,7 +74,9 @@
             current-page="$ctrl.currentPage">
 
             <div class="counters view">
-                <div ng-bind="answer.votes" ng-click="$ctrl.voteAsw(answer)"></div>
+                <div ng-class="{voted: answer.myAnswerVote, notvoted: !answer.myAnswerVote}" ng-click="$ctrl.voteAsw(answer)">
+                    <div ng-bind="answer.votes" ng-model="answer.myAnswerVote"></div>
+                </div>
             </div>
             <div class="contenu">
                 <h3 ng-bind="answer.title"></h3>
