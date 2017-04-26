@@ -23,8 +23,8 @@ COMPNT
             this.pageChangeHandler = function (num) {
                 console.log('going to page ' + num);
             };
-            
-                        this.$onInit = () => {
+
+            this.$onInit = () => {
 
                 this.connected = authService.getCurrentUser();
                 this.answers = this.question.answers;
@@ -141,7 +141,7 @@ COMPNT
                     "nb_views": 0,
                     "votes": 0,
                     "date": new Date(),
-                    "userId": AuthService.getCurrentUser().id,
+                    "userId": authService.getCurrentUser().id,
                     "questionId": this.question.id
                 }
 
@@ -149,11 +149,11 @@ COMPNT
                     "answersCount": this.question.answersCount + 1
                 }
 
+                QuestionsService.updateContent(this.question.id, newAnswersCount).then((response) => {
+                    console.log("did it work ?");
+                }).catch((error) => {})
+
                 QuestionsService.postAnswer(new_answer).then((response) => {
-                    $timeout($state.go('questionSpec', {
-                        idQuestion: this.question.id,
-                        post: false
-                    }), 0);
                     notify({
                         message: 'Votre réponse a été posté !',
                         duration: 2500,
@@ -167,9 +167,11 @@ COMPNT
                     })
                 });
 
-                QuestionsService.updateContent(this.question.id, newAnswersCount).then((response) => {
-                    console.log("did it work ?");
-                }).catch((error) => {})
+                $state.go('questionSpec', {
+                    idQuestion: this.question.id,
+                    post: false
+                })
+
 
             }
 
