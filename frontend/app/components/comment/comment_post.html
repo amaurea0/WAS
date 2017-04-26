@@ -1,0 +1,12 @@
+<div class="bloc_center">
+    <h2>Poster un commentaire</h2>
+    <form class="formulaire" ng-submit="$ctrl.saveComment($ctrl.comment)" novalidate>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <input type="text" class="form-control" id="content" ng-model="$ctrl.comment.content" />
+        </div>
+        <div class="item-actions">
+            <input class="btn btn-success" type="submit" value="Valider" />
+        </div>
+    </form>
+</div>

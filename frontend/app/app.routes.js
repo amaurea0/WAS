@@ -88,7 +88,8 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
             params: {
                 answer: null,
                 edition: null,
-                post: null
+                postAnswer: null,
+                postComment: null
             },
             resolve: {
                 question: function ($stateParams, QuestionsService) {
@@ -98,16 +99,21 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
                 edition: function ($stateParams) {
                     return $stateParams.edition;
                 },
-                post: function ($stateParams) {
-                    return $stateParams.post;
+                postAnswer: function ($stateParams) {
+                    return $stateParams.postAnswer;
                 },
                 answer: function ($stateParams, QuestionsService) {
                     if ($stateParams.answer) {
                         return QuestionsService.getSpecificAnswer($stateParams.answer);
                     }
-                }
+                
+                },
+                postComment: function ($stateParams) {
+                    return $stateParams.postComment;
+                },
             }
         })
+   
 
         .state({
             name: 'addUser',

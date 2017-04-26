@@ -12,7 +12,8 @@ COMPNT
             question: '<',
             edition: '<',
             answer: '<',
-            post: '<'
+            postAnswer: '<',
+            postComment: '<'
         },
 
         controller: ['authService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', 'notify', function (authService, QuestionsService, $log, $state, $stateParams, $location, $timeout, notify) {
@@ -60,8 +61,14 @@ COMPNT
                         }).catch((error) => {});
 
                     };
+                    QuestionsService.getAnswerForComments(answer.id).then((answerfull) => {
+                        $log.log(answerfull);
+                        answer["coms"] = answerfull.comments;
+                        console.log(this.question.answers);
+                    }).catch((error) => {
+                        $log.error("comment error");
+                    });
                 })
-
             }
 
 
@@ -84,12 +91,12 @@ COMPNT
                             QuestionsService.updateContent(this.question.id, updatedVote).then((rsp) => {
                                 $log.log("vote update");
                                 this.question.votes = rsp.votes;
-                            }).catch((error) => {});
+                            }).catch((error) => { });
 
-                            QuestionsService.postVoteQuestionUser(votes_question).then((rsp) => {}).catch((error) => {});
+                            QuestionsService.postVoteQuestionUser(votes_question).then((rsp) => { }).catch((error) => { });
 
                         }
-                    }).catch((error) => {})
+                    }).catch((error) => { })
 
                 }
             }
@@ -123,12 +130,12 @@ COMPNT
                                     }
                                 }
                                 this.question.answers[index].votes = rsp.votes;
-                            }).catch((error) => {});
+                            }).catch((error) => { });
 
-                            QuestionsService.postVoteAnswerUser(votes_answer).then((rsp) => {}).catch((error) => {});
+                            QuestionsService.postVoteAnswerUser(votes_answer).then((rsp) => { }).catch((error) => { });
 
                         }
-                    }).catch((error) => {})
+                    }).catch((error) => { })
 
                 }
             }
@@ -171,7 +178,7 @@ COMPNT
 
                 QuestionsService.updateContent(this.question.id, newAnswersCount).then((response) => {
                     console.log("did it work ?");
-                }).catch((error) => {})
+                }).catch((error) => { })
 
                 QuestionsService.postAnswer(new_answer).then((response) => {
                     notify({
@@ -189,11 +196,40 @@ COMPNT
 
                 $state.go('questionSpec', {
                     idQuestion: this.question.id,
-                    post: false
+                    postAnswer: false
+                })
+            }
+
+            // poster un nouveau commentaire
+            this.saveComment = () => {
+                var new_comment = { 
+                    "content": this.comment.content,
+                    "date": new Date(),
+
+                    "answerId": this.question.id
+                }
+
+                 QuestionsService.postComment(new_comment).then((response) => {
+                    notify({
+                        message: 'Votre réponse a été posté !',
+                        duration: 2500,
+                        classes: 'green darken-1'
+                    })
+                }).catch((err) => {
+                    notify({
+                        message: "Votre réponse n'a pas été posté !",
+                        duration: 2500,
+                        classes: 'red darken-1'
+                    })
+                });
+
+                $state.go('questionSpec', {
+                    idQuestion: this.question.id,
+                    postComment: false
                 })
 
-
             }
+
 
         }]
     });
