@@ -23,8 +23,8 @@
     {
       "title": "How can I prevent SQL injection in PHP?",
       "content": "If user input is inserted without modification into an SQL query, then the application becomes vulnerable to SQL injection, like in the following example:",
-      "nb_views": 430,
-      "votes": 906,
+      "nb_views": 426,
+      "votes": 900,
       "date": "2017-04-08T01:51:51.436Z",
       "answersCount": 5,
       "userId": 3,
@@ -178,7 +178,7 @@
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
       "stack": "http://stackexchange.com/users/10499231/piotr",
-      "tokenSecure": 5858.1278568480575
+      "tokenSecure": 4270.246497453249
     },
     {
       "email": "pierrevicq@hotmail.fr",
@@ -722,7 +722,7 @@
       "userId": 1
     },
     {
-      "title": "Responsive div/container - Fixed Soze",
+      "title": "Responsive div/container - media queries",
       "content": "utouytiut",
       "nb_views": 0,
       "votes": 1,
@@ -1299,6 +1299,91 @@
       "date": "2017-04-26T12:00:35.934Z",
       "questionId": 3,
       "id": 70
+    }
+  ],
+  "comments": [
+    {
+      "content": "well done",
+      "date": "2017-04-12T09:51:23.819Z",
+      "id": 1,
+      "answerId": 3,
+      "userId": 2
+    },
+    {
+      "content": "voici un chouette commentaire",
+      "date": "2017-04-12T09:52:23.819Z",
+      "id": 2,
+      "answerId": 13,
+      "userId": 4
+    },
+    {
+      "content": "sti d'crisss de tabarnak !!",
+      "date": "2017-04-12T09:53:23.819Z",
+      "id": 3,
+      "answerId": 23,
+      "userId": 2
+    },
+    {
+      "content": "Et j'ajouterai que bla bla bla ...",
+      "date": "2017-04-12T09:54:23.819Z",
+      "id": 4,
+      "answerId": 3,
+      "userId": 5
+    },
+    {
+      "content": "<div><!--block-->test comment</div>",
+      "date": "2017-04-26T14:59:33.653Z",
+      "answerId": 3,
+      "id": 5
+    },
+    {
+      "content": "new comment from textarea sur reponse 2",
+      "date": "2017-04-26T15:02:18.722Z",
+      "answerId": 3,
+      "id": 6
+    },
+    {
+      "content": "iijkadjlkadzlazlk",
+      "date": "2017-04-26T15:05:31.447Z",
+      "answerId": 3,
+      "id": 7
+    },
+    {
+      "content": "ceci est un com",
+      "date": "2017-04-26T15:53:44.003Z",
+      "answerId": 3,
+      "id": 8
+    },
+    {
+      "content": "qserzr",
+      "date": "2017-04-26T15:54:57.598Z",
+      "answerId": 3,
+      "id": 9
+    },
+    {
+      "content": "hello wordl",
+      "date": "2017-04-26T15:59:03.416Z",
+      "answerId": 3,
+      "id": 10
+    },
+    {
+      "content": "ola",
+      "date": "2017-04-26T15:59:39.885Z",
+      "answerId": 13,
+      "id": 11
+    },
+    {
+      "content": "hello",
+      "date": "2017-04-26T16:06:44.305Z",
+      "answerId": 23,
+      "id": 12
+    },
+    {
+      "content": "Je valide",
+      "date": "2017-04-26T23:35:31.077Z",
+      "answerId": 13,
+      "userId": "2",
+      "id": 13
     }
   ],
   "tips": [

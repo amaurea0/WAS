@@ -2,6 +2,7 @@
 
 const QST_URL = "http://localhost:3000/questions";
 const ASW_URL = "http://localhost:3000/answers";
+const COMT_URL = "http://localhost:3000/comments";
 const TIPS_URL = "http://localhost:3000/tips";
 const VOTE_QST_URL = "http://localhost:3000/votes_question";
 const VOTE_ASW_URL = "http://localhost:3000/votes_answer";
@@ -24,6 +25,17 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
     this.postAnswer = function (answer) {
         var defer = $q.defer();
         $http.post(ASW_URL, answer).then((response) => {
+            defer.resolve(response.data);
+        }).catch((error) => {
+            defer.reject(error);
+            $log.error(error);
+        });
+
+        return defer.promise;
+    };
+      this.postComment = function (comment) {
+        var defer = $q.defer();
+        $http.post(COMT_URL, comment).then((response) => {
             defer.resolve(response.data);
         }).catch((error) => {
             defer.reject(error);
@@ -91,6 +103,20 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         var defer = $q.defer();
 
         $http.get(ASW_URL + '/' + param + '?_expand=user').then((response) => {
+            defer.resolve(response.data);
+        }).catch((err) => {
+            $log.debug(`SVC: ERROR!!! ${err}`);
+            defer.reject(err);
+        });
+
+        return defer.promise;
+    };
+
+    this.getAnswerForComments = (param) => {
+
+        var defer = $q.defer();
+
+        $http.get(ASW_URL + '/' + param + '?_embed=comments').then((response) => {
             defer.resolve(response.data);
         }).catch((err) => {
             $log.debug(`SVC: ERROR!!! ${err}`);
@@ -179,18 +205,18 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
     }
 
     this.voteAswExist = (answerid, userid) => {
-            var defer = $q.defer();
+        var defer = $q.defer();
 
-            $http.get(VOTE_ASW_URL + '?userId=' + userid + '&answerId=' + answerid).then((response) => {
-                defer.resolve(response.data);
-            }).catch((error) => {
-                $log.warn(`${error} : service couldn't reach server !`)
-                defer.reject(error);
-            });
+        $http.get(VOTE_ASW_URL + '?userId=' + userid + '&answerId=' + answerid).then((response) => {
+            defer.resolve(response.data);
+        }).catch((error) => {
+            $log.warn(`${error} : service couldn't reach server !`)
+            defer.reject(error);
+        });
 
-            return defer.promise;
+        return defer.promise;
 
-        }
+    }
 
 
     this.QuestionHome = () => {
