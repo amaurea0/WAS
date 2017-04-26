@@ -74,7 +74,7 @@
 
 
 
-        <div id="answer" dir-paginate="answer in $ctrl.question.answers | filter : q | itemsPerPage: $ctrl.pageSize" current-page="$ctrl.currentPage">
+        <div class="answer" dir-paginate="answer in $ctrl.question.answers | filter : q | itemsPerPage: $ctrl.pageSize" current-page="$ctrl.currentPage">
             <div class="question flex">
                 <div class="counters view">
                     <div ng-class="{voted: answer.myAnswerVote, notvoted: !answer.myAnswerVote}" ng-click="$ctrl.voteAsw(answer)">
@@ -94,7 +94,7 @@
             <button class="waves-effect waves-light btn grey lighten-2" ng-click="postComment = true" ng-disabled="!$ctrl.connected"><i class="material-icons left">add</i>New Comment</button>
 
             <!--bouton affichage commentaires-->
-            <button class="waves-effect waves-light btn grey lighten-1" ng-click="">
+            <button class="waves-effect waves-light btn grey lighten-1" ng-click="showComments = !showComments">
                     <i class="material-icons left">add</i>Comments</button>
 
             <!-- commentaires-->
@@ -104,7 +104,7 @@
                 <form name="myForm3" class="formulaire" ng-submit="$ctrl.saveComment(answer.id)" novalidate>
                     <div class="form-group">
                         <label for="content">Content</label>
-                        <textarea class="form-control" id="content" required ng-model="$ctrl.comment.content"></textarea>
+                        <textarea class="form-control" type="text" id="content" required ng-model="$ctrl.comment.content"></textarea>
 
                     </div>
                     <div class="item-actions">
@@ -114,7 +114,7 @@
                 </form>
             </div>
             <!--display comments-->
-            <div id="answer">
+            <div class="answer" ng-show="showComments">
                 <div ng-if="answer.coms.length > 0">
                     <div class="comment" ng-repeat="comment in answer.coms">
                         <p ng-bind="comment.content"></p>
