@@ -38,6 +38,14 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
         })
 
         .state({
+            name: 'ressourcePost',
+            url: '/post',
+            component: 'ressourcePost',
+            authenticate: true,
+            resolve: {}
+        })
+
+        .state({
             name: 'users',
             url: '/users',
             component: 'usersList',

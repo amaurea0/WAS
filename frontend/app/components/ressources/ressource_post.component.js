@@ -3,17 +3,17 @@
 /**
  * The recipeCreate component
  */
-COMPNT.component("questionPost", {
+COMPNT.component("ressourcePost", {
 
-  templateUrl: '/frontend/app/components/questions/question_post.html',
+  templateUrl: '/frontend/app/components/ressources/ressource_post.html',
 
   bindings: {
     info: '<'
   },
 
-  controller: ['QuestionsService', 'TagsService', 'TaglinkService', 'AuthService', '$scope', '$state',
+  controller: ['ressourcesService', '$scope', '$state',
 
-    function (QuestionsService, TagsService, TaglinkService, AuthService, $scope, $state) {
+    function (ressourcesService, $scope, $state) {
 
       //get Tags for the input datalist
       TagsService.getTags().then((data) => {

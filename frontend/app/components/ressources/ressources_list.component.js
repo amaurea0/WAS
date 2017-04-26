@@ -4,9 +4,9 @@
  * The recipesList component
  */
 COMPNT
-  .component("questionsList", {
+  .component("ressourcesList", {
 
-    templateUrl: '/frontend/app/components/questions/questions_list.html',
+    templateUrl: '/frontend/app/components/ressources/ressources_list.html',
 
     bindings: {
       list: '<',
