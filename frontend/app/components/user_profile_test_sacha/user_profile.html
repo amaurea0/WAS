@@ -109,7 +109,7 @@
                     <h4>Reponse</h4>
                 </li>
                 <div ng-repeat="rep in $ctrl.reponse">
-                    <li class="collection-item">{{rep.title}}</li>
+                    <li class="collection-item"  ui-sref="questionSpec({idQuestion : rep.questionId})">{{rep.title}}</li>
                 </div>
             </ul>
 
@@ -120,7 +120,7 @@
                     <h4>Question</h4>
                 </li>
                 <div ng-repeat="ques in $ctrl.question">
-                    <li class="collection-item">{{ques.title}}</li>
+                    <li class="collection-item"  ui-sref="questionSpec({idQuestion : ques.id})">{{ques.title}}</li>
                 </div>
             </ul>
 

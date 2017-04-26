@@ -83,10 +83,10 @@ SERVICES.service('UsersService', ['$http', '$log', '$q',
             return $http.get('http://127.0.0.1:3000/users?id=' + id + '&tokenSecure=' + token + '');
         };
         this.checkReponse = (id) => {
-            return $http.get('http://127.0.0.1:3000/answers?userId=' + id + '&_order=DESC&_end=5');
+            return $http.get('http://127.0.0.1:3000/answers?userId=' + id + '&_sort=id&_order=DESC&_end=5');
         };
         this.checkQuestion = (id) => {
-            return $http.get('http://127.0.0.1:3000/questions?userId=' + id + '&_order=DESC&_end=5');
+            return $http.get('http://127.0.0.1:3000/questions?userId=' + id + '&_sort=id&_order=DESC&_end=5');
         };
 
 
