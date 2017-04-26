@@ -16,7 +16,9 @@
     "angular-ui-scroll": "^1.6.1",
     "angular-utils-pagination": "^0.11.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "angular-utils-pagination": "^0.11.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

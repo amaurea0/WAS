@@ -8,7 +8,7 @@ WEA.component('login', {
         redirect: '<'
     },
 
-    controller: function (AuthService, $state) {
+    controller: function (authService, $state) {
 
         this.$onInit = () => {
             this.errorMessage = '';
@@ -20,7 +20,7 @@ WEA.component('login', {
 
             this.errorMessage1 = '';
 
-            AuthService.connect(user.email, user.password).then(() => {
+            authService.connect(user.email, user.password).then(() => {
                 console.log(this.redirect)
                 $state.go(this.redirect ? this.redirect : 'questions');
             }).catch(() => {
@@ -45,7 +45,7 @@ WEA.component('login', {
                 "profile": ""
             }
 
-            AuthService.createUser(new_user).then(() => {
+            authService.createUser(new_user).then(() => {
                 $state.go(this.redirect ? this.redirect : 'questions');
             }).catch((error) => {
                 this.errorMessage2 = error;

@@ -242,7 +242,9 @@
       "twitter": "https://twitter.com/hashtag/RadioLondres2017?src=hash",
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
-      "stack": "http://stackexchange.com/users/10499231/piotr"
+      "stack": "http://stackexchange.com/users/10499231/piotr",
+      "tokenSecure": 59.72705961697855,
+      "ville": "fhdhfgfdgd"
     },
     {
       "email": "julienRousset@hotmail.com",
@@ -1000,7 +1002,7 @@
       "title": "nouveau test",
       "content": "nouvelle réponse",
       "nb_views": 0,
-      "votes": 1,
+      "votes": 0,
       "date": "2017-04-25T10:05:28.626Z",
       "userId": 1,
       "questionId": 3,

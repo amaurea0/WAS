@@ -23,6 +23,7 @@
                     </div>
                     <div>
                         <a class="tagJob">{{job.tag}}</a>
+
                     </div>
                 </div>
             <!--</div>-->
@@ -32,12 +33,14 @@
                         <h3 class="title" ng-bind="job.title"></h3>
                         <p>{{job.content}}</p>
                         <button ng-if="job.annonce" href="{{job.annonce}}" target="_blank" id="btnJob">Ad Link</button>
+
                     </a>
                 </div>
             <!--</div>-->
             <!--<div class="col s12 l3">-->
                 <div class="collection-item avatar">
                     <p class="society" class="title" ng-bind="job.society"></p>
+
                     <p class="jobPlace">{{job.place}}</p><br />
                     <p class="jobPlace">{{job.date | date:"MM/dd/yyyy"}}</p>
                 </div>

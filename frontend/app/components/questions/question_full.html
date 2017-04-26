@@ -6,6 +6,7 @@
 
     <input id="search" class="form-control" placeholder="Search..." ng-model="q" />
     <div class="question flex">
+
         <div class="counters view">
             <div ng-bind="$ctrl.question.nb_views + 1"></div>
             <div ng-bind="$ctrl.question.votes" ng-click="$ctrl.voteQst($ctrl.question.id)"></div>
@@ -23,7 +24,8 @@
 
     <button class="waves-effect waves-light btn orange lighten-2" ui-sref="questionSpec({idQuestion : $ctrl.question.id, post: true})"
         ng-disabled="!$ctrl.connected">
-        <i class="material-icons left">add</i>New Answer</button>
+        <i class="material-icons left">add</i>New Answer
+        </button>
 
     <div ng-if="$ctrl.edition" class="bloc_center">
         <h2>Edit response</h2>
@@ -78,12 +80,11 @@
                 <p ng-bind-html="answer.content"></p>
 
             </div>
+
         </div>
     </div>
 
-
     <dir-pagination-controls boundary-links="true" on-page-change="$ctrl.pageChangeHandler(newPageNumber)" template-url="node_modules/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
-
 
 
 </div>
