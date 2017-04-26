@@ -702,3 +702,18 @@ p {
     background-color: rgba(223, 168, 110, 0.846);
     color: rgba(255, 255, 255, 0.863);
 }
+
+
+/*   POST A QUESTION  */
+#btn_right {
+    float: right;
+}
+
+.marg_bottom {
+    margin-bottom: 30px;
+}
+
+
+
+
+

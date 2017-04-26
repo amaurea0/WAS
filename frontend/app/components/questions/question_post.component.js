@@ -11,9 +11,9 @@ COMPNT.component("questionPost", {
     info: '<'
   },
 
-  controller: ['QuestionsService', 'TagsService', 'TaglinkService', 'AuthService', '$scope', '$state', 'notify',
+  controller: ['QuestionsService', 'TagsService', 'TaglinkService', 'authService', '$scope', '$state', 'notify',
 
-    function (QuestionsService, TagsService, TaglinkService, AuthService, $scope, $state, notify) {
+    function (QuestionsService, TagsService, TaglinkService, authService, $scope, $state, notify) {
 
       //get Tags for the input datalist
       TagsService.getTags().then((data) => {
@@ -41,7 +41,7 @@ COMPNT.component("questionPost", {
           "votes": 0,
           "date": new Date(),
           "answersCount": 0,
-          "userId": AuthService.getCurrentUser().id
+          "userId": authService.getCurrentUser().id
         }
 
         // Save the new question
