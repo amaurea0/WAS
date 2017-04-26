@@ -221,4 +221,32 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         return defer.promise;
     }
 
+    this.getIfMyVotedQuestion = (questionid, userid) => {
+        var defer = $q.defer();
+
+        $http.get(VOTE_QST_URL + '?questionId=' + questionid + '&userId=' + userid).then((response) => {
+            defer.resolve(response.data);
+        }).catch((error) => {
+            $log.warn(`${error} : service couldn't reach server !`)
+            defer.reject(error);
+        });
+
+        return defer.promise;
+
+    }
+
+    this.getIfMyVotedAnswer = (answerid, userid) => {
+        var defer = $q.defer();
+
+        $http.get(VOTE_ASW_URL + '?answerId=' + answerid + '&userId=' + userid).then((response) => {
+            defer.resolve(response.data);
+        }).catch((error) => {
+            $log.warn(`${error} : service couldn't reach server !`)
+            defer.reject(error);
+        });
+
+        return defer.promise;
+
+    }
+
 }]);

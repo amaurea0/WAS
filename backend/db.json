@@ -13,8 +13,8 @@
     {
       "title": "AngularJS: Service vs provider vs factory",
       "content": "What are the differences between a Service, Provider and Factory in AngularJS?",
-      "nb_views": 345,
-      "votes": 178,
+      "nb_views": 346,
+      "votes": 180,
       "date": "2017-04-08T01:49:44.615Z",
       "answersCount": 0,
       "userId": 2,
@@ -23,7 +23,7 @@
     {
       "title": "How can I prevent SQL injection in PHP?",
       "content": "If user input is inserted without modification into an SQL query, then the application becomes vulnerable to SQL injection, like in the following example:",
-      "nb_views": 421,
+      "nb_views": 426,
       "votes": 900,
       "date": "2017-04-08T01:51:51.436Z",
       "answersCount": 5,
@@ -147,8 +147,18 @@
       "votes": 0,
       "date": "2017-04-26T09:35:19.490Z",
       "answersCount": 0,
-      "userId": "1",
+      "userId": 1,
       "id": 15
+    },
+    {
+      "title": "new answer",
+      "content": "<div><!--block-->testestesets</div>",
+      "nb_views": 1,
+      "votes": 0,
+      "date": "2017-04-26T14:43:45.872Z",
+      "answersCount": 0,
+      "userId": 2,
+      "id": 16
     }
   ],
   "users": [
@@ -168,7 +178,7 @@
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
       "stack": "http://stackexchange.com/users/10499231/piotr",
-      "tokenSecure": 648.8477424046741
+      "tokenSecure": 5858.1278568480575
     },
     {
       "email": "pierrevicq@hotmail.fr",
@@ -185,7 +195,8 @@
       "twitter": "https://twitter.com/hashtag/RadioLondres2017?src=hash",
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
-      "stack": "http://stackexchange.com/users/10499231/piotr"
+      "stack": "http://stackexchange.com/users/10499231/piotr",
+      "tokenSecure": 4578.866380591274
     },
     {
       "email": "lderv68@gmail.com",
@@ -713,7 +724,7 @@
       "title": "Responsive div/container - Fixed Soze",
       "content": "utouytiut",
       "nb_views": 0,
-      "votes": 0,
+      "votes": 1,
       "date": "2017-04-12T09:50:23.819Z",
       "id": 2,
       "questionId": 2,
@@ -813,7 +824,7 @@
       "title": "smldfkjmldsqkjf",
       "content": "sqmlkdfjmsqldkfjsq",
       "nb_views": 0,
-      "votes": 0,
+      "votes": 1,
       "date": "2017-04-12T13:12:19.061Z",
       "id": 12,
       "questionId": 2,
@@ -1558,24 +1569,9 @@
   ],
   "votes_question": [
     {
-      "userId": 1,
-      "questionId": 1,
+      "userId": 2,
+      "questionId": 2,
       "id": 1
-    },
-    {
-      "userId": 1,
-      "questionId": 6,
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "questionId": 3,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "questionId": 5,
-      "id": 4
     }
   ],
   "votes_answer": [

@@ -27,14 +27,21 @@ COMPNT
             this.$onInit = () => {
 
                 this.connected = authService.getCurrentUser();
+                console.log(this.connected)
                 this.answers = this.question.answers;
-
+                this.myQuestionVote = false;
                 this.myQuestion = false;
                 if (authService.getCurrentUser()) {
                     if (this.question.userId == authService.getCurrentUser().id) {
                         this.myQuestion = true;
                     }
+                    if (QuestionsService.getIfMyVotedQuestion(this.question.id, authService.getCurrentUser().id) == null) {
+                        this.myQuestionVote = true;
+                    }
+
+                    console.log(this.myQuestion)
                 }
+
                 this.question.answers.forEach((answer) => {
                     if (authService.getCurrentUser()) {
                         if (answer.userId == authService.getCurrentUser().id) {
@@ -42,6 +49,12 @@ COMPNT
                         } else {
                             answer.myAnswer = false;
                         }
+                        if (QuestionsService.getIfMyVotedAnswer(answer.id, authService.getCurrentUser().id) == null) {
+                            answer.myAnswerVote = true;
+                        } else {
+                            answer.myAnswerVote = false;
+                        }
+
                     };
                 })
 
@@ -61,6 +74,7 @@ COMPNT
                                 "userId": userid,
                                 "questionId": questionid
                             };
+                            console.log(votes_question)
 
                             QuestionsService.updateContent(this.question.id, updatedVote).then((rsp) => {
                                 $log.log("vote update");
