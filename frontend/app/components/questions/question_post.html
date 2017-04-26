@@ -4,28 +4,30 @@
     </div>
 
     <form name="myForm" ng-submit="$ctrl.save()" novalidate>
-        <div class="form-group">
+        <div class="form-group marg_bottom">
             <label for="title">Question Title</label> <br>
             <input name="title" type="text" class="form-control" id="title" required ng-model="$ctrl.question.title" />
             <!--<p ng-show="myForm.title.$invalid">Champ requis</p>-->
         </div>
-        <div class="form-group">
+        <div class="form-group marg_bottom">
             <label for="content">Content</label> <br>
             <trix-editor angular-trix ng-model="$ctrl.question.content" required></trix-editor>
             <!--<p ng-show="myForm.content.$invalid">Champ requis</p>-->
         </div>
-        <div class="form-group">
-            <label>Tag : <span ng-repeat="eachTag in $ctrl.new_tags"> {{eachTag}} <span ng-click="$ctrl.removeTag(eachTag)">X</span></span>
-            </label> <br>
-            <button ng-repeat="newtag in $ctrl.tags | orderBy:'name' " class="chip"
-                ng-model="$ctrl.SelectedTag" ng-click="$ctrl.saveTag($ctrl.SelectedTag)">{{newtag.name}}
-            </button>
+        <div class="form-group marg_bottom">
+            <label>Tag : <span ng-repeat="eachTag in $ctrl.new_tags" class="chip"> {{eachTag}} <span ng-click="$ctrl.removeTag(eachTag)">X</span></span>
+            </label> 
+            <input style="float: right" type="button" class="btn" ng-click="$ctrl.saveTag($ctrl.SelectedTag)" value="Add selected Tag" />
 
-            <!--<input id="tag" list="testList" type="" ng-model="$ctrl.SelectedTag" />
+            <!--<button ng-repeat="newtag in $ctrl.tags | orderBy:'name' " class="chip"
+                ng-model="$ctrl.SelectedTag" ng-click="$ctrl.saveTag($ctrl.SelectedTag)">{{newtag.name}}
+            </button>-->
+
+            <input id="tag" list="testList" class="form-control" type="text" ng-model="$ctrl.SelectedTag" />
             <datalist id="testList">
                 <option ng-repeat="newtag in $ctrl.tags | orderBy:'name' " value="{{newtag.name}}">
             </datalist>
-            <input type="button" ng-click="$ctrl.saveTag($ctrl.SelectedTag)" value="ajouter" />-->
+
         </div>
 
         <div class="item-actions">
