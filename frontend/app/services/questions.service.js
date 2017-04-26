@@ -106,7 +106,7 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         $http.patch(QST_URL + '/' + id, content).then((response) => {
             defer.resolve(response.data);
         }).catch((error) => {
-            $log.debug(`SVC: ERROR!!! ${err}`);
+            $log.debug(`SVC: ERROR!!! ${error}`);
             defer.reject(error);
         });
 
@@ -120,7 +120,7 @@ SERVICES.service('QuestionsService', ['$http', '$log', '$q', function ($http, $l
         $http.patch(ASW_URL + '/' + id, content).then((response) => {
             defer.resolve(response.data);
         }).catch((error) => {
-            $log.debug(`SVC: ERROR!!! ${err}`);
+            $log.debug(`SVC: ERROR!!! ${error}`);
             defer.reject(error);
         });
 
