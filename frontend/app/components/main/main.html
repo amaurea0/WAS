@@ -141,7 +141,7 @@
                             </a>
                         </li>
                         <li ng-if="ctrl.isAuthenticated"><a class="waves-effect waves-light btn" ng-click="ctrl.disconnect()">Disconnect</a></li>-->
-                        <li id="loginBtn" ng-show="$ctrl.cookieUser == null"><a class="waves-effect waves-light btn" ui-sref-active="select">Connection</a></li>
+                        <li id="loginBtn" ng-click="$ctrl.openModal()" ng-show="$ctrl.cookieUser == null"><a class="waves-effect waves-light btn" ui-sref-active="select">Connection</a></li>
                         <li ng-show="$ctrl.cookieUser != null"><a ui-sref="person({personId:$ctrl.cookieUser})" ui-sref-active="select"><i class="material-icons">face</i></a></li>
                         <li ng-show="$ctrl.cookieUser != null"><a ng-click="$ctrl.deconnexion()" class="waves-effect waves-light btn" ui-sref-active="select">Disconnect</a></li>
 

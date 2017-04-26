@@ -120,16 +120,16 @@ COMPNT
       function RandomTocken() { // on génére notre random 
         return (Math.random() * 6000); // on génére un chiffre aléatoire
       };
-
+      this.openModal = () => {
+         $('#login').modal('open');
+      }
+      
       this.$onInit = () => {
         this.cookieUser = $cookies.get('id'); //je déclare mon cookie dans une variable pour pouvoir faire des conditions trql
         this.cookieToken = $cookies.get('tokenSecure'); //je déclare mon cookie dans une variable pour pouvoir faire des conditions trql
 
         function ajax() {
           $('.modal').modal();
-          $(document).on('click', '.loginpop', function (event) {
-            $('#login').modal('open');
-          });
         }
 
         notify.config({
