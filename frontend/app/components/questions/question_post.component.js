@@ -18,12 +18,18 @@ COMPNT.component("questionPost", {
       //get Tags for the input datalist
       TagsService.getTags().then((data) => {
         this.tags = data;
+        this.tagsname = [];
+        this.tags.forEach((tag) => {
+          this.tagsname.push(tag.name);
+        })
       }).catch((err) => {});
 
       this.new_tags = [];
       this.saveTag = (tag) => {
-        if (this.new_tags.indexOf(tag) == -1) this.new_tags.push(tag);
-        this.SelectedTag = "";
+        if (this.tagsname.indexOf(tag) !== -1) {
+          if (this.new_tags.indexOf(tag) == -1) this.new_tags.push(tag);
+          this.SelectedTag = "";
+        }
       };
       this.removeTag = (tag) => {
         this.new_tags.splice(this.new_tags.indexOf(tag), 1);

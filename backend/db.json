@@ -139,6 +139,16 @@
       "answersCount": 0,
       "userId": 1,
       "id": 14
+    },
+    {
+      "title": "test question",
+      "content": "<div><!--block-->un content</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T09:35:19.490Z",
+      "answersCount": 0,
+      "userId": "1",
+      "id": 15
     }
   ],
   "users": [
@@ -676,6 +686,16 @@
       "questionId": 10,
       "tagId": 12,
       "id": 55
+    },
+    {
+      "questionId": 15,
+      "tagId": 2,
+      "id": 56
+    },
+    {
+      "questionId": 15,
+      "tagId": 3,
+      "id": 57
     }
   ],
   "answers": [

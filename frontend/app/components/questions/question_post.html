@@ -17,7 +17,7 @@
         <div class="form-group marg_bottom">
             <label>Tag : <span ng-repeat="eachTag in $ctrl.new_tags" class="chip"> {{eachTag}} <span ng-click="$ctrl.removeTag(eachTag)">X</span></span>
             </label> 
-            <input id="btn_right" type="button" class="btn" ng-click="$ctrl.saveTag($ctrl.SelectedTag)" value="Add selected Tag" />
+            <input style="float: right" type="button" class="btn" ng-click="$ctrl.saveTag($ctrl.SelectedTag)" value="Add selected Tag" />
 
             <!--<button ng-repeat="newtag in $ctrl.tags | orderBy:'name' " class="chip"
                 ng-model="$ctrl.SelectedTag" ng-click="$ctrl.saveTag($ctrl.SelectedTag)">{{newtag.name}}
