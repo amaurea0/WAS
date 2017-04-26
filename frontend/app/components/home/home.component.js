@@ -10,8 +10,6 @@ WEA.component('home', {
 
   controller: ['UsersService', 'QuestionsService', 'JobService', 'authService', function (UsersService, QuestionsService, JobService, authService) {
 
-    this.user = authService.getCurrentUser().id;
-
     var self = this;
     this.ajax = function () {
       $(function () {
