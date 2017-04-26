@@ -8,8 +8,9 @@ WEA.component('home', {
 
   },
 
-  controller: ['UsersService', 'QuestionsService', 'JobService', function (UsersService, QuestionsService, JobService) {
+  controller: ['UsersService', 'QuestionsService', 'JobService', 'authService', function (UsersService, QuestionsService, JobService, authService) {
 
+    this.user = authService.getCurrentUser().id;
 
     var self = this;
     this.ajax = function () {
@@ -32,6 +33,7 @@ WEA.component('home', {
     this.getQuestion = () => {
       QuestionsService.QuestionHome().then((response) => { // j'envoye l'id et le token qui va avec
         self.questions = response;
+        this.VotedQuestion(self.questions);
       }).catch((response) => {
         self.error = response.statusText || "une erreur s'est produite pendant l'identification"; //en cas d'échec je marque un message d'erreur
       });
@@ -43,6 +45,20 @@ WEA.component('home', {
       }).catch((response) => {
         self.error = response.statusText || "une erreur s'est produite pendant l'identification"; //en cas d'échec je marque un message d'erreur
       });
+    };
+
+    this.VotedQuestion = (questions) => {
+      questions.forEach((question) => {
+        if (authService.getCurrentUser()) {
+          QuestionsService.getIfMyVotedQuestion(question.id, authService.getCurrentUser().id).then((rsp) => {
+            if (rsp.length > 0) {
+              question.myQuestionVote = true;
+            } else {
+              question.myQuestionVote = false;
+            }
+          }).catch((error) => {});
+        };
+      })
     };
 
   }]

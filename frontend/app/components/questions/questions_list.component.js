@@ -16,7 +16,7 @@ COMPNT
       search: '@'
     },
 
-    controller: ['TaglinkService', '$state', '$stateParams', 'QuestionsService', '$log', function (TaglinkService, $state, $stateParams, QuestionsService, $log) {
+    controller: ['TaglinkService', '$state', '$stateParams', 'QuestionsService', '$log', 'authService', function (TaglinkService, $state, $stateParams, QuestionsService, $log, authService) {
 
       this.tabsList = [{
           "view": "view1",
@@ -56,6 +56,7 @@ COMPNT
         } else {
           this.getAllItems();
         }
+
       };
 
       this.pageChangeHandler = function (num) {
@@ -72,13 +73,14 @@ COMPNT
             }).catch((err) => {});
           });
 
+          this.VotedQuestion(this.questions);
         }).catch((err) => {});
       };
 
       this.getAllItems = () => {
         QuestionsService.getQuestions().then((items) => {
           this.questions = items;
-          console.log(items);
+          this.VotedQuestion(this.questions);
         }).catch((err) => {});
       };
 
@@ -89,7 +91,7 @@ COMPNT
       this.getQueries = (param) => {
         QuestionsService.searchQuestions(param).then((items) => {
           this.questions = items;
-          console.log(this.questions);
+          this.VotedQuestion(this.questions);
         }).catch((error) => {})
       }
 
@@ -107,5 +109,20 @@ COMPNT
         });
 
       }
+
+      this.VotedQuestion = (questions) => {
+        questions.forEach((question) => {
+          if (authService.getCurrentUser()) {
+            QuestionsService.getIfMyVotedQuestion(question.id, authService.getCurrentUser().id).then((rsp) => {
+              if (rsp.length > 0) {
+                question.myQuestionVote = true;
+              } else {
+                question.myQuestionVote = false;
+              }
+            }).catch((error) => {});
+          };
+        })
+      }
+
     }]
   });

@@ -13,8 +13,8 @@
     {
       "title": "AngularJS: Service vs provider vs factory",
       "content": "What are the differences between a Service, Provider and Factory in AngularJS?",
-      "nb_views": 346,
-      "votes": 180,
+      "nb_views": 347,
+      "votes": 181,
       "date": "2017-04-08T01:49:44.615Z",
       "answersCount": 0,
       "userId": 2,
@@ -23,7 +23,7 @@
     {
       "title": "How can I prevent SQL injection in PHP?",
       "content": "If user input is inserted without modification into an SQL query, then the application becomes vulnerable to SQL injection, like in the following example:",
-      "nb_views": 427,
+      "nb_views": 429,
       "votes": 906,
       "date": "2017-04-08T01:51:51.436Z",
       "answersCount": 5,
@@ -144,7 +144,7 @@
       "title": "test question",
       "content": "<div><!--block-->un content</div>",
       "nb_views": 0,
-      "votes": 0,
+      "votes": 1,
       "date": "2017-04-26T09:35:19.490Z",
       "answersCount": 0,
       "userId": 1,
@@ -1578,6 +1578,16 @@
       "userId": 3,
       "questionId": 5,
       "id": 2
+    },
+    {
+      "userId": 3,
+      "questionId": 15,
+      "id": 3
+    },
+    {
+      "userId": 3,
+      "questionId": 2,
+      "id": 4
     }
   ],
   "votes_answer": [
