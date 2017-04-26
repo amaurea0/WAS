@@ -11,8 +11,8 @@
             <div class="viewicon">
                 <div ng-bind="$ctrl.question.nb_views + 1"></div>
             </div>
-            <div ng-class="{voted: $ctrl.myQuestionVote, notvoted: !$ctrl.myQuestionVote}">
-                <div ng-bind="$ctrl.question.votes" ng-click="$ctrl.voteQst($ctrl.question.id)" ng-model="$ctrl.myQuestionVote"></div>
+            <div ng-class="{voted: $ctrl.myQuestionVote, notvoted: !$ctrl.myQuestionVote}"  ng-click="$ctrl.voteQst($ctrl.question.id)">
+                <div ng-bind="$ctrl.question.votes" ng-model="$ctrl.myQuestionVote"></div>
             </div>
         </div>
         <div class="contenu">
@@ -74,8 +74,8 @@
             current-page="$ctrl.currentPage">
 
             <div class="counters view">
-                <div ng-class="{voted: answer.myAnswerVote, notvoted: !answer.myAnswerVote}">
-                    <div ng-bind="answer.votes" ng-click="$ctrl.voteAsw(answer)" ng-model="answer.myAnswerVote"></div>
+                <div ng-class="{voted: answer.myAnswerVote, notvoted: !answer.myAnswerVote}" ng-click="$ctrl.voteAsw(answer)">
+                    <div ng-bind="answer.votes" ng-model="answer.myAnswerVote"></div>
                 </div>
             </div>
             <div class="contenu">
