@@ -1,5 +1,3 @@
-'use strict';		
-
 WEA.run(function (authService, $log, $state, $transitions, $rootScope, $cookies) {
 
     // ui-router transitions
