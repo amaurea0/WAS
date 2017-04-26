@@ -9,49 +9,26 @@ COMPNT
     templateUrl: '/frontend/app/components/ressources/ressources_list.html',
 
     bindings: {
-      list: '<',
       query: '@',
       tagFilter: '<',
       info: '<',
       search: '@'
     },
 
-    controller: ['TaglinkService', '$state', '$stateParams', 'QuestionsService', function (TaglinkService, $state, $stateParams, QuestionsService) {
+    controller: ['ressourcesService', '$state', '$stateParams', function (ressourcesService, $state, $stateParams) {
 
-      this.tabsList = [{
-          "view": "view1",
-          "label": "Most Popular",
-          "sort": "-votes"
-        },
-        {
-          "view": "view2",
-          "label": "Most Viewed",
-          "sort": "-nb_views"
-        },
-        {
-          "view": "view3",
-          "label": "Latest",
-          "sort": "-date"
-        },
-        {
-          "view": "view4",
-          "label": "Least Answered",
-          "sort": "answers"
-        }
-      ];
 
       this.model = {
-        tagQuestionId: [],
+        tagRessourcesId: [],
         query: ''
       };
       this.currentPage = 1;
       this.pageSize = 2;
-      this.questions = [];
+      this.ressources = [];
 
       this.$onInit = () => {
-        if (this.search) {
-          this.getQueries(this.search);
-        } else if (this.tagFilter) {
+        console.log(this.tagFilter)
+       if (this.tagFilter) {
           this.getTagedItems();
         } else {
           this.getAllItems();
@@ -63,49 +40,29 @@ COMPNT
       };
 
       this.getTagedItems = () => {
-        TaglinkService.getQuestionsTag(this.tagFilter.tagId).then((items) => {
-          this.model.tagQuestionId = items;
-
-          angular.forEach(this.model.tagQuestionId, (value, key) => {
-            QuestionsService.getQuestionId(value.questionId).then((question) => {
-              this.questions.push(question[0]);
-            }).catch((err) => {});
-          });
-
+        ressourcesService.getRessourceTag(this.tagFilter.tagId).then((items) => {
+          this.ressources = items;
+          console.log(items);
         }).catch((err) => {});
       };
 
       this.getAllItems = () => {
-        QuestionsService.getQuestions().then((items) => {
-          this.questions = items;
+        ressourcesService.getRessource().then((items) => {
+          this.ressources = items;
           console.log(items);
         }).catch((err) => {});
       };
 
       this.removeTag = () => {
-        $state.go('questions');
+        $state.go('ressources');
       };
 
       this.getQueries = (param) => {
-        QuestionsService.searchQuestions(param).then((items) => {
+        ressourcesService.searchQuestions(param).then((items) => {
           this.questions = items;
           console.log(this.questions);
         }).catch((error) => {})
       }
 
-      this.countViews = (id) => {
-        var updatedCount = {}
-        QuestionsService.getQuestionId(id).then((response) => {
-          updatedCount.nb_views = response[0].nb_views + 1
-
-          QuestionsService.viewQuestion(id, updatedCount).then((response) => {
-            $log.log('views updated');
-          }).catch((error) => {});
-
-        }).catch((error) => {
-          $log.error('pb sur getQuestionId');
-        });
-
-      }
     }]
   });

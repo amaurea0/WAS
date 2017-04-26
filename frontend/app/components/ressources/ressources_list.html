@@ -4,7 +4,7 @@
     <h1>Ressources</h1>
   </div>
 
-  <div ng-if="$ctrl.questions.length > 0">
+  <div ng-if="$ctrl.ressource.length > 0">
     <div class="chip" ng-show="$ctrl.tagFilter.tagName.length >0">
       {{$ctrl.tagFilter.tagName}}
       <i class="close material-icons" ng-if="$ctrl.tagFilter.tagName" ng-click="$ctrl.removeTag()">close</i>
@@ -20,30 +20,17 @@
     <div class="row">
 
       <div class="col s12">
-        <div class="question flex" dir-paginate="ressource in $ctrl.ressources | filter:"
+        <div class="question flex" dir-paginate="ressource in $ctrl.ressources | filter:q | orderBy : aTab.sort | itemsPerPage: $ctrl.pageSize"
 
           current-page="$ctrl.currentPage">
 
-          <div class="counters view">
-            <div ng-bind="question.nb_views"></div>
-            <div ng-bind="question.votes"></div>
+          <div >
+            <div ng-bind="ressource.title"></div>
+            <div ng-bind="$ctrl.tagFilter.tagName"></div>
+            <h3 ng-bind="ressource.url"></h3>
           </div>
-
           <div class="contenu">
-            <a ng-click="$ctrl.countViews(question.id)" ui-sref="questionSpec({idQuestion : question.id})">
-
-              <h3 ng-bind="ressource.title"></h3>
-
-              <span>{{question.answers.length}} Réponses</span>
-              <span>{{question.date | date:"dd.MM.yyyy HH:mm:ss"}}</span>
-              <p ng-bind="question.content"></p>
-              <span id="questionsTags">{{question.tag}}</span>
-              <div ng-bind="question.tag"></div>
-            </a>
-          </div>
-
-          <div class="collection-item avatar">
-            <img class="circle" ng-src="{{question.user.avatar}}" alt="user's picture">
+              <div ng-bind="ressource.url"></div>
           </div>
 
         </div>
