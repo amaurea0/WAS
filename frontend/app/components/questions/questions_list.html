@@ -50,7 +50,13 @@
               <span>{{question.date | date:"MM/dd/yyyy"}}</span>
               <p ng-bind-html="question.content"></p>
 
-              <span id="questionsTags">{{question.tag}}</span>
+              <span ng-repeat="tag in question.tags">{{tag.tag.name}}
+
+
+
+
+
+              </span>
               <div ng-bind="question.tag"></div>
             </a>
           </div>
