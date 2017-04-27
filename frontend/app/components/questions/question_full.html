@@ -130,7 +130,7 @@
                         <textarea class="form-control" type="text" id="content" required ng-model="$ctrl.comment.content"></textarea>
 
                     </div>
-                    <div class="item-actions">
+                    <div class="item-actions" ng-click="showComments = true">
                         <input class="btn btn-success" ng-click="postComment = false" type="submit" value="Valider" ng-disabled="myForm3.$invalid"
                         />
                     </div>
