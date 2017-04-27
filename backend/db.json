@@ -190,6 +190,8 @@
       "first_name": "Laetitia",
       "pseudo": "Letitbe",
       "jobId": 1,
+      "school": "La Loupe",
+      "promotion": "février 2017",
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990501.jpg",
       "profile": "je suis passionnée d'informatique, de graphisme. Je suis également fan des Beattles, d'où mon pseudo Hihihi",
       "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
@@ -198,7 +200,9 @@
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
       "stack": "http://stackexchange.com/users/10499231/piotr",
-      "tokenSecure": 1740.22893890307
+      "tokenSecure": 1740.22893890307,
+      "ville": "La loupe",
+      "graduation": "Février 2017"
     },
     {
       "email": "pierrevicq@hotmail.fr",
@@ -340,7 +344,9 @@
       "github": "",
       "linkedin": "https://www.linkedin.com/in/elisa-etcheverry-2a27515b/",
       "stack": "",
-      "tokenSecure": 3834.9829100000647
+      "tokenSecure": 4957.982304779234,
+      "ville": "Bordeaux",
+      "graduation": "Février 2017"
     }
   ],
   "tags": [

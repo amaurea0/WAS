@@ -22,14 +22,17 @@ COMPNT
 
       this.pathSetting = (settings) => {
         this.addSettings = {
+          pseudo: this.setting.pseudo,
           last_name: this.setting.nom,
           first_name: this.setting.prenom,
           facebook: this.setting.facebook,
           twitter: this.setting.twitter,
           github: this.setting.github,
           ville: this.setting.ville,
-          profile: this.setting.profil
+          profile: this.setting.profil,
+          graduation: this.setting.graduation
         }
+        this.person = this.addSettings;
 
         UsersService.patchSetting(this.cookieUser, this.addSettings).then((response) => { // j'envoye l'id et le token qui va avec
         }).catch((response) => {

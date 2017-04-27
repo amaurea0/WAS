@@ -5,6 +5,12 @@
 
                 <div class="row">
                     <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.pseudo" ng-model="$ctrl.setting.pseudo" class="validate" placeholder="Pseudo">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
                         <input type="text" ng-value="$ctrl.person.first_name" ng-model="$ctrl.setting.nom" class="validate" placeholder="Nom">
 
                     </div>
@@ -33,10 +39,16 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input type="text" ng-value="$ctrl.person.ville" ng-model="$ctrl.setting.ville" class="validate" placeholder="Ville">
+                        <input type="text" ng-value="$ctrl.person.ville" ng-model="$ctrl.setting.ville" class="validate" placeholder="School">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.graduation" ng-model="$ctrl.setting.graduation" class="validate" placeholder="Graduation Year">
 
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="input-field col s12">
                         <textarea id="textarea1" ng-model="$ctrl.setting.profil" ng-value="$ctrl.person.profile" class="materialize-textarea" placeholder="Résumer"></textarea>
@@ -58,39 +70,46 @@
     <div class="row">
         <div class="col s12">
             <div class="card blue-grey darken-1">
-                <div class="row">
-                    <div class="col s6">
-                        <div class="card-content white-text">
-                            <h4 id="pseudo">{{$ctrl.person.pseudo}}</h4>
-                            <h5>{{$ctrl.person.first_name}} {{$ctrl.person.last_name}}</h5>
-                            <p>{{$ctrl.person.profile}}</p>
-                        </div>
-                    </div>
-                    <div class="col s6">
-                        <div class="card-content white-text" id="personRight">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <div class="collection-item avatar">
-                                            <img class="circle" id="avatar" ng-src="{{$ctrl.person.avatar}}" alt="user's picture"><br/>
-                                            <a class="material-icons #ffb74d orange-text lighten-2" href="mailto:{{$ctrl.person.email}}">email</a>
-                                        </div>
-                                        <div id="icons">
-                                            <a href="{{$ctrl.person.github}}" target="_blank"><img class="icons" src="/frontend/assets/img/github.png" alt="github icon"></a>
-                                            <a href="{{$ctrl.person.stack}}" target="_blank"><img class="icons" src="/frontend/assets/img/stack.png" alt="github icon"></a>
-                                            <a href="{{$ctrl.person.twitter}}" target="_blank"><img class="icons" src="/frontend/assets/img/twitter.png" alt="twitter icon"></a>
-                                            <a href="{{$ctrl.person.facebook}}" target="_blank"><img class="icons" src="/frontend/assets/img/facebook.png" alt="facebook icon"></a>
-                                            <a href="{{$ctrl.person.linkedin}}" target="_blank"><img class="icons" src="/frontend/assets/img/linkedin.png" alt="linkedin icon"></a>
-                                            <a href="{{$ctrl.person.instagram}}" target="_blank"><img class="icons" src="/frontend/assets/img/instagram.png" alt="instagram icon"></a>
-                                            <p ng-bind="$ctrl.person.ville"></p>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="card-content white-text">
+                                <h4 id="pseudo">{{$ctrl.person.pseudo}}</h4>
+                                <h5>{{$ctrl.person.first_name}} {{$ctrl.person.last_name}}</h5>
 
-                        </div>
-                    </div>
-                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="card-content white-text" id="promotion">
+                                <P>School: <span ng-bind="$ctrl.person.ville"></P><br />
+                                <P>Graduation: <span ng-bind="$ctrl.person.graduation"></P>
+                            </div>
+                        </td>
+                        <td id="rightPerson">
+                            <div class="collection-item avatar" id="avatar">
+                                <img class="circle" id="avatar" ng-src="{{$ctrl.person.avatar}}" alt="user's picture"><br/>
+                                <a class="material-icons #ffb74d orange-text lighten-2" href="mailto:{{$ctrl.person.email}}">email</a>
+                            </div>
+                            <div id="icons">
+                                <a href="{{$ctrl.person.github}}" target="_blank"><img class="icons" src="/frontend/assets/img/github.png" alt="github icon"></a>
+                                <a href="{{$ctrl.person.stack}}" target="_blank"><img class="icons" src="/frontend/assets/img/stack.png" alt="github icon"></a>
+                                <a href="{{$ctrl.person.twitter}}" target="_blank"><img class="icons" src="/frontend/assets/img/twitter.png" alt="twitter icon"></a>
+                                <a href="{{$ctrl.person.facebook}}" target="_blank"><img class="icons" src="/frontend/assets/img/facebook.png" alt="facebook icon"></a>
+                                <a href="{{$ctrl.person.linkedin}}" target="_blank"><img class="icons" src="/frontend/assets/img/linkedin.png" alt="linkedin icon"></a>
+                                <a href="{{$ctrl.person.instagram}}" target="_blank"><img class="icons" src="/frontend/assets/img/instagram.png" alt="instagram icon"></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="card-content white-text">
+                                <p>{{$ctrl.person.profile}}</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+
                 <div ng-if='$ctrl.uncheckedAnswers.length > 0' class="card-action">
                     <div id="reponses-non-consultées" class="collection with-header">
                         <div class="collection-header">

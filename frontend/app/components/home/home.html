@@ -12,13 +12,13 @@
     </div>
   </div>
   <div class="parallax">
-    <img src="https://wildcodeschool.fr/wp-content/uploads/2017/01/header_background.jpg" alt="Unsplashed background img 1">
+    <img src="/frontend/assets/img/Background1.jpg" alt="Unsplashed background img 1">
   </div>
 </div>
 
 
 <div class="container">
-    <div class="section">
+  <div class="section">
     <!--   Icon Section   -->
     <div class="row">
       <div class="col s12 m12">
@@ -28,14 +28,14 @@
           <div class="question flex" ng-repeat="question in $ctrl.questions">
 
 
-          <div class="counters view">
-            <div class="viewicon">
-              <div ng-bind="question.nb_views"></div>
+            <div class="counters view">
+              <div class="viewicon">
+                <div ng-bind="question.nb_views"></div>
+              </div>
+              <div ng-class="{voted: question.myQuestionVote, notvoted: !question.myQuestionVote}">
+                <div ng-bind="question.votes"></div>
+              </div>
             </div>
-            <div ng-class="{voted: question.myQuestionVote, notvoted: !question.myQuestionVote}">
-              <div ng-bind="question.votes"></div>
-            </div>
-          </div>
 
             <div class="contenu">
               <a ui-sref="questionSpec({idQuestion : question.id})">
@@ -82,11 +82,11 @@
   <div class="section no-pad-bot">
     <div class="container">
       <div class="row center">
-        <h5 class="header col s12 light">Apprendre et savoir apprendre sans chausette !</h5>
+        <h5 class="header col s12 light">Learn to Learn without Shoes !</h5>
       </div>
     </div>
   </div>
-  <div class="parallax"> <img src="/frontend/assets/img/shutterstock_326764691.jpg" alt="Unsplashed background img 1">
+  <div class="parallax"> <img src="/frontend/assets/img/background2.jpg" alt="Unsplashed background img 1">
   </div>
 </div>
 
@@ -112,7 +112,7 @@
             <a>
               <h3 class="title" ng-bind="job.title"></h3>
               <p class="content flow-text">{{job.content}}</p>
-              <a class="#1de9b6 teal-text accent-3" href="{{job.annonce}}" target="_blank">{{job.annonce}}</a>
+              <a ng-if="job.annonce" href="{{job.annonce}}" target="_blank" id="btnJob">Ad Link</a><br />
             </a>
           </div>
 
@@ -133,11 +133,11 @@
   <div class="section no-pad-bot">
     <div class="container">
       <div class="row center">
-        <h5 class="header col s12 light">Learn to learn without socks !</h5>
+        <h5 class="header col s12 light">Learn to Learn without Shoes !</h5>
       </div>
     </div>
   </div>
-  <div class="parallax"> <img src="/frontend/assets/img/shutterstock_326764691.jpg" alt="Unsplashed background img 1">
+  <div class="parallax"> <img src="/frontend/assets/img/background3.jpg" alt="Unsplashed background img 1">
   </div>
 </div>
 
