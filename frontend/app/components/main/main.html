@@ -154,9 +154,11 @@
                         <li><a ui-sref="questions" ui-sref-active="select">Questions</a></li>
                         <li><a ui-sref="users" ui-sref-active="select">Users</a></li>
                         <li><a ui-sref="jobs" ui-sref-active="select">Jobs</a></li>
-                        <li><a ui-sref="tips" ui-sref-active="select">Tips</a></li>
-                        <li><a ui-sref="nuage" ui-sref-active="select">Tags</a></li>
-                        <li><a class="dropdown-button" href="#!" data-activates="administracion"><i class="material-icons">face</i></a></li>
+                        <li><a ui-sref="tips" ui-sref-active="select">Tips&Tricks</a></li>
+                        <li><a ui-sref="nuage" ui-sref-active="select">Tags&Ressources</a></li>
+                        <li id="loginBtn" ng-click="$ctrl.openModal()" ng-show="$ctrl.cookieUser == null"><a class="waves-effect waves-light btn" ui-sref-active="select">Log In</a></li>
+                        <li ng-show="$ctrl.cookieUser != null"><a ui-sref="person({personId:$ctrl.cookieUser})" ui-sref-active="select">Profil</a></li>
+                        <li ng-show="$ctrl.cookieUser != null"><a ng-click="$ctrl.deconnexion()" class="waves-effect waves-light btn" ui-sref-active="select">Log Out</a></li>
                     </ul>
                 </div>
             </nav>
