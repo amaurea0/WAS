@@ -207,9 +207,6 @@ COMPNT
                     "questionId": this.question.id,
                     "bestAnswer": false
                 }
-                console.log(this.question.answers)
-                this.question.answers.push(new_answer);
-                console.log(this.question.answers)
 
                 var newAnswersCount = {
                     "answersCount": this.question.answersCount + 1
@@ -218,6 +215,7 @@ COMPNT
                 QuestionsService.updateContent(this.question.id, newAnswersCount).then((response) => {}).catch((error) => {})
 
                 QuestionsService.postAnswer(new_answer).then((response) => {
+                    this.answers = this.newAnswer(new_answer);
                     notify({
                         message: 'Votre réponse a été posté !',
                         duration: 2500,
@@ -233,6 +231,11 @@ COMPNT
 
             }
 
+            this.newAnswer = (obj) => {
+                var _collection = this.question.answers;
+                _collection.push(obj);
+                return _collection;
+            }
 
             // poster un nouveau commentaire
             this.saveComment = (answerid) => {

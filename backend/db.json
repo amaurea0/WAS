@@ -23,10 +23,10 @@
     {
       "title": "How can I prevent SQL injection in PHP?",
       "content": "If user input is inserted without modification into an SQL query, then the application becomes vulnerable to SQL injection, like in the following example:",
-      "nb_views": 423,
+      "nb_views": 424,
       "votes": 901,
       "date": "2017-04-08T01:51:51.436Z",
-      "answersCount": 4,
+      "answersCount": 10,
       "userId": 3,
       "id": 3
     },
@@ -198,7 +198,7 @@
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
       "stack": "http://stackexchange.com/users/10499231/piotr",
-      "tokenSecure": 648.8477424046741
+      "tokenSecure": 1631.1051698987712
     },
     {
       "email": "pierrevicq@hotmail.fr",
@@ -1480,6 +1480,94 @@
       "questionId": 2,
       "bestAnswer": false,
       "id": 83
+    },
+    {
+      "title": "batman",
+      "content": "<div><!--block-->batman</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T09:58:59.018Z",
+      "userId": 1,
+      "questionId": 3,
+      "bestAnswer": false,
+      "id": 84
+    },
+    {
+      "title": "motfiqer",
+      "content": "<div><!--block-->batman is bak</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T10:00:10.004Z",
+      "userId": 1,
+      "questionId": 3,
+      "bestAnswer": false,
+      "id": 85
+    },
+    {
+      "title": "ola",
+      "content": "<div><!--block-->que tal</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T10:00:33.260Z",
+      "userId": 1,
+      "questionId": 3,
+      "bestAnswer": false,
+      "id": 86
+    },
+    {
+      "title": "hello",
+      "content": "<div><!--block-->blabla</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T10:01:28.324Z",
+      "userId": 1,
+      "questionId": 3,
+      "bestAnswer": false,
+      "id": 87
+    },
+    {
+      "title": "hello",
+      "content": "<div><!--block-->blabla</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T10:01:53.329Z",
+      "userId": 1,
+      "questionId": 3,
+      "bestAnswer": false,
+      "id": 88
+    },
+    {
+      "title": "hulk",
+      "content": "<div><!--block-->hulk</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T10:02:27.634Z",
+      "userId": 1,
+      "questionId": 3,
+      "bestAnswer": false,
+      "id": 89
+    },
+    {
+      "title": "wolverine",
+      "content": "<div><!--block-->wolverine</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T10:04:43.407Z",
+      "userId": 1,
+      "questionId": 3,
+      "bestAnswer": false,
+      "id": 90
+    },
+    {
+      "title": "cyclops",
+      "content": "<div><!--block-->cyclops</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T10:06:54.748Z",
+      "userId": 1,
+      "questionId": 3,
+      "bestAnswer": false,
+      "id": 91
     }
   ],
   "comments": [
