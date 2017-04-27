@@ -3,10 +3,10 @@
     {
       "title": "How do JavaScript closures work?",
       "content": "How would you explain JavaScript closures to someone with a knowledge of the concepts they consist of (for example functions, variables and the like), but does not understand closures themselves?",
-      "nb_views": 88,
-      "votes": 100,
-      "date": "2017-04-08T01:47:18.815Z",
-      "answersCount": 0,
+      "nb_views": 152,
+      "votes": 101,
+      "date": "1998-04-08T01:47:18.815Z",
+      "answersCount": 1,
       "userId": 1,
       "id": 1
     },
@@ -14,28 +14,28 @@
       "title": "AngularJS: Service vs provider vs factory",
       "content": "What are the differences between a Service, Provider and Factory in AngularJS?",
       "nb_views": 345,
-      "votes": 178,
-      "date": "2017-04-08T01:49:44.615Z",
-      "answersCount": 1,
+      "votes": 17,
+      "date": "2015-03-01T01:49:44.615Z",
+      "answersCount": 0,
       "userId": 2,
       "id": 2
     },
     {
       "title": "How can I prevent SQL injection in PHP?",
       "content": "If user input is inserted without modification into an SQL query, then the application becomes vulnerable to SQL injection, like in the following example:",
-      "nb_views": 433,
-      "votes": 901,
-      "date": "2017-04-08T01:51:51.436Z",
-      "answersCount": 10,
+      "nb_views": 423,
+      "votes": 2,
+      "date": "2015-04-08T01:51:51.436Z",
+      "answersCount": 4,
       "userId": 3,
       "id": 3
     },
     {
-      "title": "Should everything really be a bundle in Symfony 2.x?",
-      "content": "I'm aware of questions like this, where people tend to discuss the general Symfony 2 concept of bundle. The thing is, in a specific application, like, for instance, a twitter-like application, should everything really be inside a generic bundle, like the official docs say?",
-      "nb_views": 36,
+      "title": "Is Java 'pass-by-reference' or 'ass-by-value'?",
+      "content": "I always thought Java was pass-by-reference; however I've seen a couple of blog posts (for example, this blog) that claim it's not. I don't think I understand the distinction they're making. What is the explanation?",
+      "nb_views": 186,
       "votes": 98,
-      "date": "2017-04-08T01:53:23.566Z",
+      "date": "2015-12-08T01:53:23.566Z",
       "answersCount": 0,
       "userId": 4,
       "id": 4
@@ -43,9 +43,9 @@
     {
       "title": "What does 'use strict' do in JavaScript, and what is the reasoning behind it?",
       "content": "Recently, I ran some of my JavaScript code through Crockford's JSLint, and it gave the following error:",
-      "nb_views": 27,
-      "votes": 745,
-      "date": "2017-04-08T09:25:09.366Z",
+      "nb_views": 120,
+      "votes": 27,
+      "date": "2016-02-08T09:25:09.366Z",
       "answersCount": 0,
       "userId": 5,
       "id": 5
@@ -55,7 +55,7 @@
       "content": "I would like to access my $scope variable in Chrome's JavaScript console. How do I do that? I can neither see $scope nor the name of my module myapp in the console as variables.",
       "nb_views": 15,
       "votes": 0,
-      "date": "2017-04-14T11:12:55.705Z",
+      "date": "2016-03-14T11:12:55.705Z",
       "answersCount": 0,
       "userId": 6,
       "id": 6
@@ -63,142 +63,442 @@
     {
       "title": "How does PHP 'foreach' actually work?",
       "content": "Let me prefix this by saying that I know what foreach is, does and how to use it.",
-      "nb_views": 14,
+      "nb_views": 140,
       "votes": 0,
-      "date": "2017-04-14T11:55:23.473Z",
+      "date": "2016-04-03T11:55:23.473Z",
       "answersCount": 0,
       "userId": 7,
       "id": 7
     },
     {
-      "title": "How to get the request parameters in symfony2?",
-      "content": "I am very new to symfony. In other languages like java and others I can use request.getParameter('parmeter name') to get the value.",
-      "nb_views": 3,
+      "title": "Java's +=, -=, *=, /= compound assignment operators",
+      "content": "I'm surprised Java allows this, being a stricter language than its predecessors. Errors in casting can lead to critical failure, as was the case with Ariane5 Flight 501 where a 64-bit float cast to a 16-bit integer resulted in the crash",
+      "nb_views": 32,
       "votes": 0,
-      "date": "2017-04-14T11:56:17.597Z",
+      "date": "2016-04-22T11:56:17.597Z",
       "answersCount": 0,
-      "userId": 1,
+      "userId": 8,
       "id": 8
     },
     {
       "title": "Why are C# 4 optional parameters defined on interface not enforced on implementing class?",
       "content": "I noticed that with the optional parameters in C# 4 if you specify a parameter as optional on an interface you DON'T have to make that parameter optional on any implementing class: public interface",
-      "nb_views": 20,
+      "nb_views": 207,
       "votes": 0,
-      "date": "2017-04-17T15:28:44.873Z",
-      "answersCount": 5,
-      "userId": 6,
+      "date": "2016-04-23T15:28:44.873Z",
+      "answersCount": 0,
+      "userId": 9,
       "id": 9
     },
     {
-      "title": "How to use a filter in a controller?",
-      "content": "I have written a filter function which will return data based on the argument you are passing. I want the same functionality in my controller.",
+      "title": "Setting 'checked' for a checkbox with jQuery?",
+      "content": "I'd like to do something like this to tick a checkbox using jQuery:",
       "nb_views": 3,
       "votes": 0,
-      "date": "2017-04-17T17:51:13.675Z",
+      "date": "2016-05-17T17:51:13.675Z",
       "answersCount": 0,
-      "userId": 5,
+      "userId": 1,
       "id": 10
     },
     {
-      "title": "coucou Quitterie Benoite",
-      "content": "<div><!--block-->this is&nbsp;<strong>hello world</strong></div>",
-      "nb_views": 18,
+      "title": "What does the “yield” keyword do in Python?",
+      "content": "What is the use of the yield keyword in Python? What does it do?",
+      "nb_views": 189,
       "votes": 0,
-      "date": "2017-04-25T12:12:40.826Z",
+      "date": "2016-06-25T12:12:40.826Z",
       "answersCount": 2,
-      "userId": 8,
+      "userId": 2,
       "id": 11
     },
     {
-      "title": "salut tout le monde",
-      "content": "<div><!--block--><strong>hello</strong></div>",
-      "nb_views": 6,
+      "title": "How do I get the current absolute URL in Ruby on Rails?",
+      "content": "How can I get the current absolute URL in my Ruby on Rails view? The request.request_uri only returns the relative URL.",
+      "nb_views": 5,
       "votes": 0,
-      "date": "2017-04-25T14:32:05.211Z",
-      "answersCount": 3,
-      "userId": 8,
+      "date": "2016-07-23T14:32:05.211Z",
+      "answersCount": 0,
+      "userId": 3,
       "id": 12
     },
     {
-      "title": "test notify",
-      "content": "<div><!--block-->salut les gens</div>",
+      "title": "How do I get a consistent byte representation of strings in C# without manually specifying an encoding?",
+      "content": "How do I convert a string to a byte[] in .NET (C#) without manually specifying a specific encoding?",
       "nb_views": 34,
       "votes": 0,
-      "date": "2017-04-25T14:59:11.581Z",
+      "date": "2016-07-25T14:59:11.581Z",
       "answersCount": 2,
-      "userId": 8,
+      "userId": 4,
       "id": 13
     },
     {
-      "title": "sdfferfze",
-      "content": "<div><!--block-->test</div>",
-      "nb_views": 2,
-      "votes": 0,
-      "date": "2017-04-25T17:22:52.010Z",
-      "answersCount": 2,
-      "userId": 1,
+      "title": "event.preventDefault() vs. return false",
+      "content": "When I want to prevent other event handlers from executing after a certain event is fired, I can use one of two techniques",
+      "nb_views": 9,
+      "votes": 1,
+      "date": "2016-08-24T17:22:52.010Z",
+      "answersCount": 0,
+      "userId": 5,
       "id": 14
     },
     {
-      "title": "test question",
-      "content": "<div><!--block-->un content</div>",
+      "title": "What does the “yield” keyword do in Python?",
+      "content": "What is the use of the yield keyword in Python? What does it do?",
       "nb_views": 0,
       "votes": 0,
-      "date": "2017-04-26T09:35:19.490Z",
+      "date": "2016-09-26T09:35:19.490Z",
       "answersCount": 0,
-      "userId": "1",
+      "userId": 3,
       "id": 15
     },
     {
-      "title": "tests",
-      "content": "<div><!--block-->salslaj</div>",
+      "title": "A concise explanation of nil v. empty v. blank in Ruby on Rails",
+      "content": "I find myself repeatedly looking for a clear definition of the differences of nil?, blank?, and empty? in Ruby on Rails. ",
       "nb_views": 1,
       "votes": 0,
-      "date": "2017-04-26T15:23:11.146Z",
+      "date": "2016-10-26T15:23:11.146Z",
       "answersCount": 0,
-      "userId": "9",
+      "userId": 9,
       "id": 16
     },
     {
-      "title": "dadaz",
-      "content": "<div><!--block-->kkdajkjad</div>",
-      "nb_views": 1,
+      "title": "Abort Ajax requests using jQuery",
+      "content": "Using jQuery, how can I cancel/abort an Ajax request that I have not yet received the response from?",
+      "nb_views": 0,
       "votes": 0,
-      "date": "2017-04-27T06:59:18.163Z",
+      "date": "2016-10-27T06:59:18.163Z",
       "answersCount": 0,
-      "userId": "9",
+      "userId": 5,
       "id": 17
     },
     {
-      "title": "szsa",
-      "content": "<div><!--block-->sasa</div>",
-      "nb_views": 1,
-      "votes": 0,
-      "date": "2017-04-27T07:01:30.818Z",
-      "answersCount": 0,
-      "userId": "9",
+      "title": "What characters do I need to escape in XML documents?",
+      "content": "What characters must be escaped in XML documents, or where could I find such a list?",
+      "nb_views": 349,
+      "votes": 124,
+      "date": "2016-10-27T07:01:30.818Z",
+      "answersCount": 1,
+      "userId": 2,
       "id": 18
     },
     {
-      "title": "new question",
-      "content": "<div><!--block-->tadada</div>",
-      "nb_views": 4,
-      "votes": 0,
-      "date": "2017-04-27T18:02:26.766Z",
-      "answersCount": 2,
-      "userId": 1,
+      "title": "Swift performance: sorting arrays",
+      "content": "I was implementing an algorithm in Swift and noticed that the performance was very poor. After digging deeper I realised that one of the bottlenecks was something as simple as sorting arrays.",
+      "nb_views": 289,
+      "votes": 120,
+      "date": "2016-10-27T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 3,
       "id": 19
     },
     {
-      "title": "qsdf",
-      "content": "aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa ",
-      "nb_views": 1,
+      "title": "How to find all files containing specific text on Linux?",
+      "content": "I'm trying to find a way to scan my entire Linux system for all files containing a specific string of text. Just to clarify, I'm looking for text within the file, not in the file name.",
+      "nb_views": 134,
+      "votes": 65,
+      "date": "2016-10-27T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 2,
+      "id": 20
+    },
+    {
+      "title": "Wait until all jQuery Ajax requests are done?",
+      "content": "How do I make a function wait until all jQuery Ajax requests are done inside another function? In short, I need to wait for all Ajax requests to be done before I execute the next.",
+      "nb_views": 43,
+      "votes": 12,
+      "date": "2016-10-27T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 2,
+      "id": 21
+    },
+    {
+      "title": "How do I parse XML in Python?",
+      "content": "I have many rows in a database that contains xml and I'm trying to write a Python script that will go through those rows and count how many instances of a particular node attribute show up.",
+      "nb_views": 0,
       "votes": 0,
-      "date": "2017-04-27T18:04:08.322Z",
+      "date": "2016-11-16T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 5,
+      "id": 22
+    },
+    {
+      "title": "How do I create a basic UIButton programmatically?",
+      "content": "How can I create a basic UIButton programmatically? For example in my view controller, when executing the viewDidLoad method, three UIButtons will be created dynamically and its layout or properties ...",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2016-11-15T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 2,
+      "id": 23
+    },
+    {
+      "title": "How can I redirect and append both stdout and stderr to a file with Bash?",
+      "content": "How do I redirect both stdout and stderr appending to a file? cmd &>> file.txt did not work for me.",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2016-11-22T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 2,
+      "id": 24
+    },
+    {
+      "title": "Nodejs Event Loop",
+      "content": "On an I/O request does node queue the request to libeio which in turn notifies the availability of data via events using libev and finally those events are handled by v8 event loop using callbacks? Basically, How are libev and libeio integrated in nodejs architecture?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2016-11-27T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 9,
+      "id": 25
+    },
+    {
+      "title": "What's the difference between the atomic and nonatomic attributes?",
+      "content": "What is the operational difference between these three?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2016-12-12T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 9,
+      "id": 26
+    },
+    {
+      "title": "Change an HTML5 input's placeholder color with CSS",
+      "content": "Chrome supports the placeholder attribute on input[type=text] elements (others probably do too).",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2016-12-29T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 9,
+      "id": 27
+    },
+    {
+      "title": "How to horizontally center a <div> in another <div>?",
+      "content": "How can I horizontally center a <div> within another <div> using CSS (if it's even possible)?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2016-12-19T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 8,
+      "id": 28
+    },
+    {
+      "title": "nodejs vs node on ubuntu 12.04",
+      "content": "So, how do I get node working?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2016-12-16T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 9,
+      "id": 29
+    },
+    {
+      "title": "In Objective-C, how do I test the object type?",
+      "content": "I need to test whether the object is of type NSString or UIImageView. How can I accomplish this? Is there some type of 'isoftype' method?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2016-12-07T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 9,
+      "id": 30
+    },
+    {
+      "title": "Why does HTML think “chucknorris” is a color?",
+      "content": "How come certain random strings produce colors when entered as background colors in HTML? For example:",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2016-12-30T06:59:18.163Z",
       "answersCount": 0,
       "userId": 1,
-      "id": 20
+      "id": 31
+    },
+    {
+      "title": "Passing Data between View Controllers",
+      "content": "I'm new to iOS and, Objective-C and the whole MVC paradigm and I'm stuck with the following: I have a view that acts as a data entry form and I want to give the user the option to select multiple products. The products are listed on another view with a UITableView controller and I have enabled multiple selections.",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-01-04T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 2,
+      "id": 32
+    },
+    {
+      "title": "Need a minimal Django file upload example",
+      "content": "As a newbie to Django, I am having difficulty making an upload app in Django 1.3. I could not find any up-to-date example/snippets. May someone post a minimal but complete (Model, View, Template) example code to do so?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-01-17T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 3,
+      "id": 33
+    },
+    {
+      "title": "What are the Wordpress alternatives for Ruby on Rails?",
+      "content": "What are the Wordpress alternatives for Ruby on Rails? How do they compare to Wordpress?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-01-21T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 6,
+      "id": 34
+    },
+    {
+      "title": "vertical-align with Bootstrap",
+      "content": "I'm using Twitter Bootstrap 3, and I have problems when I want to align vertically two div, for example",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-02-20T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 9,
+      "id": 35
+    },
+    {
+      "title": "Material effect on button with background color",
+      "content": "I am using Android v21 support library. I have created a button with custom background color.",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-03-19T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 3,
+      "id": 36
+    },
+    {
+      "title": "Need a minimal Django file upload example",
+      "content": "As a newbie to Django, I am having difficulty making an upload app in Django 1.3. I could not find any up-to-date example/snippets.",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-03-30T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 2,
+      "id": 37
+    },
+    {
+      "title": "Correct file permissions for WordPress",
+      "content": "I've had a look over here but didn't find any details on the best file permissions. I also took a look at some of WordPress's form's questions over here too but anybody that suggests 777 obviously needs a little lesson in security.",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-01T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 3,
+      "id": 38
+    },
+    {
+      "title": "How can I make Bootstrap columns all the same height?",
+      "content": "I'm using Bootstrap. How can I make three columns all the same height? Here is a screenshot of the problem - I would like the blue and red columns to be the same height as the yellow column.",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-14T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 7,
+      "id": 39
+    },
+    {
+      "title": "Angular Material",
+      "content": "So i have installed angular, angular-material, angular-aria, angular-animate dependencies to my system. I just want to test out this up and coming styling method. It seems I'm stuck at the beginning. Can you tell me whats wrong with the code?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-15T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 9,
+      "id": 40
+    },
+    {
+      "title": "Visual Studio - Command to collapse all sections of code?",
+      "content": "In Visual Studio (2008) is there a command to collapse/expand all the sections of code in a file?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-17T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 2,
+      "id": 41
+    },
+    {
+      "title": "Does VBA have Dictionary Structure?",
+      "content": "Does VBA have dictionary structure? Like key<>value array?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-22T10:59:18.163Z",
+      "answersCount": 0,
+      "userId": 1,
+      "id": 42
+    },
+    {
+      "title": "Responsive Google Map?",
+      "content": "How to make a responsive google map from the code",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-24T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 5,
+      "id": 43
+    },
+    {
+      "title": "How to avoid Java code in JSP files?",
+      "content": "is an old school way of coding and in JSP version 2 there exists a method to avoid Java code in JSP files. Can someone please tell me the alternative JSP 2 lines, and what this technique is called?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T03:59:18.163Z",
+      "answersCount": 0,
+      "userId": 4,
+      "id": 44
+    },
+    {
+      "title": "How to enable mod_rewrite for Apache 2.2",
+      "content": "I've got fresh install of Apache 2.2 on my Vista machine, everything works fine, except mod rewrite.",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 8,
+      "id": 45
+    },
+    {
+      "title": "Calling an external command in Python",
+      "content": "How can I call an external command (as if I'd typed it at the Unix shell or Windows command prompt) from within a Python script?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-25T13:59:18.163Z",
+      "answersCount": 0,
+      "userId": 2,
+      "id": 46
+    },
+    {
+      "title": "How to pass command line arguments to a rake task",
+      "content": "I have a rake task that needs to insert a value into multiple databases. I'd like to pass this value into the rake task from the command line, or from another rake task. How can I do this?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T06:59:18.163Z",
+      "answersCount": 0,
+      "userId": 1,
+      "id": 47
+    },
+    {
+      "title": "What are the correct version numbers for C#?",
+      "content": "What are the correct version numbers for C#? What came out when? Why can't I find any answers about C# 3.5?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T14:59:18.163Z",
+      "answersCount": 0,
+      "userId": 7,
+      "id": 48
+    },
+    {
+      "title": "Add table row in jQuery",
+      "content": "What is the best method in jQuery to add an additional row to a table as the last row? Is this acceptable?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T20:59:18.163Z",
+      "answersCount": 0,
+      "userId": 8,
+      "id": 49
+    },
+    {
+      "title": "Sort a Python dictionary by value",
+      "content": "I have a dictionary of values read from two fields in a database: a string field and a numeric field. The string field is unique, so that is the key of the dictionary. I can sort on the keys, but how can I sort based on the values?",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T10:59:18.163Z",
+      "answersCount": 0,
+      "userId": 1,
+      "id": 50
     }
   ],
   "users": [
@@ -209,7 +509,6 @@
       "last_name": "Dervaux",
       "first_name": "Laetitia",
       "pseudo": "Letitbe",
-      "jobId": 1,
       "school": "La Loupe",
       "promotion": "février 2017",
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990501.jpg",
@@ -220,9 +519,9 @@
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
       "stack": "http://stackexchange.com/users/10499231/piotr",
-      "tokenSecure": 2595.7700322984815,
-      "ville": "La loupe",
-      "graduation": "Février 2017"
+      "ville": "La Loupe",
+      "graduation": "Mars 2017",
+      "tokenSecure": 648.8477424046741
     },
     {
       "email": "pierrevicq@hotmail.fr",
@@ -231,7 +530,6 @@
       "last_name": "Vicq",
       "first_name": "Pierre",
       "pseudo": "Piotr",
-      "jobId": 2,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990500.jpg",
       "profile": "Je suis passionné d'angular, mais vraiment vraiment trop...et ça se voit quand je code: mes 'Get' sont resplendissants, même si mes 'Post', un peu moins...",
       "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
@@ -240,6 +538,8 @@
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
       "stack": "http://stackexchange.com/users/10499231/piotr",
+      "ville": "Lyon",
+      "graduation": "Septembre 2016",
       "tokenSecure": 4578.866380591274
     },
     {
@@ -249,7 +549,6 @@
       "last_name": "Vauder",
       "first_name": "Letty",
       "pseudo": "Lettyyyyy",
-      "jobId": 3,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990499.jpg",
       "profile": "je suis passionnée d'informatique et de graphisme, tout comme Laetitia. C'est drôle parce qu'on a presque le même prénom en plus. Par contre, moi, les Beattles, j'peux pas les encadrer... j'suis bien contente qu'ils soient morts !",
       "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
@@ -258,16 +557,17 @@
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
       "stack": "http://stackexchange.com/users/10499231/piotr",
+      "ville": "Bordeaux",
+      "graduation": "Janvier 2017",
       "tokenSecure": 3591.175768813098
     },
     {
-      "email": "sasha@gmail.com",
-      "pass": "sashaPSW",
+      "email": "sacha@gmail.com",
+      "pass": "sachaPSW",
       "id": 4,
       "last_name": "Grasso",
-      "first_name": "Sasha",
-      "pseudo": "Sash",
-      "jobId": 4,
+      "first_name": "Sacha",
+      "pseudo": "Sach",
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990497.jpg",
       "profile": "je suis passionné d'angular, je surkiffe... j'adore ma barbe aussi, elle fait tomber toutes les minettes... et la soupe aussi, avec un peu de lait dedans hahahaha",
       "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
@@ -275,7 +575,9 @@
       "twitter": "https://twitter.com/hashtag/RadioLondres2017?src=hash",
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
-      "stack": "http://stackexchange.com/users/10499231/piotr"
+      "stack": "http://stackexchange.com/users/10499231/piotr",
+      "ville": "Toulouse",
+      "graduation": "Mars 2017"
     },
     {
       "email": "aurore@gmail.com",
@@ -284,15 +586,16 @@
       "last_name": "Chataigner",
       "first_name": "Aurore",
       "pseudo": "Aur",
-      "jobId": 5,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990496.jpg",
-      "profile": "je suis passionnée d'angular, je surkiffe aussi, tout comme Sash (dont j'adore la barbe moelleuse)... Sinon, me fais pas trop iech ou j'te fais un fatal Ushiro-Geri! Hiiiiiaaaaouuuu",
+      "profile": "je suis passionnée d'angular, je surkiffe aussi, tout comme Sach (dont j'adore la barbe moelleuse)... Sinon, me fais pas trop iech ou j'te fais un fatal Ushiro-Geri! Hiiiiiaaaaouuuu",
       "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
       "instagram": "https://www.instagram.com/piotr____/",
       "twitter": "https://twitter.com/hashtag/RadioLondres2017?src=hash",
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
-      "stack": "http://stackexchange.com/users/10499231/piotr"
+      "stack": "http://stackexchange.com/users/10499231/piotr",
+      "ville": "Fontainebleau",
+      "graduation": "Mars 2017"
     },
     {
       "email": "julien@gmail.com",
@@ -301,7 +604,6 @@
       "last_name": "Rousset",
       "first_name": "Julien",
       "pseudo": "Ju",
-      "jobId": 6,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909590922655014990495.jpg",
       "profile": "Salut, moi ca va... hier, le dojo c'était sympathique. Voilà quoi hahah",
       "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
@@ -311,7 +613,8 @@
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
       "stack": "http://stackexchange.com/users/10499231/piotr",
       "tokenSecure": 59.72705961697855,
-      "ville": "fhdhfgfdgd"
+      "ville": "La Loupe",
+      "graduation": "Mars 2017"
     },
     {
       "email": "julienRousset@hotmail.com",
@@ -320,7 +623,6 @@
       "last_name": "Roussetto",
       "first_name": "Juliano",
       "pseudo": "Julian",
-      "jobId": 7,
       "avatar": "http://nsm07.casimages.com/img/2017/04/19//17041909591022655014990498.jpg",
       "profile": "Salut, moi ca va aussi... hier, Prison Break, c'était pas mal. Si t'as un problème avec angular, j'peux t'aider: tu prends cette variable, tu la mets dans le truc là, et bâaaam ! Voilà ! hahah",
       "facebook": "https://www.facebook.com/upper.burger.3?fref=ts",
@@ -328,7 +630,9 @@
       "twitter": "https://twitter.com/hashtag/RadioLondres2017?src=hash",
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
-      "stack": "http://stackexchange.com/users/10499231/piotr"
+      "stack": "http://stackexchange.com/users/10499231/piotr",
+      "ville": "Bordeaux",
+      "graduation": "Février 2017"
     },
     {
       "email": "pierrevicq@gmail.com",
@@ -346,7 +650,9 @@
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
       "stack": "http://stackexchange.com/users/10499231/piotr",
-      "tokenSecure": 27.26556883592579
+      "ville": "Toulouse",
+      "graduation": "Septembre 2015",
+      "tokenSecure": 2577.134604846846
     },
     {
       "email": "elisa@gmail.com",
@@ -366,7 +672,7 @@
       "stack": "",
       "tokenSecure": 4957.982304779234,
       "ville": "Bordeaux",
-      "graduation": "Février 2017"
+      "graduation": "Septembre 2016"
     }
   ],
   "tags": [
@@ -523,1375 +829,261 @@
       "id": 10
     },
     {
-      "questionId": 1,
+      "questionId": 11,
       "tagId": 7,
       "id": 11
     },
     {
-      "questionId": 2,
+      "questionId": 12,
       "tagId": 8,
       "id": 12
     },
     {
-      "questionId": 3,
+      "questionId": 13,
       "tagId": 5,
       "id": 13
     },
     {
-      "questionId": 4,
+      "questionId": 14,
       "tagId": 6,
       "id": 14
     },
     {
-      "questionId": 5,
+      "questionId": 15,
       "tagId": 7,
       "id": 15
     },
     {
-      "questionId": 6,
+      "questionId": 16,
       "tagId": 8,
       "id": 16
     },
     {
-      "questionId": 7,
+      "questionId": 17,
       "tagId": 9,
       "id": 17
     },
     {
-      "questionId": 8,
+      "questionId": 18,
       "tagId": 10,
       "id": 18
     },
     {
-      "questionId": 9,
+      "questionId": 19,
       "tagId": 11,
       "id": 19
     },
     {
-      "questionId": 10,
+      "questionId": 20,
       "tagId": 12,
       "id": 20
     },
     {
-      "questionId": 1,
+      "questionId": 21,
       "tagId": 9,
       "id": 21
     },
     {
-      "questionId": 2,
+      "questionId": 22,
       "tagId": 10,
       "id": 22
     },
     {
-      "questionId": 3,
+      "questionId": 23,
       "tagId": 11,
       "id": 23
     },
     {
-      "questionId": 4,
+      "questionId": 24,
       "tagId": 12,
       "id": 24
     },
     {
-      "questionId": 5,
+      "questionId": 25,
       "tagId": 13,
       "id": 25
     },
     {
-      "questionId": 6,
+      "questionId": 26,
       "tagId": 14,
       "id": 26
     },
     {
-      "questionId": 7,
+      "questionId": 27,
       "tagId": 15,
       "id": 27
     },
     {
-      "questionId": 8,
+      "questionId": 28,
       "tagId": 16,
       "id": 28
     },
     {
-      "questionId": 9,
+      "questionId": 29,
       "tagId": 13,
       "id": 29
     },
     {
-      "questionId": 10,
+      "questionId": 30,
       "tagId": 14,
       "id": 30
     },
     {
-      "questionId": 1,
+      "questionId": 31,
       "tagId": 15,
       "id": 31
     },
     {
-      "questionId": 2,
+      "questionId": 32,
       "tagId": 16,
       "id": 32
     },
     {
-      "questionId": 3,
+      "questionId": 33,
       "tagId": 17,
       "id": 33
     },
     {
-      "questionId": 4,
+      "questionId": 34,
       "tagId": 18,
       "id": 34
     },
     {
-      "questionId": 5,
+      "questionId": 35,
       "tagId": 19,
       "id": 35
     },
     {
-      "questionId": 6,
+      "questionId": 36,
       "tagId": 20,
       "id": 36
     },
     {
-      "questionId": 7,
+      "questionId": 37,
       "tagId": 17,
       "id": 37
     },
     {
-      "questionId": 8,
+      "questionId": 38,
       "tagId": 18,
       "id": 38
     },
     {
-      "questionId": 9,
+      "questionId": 39,
       "tagId": 19,
       "id": 39
     },
     {
-      "questionId": 10,
+      "questionId": 40,
       "tagId": 20,
       "id": 40
     },
     {
-      "questionId": 6,
+      "questionId": 41,
       "tagId": 21,
       "id": 41
     },
     {
-      "questionId": 7,
+      "questionId": 42,
       "tagId": 22,
       "id": 42
     },
     {
-      "questionId": 8,
+      "questionId": 43,
       "tagId": 23,
       "id": 43
     },
     {
-      "questionId": 9,
+      "questionId": 44,
       "tagId": 24,
       "id": 44
     },
     {
-      "questionId": 10,
+      "questionId": 45,
       "tagId": 25,
       "id": 45
     },
     {
-      "questionId": 1,
+      "questionId": 46,
       "tagId": 7,
       "id": 46
     },
     {
-      "questionId": 2,
+      "questionId": 47,
       "tagId": 8,
       "id": 47
     },
     {
-      "questionId": 3,
+      "questionId": 48,
       "tagId": 5,
       "id": 48
     },
     {
-      "questionId": 4,
+      "questionId": 49,
       "tagId": 6,
       "id": 49
     },
     {
-      "questionId": 5,
+      "questionId": 50,
       "tagId": 7,
       "id": 50
     },
     {
-      "questionId": 6,
-      "tagId": 8,
+      "questionId": 17,
+      "tagId": 6,
       "id": 51
     },
     {
-      "questionId": 7,
-      "tagId": 9,
+      "questionId": 21,
+      "tagId": 6,
       "id": 52
     },
     {
-      "questionId": 8,
-      "tagId": 10,
+      "questionId": 22,
+      "tagId": 7,
       "id": 53
     },
     {
-      "questionId": 9,
-      "tagId": 11,
+      "questionId": 34,
+      "tagId": 8,
       "id": 54
     },
     {
-      "questionId": 10,
-      "tagId": 12,
+      "questionId": 27,
+      "tagId": 16,
       "id": 55
     },
     {
-      "questionId": 15,
+      "questionId": 40,
       "tagId": 2,
       "id": 56
-    },
-    {
-      "questionId": 15,
-      "tagId": 3,
-      "id": 57
-    },
-    {
-      "questionId": 31,
-      "tagId": 16,
-      "id": 58
-    },
-    {
-      "questionId": 32,
-      "tagId": 1,
-      "id": 59
     }
   ],
   "answers": [
     {
-      "title": "Responsive div/container - Fixed Soze",
-      "content": "utouytiut",
+      "title": "XML escape characters",
+      "content": "<div><!--block-->If you use an appropriate class or library, they will do the escaping for you. Many XML issues are caused by string concatenation.</div>",
       "nb_views": 0,
       "votes": 0,
-      "date": "2017-04-12T09:50:23.819Z",
-      "id": 1,
-      "questionId": 1,
-      "userId": 1,
-      "bestAnswer": false
-    },
-    {
-      "title": "Responsive div/container - media queries",
-      "content": "utouytiut",
-      "nb_views": 0,
-      "votes": 2,
-      "date": "2017-04-12T09:50:23.819Z",
-      "id": 2,
-      "questionId": 2,
-      "userId": 1,
-      "bestAnswer": true
-    },
-    {
-      "title": "coucou papa",
-      "content": "test de la mort qui tue",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-12T09:51:03.968Z",
-      "id": 3,
-      "questionId": 3,
-      "userId": 1
-    },
-    {
-      "title": "Responsive div/container - Fixed Soze",
-      "content": "test",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-12T09:54:21.521Z",
-      "id": 4,
-      "questionId": 4,
-      "userId": 1
-    },
-    {
-      "title": "Responsive div/container - Fixed Soze",
-      "content": "utouytiut",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-12T09:55:44.042Z",
-      "id": 5,
-      "questionId": 5,
-      "userId": 1
-    },
-    {
-      "title": "spokclvjdslk",
-      "content": "smldkfsmldkfmldskf",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-12T11:37:56.086Z",
-      "id": 6,
-      "questionId": 6,
-      "userId": 1
-    },
-    {
-      "title": "Responsive div/container - Fixed Soze",
-      "content": "utouytiut",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-12T11:48:03.147Z",
-      "id": 7,
-      "questionId": 8,
-      "userId": 1
-    },
-    {
-      "title": "Haloooo",
-      "content": "you're a beast Enzzzo",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-12T13:01:06.044Z",
-      "id": 8,
-      "questionId": 7,
-      "userId": 1
-    },
-    {
-      "title": "essaie décisif",
-      "content": "ma vie se joue la dessus",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-12T13:01:26.350Z",
-      "id": 9,
-      "questionId": 9,
-      "userId": 1
-    },
-    {
-      "title": "sldkfjs",
-      "content": "sdlkfdsfjds",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-12T13:06:07.016Z",
-      "id": 10,
-      "questionId": 10,
-      "userId": 1
-    },
-    {
-      "title": "smldfkjmldsqkjf",
-      "content": "sqmlkdfjmsqldkfjsq",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-12T13:12:17.694Z",
-      "id": 11,
-      "questionId": 1,
-      "userId": 1,
-      "bestAnswer": true
-    },
-    {
-      "title": "smldfkjmldsqkjf",
-      "content": "sqmlkdfjmsqldkfjsq",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-12T13:12:19.061Z",
-      "id": 12,
-      "questionId": 2,
-      "userId": 1,
-      "bestAnswer": false
-    },
-    {
-      "title": "smldfkjmldsqkjf",
-      "content": "et ça maaarche",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-12T13:12:24.897Z",
-      "questionId": 3,
-      "id": 13,
-      "userId": 1
-    },
-    {
-      "title": "smldfkjmldsqkjf",
-      "content": "sqmlkdfjmsqldkfjsq",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-12T13:12:25.364Z",
-      "questionId": 4,
-      "id": 14,
-      "userId": 1
-    },
-    {
-      "title": "smldfkjmldsqkjf",
-      "content": "sqmlkdfjmsqldkfjsq",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-12T13:12:25.547Z",
-      "questionId": 5,
-      "id": 15,
-      "userId": 1
-    },
-    {
-      "title": "test bastien",
-      "content": "test de ouf bastien",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-13T19:09:28.514Z",
-      "questionId": 6,
-      "id": 16,
-      "userId": 1
-    },
-    {
-      "title": "test2",
-      "content": "blabla",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-13T19:11:26.001Z",
-      "questionId": 7,
-      "id": 17,
-      "userId": 1
-    },
-    {
-      "title": "allo",
-      "content": "allo",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-13T19:12:13.311Z",
-      "questionId": 8,
-      "id": 18,
-      "userId": 1
-    },
-    {
-      "title": "Responsive div/container - Fixed Soze",
-      "content": "utouytiut",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-13T19:12:59.631Z",
-      "questionId": 9,
-      "id": 19,
-      "userId": 1
-    },
-    {
-      "title": "test 3",
-      "content": "test3",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-13T19:16:40.214Z",
-      "questionId": 10,
-      "id": 20,
-      "userId": 1
-    },
-    {
-      "title": "test final",
-      "content": "test final",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-13T19:17:29.206Z",
-      "questionId": 1,
-      "id": 21,
-      "userId": 1,
-      "bestAnswer": false
-    },
-    {
-      "title": "foukiou",
-      "content": "utouytiut",
-      "nb_views": 0,
-      "votes": 5,
-      "date": "2017-04-13T19:19:36.013Z",
-      "questionId": 2,
-      "id": 22,
-      "userId": 1,
-      "bestAnswer": false
-    },
-    {
-      "title": "test aurore",
-      "content": "sacha a droit à un cookie",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-14T07:41:46.952Z",
-      "questionId": 3,
-      "id": 23,
-      "userId": 1
-    },
-    {
-      "title": "lksdgfmlkdsqjfmlqdsjf",
-      "content": "mlksqdjfmsqlkdjfmqlkdsjfmldsqkjf",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-14T08:25:03.295Z",
-      "questionId": 4,
-      "id": 24,
-      "userId": 1
-    },
-    {
-      "title": "Hahah",
-      "content": "Yeahhhhh",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-14T11:13:21.836Z",
-      "questionId": 5,
-      "id": 25,
-      "userId": 1
-    },
-    {
-      "title": "Hooooo",
-      "content": "Trop beauuuuu",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-14T11:39:58.090Z",
-      "questionId": 6,
-      "id": 26,
-      "userId": 1
-    },
-    {
-      "title": "on pense aux gateaux",
-      "content": "des gateaux au chocolat",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-14T11:54:56.243Z",
-      "questionId": 7,
-      "id": 27,
-      "userId": 1
-    },
-    {
-      "title": "tes reponse",
-      "content": "coucou la wild code school",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-14T13:45:04.959Z",
-      "questionId": 8,
-      "id": 28,
-      "userId": 1
-    },
-    {
-      "title": "Un titre",
-      "content": "Test",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-19T13:41:36.464Z",
-      "questionId": 9,
-      "id": 29,
-      "userId": 1
-    },
-    {
-      "title": "une nouvelle réponse",
-      "content": "test2",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-19T13:48:35.319Z",
-      "questionId": 10,
-      "id": 30,
-      "userId": 1
-    },
-    {
-      "title": "on pense aussi",
-      "content": "à la purée",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-20T19:53:12.779Z",
-      "questionId": 23,
-      "id": 31,
-      "userId": 1
-    },
-    {
-      "title": "Hello World",
-      "content": "test numéro 2",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-25T10:03:36.328Z",
-      "userId": 1,
-      "questionId": 3,
-      "id": 32
-    },
-    {
-      "title": "nouveau test",
-      "content": "nouvelle réponse",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T10:05:28.626Z",
-      "userId": 1,
-      "questionId": 3,
-      "id": 33
-    },
-    {
-      "title": "nouvelle réponse",
-      "content": "new response",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-25T10:23:05.367Z",
-      "userId": 1,
-      "questionId": 3,
-      "id": 34
-    },
-    {
-      "title": "coucou Quitterie Benoite",
-      "content": "<div><!--block--><em>c'est la teuf</em></div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T12:26:07.868Z",
+      "date": "2017-04-27T20:21:58.498Z",
       "userId": 8,
-      "questionId": 11,
-      "id": 46
-    },
-    {
-      "title": "salut pierre",
-      "content": "<div><!--block-->on va&nbsp;<strong>comment</strong>&nbsp;?</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T12:34:58.701Z",
-      "userId": 8,
-      "questionId": 11,
-      "id": 47
-    },
-    {
-      "title": "hello beau gosse",
-      "content": "<div><!--block-->on va voir si tu postes les trucs correctement</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T12:39:12.922Z",
-      "userId": 8,
-      "questionId": 11,
-      "id": 48
-    },
-    {
-      "title": "coucou mathias",
-      "content": "<div><!--block-->this is chasse&nbsp;<strong>sous-marine</strong></div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T12:57:00.930Z",
-      "userId": 8,
-      "questionId": 11,
-      "id": 49
-    },
-    {
-      "title": "salut julien",
-      "content": "<div><!--block-->beau gosse t'as vu get</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T13:00:19.673Z",
-      "userId": 8,
-      "questionId": 11,
-      "id": 50
-    },
-    {
-      "title": "salut sacha et julirn",
-      "content": "<div><!--block-->c'est la teuf</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T13:01:58.050Z",
-      "userId": 8,
-      "questionId": 11,
-      "id": 51
-    },
-    {
-      "title": "je test",
-      "content": "<div><!--block-->une nouvelle fois</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T13:02:47.039Z",
-      "userId": 8,
-      "questionId": 11,
-      "id": 52
-    },
-    {
-      "title": "test",
-      "content": "<div><!--block-->Quatrieme réponse</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T13:08:24.056Z",
-      "userId": 8,
-      "questionId": 3,
-      "id": 53
-    },
-    {
-      "title": "test 3",
-      "content": "<div><!--block-->est ce que ca marche vraiment ?</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T13:08:52.405Z",
-      "userId": 8,
-      "questionId": 3,
-      "id": 54
-    },
-    {
-      "title": "test notify answer",
-      "content": "<div><!--block-->salut les gens</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T14:59:32.870Z",
-      "userId": 8,
-      "questionId": 13,
-      "id": 55
-    },
-    {
-      "title": "test 2",
-      "content": "<div><!--block-->on verra bien<br><br></div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T15:00:15.852Z",
-      "userId": 8,
-      "questionId": 13,
-      "id": 56
-    },
-    {
-      "title": "test 3",
-      "content": "<div><!--block-->allo ?</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T15:01:03.813Z",
-      "userId": 8,
-      "questionId": 13,
-      "id": 57
-    },
-    {
-      "title": "salut",
-      "content": "<div><!--block-->hello</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T15:03:20.292Z",
-      "userId": 8,
-      "questionId": 13,
-      "id": 58
-    },
-    {
-      "title": "test bastien",
-      "content": "<div><!--block-->coucou maman</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T15:23:18.639Z",
-      "userId": 8,
-      "questionId": 13,
-      "id": 59
-    },
-    {
-      "title": "test",
-      "content": "<div><!--block-->hello</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T15:24:13.665Z",
-      "userId": 8,
-      "questionId": 13,
-      "id": 60
-    },
-    {
-      "title": "salut",
-      "content": "<div><!--block-->debuggage</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T15:25:56.399Z",
-      "userId": 8,
-      "questionId": 13,
-      "id": 61
-    },
-    {
-      "title": "salut",
-      "content": "<div><!--block-->hello world</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T15:28:11.697Z",
-      "userId": 8,
-      "questionId": 13,
-      "id": 62
-    },
-    {
-      "title": "fais chier",
-      "content": "<div><!--block-->fais chier</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T15:36:50.922Z",
-      "userId": 8,
-      "questionId": 13,
-      "id": 63
-    },
-    {
-      "title": "test",
-      "content": "<div><!--block-->test deux</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T15:37:42.305Z",
-      "userId": 8,
-      "questionId": 13,
-      "id": 64
-    },
-    {
-      "title": "on teste",
-      "content": "<div><!--block-->on teste</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T15:38:48.903Z",
-      "userId": 8,
-      "questionId": 13,
-      "id": 65
-    },
-    {
-      "title": "on teste",
-      "content": "<div><!--block-->on teste</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T15:43:12.040Z",
-      "userId": 8,
-      "questionId": 13,
-      "id": 66
-    },
-    {
-      "title": "nouvelle réponse",
-      "content": "<div><!--block-->Hello from the other side</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-25T15:43:41.310Z",
-      "userId": 8,
-      "questionId": 13,
-      "id": 67
-    },
-    {
-      "title": "test",
-      "content": "<div><!--block-->ola</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-26T08:08:21.933Z",
-      "userId": "1",
-      "questionId": 3,
-      "id": 68
-    },
-    {
-      "title": "salut",
-      "content": "<div><!--block-->bravo les gars</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-26T08:12:24.892Z",
-      "userId": "1",
-      "questionId": 3,
-      "id": 69
-    },
-    {
-      "title": "eh bien",
-      "content": "<div><!--block-->moi je sais le dire en&nbsp;<del>BASQUE</del>&nbsp;italien !!<br><br>buongiorno ;-)</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-26T14:29:39.041Z",
-      "userId": "10",
-      "questionId": 15,
-      "id": 70
-    },
-    {
-      "title": "je sais",
-      "content": "<div><!--block-->aussi le dire en anglais&nbsp;<em>HELLO</em></div>",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-26T14:30:40.246Z",
-      "userId": "10",
-      "questionId": 15,
-      "id": 71
-    },
-    {
-      "title": "derniere fois",
-      "content": "<div><!--block-->en japonais KONNICHIWA</div>",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-26T14:32:59.593Z",
-      "userId": "10",
-      "questionId": 15,
-      "id": 72
-    },
-    {
-      "title": "dernier test",
-      "content": "<div><!--block-->dernier test</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-26T14:34:23.532Z",
-      "userId": "10",
-      "questionId": 15,
-      "id": 73
-    },
-    {
-      "title": "on essaie !!",
-      "content": "<div><!--block-->on y croit !!!</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-26T15:21:10.863Z",
-      "userId": "12",
-      "questionId": 15,
-      "id": 74
-    },
-    {
-      "title": "coucou mathilde",
-      "content": "<div><!--block-->comment ca va ?</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-26T19:43:47.913Z",
-      "userId": 12,
-      "questionId": 15,
-      "id": 75
-    },
-    {
-      "title": "on teste les liens profiles",
-      "content": "<div><!--block-->nice</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-26T20:36:26.921Z",
-      "userId": 12,
-      "questionId": 16,
-      "id": 76
-    },
-    {
-      "title": "coucou toi",
-      "content": "<div><!--block-->comment ca va ?</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-26T20:36:37.442Z",
-      "userId": 12,
-      "questionId": 16,
-      "id": 77
-    },
-    {
-      "title": "neaw answer",
-      "content": "<div><!--block-->ça marche ?</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T07:52:31.234Z",
-      "userId": 1,
-      "questionId": 9,
-      "bestAnswer": false,
-      "id": 78
-    },
-    {
-      "title": "nouvelle réponse",
-      "content": "<div><!--block-->test</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T08:02:04.043Z",
-      "userId": 1,
-      "questionId": 9,
-      "bestAnswer": false,
-      "id": 79
-    },
-    {
-      "title": "dernier test",
-      "content": "<div><!--block-->ola</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T08:04:35.315Z",
-      "userId": 1,
-      "questionId": 9,
-      "bestAnswer": false,
-      "id": 80
-    },
-    {
-      "title": "sdf",
-      "content": "<div><!--block-->sdf</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T08:05:36.469Z",
-      "userId": 1,
-      "questionId": 9,
-      "bestAnswer": false,
-      "id": 81
-    },
-    {
-      "title": "bisounours",
-      "content": "<div><!--block-->coouou</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T08:13:23.228Z",
-      "userId": 1,
-      "questionId": 9,
-      "bestAnswer": false,
-      "id": 82
-    },
-    {
-      "title": "nouvelle réponse",
-      "content": "<div><!--block-->test réponse</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T08:40:59.348Z",
-      "userId": 1,
-      "questionId": 2,
-      "bestAnswer": false,
-      "id": 83
-    },
-    {
-      "title": "batman",
-      "content": "<div><!--block-->batman</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T09:58:59.018Z",
-      "userId": 1,
-      "questionId": 3,
-      "bestAnswer": false,
-      "id": 84
-    },
-    {
-      "title": "motfiqer",
-      "content": "<div><!--block-->batman is bak</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T10:00:10.004Z",
-      "userId": 1,
-      "questionId": 3,
-      "bestAnswer": false,
-      "id": 85
-    },
-    {
-      "title": "ola",
-      "content": "<div><!--block-->que tal</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T10:00:33.260Z",
-      "userId": 1,
-      "questionId": 3,
-      "bestAnswer": false,
-      "id": 86
-    },
-    {
-      "title": "hello",
-      "content": "<div><!--block-->blabla</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T10:01:28.324Z",
-      "userId": 1,
-      "questionId": 3,
-      "bestAnswer": false,
-      "id": 87
-    },
-    {
-      "title": "hello",
-      "content": "<div><!--block-->blabla</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T10:01:53.329Z",
-      "userId": 1,
-      "questionId": 3,
-      "bestAnswer": false,
-      "id": 88
-    },
-    {
-      "title": "hulk",
-      "content": "<div><!--block-->hulk</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T10:02:27.634Z",
-      "userId": 1,
-      "questionId": 3,
-      "bestAnswer": false,
-      "id": 89
-    },
-    {
-      "title": "wolverine",
-      "content": "<div><!--block-->wolverine</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T10:04:43.407Z",
-      "userId": 1,
-      "questionId": 3,
-      "bestAnswer": false,
-      "id": 90
-    },
-    {
-      "title": "cyclops",
-      "content": "<div><!--block-->cyclops</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T10:06:54.748Z",
-      "userId": 1,
-      "questionId": 3,
-      "bestAnswer": false,
-      "id": 91
-    },
-    {
-      "title": "qsf",
-      "content": "<div><!--block-->sdf</div>",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-27T17:32:59.667Z",
-      "userId": 9,
-      "questionId": 12,
-      "bestAnswer": false,
-      "id": 92
-    },
-    {
-      "title": "sdf",
-      "content": "<div><!--block-->sdf</div>",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-27T17:53:26.845Z",
-      "userId": 9,
-      "questionId": 12,
-      "bestAnswer": false,
-      "id": 93
-    },
-    {
-      "title": "qsdf",
-      "content": "<div><!--block-->zer</div>",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-27T17:53:38.571Z",
-      "userId": 9,
-      "questionId": 12,
-      "bestAnswer": false,
-      "id": 94
-    },
-    {
-      "title": "sdfferfze",
-      "content": "<div><!--block-->sdfaez</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T17:57:01.039Z",
-      "userId": 9,
-      "questionId": 17,
-      "bestAnswer": false,
-      "id": 95
-    },
-    {
-      "title": "qsdfae",
-      "content": "<div><!--block-->faer</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T17:57:19.977Z",
-      "userId": 9,
-      "questionId": 17,
-      "bestAnswer": false,
-      "id": 96
-    },
-    {
-      "title": "qf",
-      "content": "<div><!--block-->azeff</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T17:58:47.846Z",
-      "userId": 9,
-      "questionId": 14,
-      "bestAnswer": false,
-      "id": 97
-    },
-    {
-      "title": "qsdfz",
-      "content": "<div><!--block-->fzef</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T17:58:59.836Z",
-      "userId": 9,
-      "questionId": 14,
-      "bestAnswer": false,
-      "id": 98
-    },
-    {
-      "title": "sdf",
-      "content": "<div><!--block-->fzef</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T17:59:48.269Z",
-      "userId": 9,
       "questionId": 18,
       "bestAnswer": false,
-      "id": 99
+      "id": 1
     },
     {
-      "title": "fzef",
-      "content": "<div><!--block-->qsfdz</div>",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-27T17:59:58.966Z",
-      "userId": 9,
-      "questionId": 18,
-      "bestAnswer": false,
-      "id": 100
-    },
-    {
-      "title": "sdfz",
-      "content": "<div><!--block-->fzef</div>",
-      "nb_views": 0,
-      "votes": 1,
-      "date": "2017-04-27T18:04:19.141Z",
-      "userId": 1,
-      "questionId": 19,
-      "bestAnswer": false,
-      "id": 101
-    },
-    {
-      "title": "sdfz",
-      "content": "<div><!--block-->zefzef</div>",
+      "title": "Closures Are Not Magic",
+      "content": "<div><!--block-->This page explains closures so that a programmer can understand them — using working JavaScript code. It is not for gurus or functional programmers.<br><br></div><div><!--block-->Closures are&nbsp;<em>not hard</em>&nbsp;to understand once the core concept is grokked. However, they are impossible to understand by reading any academic papers or academically oriented information about them!</div>",
       "nb_views": 0,
       "votes": 0,
-      "date": "2017-04-27T18:11:47.233Z",
-      "userId": 1,
-      "questionId": 20,
+      "date": "2017-04-27T20:23:02.018Z",
+      "userId": 8,
+      "questionId": 1,
       "bestAnswer": false,
-      "id": 102
-    },
-    {
-      "title": "fzeffz",
-      "content": "<div><!--block-->fzef</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T18:12:01.589Z",
-      "userId": 1,
-      "questionId": 20,
-      "bestAnswer": false,
-      "id": 103
-    },
-    {
-      "title": "sdfzef",
-      "content": "<div><!--block-->dfsdf</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T20:29:19.814Z",
-      "userId": 1,
-      "questionId": 19,
-      "bestAnswer": false,
-      "id": 104
-    },
-    {
-      "title": "efsdfsdf",
-      "content": "<div><!--block-->sdffd</div>",
-      "nb_views": 0,
-      "votes": 0,
-      "date": "2017-04-27T20:31:31.487Z",
-      "userId": 1,
-      "questionId": 19,
-      "bestAnswer": false,
-      "id": 105
+      "id": 2
     }
   ],
-  "comments": [
-    {
-      "content": "well done",
-      "date": "2017-04-12T09:51:23.819Z",
-      "id": 1,
-      "answerId": 3,
-      "userId": 2
-    },
-    {
-      "content": "voici un chouette commentaire",
-      "date": "2017-04-12T09:52:23.819Z",
-      "id": 2,
-      "answerId": 13,
-      "userId": 4
-    },
-    {
-      "content": "sti d'crisss de tabarnak !!",
-      "date": "2017-04-12T09:53:23.819Z",
-      "id": 3,
-      "answerId": 23,
-      "userId": 2
-    },
-    {
-      "content": "Et j'ajouterai que bla bla bla ...",
-      "date": "2017-04-12T09:54:23.819Z",
-      "id": 4,
-      "answerId": 3,
-      "userId": 5
-    },
-    {
-      "content": "<div><!--block-->test comment</div>",
-      "date": "2017-04-26T14:59:33.653Z",
-      "answerId": 3,
-      "id": 5
-    },
-    {
-      "content": "new comment from textarea sur reponse 2",
-      "date": "2017-04-26T15:02:18.722Z",
-      "answerId": 3,
-      "id": 6
-    },
-    {
-      "content": "iijkadjlkadzlazlk",
-      "date": "2017-04-26T15:05:31.447Z",
-      "answerId": 3,
-      "id": 7
-    },
-    {
-      "content": "ceci est un com",
-      "date": "2017-04-26T15:53:44.003Z",
-      "answerId": 3,
-      "id": 8
-    },
-    {
-      "content": "qserzr",
-      "date": "2017-04-26T15:54:57.598Z",
-      "answerId": 3,
-      "id": 9
-    },
-    {
-      "content": "hello wordl",
-      "date": "2017-04-26T15:59:03.416Z",
-      "answerId": 3,
-      "id": 10
-    },
-    {
-      "content": "ola",
-      "date": "2017-04-26T15:59:39.885Z",
-      "answerId": 13,
-      "id": 11
-    },
-    {
-      "content": "hello",
-      "date": "2017-04-26T16:06:44.305Z",
-      "answerId": 23,
-      "id": 12
-    },
-    {
-      "content": "Je valide",
-      "date": "2017-04-26T23:35:31.077Z",
-      "answerId": 13,
-      "userId": "2",
-      "id": 13
-    },
-    {
-      "content": "sdf",
-      "date": "2017-04-27T07:43:06.293Z",
-      "answerId": 19,
-      "userId": 1,
-      "id": 14
-    },
-    {
-      "content": "sdf",
-      "date": "2017-04-27T07:44:14.042Z",
-      "answerId": 19,
-      "userId": 1,
-      "id": 15
-    },
-    {
-      "content": "xffs",
-      "date": "2017-04-27T07:45:48.899Z",
-      "answerId": 19,
-      "userId": 1,
-      "id": 16
-    },
-    {
-      "content": "sdd",
-      "date": "2017-04-27T18:13:44.508Z",
-      "answerId": 103,
-      "userId": 1,
-      "id": 17
-    },
-    {
-      "content": "qsdqds",
-      "date": "2017-04-27T18:14:29.336Z",
-      "answerId": 103,
-      "userId": 1,
-      "id": 18
-    },
-    {
-      "content": "fdsf",
-      "date": "2017-04-27T18:14:37.261Z",
-      "answerId": 103,
-      "userId": 1,
-      "id": 19
-    },
-    {
-      "content": "dqsddqs",
-      "date": "2017-04-27T18:16:57.395Z",
-      "answerId": 103,
-      "userId": 1,
-      "id": 20
-    },
-    {
-      "content": "sdffs",
-      "date": "2017-04-27T18:18:02.458Z",
-      "answerId": 103,
-      "userId": 1,
-      "id": 21
-    },
-    {
-      "content": "dfdfsdf",
-      "date": "2017-04-27T20:32:51.250Z",
-      "answerId": 104,
-      "userId": 1,
-      "id": 22
-    }
-  ],
+  "comments": [],
   "tips": [
     {
       "id": 0,
@@ -1919,11 +1111,6 @@
       "id": 8
     },
     {
-      "content": "ksqjfmq",
-      "url": "http://mlskdjfqs",
-      "id": 9
-    },
-    {
       "content": "comment on cuisine",
       "url": "http://www.marmiton.org",
       "id": 10
@@ -1931,363 +1118,235 @@
   ],
   "jobs": [
     {
-      "title": "Developer Frontend",
-      "content": "Afin de réparer le réacteur de notre véhicule principal, recherchons personne motivée avec quelques connaissances en Angular 2 et spacio-mécanique thermonucléaire",
-      "place": "Alpha du centaure",
-      "society": "USS Enterprise",
-      "date": "2017-04-08T01:47:18.815Z",
-      "email": "MisterSpock@ussenterprise.com",
-      "site": "www.ussenterprise.com",
-      "annonce": "",
-      "tag": "Angular 2",
+      "title": "Software Developer",
+      "content": "",
+      "place": "San Francisco, CA",
+      "society": "CyberCoders",
+      "date": "2017-02-21T09:26:11.776Z",
+      "email": "",
+      "site": "",
+      "annonce": "http://www.careerbuilder.com/job/J3K3JM66DKJXZMP5NY8?ipath=JRG52&searchid=87ed1b4f-08ad-4563-8a98-a51d12ce43b3&siteid=ns_fr_g",
+      "tag": "Angular js",
       "id": 1
-    },
-    {
-      "title": "Mobile Application Software Developer",
-      "content": "",
-      "place": "Tinton Falls, NJ",
-      "society": "The Select Group",
-      "date": "2017-04-21T09:26:11.776Z",
-      "email": "",
-      "site": "",
-      "annonce": "http://www.careerbuilder.com/job/J3H3XC793QHLP9442W0?ipath=JRG9&searchid=a59833e6-014b-4b4b-8031-e994066d7bb7&siteid=ns_fr_g",
-      "tag": "IOS",
-      "id": 2
-    },
-    {
-      "title": "DEA - Sr. Software Developer",
-      "content": "",
-      "place": "Bordeaux",
-      "society": "Ubisoft",
-      "date": "2017-04-21T09:26:11.776Z",
-      "email": "",
-      "site": "",
-      "annonce": "http://www.careerbuilder.com/job/J3F7B77235DGZCYL0R5?ipath=JRG5&searchid=a59833e6-014b-4b4b-8031-e994066d7bb7&siteid=ns_fr_g",
-      "tag": "C++",
-      "id": 3
-    },
-    {
-      "title": "Software Developer",
-      "content": "",
-      "place": "San Francisco, CA",
-      "society": "CyberCoders",
-      "date": "2017-04-21T09:26:11.776Z",
-      "email": "",
-      "site": "",
-      "annonce": "http://www.careerbuilder.com/job/J3K3JM66DKJXZMP5NY8?ipath=JRG52&searchid=87ed1b4f-08ad-4563-8a98-a51d12ce43b3&siteid=ns_fr_g",
-      "tag": "Angular js",
-      "id": 4
-    },
-    {
-      "title": "Developer Backend",
-      "content": "Au sein d'une équipe dynamique, passionnée et responsable, vous participez au développement d’un écosystème de micro-services hébergés sur une infrastructure à haute disponibilité.",
-      "place": "Bordeaux",
-      "society": "Nemesis",
-      "date": "2017-04-08T01:47:18.815Z",
-      "email": "drh@nemesis.com",
-      "site": "www.nemesis.com",
-      "annonce": "",
-      "tag": "PHP",
-      "id": 5
-    },
-    {
-      "title": "DRH",
-      "content": "Vous recherchez un poste avec de vrais challenges techniques? Vous souhaitez enfin développer des solutions avec des personnes qui parlent le même langage que vous ? Dans le cadre de son développement, la société NP6 recherche un développeur web front Junior à Bordeaux. Au sein d’une équipe jeune, internationale, dynamique et passionnée, vous apporterez votre expertise en développement web.",
-      "place": "Lille",
-      "society": "Ajx",
-      "date": "2017-04-08T01:47:18.815Z",
-      "email": "drh-ajx@ajx.fr",
-      "site": "www.ajx.com",
-      "annonce": "",
-      "tag": "Javascript",
-      "id": 6
-    },
-    {
-      "title": "CEO",
-      "content": "Recherchons nouveau CEO, bonne paye. Connaissance en programmation est un plus",
-      "place": "San-Bernardino",
-      "society": "Apple",
-      "date": "2017-04-08T01:47:18.815Z",
-      "email": "tim@apple.com",
-      "site": "www.apple.com",
-      "annonce": "",
-      "tag": "Angularjs",
-      "id": 7
-    },
-    {
-      "title": "Développeur Java",
-      "content": "",
-      "place": "Paris 8ème",
-      "society": "Triodos",
-      "date": "2017-04-21T09:26:11.776Z",
-      "email": "",
-      "site": "",
-      "annonce": "https://www.indeed.fr/cmp/Triodos/jobs/Développeur-Java-64f629156b1270ff?sjdu=QwrRXKrqZ3CNX5W-O9jEvcXC4ujvmUOwskSHw4K2Xo7nOmZurWE5f7F1gLSPzaNi5xdv9USesDgTgSGmwjMouw",
-      "tag": "Java",
-      "id": 8
-    },
-    {
-      "title": "Administrateur Reseaux",
-      "content": "Leader dans son domaine, Chez Néné recherche un administrateur ultra spécialisé pour vendre ses produits",
-      "place": "Melun",
-      "society": "Chez Néné",
-      "date": "2017-04-08T01:47:18.815Z",
-      "email": "rene@caramail.com",
-      "site": "en cours",
-      "annonce": "",
-      "tag": "PHP",
-      "id": 9
-    },
-    {
-      "title": "Responsable Marketing",
-      "content": "Recherchons jeune femme (joindre photo), accessoirement pour développer en symfony",
-      "place": "Bologne",
-      "society": "Nutella",
-      "date": "2017-04-08T01:47:18.815Z",
-      "email": "gabriela@nutella.com",
-      "site": "www.nutella.com",
-      "annonce": "",
-      "tag": "Symfony",
-      "id": 10
-    },
-    {
-      "title": "PDG",
-      "content": "Besoin urgent d'un spécialiste Android pour développer l'application de notre entreprise afin d'accroitre notre CA dans une économie globalisée ultra concurrentielle et notamment à Saint-Georges-sous-Clisson",
-      "place": "Saint-Georges-sous-Clisson",
-      "society": "Charcuterie Bouloche",
-      "date": "2017-04-08T01:47:18.815Z",
-      "email": "raymond@wanadoo.fr",
-      "site": "www.CharcuterieBoulloche.com",
-      "annonce": "",
-      "tag": "Android",
-      "id": 11
-    },
-    {
-      "title": "Responsable qualité",
-      "content": "Recherchons un responsable qualité spécialisé dans le PHP",
-      "place": "Biarritz",
-      "society": "Oackley",
-      "date": "2017-04-08T01:47:18.815Z",
-      "email": "surflife@oackley.com",
-      "site": "www.oackley.com",
-      "annonce": "",
-      "tag": "PHP",
-      "id": 12
-    },
-    {
-      "title": "CEO",
-      "content": "Cherche Developpeur de la Wild Wild Code School uniquement",
-      "place": "Bordeaux",
-      "society": "Ubisoft",
-      "date": "2017-04-21T09:26:11.776Z",
-      "email": "surflife@oackley.com",
-      "site": "www.ubisoft.fr",
-      "annonce": "",
-      "tag": "C++",
-      "id": 13
-    },
-    {
-      "title": "Mobile Application Software Developer",
-      "content": "",
-      "place": "Tinton Falls, NJ",
-      "society": "The Select Group",
-      "date": "2017-04-21T09:26:11.776Z",
-      "email": "",
-      "site": "",
-      "annonce": "http://www.careerbuilder.com/job/J3H3XC793QHLP9442W0?ipath=JRG9&searchid=a59833e6-014b-4b4b-8031-e994066d7bb7&siteid=ns_fr_g",
-      "tag": "IOS",
-      "id": 14
-    },
-    {
-      "title": "Software Developer",
-      "content": "",
-      "place": "San Francisco, CA",
-      "society": "CyberCoders",
-      "date": "2017-04-21T09:26:11.776Z",
-      "email": "",
-      "site": "",
-      "annonce": "http://www.careerbuilder.com/job/J3K3JM66DKJXZMP5NY8?ipath=JRG52&searchid=87ed1b4f-08ad-4563-8a98-a51d12ce43b3&siteid=ns_fr_g",
-      "tag": "Angular js",
-      "id": 15
     },
     {
       "title": "Software Developer",
       "content": "",
       "place": "Orlando, FL",
       "society": "Hytec Dealer Services",
-      "date": "2017-04-21T09:26:11.776Z",
+      "date": "2017-02-22T09:26:11.776Z",
       "email": "",
       "site": "",
       "annonce": "http://www.careerbuilder.com/job/JCH25578PYY7SNT9QWR?ipath=JRG57&searchid=87ed1b4f-08ad-4563-8a98-a51d12ce43b3&siteid=ns_fr_g",
       "tag": "Javascript",
-      "id": 16
+      "id": 2
     },
     {
       "title": "Entry Level Software Developer",
       "content": "",
       "place": "Memphis, TN",
       "society": "Cook Systems FastTrack'D",
-      "date": "2017-04-21T09:26:11.776Z",
+      "date": "2017-02-23T09:26:11.776Z",
       "email": "",
       "site": "",
       "annonce": "http://www.careerbuilder.com/job/J5L01L5WN4T0RDVLT8G?ipath=JRG179&searchid=488eee56-1958-47a4-b1ec-08716eba1512&siteid=ns_fr_g",
       "tag": "C++",
-      "id": 17
+      "id": 3
+    },
+    {
+      "title": "Software Developer",
+      "content": "This is a great upside opportunity for an exceptional Software Developer in an emerging and innovative platform software company! We're looking for an energetic, highly-motivated Developer to join our fast paced client services team. If you are a Software Developer (Angular js) with experience, please read on!",
+      "place": "San Francisco, CA",
+      "society": "CyberCoders",
+      "date": "2017-03-08T01:47:18.815Z",
+      "email": "MisterSpock@ussenterprise.com",
+      "site": "www.ussenterprise.com",
+      "annonce": "",
+      "tag": "Angularjs",
+      "id": 4
     },
     {
       "title": "Développeur Java",
       "content": "",
       "place": "Paris 8ème",
       "society": "Triodos",
-      "date": "2017-04-21T09:26:11.776Z",
+      "date": "2017-03-21T09:26:11.776Z",
       "email": "",
       "site": "",
       "annonce": "https://www.indeed.fr/cmp/Triodos/jobs/Développeur-Java-64f629156b1270ff?sjdu=QwrRXKrqZ3CNX5W-O9jEvcXC4ujvmUOwskSHw4K2Xo7nOmZurWE5f7F1gLSPzaNi5xdv9USesDgTgSGmwjMouw",
       "tag": "Java",
-      "id": 18
+      "id": 5
     },
     {
-      "title": "Développeur Informatique",
+      "title": "Mobile Application Software Developer",
       "content": "",
-      "place": "",
-      "society": "Gestform Merignac",
+      "place": "Tinton Falls, NJ",
+      "society": "The Select Group",
       "date": "2017-04-21T09:26:11.776Z",
       "email": "",
       "site": "",
-      "annonce": "https://www.indeed.fr/cmp/GESTFORM-MERIGNAC/jobs/Developpeur-Informatique-8722febc1fdd6281?q=Developpeur+Informatique",
-      "tag": "C#",
-      "id": 19
+      "annonce": "http://www.careerbuilder.com/job/J3H3XC793QHLP9442W0?ipath=JRG9&searchid=a59833e6-014b-4b4b-8031-e994066d7bb7&siteid=ns_fr_g",
+      "tag": "IOS",
+      "id": 6
+    },
+    {
+      "title": "DEA - Sr. Software Developer",
+      "content": "",
+      "place": "Bordeaux",
+      "society": "Ubisoft",
+      "date": "2017-04-22T09:26:11.776Z",
+      "email": "",
+      "site": "",
+      "annonce": "http://www.careerbuilder.com/job/J3F7B77235DGZCYL0R5?ipath=JRG5&searchid=a59833e6-014b-4b4b-8031-e994066d7bb7&siteid=ns_fr_g",
+      "tag": "C++",
+      "id": 7
+    },
+    {
+      "title": "Software Developer",
+      "content": "",
+      "place": "San Francisco, CA",
+      "society": "CyberCoders",
+      "date": "2017-04-23T09:26:11.776Z",
+      "email": "",
+      "site": "",
+      "annonce": "http://www.careerbuilder.com/job/J3K3JM66DKJXZMP5NY8?ipath=JRG52&searchid=87ed1b4f-08ad-4563-8a98-a51d12ce43b3&siteid=ns_fr_g",
+      "tag": "Angular js",
+      "id": 8
+    },
+    {
+      "title": "Software Developer",
+      "content": "Our Client is looking for a Software Developer to be a part of a growing Information Technology and Finance team. This person is responsible for creating solutions to enhance the existing internal systems or create new applications to support our continued growth.",
+      "place": "Bordeaux",
+      "society": "Nemesis",
+      "date": "2017-04-24T01:47:18.815Z",
+      "email": "drh@nemesis.com",
+      "site": "www.nemesis.com",
+      "annonce": "",
+      "tag": "PHP",
+      "id": 9
+    },
+    {
+      "title": "Software Developer",
+      "content": "Suitable candidate should have 5+ years’ experience C# .Net, creating Web-services,  SQL Stored Procedures, SSRS, SSIS.   Seeking a self-sufficient developer who can take business concepts and architect a successful project completion. Developer will report directly to CTO of company. Developer is responsible for documentation and source control while manage the development projects. Projects include internal projects and customer paid projects. Typical number of projects per year average 4-6 projects.",
+      "place": "Lille",
+      "society": "Ajx",
+      "date": "2017-04-24T10:47:18.815Z",
+      "email": "drh-ajx@ajx.fr",
+      "site": "www.ajx.com",
+      "annonce": "",
+      "tag": "Javascript",
+      "id": 10
+    },
+    {
+      "title": "Software Developer",
+      "content": "Our client, located in the center of downtown Atlanta, GA, is seeking a software developer to work primarily on the UI of their application using AngularJS. The app has a C# back-end which connects to a MongoDB, so you would be able to use the best of the best technologies from front to back. Development breakdown is 80% front-end building out the Angular portion of the single page application, and 20% enhancing/maintaining the C# on the server-side. This is a highly critical application used company-wide as a SaaS platform.  If you are looking for a job where you get the freedom to use new technologies, have an opinion in the development process, and function more or less autonomously, then this is the job for you.",
+      "place": "San-Bernardino",
+      "society": "Apple",
+      "date": "2017-04-24T11:47:18.815Z",
+      "email": "tim@apple.com",
+      "site": "www.apple.com",
+      "annonce": "",
+      "tag": "Angularjs",
+      "id": 11
+    },
+    {
+      "title": "Développeur Java",
+      "content": "",
+      "place": "Paris 8ème",
+      "society": "Triodos",
+      "date": "2017-04-25T09:26:11.776Z",
+      "email": "",
+      "site": "",
+      "annonce": "https://www.indeed.fr/cmp/Triodos/jobs/Développeur-Java-64f629156b1270ff?sjdu=QwrRXKrqZ3CNX5W-O9jEvcXC4ujvmUOwskSHw4K2Xo7nOmZurWE5f7F1gLSPzaNi5xdv9USesDgTgSGmwjMouw",
+      "tag": "Java",
+      "id": 12
+    },
+    {
+      "title": "Software Developer",
+      "content": "Our client, a nationwide household name in the entertainment industry, has budget approved to hire a PHP Developer who will be focusing on web projects.  In this role you will be conducting development and support of high-availability, customer-facing systems and applications.  Projects include streaming video, video on demand, social media integration, and automation.",
+      "place": "Melun",
+      "society": "Principle Solutions Group",
+      "date": "2017-04-25T11:47:18.815Z",
+      "email": "rene@caramail.com",
+      "site": "",
+      "annonce": "",
+      "tag": "PHP",
+      "id": 13
+    },
+    {
+      "title": "Software Developer",
+      "content": "Our highly-recognized, leading entertainment and media company, client is looking for an experienced PHP Developer to work on upgrading and redesigning its enterprise web platform. This is a great opportunity to work on end-to-end development with a dynamic and data-driven team, to deploy a highly visible web applications.  If you are interested in Full-Stack, end-to-end development, while working in an Agile environment, we would love to speak with you.",
+      "place": "Bologne",
+      "society": "Principle Solutions Group",
+      "date": "2017-04-26T01:47:18.815Z",
+      "email": "gabriela@nutella.com",
+      "site": "www.nutella.com",
+      "annonce": "",
+      "tag": "Symfony",
+      "id": 14
+    },
+    {
+      "title": "Software Developer",
+      "content": "If you are an experienced Android Software Developer looking for a position with a leading company, Bartech can help! We are a leading staffing firm and our clients include some of the nation’s biggest companies. Our client has a need for a Android Software Developer. This is a contract position; however it is not uncommon for assignments to transition into permanent positions with our client companies. If you have the background we are looking for, and you are interested in an opportunity to get your foot in the door with a leading company, we want to talk with you!",
+      "place": "Saint-Georges-sous-Clisson",
+      "society": "Bartech Group",
+      "date": "2017-04-26T11:47:18.815Z",
+      "email": "raymond@wanadoo.fr",
+      "site": "www.CharcuterieBoulloche.com",
+      "annonce": "",
+      "tag": "Android",
+      "id": 15
+    },
+    {
+      "title": "Android Developer",
+      "content": "Strategic Staffing Solutions (S3) prides itself on being an international IT Staffing and Solutions Company with 25 years’ experience recruiting and managing exceptional IT and Business consultants for customers in the Financial, Energy, Public Sector and Retail Distribution industries.  A privately held, financially strong, woman-owned company, S3 is a full service IT firm, with 24 major market locations in the U.S!",
+      "place": "Biarritz",
+      "society": "Strategic Staffing Solutions",
+      "date": "2017-04-26T13:47:18.815Z",
+      "email": "surflife@oackley.com",
+      "site": "www.oackley.com",
+      "annonce": "",
+      "tag": "Android",
+      "id": 16
+    },
+    {
+      "title": "Mobile Application Software Developer",
+      "content": "",
+      "place": "Tinton Falls, NJ",
+      "society": "The Select Group",
+      "date": "2017-04-26T15:26:11.776Z",
+      "email": "",
+      "site": "",
+      "annonce": "http://www.careerbuilder.com/job/J3H3XC793QHLP9442W0?ipath=JRG9&searchid=a59833e6-014b-4b4b-8031-e994066d7bb7&siteid=ns_fr_g",
+      "tag": "IOS",
+      "id": 17
+    },
+    {
+      "title": "Software Developer",
+      "content": "Vencore Labs (formerly Applied Communication Sciences) is a self-sustaining research center within Vencore that provides applied research and engineering to enable government agencies, utilities and commercial enterprises to fully exploit the future of communications, data analytics and cyber security. From smart grid to smart phones, intelligent highways to intelligent battlefields, Vencore Labs’ 200 scientists, engineers and analysts are consistently creating generation-after-next technologies and solutions.  In doing so, our labs are helping to transform traditional government research.  We connect our customers to advanced research and technology helping them to develop solutions to their toughest challenges.  Accelerating the arc of transformation — from research to engineering to products — that’s what we focus on each day at Vencore Labs. Graduated from the Wild Code School is a mega big plus.",
+      "place": "Bordeaux",
+      "society": "Vencore",
+      "date": "2017-04-27T09:26:11.776Z",
+      "email": "surflife@oackley.com",
+      "site": "www.Vencore.fr",
+      "annonce": "",
+      "tag": "Python",
+      "id": 18
     }
   ],
   "votes_question": [
     {
-      "userId": 1,
+      "userId": 8,
+      "questionId": 18,
+      "id": 1
+    },
+    {
+      "userId": 8,
       "questionId": 1,
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "questionId": 6,
       "id": 2
-    },
-    {
-      "userId": 1,
-      "questionId": 3,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "questionId": 5,
-      "id": 4
-    },
-    {
-      "userId": 12,
-      "questionId": 15,
-      "id": 5
     }
   ],
-  "votes_answer": [
-    {
-      "userId": 1,
-      "answerId": 1,
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "answerId": 6,
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "answerIde": 3,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "answerId": 5,
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "answerId": 15,
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "answerId": 25,
-      "id": 6
-    },
-    {
-      "userId": 9,
-      "answerId": 23,
-      "id": 7
-    },
-    {
-      "userId": 9,
-      "answerId": 32,
-      "id": 8
-    },
-    {
-      "userId": 9,
-      "answerId": 13,
-      "id": 9
-    },
-    {
-      "userId": 9,
-      "answerId": 3,
-      "id": 10
-    },
-    {
-      "userId": 9,
-      "answerId": 33,
-      "id": 11
-    },
-    {
-      "userId": 9,
-      "answerId": 34,
-      "id": 12
-    },
-    {
-      "userId": 12,
-      "answerId": 72,
-      "id": 13
-    },
-    {
-      "userId": 12,
-      "answerId": 71,
-      "id": 14
-    },
-    {
-      "userId": 9,
-      "answerId": 93,
-      "id": 15
-    },
-    {
-      "userId": 9,
-      "answerId": 92,
-      "id": 16
-    },
-    {
-      "userId": 9,
-      "answerId": 94,
-      "id": 17
-    },
-    {
-      "userId": 9,
-      "answerId": 100,
-      "id": 18
-    },
-    {
-      "userId": 1,
-      "answerId": 2,
-      "id": 19
-    },
-    {
-      "userId": 1,
-      "answerId": 101,
-      "id": 20
-    }
-  ],
+  "votes_answer": [],
   "ressources": [
     {
       "id": 1,
@@ -2498,14 +1557,6 @@
       "content": "Learn how to use Apache, from beginner basics to advanced techniques, with online video tutorials taught by industry experts.",
       "tagId": 25,
       "url": "https://www.lynda.com/Apache-training-tutorials/1279-0.html"
-    },
-    {
-      "title": "Ciode",
-      "url": "wwww?hhuuuuu",
-      "content": "ljlkjlkj",
-      "tagId": 19,
-      "userId": "9",
-      "id": 31
     }
   ]
 }
