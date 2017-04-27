@@ -44,11 +44,11 @@
           <div class="contenu">
             <a ng-click="$ctrl.countViews(question.id)" ui-sref="questionSpec({idQuestion : question.id})">
 
-              <h3 ng-bind="question.title"></h3>
+              <h3 ng-bind="question.title | limitTo: 100"></h3>
               <!-- <span class="answers" ng-bind="question.answers"></span>-->
               <span>{{question.answers.length}} Réponses</span>
               <span>{{question.date | date:"MM/dd/yyyy"}}</span>
-              <p ng-bind-html="question.content"></p>
+              <p ng-bind-html="question.content | limitTo: 120"></p>
               <div >
                 <ul>
                   <li ng-repeat="tag in question.tags" class="chip">{{tag.tag.name}}</li>
