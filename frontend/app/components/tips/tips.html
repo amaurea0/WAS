@@ -1,10 +1,10 @@
 <div class="container">
     <div class="entete">
-        <a class="btn btn-floating  pulse orange Lighten-2" ui-sref="tips.postTip" ui-sref-active="select"><i class="material-icons">add</i></a>
-        <h1>Astuces</h1>
+        <a class="btn btn-floating pulse #ffb74d orange lighten-2" ui-sref="tips.postTip" ui-sref-active="select"><i class="material-icons">add</i></a>
+        <h1>Tricks &amp Tips</h1>
     </div>
     <div class="input-field">
-        <input class="validate" type="text" placeholder="Rechercher..." ng-model="$ctrl.model.query">
+        <input class="validate" type="text" placeholder="Search..." ng-model="$ctrl.query">
     </div>
 
 
@@ -14,10 +14,15 @@
         <ui-view></ui-view>
 
         <div ng-if="$ctrl.tips.length > 0">
-            <div id="question" ng-repeat="tip in $ctrl.tips">
-                <p><i class="tiny material-icons orange-text">subdirectory_arrow_right</i>
-                    <span ng-bind="tip.content"></span>
-                    <a target="_blank" href="{{tip.url}}"><span class="lien">lien</span></a></p>
+            <div class="question" ng-repeat="tip in $ctrl.tips | filter : $ctrl.query">
+                <div class="flex_direction">
+                    <p>
+                        <i class="tiny material-icons orange-text">subdirectory_arrow_right</i><span ng-bind="tip.content"></span>
+                    </p>
+                    <p>
+                        <a target="_blank" href="{{tip.url}}"><span class="lien">link</span></a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

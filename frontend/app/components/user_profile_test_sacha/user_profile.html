@@ -1,33 +1,138 @@
+<div id="setting" class="modal">
+    <div class="bloc_center">
+        <div class="row">
+            <div id="connexion" class="col s12">
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.pseudo" ng-model="$ctrl.setting.pseudo" class="validate" placeholder="Pseudo">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.first_name" ng-model="$ctrl.setting.nom" class="validate" placeholder="Nom">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.last_name" ng-model="$ctrl.setting.prenom" class="validate" placeholder="Prenom">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.twitter" ng-model="$ctrl.setting.twitter" class="validate" placeholder="Twitter">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.facebook" ng-model="$ctrl.setting.facebook" class="validate" placeholder="Facebook">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.github" ng-model="$ctrl.setting.github" class="validate" placeholder="Github">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.ville" ng-model="$ctrl.setting.ville" class="validate" placeholder="School">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-value="$ctrl.person.graduation" ng-model="$ctrl.setting.graduation" class="validate" placeholder="Graduation Year">
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" ng-model="$ctrl.setting.profil" ng-value="$ctrl.person.profile" class="materialize-textarea" placeholder="Résumer"></textarea>
+
+                    </div>
+                </div>
+                <center>
+                    <a class="waves-effect waves-light btn-large settingstest" ng-click="$ctrl.pathSetting($ctrl.setting)"><i class="material-icons right">cloud</i>Enregistrer</a>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="entete">
         <h1>User Profile</h1>
+        <a ng-if="$ctrl.person.id == $ctrl.cookieUser" class="btn btn-floating pulse #ffb74d orange lighten-2" ng-click="$ctrl.openmodal()"><i class="material-icons">mode_edit</i></a>
     </div>
-
     <div class="row">
         <div class="col s12">
             <div class="card blue-grey darken-1">
-                <div class="row">
-                    <div class="col s12 l6">
-                        <div class="card-content white-text">
-                            <h4 id="pseudo">{{$ctrl.person.pseudo}}</h4>
-                            <h5>{{$ctrl.person.first_name}} {{$ctrl.person.last_name}}</h5>
-                            <p>{{$ctrl.person.profile}}</p>
-                        </div>
-                    </div>
-                    <div class="col s12 l6">
-                        <div class="card-content white-text" id="personRight">
+                <table>
+                    <tr>
+                        <td>
                             <div class="card-content white-text">
-                                <a class="material-icons #ffb74d orange-text lighten-2" href="mailto:{{user.email}}">email</a>
-                                <p ng-bind="$ctrl.person.ville"></p>
+                                <h4 id="pseudo">{{$ctrl.person.pseudo}}</h4>
+                                <h5>{{$ctrl.person.first_name}} {{$ctrl.person.last_name}}</h5>
+
                             </div>
-                            <div class="collection-item avatar">
-                                <img class="circle" ng-src="{{$ctrl.person.avatar}}" alt="user's picture">
+                        </td>
+                        <td>
+                            <div class="card-content white-text" id="promotion">
+                                <P>School: <span ng-bind="$ctrl.person.ville"></P><br />
+                                <P>Graduation: <span ng-bind="$ctrl.person.graduation"></P>
+                            </div>
+                        </td>
+                        <td id="rightPerson">
+                            <div class="collection-item avatar" id="avatar">
+                                <img class="circle" id="avatar" ng-src="{{$ctrl.person.avatar}}" alt="user's picture"><br/>
+                                <a class="material-icons #ffb74d orange-text lighten-2" href="mailto:{{$ctrl.person.email}}">email</a>
+                            </div>
+                            <div id="icons">
+                                <a href="{{$ctrl.person.github}}" target="_blank"><img class="icons" src="/frontend/assets/img/github.png" alt="github icon"></a>
+                                <a href="{{$ctrl.person.stack}}" target="_blank"><img class="icons" src="/frontend/assets/img/stack.png" alt="github icon"></a>
+                                <a href="{{$ctrl.person.twitter}}" target="_blank"><img class="icons" src="/frontend/assets/img/twitter.png" alt="twitter icon"></a>
+                                <a href="{{$ctrl.person.facebook}}" target="_blank"><img class="icons" src="/frontend/assets/img/facebook.png" alt="facebook icon"></a>
+                                <a href="{{$ctrl.person.linkedin}}" target="_blank"><img class="icons" src="/frontend/assets/img/linkedin.png" alt="linkedin icon"></a>
+                                <a href="{{$ctrl.person.instagram}}" target="_blank"><img class="icons" src="/frontend/assets/img/instagram.png" alt="instagram icon"></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="card-content white-text">
+                                <p>{{$ctrl.person.profile}}</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+
+                <div ng-if='$ctrl.uncheckedAnswers.length > 0' class="card-action">
+                    <div id="reponses-non-consultées" class="collection with-header">
+                        <div class="collection-header">
+                            <h5>Unchecked Answers</h5>
+                            <div ng-repeat="notifs in $ctrl.uncheckedAnswers" class="collection-item" ui-sref="questionSpec({idQuestion : notifs.questionId})">
+                                <span>{{notifs.title}} {{notifs.answersCount}}</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-action">
-                    <a id="questionsTags">{{question.tag}}</a>
+                    <div class="collection with-header">
+                        <div class="collection-header">
+                            <h5>Answers</h5>
+                            <a ng-repeat="rep in $ctrl.reponse" class="collection-item" ui-sref="questionSpec({idQuestion : rep.questionId})">{{rep.title}}</a>
+                        </div>
+                    </div>
+                    <div class="collection with-header">
+                        <div class="collection-header">
+                            <h5>Questions</h5>
+                            <a ng-repeat="ques in $ctrl.question" class="collection-item profile" ui-sref="questionSpec({idQuestion : ques.id})">{{ques.title}}</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

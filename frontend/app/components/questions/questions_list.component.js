@@ -16,46 +16,51 @@ COMPNT
       search: '@'
     },
 
-    controller: ['TaglinkService', '$state', '$stateParams', 'QuestionsService', function (TaglinkService, $state, $stateParams, QuestionsService) {
+    controller: ['TaglinkService', '$state', '$stateParams', 'QuestionsService', '$log', 'authService', function (TaglinkService, $state, $stateParams, QuestionsService, $log, authService) {
 
       this.tabsList = [{
-          "view": "view1",
-          "label": "Plus populaire",
-          "sort": "-votes"
-        },
-        {
-          "view": "view2",
-          "label": "Plus vues",
-          "sort": "-nb_views"
-        },
-        {
-          "view": "view3",
-          "label": "Latest",
-          "sort": "-date"
-        },
-        {
-          "view": "view4",
-          "label": "Less answers",
-          "sort": "answers"
-        }
+        "view": "view1",
+        "label": "Most Popular",
+        "sort": "-votes"
+      },
+      {
+        "view": "view2",
+        "label": "Most Viewed",
+        "sort": "-nb_views"
+      },
+      {
+        "view": "view3",
+        "label": "Latest",
+        "sort": "-date"
+      },
+      {
+        "view": "view4",
+        "label": "Least Answered",
+        "sort": "answers"
+      }
       ];
 
       this.model = {
         tagQuestionId: [],
         query: ''
       };
-      // this.searchQuery = $stateParams.queryParam;
+      this.currentPage = 1;
+      this.pageSize = 4;
       this.questions = [];
 
       this.$onInit = () => {
         if (this.search) {
-          console.log(this.search);
           this.getQueries(this.search);
         } else if (this.tagFilter) {
           this.getTagedItems();
         } else {
           this.getAllItems();
         }
+
+      };
+
+      this.pageChangeHandler = (num) => {
+        console.log('going to page ' + num);
       };
 
       this.getTagedItems = () => {
@@ -64,18 +69,26 @@ COMPNT
 
           angular.forEach(this.model.tagQuestionId, (value, key) => {
             QuestionsService.getQuestionId(value.questionId).then((question) => {
+              TaglinkService.displayTags(question[0]);
               this.questions.push(question[0]);
-            }).catch((err) => {});
+            }).catch((err) => { });
           });
+          TaglinkService.displayTags(this.questions);
 
-        }).catch((err) => {});
+          this.VotedQuestion(this.questions);
+        }).catch((err) => { });
       };
 
       this.getAllItems = () => {
         QuestionsService.getQuestions().then((items) => {
+
           this.questions = items;
-          console.log(items);
-        }).catch((err) => {});
+          this.questions.forEach((currentQuestion) => {
+            TaglinkService.displayTags(currentQuestion);
+          }).catch((err) => { });
+
+          this.VotedQuestion(this.questions);
+        }).catch((err) => { });
       };
 
       this.removeTag = () => {
@@ -85,8 +98,38 @@ COMPNT
       this.getQueries = (param) => {
         QuestionsService.searchQuestions(param).then((items) => {
           this.questions = items;
-          console.log(this.questions);
-        }).catch((error) => {})
+          this.VotedQuestion(this.questions);
+        }).catch((error) => { })
       }
+
+      this.countViews = (id) => {
+        var updatedCount = {}
+        QuestionsService.getQuestionId(id).then((response) => {
+          updatedCount.nb_views = response[0].nb_views + 1
+
+          QuestionsService.updateContent(id, updatedCount).then((response) => {
+            $log.log('views updated');
+          }).catch((error) => { });
+
+        }).catch((error) => {
+          $log.error('pb sur getQuestionId');
+        });
+
+      }
+
+      this.VotedQuestion = (questions) => {
+        questions.forEach((question) => {
+          if (authService.getCurrentUser()) {
+            QuestionsService.getIfMyVotedQuestion(question.id, authService.getCurrentUser().id).then((rsp) => {
+              if (rsp.length > 0) {
+                question.myQuestionVote = true;
+              } else {
+                question.myQuestionVote = false;
+              }
+            }).catch((error) => { });
+          };
+        })
+      }
+
     }]
   });

@@ -1,14 +1,22 @@
 <div class="container">
-    <div class="input-field">
-        <input class="validate" type="text" placeholder="Rechercher..." ng-model="$ctrl.nuage.query">
+    <div class="entete">
+        <h1>Categories</h1>
     </div>
-    <table class="table">
-        <ul class="collection">
-            <li class="collection-item avatar">
-                <button ng-repeat="tag in $ctrl.nuage.list" class="chip" ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">
-                    {{tag.name}}
-                </button>
-            </li>
+
+    <div id="nuage">
+        <ul>
+            <button id=btnNuage ng-repeat="tag in $ctrl.nuage.list | orderBy: tagName: tag.name">
+                <li class="#00695c teal-text darken-3" id="tagTitle">{{tag.name}}</li>
+                <li class="#455a64 blue-grey-text darken-2" ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">Questions</li>
+                <li class="#455a64 blue-grey-text darken-2" ui-sref="ressources({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">Ressources</li>
+            </button>
         </ul>
-    </table>
+    </div>
+
 </div>
+
+<!--<div class="collection">
+        <button ng-repeat="tag in $ctrl.nuage.list" class="chip" ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">{{tag.name}}
+        </button>
+    </div>-->
+

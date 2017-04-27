@@ -1,16 +1,17 @@
 <div class="container">
     <div class="entete">
-        <a class="btn btn-floating #ffb74d orange lighten-2" ui-sref="addUser" ui-sref-active="select"><i class="material-icons">add</i></a>
         <h1>Users List</h1>
     </div>
 
     <div ng-if="$ctrl.users.length > 0">
         <div class="input-field">
-            <input class="validate" type="text" placeholder="Rechercher..." ng-model="$ctrl.model.query">
+            <input class="validate" type="text" placeholder="Search..." ng-model="q">
         </div>
 
 
-        <div id="question" ng-repeat="user in $ctrl.users | filter : $ctrl.model.query" class="collection">
+        <div class="question flex" dir-paginate="user in $ctrl.users | filter : q | itemsPerPage: $ctrl.pageSize"
+
+          current-page="$ctrl.currentPage" class="collection">
             <div class="counters">
                 <div><a class="material-icons #ffe0b2 orange-text lighten-4" href="mailto:{{user.email}}">email</a></div>
             </div>
@@ -26,8 +27,10 @@
             </div>
 
             <div class="collection-item avatar">
-                <img class="circle" ng-src="{{user.avatar}}" alt="user's picture">
+                <img class="responsive-img circle" ng-src="{{user.avatar}}" alt="user's picture">
             </div>
         </div>
     </div>
+
+    <dir-pagination-controls boundary-links="true" on-page-change="$ctrl.pageChangeHandler(newPageNumber)" template-url="node_modules/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
 </div>

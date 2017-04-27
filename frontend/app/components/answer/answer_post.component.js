@@ -3,11 +3,11 @@
 
 COMPNT.component("answerPost", {
 
-  templateUrl: '/frontend/app/components/answer_post/answer_post.html',
+  templateUrl: '/frontend/app/components/answer/answer_post.html',
 
   bindings: {},
 
-  controller: ['QuestionsService', 'AuthService', '$scope', '$state', function (QuestionsService, AuthService, $scope, $state) {
+  controller: ['QuestionsService', 'authService', '$scope', '$state', function (QuestionsService, authService, $scope, $state) {
 
     var currentId = $scope.$parent.$ctrl.question.id;
 
@@ -18,7 +18,7 @@ COMPNT.component("answerPost", {
         "nb_views": 0,
         "votes": 0,
         "date": new Date(),
-        "userId": AuthService.getCurrentUser().id,
+        "userId": authService.getCurrentUser().id,
         "questionId": currentId
       }
 

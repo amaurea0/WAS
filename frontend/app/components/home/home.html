@@ -2,7 +2,7 @@
   <div class="section no-pad-bot">
     <div class="container">
       <br><br>
-      <h1 class="header center teal-text text-lighten-2">Join the Wild Code School Communityy</h1>
+      <h1 class="header center teal-text text-lighten-2">Join the Wild Code School Community</h1>
       <div class="row center">
 
       </div>
@@ -12,44 +12,72 @@
     </div>
   </div>
   <div class="parallax">
-    <img src="https://wildcodeschool.fr/wp-content/uploads/2017/01/header_background.jpg" alt="Unsplashed background img 1">
+    <img src="/frontend/assets/img/Background1.jpg" alt="Unsplashed background img 1">
   </div>
 </div>
 
 
 <div class="container">
   <div class="section">
-
     <!--   Icon Section   -->
     <div class="row">
-
-
       <div class="col s12 m12">
         <div class="icon-block">
           <h2 class="center brown-text"><i class="material-icons">remove_red_eye</i></h2>
-          <h5 class="center">TOP QUESTIONS</h5>
-          <div ng-repeat="questions in $ctrl.questions">
-           <div id="questionhome">
-            <div class="vote">
-              <p>{{questions.votes}}<br />votes</p>
-              <p>{{questions.nb_views}}<br />vues</p>
-              <p>{{questions.reponse}}<br />réponses</p>
+          <h5 class="center"> LAST QUESTIONS</h5>
+          <div class="question flex" ng-repeat="question in $ctrl.questions">
+
+
+            <div class="counters view">
+              <div class="viewicon">
+                <div ng-bind="question.nb_views"></div>
+              </div>
+              <div ng-class="{voted: question.myQuestionVote, notvoted: !question.myQuestionVote}">
+                <div ng-bind="question.votes"></div>
+              </div>
             </div>
-            <div class="text">
-              <p>{{questions.title}}
-              </p>
-              <span>par {{questions.userId}}<i> créé le {{questions.date}}</i></span>
-              <div class="tag"><span>json</span><span>json</span></div>
+
+            <div class="contenu">
+              <a ui-sref="questionSpec({idQuestion : question.id})">
+
+                <h3 ng-bind="question.title | limitTo: 100"></h3>
+                <!-- <span class="answers" ng-bind="question.answers"></span>-->
+                <span>{{question.answers.length}} Réponses</span>
+                <span>{{question.date | date:"MM/dd/yyyy"}}</span>
+                <p ng-bind-html="question.content | limitTo: 120"></p>
+                <div>
+                  <ul>
+                    <li ng-repeat="tag in question.tags" class="chip">{{tag.tag.name}}</li>
+                  </ul>
+                </div>
+                <div ng-bind="question.tag"></div>
+              </a>
             </div>
+
+            <div class="collection-item avatar">
+              <img class="circle" ng-src="{{question.user.avatar}}" alt="user's picture">
+            </div>
+            <!--<div id="questionhome">
+              <div class="vote">
+                <p>{{questions.votes}}<br />votes</p>
+                <p>{{questions.nb_views}}<br />vues</p>
+                <p>{{questions.reponse}}<br />réponses</p>
+              </div>
+              <div class="text">
+                <p>{{questions.title}}
+                </p>
+                <span>par {{questions.userId}}<i> créé le {{questions.date}}</i></span>
+                <div class="tag"><span>json</span><span>json</span></div>
+              </div>
+            </div>-->
           </div>
         </div>
       </div>
+
+
     </div>
 
-
   </div>
-
-</div>
 </div>
 
 
@@ -57,11 +85,62 @@
   <div class="section no-pad-bot">
     <div class="container">
       <div class="row center">
-        <h5 class="header col s12 light">Apprendre et savoir apprendre sans chausette !</h5>
+        <h5 class="header col s12 light">Learn to Learn without Shoes !</h5>
       </div>
     </div>
   </div>
-  <div class="parallax"> <img src="/frontend/assets/img/shutterstock_326764691.jpg" alt="Unsplashed background img 1">
+  <div class="parallax"> <img src="/frontend/assets/img/background2.jpg" alt="Unsplashed background img 1">
+  </div>
+</div>
+
+<div class="container">
+  <div class="section">
+
+    <div class="row">
+      <div class="col s12 center">
+        <h3><i class="mdi-content-send brown-text"></i></h3>
+        <h4>Latest jobs</h4>
+        <div class="question flex" ng-repeat="job in $ctrl.jobs">
+          <div class="counters" class="flexJob">
+            <div>
+              <a class="material-icons #ffe0b2 orange-text lighten-4" href="mailto:{{job.email}}">email</a>
+              <a class="material-icons #ffe0b2 orange-text lighten-4" href="{{job.site}}" target="_blank">http</a>
+            </div>
+            <div>
+              <a class="tagJob">{{job.tag}}</a>
+            </div>
+          </div>
+
+          <div class="contenu jobcontent">
+            <a>
+              <h3 class="title" ng-bind="job.title | limitTo: 100"></h3>
+              <p class="content flow-text" ng-bind="job.content | limitTo: 100"></p>
+              <a ng-if="job.annonce" href="{{job.annonce}}" target="_blank" id="btnJob">Ad Link</a><br />
+            </a>
+          </div>
+
+          <div class="collection-item avatar">
+            <h3 class="society" class="title" ng-bind="job.society"></h3>
+            <p>{{job.place}}</p><br />
+            <p>{{job.date | date:"MM/dd/yyyy"}}</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <h5 class="header col s12 light">Learn to Learn without Shoes !</h5>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"> <img src="/frontend/assets/img/background3.jpg" alt="Unsplashed background img 1">
   </div>
 </div>
 

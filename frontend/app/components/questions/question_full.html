@@ -1,48 +1,154 @@
 <div class="container">
     <div class="entete">
-        <h1>Question et réponses</h1>
-        <a class="btn btn-floating pulse orange" ui-sref="questionPost" ui-sref-active="select"><i class="material-icons">add</i></a>
+        <h1>Questions and Answers</h1>
+        <a class="btn btn-floating pulse #ffb74d orange lighten-2" ui-sref="questionPost" ui-sref-active="select"><i class="material-icons">add</i></a>
     </div>
 
-    <input id="search" class="form-control" placeholder="Rechercher..." ng-model="$ctrl.model.query" />
-    <div id="question">
-        <div class="counters view">
-            <div ng-bind="$ctrl.question.votes"></div>
+    <input id="search" class="form-control" placeholder="Search..." ng-model="q" />
+    <div class="question flex">
 
-            <div ng-bind="$ctrl.question.nb_views + 1"></div>
+        <div class="counters view">
+            <div class="viewicon">
+                <div ng-bind="$ctrl.question.nb_views + 1"></div>
+            </div>
+            <div ng-class="{voted: $ctrl.myQuestionVote, notvoted: !$ctrl.myQuestionVote}" ng-click="$ctrl.voteQst($ctrl.question.id)">
+                <div ng-bind="$ctrl.question.votes" ng-model="$ctrl.myQuestionVote"></div>
+            </div>
         </div>
+
         <div class="contenu">
             <h3 ng-bind="$ctrl.question.title"></h3>
-            <button ng-if="$ctrl.myQuestion" ui-sref="editPost({postId : $ctrl.question.id})">EDITION</button>
+            <button ng-if="$ctrl.resolved" class="lien redchip"> Resolved </button>
+            <button ng-if="$ctrl.myQuestion" ui-sref="editPost({postId : $ctrl.question.id})" class="lien">Edit</button>
             <span>{{$ctrl.question.date | date:"MM/dd/yyyy"}}</span>
-            <p ng-bind="$ctrl.question.content"></p>
+            <p ng-bind-html="$ctrl.question.content"></p>
+            <div>
+                <ul>
+                    <li ng-repeat="tag in $ctrl.question.tags" class="chip">{{tag.tag.name}}</li>
+                </ul>
+            </div>
         </div>
         <div class="collection-item avatar">
             <img class="circle" ng-src="{{$ctrl.question.user.avatar}}" alt="avatar">
         </div>
     </div>
 
-    <a class="waves-effect waves-light btn orange lighten-2" ui-sref="questionSpec.postAnswer">
-        <i class="material-icons left">add</i>Nouvelle Réponse</a>
+    <button class="waves-effect waves-light btn orange lighten-2" ng-click="postAnswer = !postAnswer" ng-disabled="!$ctrl.connected.id">
 
+        <i class="material-icons left">add</i>New Answer
+        </button>
+    <!-- edition answer-->
+    <div ng-if="$ctrl.edition" class="bloc_center">
+        <h2>Edit response</h2>
+        <form name="myForm1" class="formulaire" ng-submit="$ctrl.editContentAnswer($ctrl.answer)" novalidate>
+            <div class="form-group">
+                <label for="title">Titre réponse</label>
+                <input type="text" class="form-control" id="title" required ng-model="$ctrl.answer.title" />
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <trix-editor angular-trix type="text" class="form-control" id="content" required ng-model="$ctrl.answer.content"></trix-editor>
+            </div>
+            <div class="item-actions">
+
+                <input class="btn btn-success" type="submit" value="Valider" ng-disabled="myForm1.$invalid" />
+
+            </div>
+        </form>
+    </div>
+    <!-- post answer-->
+    <div ng-show="postAnswer" class="bloc_center">
+        <h2>Post a new answer</h2>
+        <form name="myForm2" class="formulaire" ng-submit="$ctrl.saveAnswer()" novalidate>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" required ng-model="$ctrl.answer.title" />
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <trix-editor angular-trix type="text" class="form-control" id="content" required ng-model="$ctrl.answer.content"></trix-editor>
+            </div>
+            <div class="item-actions">
+
+                <input class="btn btn-success" ng-click="postAnswer = false" type="submit" value="Valider" ng-disabled="myForm2.$invalid"
+                />
+
+            </div>
+        </form>
+    </div>
+    <!-- display answers-->
     <div>
-        <ui-view></ui-view>
+        <div class="best_answer question flex" ng-if="$ctrl.bestanswer !== undefined">
+            <div class="counters view">
+                <div ng-class="{voted: $ctrl.bestanswer.myAnswerVote, notvoted: !$ctrl.bestanswer.myAnswerVote}" ng-click="$ctrl.voteBestAsw($ctrl.bestanswer)">
+                    <div ng-bind="$ctrl.bestanswer.votes" ng-model="$ctrl.bestanswer.myAnswerVote"></div>
+                </div>
+            </div>
 
+            <div class="contenu">
+                <h3 ng-bind="$ctrl.bestanswer.title"></h3>
 
-        <div ng-if="$ctrl.question.answers.length > 0">
-            <div id="answer" ng-repeat="answer in $ctrl.question.answers | filter : $ctrl.model.query">
+                <button ng-if="$ctrl.bestanswer.bestAnswer" class="lien redchip"> Best Answer </button>
+                <button ng-if="$ctrl.bestanswer.myAnswer" class="lien" ui-sref="questionSpec({idQuestion : $ctrl.question.id, edition: true, answer: $ctrl.bestanswer.id})">edit</button>
 
+                <span>{{$ctrl.bestanswer.date | date:"MM/dd/yyyy"}}</span>
+                <p ng-bind-html="$ctrl.bestanswer.content"></p>
+            </div>
+        </div>
+
+        <div class="answer" ng-if="$ctrl.question.answers.length > 0" dir-paginate="answer in $ctrl.question.answers | filter : q | itemsPerPage: $ctrl.pageSize"
+            current-page="$ctrl.currentPage">
+            <div class="question flex">
                 <div class="counters view">
-                    <div ng-bind="answer.votes"></div>
+                    <div ng-class="{voted: answer.myAnswerVote, notvoted: !answer.myAnswerVote}" ng-click="$ctrl.voteAsw(answer)">
+                        <div ng-bind="answer.votes" ng-model="answer.myAnswerVote"></div>
+                    </div>
                 </div>
                 <div class="contenu">
                     <h3 ng-bind="answer.title"></h3>
-                    <!--<button class="lien" ui-sref="editPost({postId : answer.id})">edit</button>-->
-                    <span>{{answer.date | date:"MM/dd/yyyy"}}</span>
-                    <p ng-bind="answer.content"></p>
-                </div>
+                    <button ng-if="$ctrl.myQuestion" ng-click="$ctrl.bestAnswer(answer)" class="lien lienred">Best answer</button>
+                    <button ng-if="answer.myAnswer" class="lien" ui-sref="questionSpec({idQuestion : $ctrl.question.id, edition: true, answer: answer.id})">edit</button>
 
+                    <span>{{answer.date | date:"MM/dd/yyyy"}}</span>
+                    <p ng-bind-html="answer.content"></p>
+                </div>
+            </div>
+
+            <!-- bouton poster des commentaires-->
+            <button class="waves-effect waves-light btn grey lighten-2" ng-click="postComment = !postComment" ng-disabled="!$ctrl.connected"><i class="material-icons left">add</i>New Comment</button>
+
+            <!--bouton affichage commentaires-->
+            <button class="waves-effect waves-light btn grey lighten-1" ng-click="showComments = !showComments">
+                    <i class="material-icons left">add</i>Comments</button>
+
+            <!-- commentaires-->
+            <!-- formulaire des commentaires-->
+            <div ng-show="postComment" class="bloc_center">
+                <h2>Post a new comment</h2>
+                <form name="myForm3" class="formulaire" ng-submit="$ctrl.saveComment(answer.id)" novalidate>
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea class="form-control" type="text" id="content" required ng-model="$ctrl.comment.content"></textarea>
+
+                    </div>
+                    <div class="item-actions" ng-click="showComments = true">
+                        <input class="btn btn-success" ng-click="postComment = false" type="submit" value="Valider" ng-disabled="myForm3.$invalid"
+                        />
+                    </div>
+                </form>
+            </div>
+            <!--display comments-->
+            <div class="answer" ng-show="showComments">
+                <div ng-if="answer.coms.length > 0">
+                    <div class="comment" ng-repeat="comment in answer.coms">
+                        <p ng-bind="comment.content"></p>
+                        <span>{{comment.date | date:"MM/dd/yyyy"}}</span><span>{{comment.pseudo.userId}}</span>
+                    </div>
+                </div>
             </div>
         </div>
+
+
     </div>
+    <dir-pagination-controls boundary-links="true" on-page-change="$ctrl.pageChangeHandler(newPageNumber)" template-url="node_modules/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
 </div>

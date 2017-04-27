@@ -16,8 +16,38 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
                 queryParam: null
             },
             resolve: {
-                search: function($stateParams){
+                search: function ($stateParams) {
                     return $stateParams.queryParam;
+                }
+            }
+        })
+
+        .state({
+            name: 'ressources',
+            url: '/ressources/:tagId/:tagName',
+            component: 'ressourcesList',
+            resolve: {
+                tagFilter: function ($stateParams) {
+                    return {
+                        tagId: $stateParams.tagId,
+                        tagName: $stateParams.tagName
+                    };
+                }
+
+            }
+        })
+
+        .state({
+            name: 'ressourcePost',
+            url: '/ressourcePost/:tagId/:tagName',
+            component: 'ressourcePost',
+            authenticate: true,
+            resolve: {
+                tagFilter: function ($stateParams) {
+                    return {
+                        tagId: $stateParams.tagId,
+                        tagName: $stateParams.tagName
+                    };
                 }
             }
         })
@@ -83,14 +113,36 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
 
         .state({
             name: 'questionSpec',
-            url: '/questions/{idQuestion}',
+            url: '/questions/:idQuestion',
             component: 'questionFull',
+            params: {
+                answer: null,
+                edition: null,
+                postAnswer: null,
+                postComment: null
+            },
             resolve: {
-                question: function ($rootScope, QuestionsService, $transition$) {
-                    return QuestionsService.getSpecificQuestion($transition$.params().idQuestion);
-                }
+                question: function ($stateParams, QuestionsService) {
+                    console.log($stateParams)
+                    return QuestionsService.getSpecificQuestion($stateParams.idQuestion);
+                },
+                edition: function ($stateParams) {
+                    return $stateParams.edition;
+                },
+                postAnswer: function ($stateParams) {
+                    return $stateParams.postAnswer;
+                },
+                answer: function ($stateParams, QuestionsService) {
+                    if ($stateParams.answer) {
+                        return QuestionsService.getSpecificAnswer($stateParams.answer);
+                    }
+                },
+                postComment: function ($stateParams) {
+                    return $stateParams.postComment;
+                },
             }
         })
+   
 
         .state({
             name: 'addUser',

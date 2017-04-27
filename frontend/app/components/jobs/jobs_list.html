@@ -1,39 +1,52 @@
 <div class="container">
     <div class="entete">
-        <a class="btn btn-floating #ffb74d orange lighten-2" ui-sref="jobPost" ui-sref-active="select"><i class="material-icons">add</i></a>
+        <a class="btn btn-floating pulse #ffb74d orange lighten-2" ui-sref="jobPost" ui-sref-active="select"><i class="material-icons">add</i></a>
         <h1>Jobs Search</h1>
     </div>
 
     <div ng-if="$ctrl.jobs.length > 0">
         <div class="input-field">
-            <input class="validate" type="text" placeholder="Rechercher..." ng-model="$ctrl.model.query">
-        </div>
-
-
-        <div id="question" ng-repeat="job in $ctrl.jobs | filter : $ctrl.model.query" class="collection">
-            <div class="counters" id="flexJob">
-                <div>
-                    <a class="material-icons #ffe0b2 orange-text lighten-4" href="mailto:{{job.email}}">email</a>
-                    <a class="material-icons #ffe0b2 orange-text lighten-4" href="{{job.site}}" target="_blank">http</a>
-                </div>
-                <div>
-                    <a id="tagJob">{{job.tag}}</a>
-                </div>
-            </div>
-
-            <div class="contenu">
-                <a>
-                    <h3 class="title" ng-bind="job.title"></h3>
-                    <p class="content flow-text">{{job.content}}</p>
-                    <a class="#1de9b6 teal-text accent-3" href="{{job.annonce}}" target="_blank">{{job.annonce}}</a>
-                </a>
-            </div>
-
-            <div class="collection-item avatar">
-                <h3 id="society" class="title" ng-bind="job.society"></h3>
-                <p>{{job.place}}</p><br />
-                <p>{{job.date | date:"MM/dd/yyyy"}}</p>
-            </div>
+            <input class="validate" type="text" placeholder="Search..." ng-model="q">
         </div>
     </div>
+
+    <div class="question flex collection" dir-paginate="job in $ctrl.jobs | filter:q | orderBy: '-date'| itemsPerPage: 4"
+        current-page="$ctrl.currentPage">
+
+        <!--<div id="question" ng-repeat="job in $ctrl.jobs | filter : $ctrl.model.query" class="collection">-->
+        <!--<div class="row">-->
+            <!--<div class="col s12 l2 offset-l1">-->
+                <div class="counters flexJob">
+                    <div>
+                        <a class="material-icons #ffe0b2 orange-text lighten-4" href="mailto:{{job.email}}">email</a>
+                        <a class="material-icons #ffe0b2 orange-text lighten-4" href="{{job.site}}" target="_blank">http</a>
+                    </div>
+                    <div>
+                        <a class="tagJob">{{job.tag}}</a>
+
+                    </div>
+                </div>
+            <!--</div>-->
+            <!--<div class="col s12 l6">-->
+                <div class="contenu">
+                    <a>
+                        <h3 class="title" ng-bind="job.title"></h3>
+                        <p>{{job.content}}</p><br />           
+                        <a ng-if="job.annonce" href="{{job.annonce}}" target="_blank" id="btnJob">Ad Link</a><br />
+                    </a>
+                </div>
+            <!--</div>-->
+            <!--<div class="col s12 l3">-->
+                <div class="collection-item avatar">
+                    <p class="society" class="title" ng-bind="job.society"></p>
+
+                    <p class="jobPlace">{{job.place}}</p><br />
+                    <p class="jobPlace">{{job.date | date:"MM/dd/yyyy"}}</p>
+                </div>
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    <dir-pagination-controls boundary-links="true" on-page-change="$ctrl.pageChangeHandler(newPageNumber)" template-url="node_modules/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+
 </div>

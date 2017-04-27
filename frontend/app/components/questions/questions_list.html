@@ -1,10 +1,8 @@
 <div class="container">
   <div class="entete">
-    <a class="btn btn-floating pulse orange" ui-sref="questionPost" ui-sref-active="select"><i class="material-icons">add</i></a>
+    <a class="btn btn-floating pulse #ffb74d orange lighten-2" ui-sref="questionPost" ui-sref-active="select"><i class="material-icons">add</i></a>
     <h1>Questions</h1>
   </div>
-
-
 
   <div ng-if="$ctrl.questions.length > 0">
     <div class="chip" ng-show="$ctrl.tagFilter.tagName.length >0">
@@ -14,9 +12,8 @@
   </div>
 
   <div class="input-field">
-    <input class="validate" type="text" placeholder="Rechercher..." ng-model="$ctrl.model.query">
+    <input class="validate" type="text" placeholder="Search..." ng-model="q">
   </div>
-
 
   <div class="bloc_center">
 
@@ -32,35 +29,45 @@
       </div>
 
       <div ng-repeat="aTab in $ctrl.tabsList" id="{{aTab.view}}" class="col s12">
-        <div id="question" ng-repeat="question in $ctrl.questions | filter : $ctrl.model.query | orderBy : aTab.sort">
+        <div class="question flex" dir-paginate="question in $ctrl.questions | filter:q | orderBy : aTab.sort | itemsPerPage: $ctrl.pageSize"
+          current-page="$ctrl.currentPage">
 
           <div class="counters view">
-            <div ng-bind="question.votes"></div>
-            <div ng-bind="question.nb_views"></div>
+            <div class="viewicon">
+              <div ng-bind="question.nb_views"></div>
+            </div>
+            <div ng-class="{voted: question.myQuestionVote, notvoted: !question.myQuestionVote}">
+              <div ng-bind="question.votes"></div>
+            </div>
           </div>
 
           <div class="contenu">
-            <a ui-sref="questionSpec({idQuestion : question.id})">
+            <a ng-click="$ctrl.countViews(question.id)" ui-sref="questionSpec({idQuestion : question.id})">
 
-              <h3 ng-bind="question.title"></h3>
+              <h3 ng-bind="question.title | limitTo: 100"></h3>
               <!-- <span class="answers" ng-bind="question.answers"></span>-->
               <span>{{question.answers.length}} Réponses</span>
               <span>{{question.date | date:"MM/dd/yyyy"}}</span>
-               <p ng-bind="question.content"></p>
-               <span id="questionsTags">{{question.tag}}</span>
+              <p ng-bind-html="question.content | limitTo: 120"></p>
+              <div >
+                <ul>
+                  <li ng-repeat="tag in question.tags" class="chip">{{tag.tag.name}}</li>
+                </ul>
+              </div>
+
               <div ng-bind="question.tag"></div>
             </a>
           </div>
 
-            <div class="collection-item avatar">
-                <img class="circle" ng-src="{{question.user.avatar}}" alt="user's picture">
-            </div>
-
-        </div>
+          <div class="collection-item avatar">
+            <img class="responsive-img circle" ng-src="{{question.user.avatar}}" alt="user's picture">
+          </div>
 
       </div>
+      <dir-pagination-controls boundary-links="true" on-page-change="$ctrl.pageChangeHandler(newPageNumber)" template-url="node_modules/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
     </div>
   </div>
-  <!-- FIN bloc_center -->
+</div>
+<!-- FIN bloc_center -->
 </div>
 <!-- FIN container -->

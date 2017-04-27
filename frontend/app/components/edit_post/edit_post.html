@@ -1,9 +1,9 @@
 <div class="container">
-    <h3>Edition Question</h3>
+    <h3>Edit your Question</h3>
 
     <form name="myForm" ng-submit="$ctrl.editContent($ctrl.post)" novalidate>
         <div class="form-group">
-            <label for="title">Titre question</label> <br>
+            <label for="title">Question title</label> <br>
             <input name="title" type="text" class="form-control" id="title" required ng-model="$ctrl.post.title" />
             <!--<p ng-show="myForm.title.$invalid">Champ requis</p>-->
         </div>
@@ -24,7 +24,7 @@
 
         <div class="item-actions">
             <input class="btn btn-success" type="submit" value="Valider" ng-disabled="myForm.$invalid" />
-            <a class="btn btn-default" ui-sref="list">Annuler</a>
+            <a class="btn btn-default" ui-sref="list">Cancel</a>
         </div>
     </form>
 </div>
