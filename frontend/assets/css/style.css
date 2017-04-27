@@ -494,7 +494,15 @@ p {
     margin-top: 117px;
     font-size: 80px;
 }
-
+.slogan {
+    font-size : 2.2em;
+    font-weight : bold;
+    letter-spacing: 0.2em;
+}
+.contact {
+    color : #455a64;
+    font-size : 1.3em ;
+}
 
 /*//////////////////////////////////////////////////////////////*/
 
