@@ -76,6 +76,7 @@ COMPNT
                 this.answers = this.question.answers;
                 var maxvote = 0;
                 var keepGoing = true;
+                this.bestanswer = this.answers[0];
                 this.answers.forEach((answer) => {
                     if (keepGoing) {
                         if (answer.votes > maxvote) {
@@ -228,7 +229,7 @@ COMPNT
                 });
 
                 this.question.answers.push(new_answer);
-                
+
                 $state.go('questionSpec', {
                     idQuestion: this.question.id,
                     postAnswer: false
@@ -244,7 +245,7 @@ COMPNT
                     "answerId": answerid,
                     "userId": authService.getCurrentUser().id
                 }
-
+                this.comment.content = "";
                 this.question.answers.forEach((answer) => {
                     if (answer.id == answerid) {
                         answer.coms.push(new_comment);

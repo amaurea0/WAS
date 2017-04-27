@@ -110,7 +110,7 @@
             </div>
 
             <!-- bouton poster des commentaires-->
-            <button class="waves-effect waves-light btn grey lighten-2" ng-click="postComment = true" ng-disabled="!$ctrl.connected"><i class="material-icons left">add</i>New Comment</button>
+            <button class="waves-effect waves-light btn grey lighten-2" ng-click="postComment = !postComment" ng-disabled="!$ctrl.connected"><i class="material-icons left">add</i>New Comment</button>
 
             <!--bouton affichage commentaires-->
             <button class="waves-effect waves-light btn grey lighten-1" ng-click="showComments = !showComments">

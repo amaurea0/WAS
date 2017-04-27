@@ -83,7 +83,7 @@
     {
       "title": "Why are C# 4 optional parameters defined on interface not enforced on implementing class?",
       "content": "I noticed that with the optional parameters in C# 4 if you specify a parameter as optional on an interface you DON'T have to make that parameter optional on any implementing class: public interface",
-      "nb_views": 20,
+      "nb_views": 21,
       "votes": 0,
       "date": "2017-04-17T15:28:44.873Z",
       "answersCount": 0,
@@ -1400,7 +1400,7 @@
       "id": 70
     },
     {
-       "title": "eh bien",
+      "title": "eh bien",
       "content": "<div><!--block-->moi je sais le dire en&nbsp;<del>BASQUE</del>&nbsp;italien !!<br><br>buongiorno ;-)</div>",
       "nb_views": 0,
       "votes": 0,
@@ -1563,6 +1563,27 @@
       "answerId": 13,
       "userId": "2",
       "id": 13
+    },
+    {
+      "content": "sdf",
+      "date": "2017-04-27T07:43:06.293Z",
+      "answerId": 19,
+      "userId": 1,
+      "id": 14
+    },
+    {
+      "content": "sdf",
+      "date": "2017-04-27T07:44:14.042Z",
+      "answerId": 19,
+      "userId": 1,
+      "id": 15
+    },
+    {
+      "content": "xffs",
+      "date": "2017-04-27T07:45:48.899Z",
+      "answerId": 19,
+      "userId": 1,
+      "id": 16
     }
   ],
   "tips": [
