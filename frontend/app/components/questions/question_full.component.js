@@ -207,6 +207,9 @@ COMPNT
                     "questionId": this.question.id,
                     "bestAnswer": false
                 }
+                console.log(this.question.answers)
+                this.question.answers.push(new_answer);
+                console.log(this.question.answers)
 
                 var newAnswersCount = {
                     "answersCount": this.question.answersCount + 1
@@ -228,7 +231,6 @@ COMPNT
                     })
                 });
 
-                this.question.answers.push(new_answer);
 
                 $state.go('questionSpec', {
                     idQuestion: this.question.id,

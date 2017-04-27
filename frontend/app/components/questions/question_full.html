@@ -92,7 +92,7 @@
             </div>
         </div>
 
-        <div class="answer" dir-paginate="answer in $ctrl.question.answers | filter : q | itemsPerPage: $ctrl.pageSize" current-page="$ctrl.currentPage">
+        <div class="answer" dir-paginate="answer in $ctrl.question.answers | filter : q | orderBy : '-date' | itemsPerPage: $ctrl.pageSize" current-page="$ctrl.currentPage">
             <div class="question flex">
                 <div class="counters view">
                     <div ng-class="{voted: answer.myAnswerVote, notvoted: !answer.myAnswerVote}" ng-click="$ctrl.voteAsw(answer)">

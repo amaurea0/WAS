@@ -86,7 +86,7 @@
       "nb_views": 20,
       "votes": 0,
       "date": "2017-04-17T15:28:44.873Z",
-      "answersCount": 0,
+      "answersCount": 4,
       "userId": 6,
       "id": 9
     },
@@ -1414,6 +1414,50 @@
       "userId": 12,
       "questionId": 16,
       "id": 77
+    },
+    {
+      "title": "neaw answer",
+      "content": "<div><!--block-->ça marche ?</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T07:52:31.234Z",
+      "userId": 1,
+      "questionId": 9,
+      "bestAnswer": false,
+      "id": 78
+    },
+    {
+      "title": "nouvelle réponse",
+      "content": "<div><!--block-->test</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T08:02:04.043Z",
+      "userId": 1,
+      "questionId": 9,
+      "bestAnswer": false,
+      "id": 79
+    },
+    {
+      "title": "dernier test",
+      "content": "<div><!--block-->ola</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T08:04:35.315Z",
+      "userId": 1,
+      "questionId": 9,
+      "bestAnswer": false,
+      "id": 80
+    },
+    {
+      "title": "sdf",
+      "content": "<div><!--block-->sdf</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T08:05:36.469Z",
+      "userId": 1,
+      "questionId": 9,
+      "bestAnswer": false,
+      "id": 81
     }
   ],
   "comments": [
