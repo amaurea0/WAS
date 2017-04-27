@@ -55,7 +55,7 @@
     <!-- post answer-->
     <div ng-show="postAnswer" class="bloc_center">
         <h2>Post a new answer</h2>
-        <form name="myForm2" class="formulaire" ng-submit="$ctrl.saveAnswer($ctrl.answer)" novalidate>
+        <form name="myForm2" class="formulaire" ng-submit="$ctrl.saveAnswer()" novalidate>
             <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" class="form-control" id="title" required ng-model="$ctrl.answer.title" />

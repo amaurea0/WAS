@@ -16,7 +16,7 @@
       "nb_views": 345,
       "votes": 178,
       "date": "2017-04-08T01:49:44.615Z",
-      "answersCount": 0,
+      "answersCount": 1,
       "userId": 2,
       "id": 2
     },
@@ -1469,6 +1469,17 @@
       "questionId": 9,
       "bestAnswer": false,
       "id": 82
+    },
+    {
+      "title": "nouvelle réponse",
+      "content": "<div><!--block-->test réponse</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T08:40:59.348Z",
+      "userId": 1,
+      "questionId": 2,
+      "bestAnswer": false,
+      "id": 83
     }
   ],
   "comments": [
