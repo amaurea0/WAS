@@ -183,10 +183,10 @@
     {
       "title": "new question",
       "content": "<div><!--block-->tadada</div>",
-      "nb_views": 3,
+      "nb_views": 4,
       "votes": 0,
       "date": "2017-04-27T18:02:26.766Z",
-      "answersCount": 0,
+      "answersCount": 2,
       "userId": 1,
       "id": 19
     },
@@ -1720,6 +1720,28 @@
       "questionId": 20,
       "bestAnswer": false,
       "id": 103
+    },
+    {
+      "title": "sdfzef",
+      "content": "<div><!--block-->dfsdf</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T20:29:19.814Z",
+      "userId": 1,
+      "questionId": 19,
+      "bestAnswer": false,
+      "id": 104
+    },
+    {
+      "title": "efsdfsdf",
+      "content": "<div><!--block-->sdffd</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T20:31:31.487Z",
+      "userId": 1,
+      "questionId": 19,
+      "bestAnswer": false,
+      "id": 105
     }
   ],
   "comments": [

@@ -240,6 +240,7 @@ COMPNT
                     "questionId": this.question.id,
                     "bestAnswer": false
                 }
+                this.answer={};
 
                 var newAnswersCount = {
                     "answersCount": this.question.answersCount + 1
