@@ -80,7 +80,7 @@
     <div>
         <div class="best_answer question flex"  ng-if="$ctrl.bestanswer !== undefined">
             <div class="counters view">
-                <div ng-class="{voted: $ctrl.bestanswer.myAnswerVote, notvoted: !$ctrl.bestanswer.myAnswerVote}" ng-click="$ctrl.voteAsw($ctrl.bestanswer)">
+                <div ng-class="{voted: $ctrl.bestanswer.myAnswerVote, notvoted: !$ctrl.bestanswer.myAnswerVote}" ng-click="$ctrl.voteBestAsw($ctrl.bestanswer)">
                     <div ng-bind="$ctrl.bestanswer.votes" ng-model="$ctrl.bestanswer.myAnswerVote"></div>
                 </div>
             </div>

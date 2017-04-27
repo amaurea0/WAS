@@ -183,7 +183,7 @@
     {
       "title": "new question",
       "content": "<div><!--block-->tadada</div>",
-      "nb_views": 1,
+      "nb_views": 2,
       "votes": 0,
       "date": "2017-04-27T18:02:26.766Z",
       "answersCount": 0,
@@ -783,7 +783,7 @@
       "title": "Responsive div/container - media queries",
       "content": "utouytiut",
       "nb_views": 0,
-      "votes": 1,
+      "votes": 2,
       "date": "2017-04-12T09:50:23.819Z",
       "id": 2,
       "questionId": 2,
@@ -1689,7 +1689,7 @@
       "title": "sdfz",
       "content": "<div><!--block-->fzef</div>",
       "nb_views": 0,
-      "votes": 0,
+      "votes": 1,
       "date": "2017-04-27T18:04:19.141Z",
       "userId": 1,
       "questionId": 19,
@@ -2244,6 +2244,16 @@
       "userId": 9,
       "answerId": 100,
       "id": 18
+    },
+    {
+      "userId": 1,
+      "answerId": 2,
+      "id": 19
+    },
+    {
+      "userId": 1,
+      "answerId": 101,
+      "id": 20
     }
   ],
   "ressources": [

@@ -176,6 +176,37 @@ COMPNT
 
                 }
             }
+            this.voteBestAsw = (answer) => {
+                if (authService.getCurrentUser()) {
+                    var userid = authService.getCurrentUser().id;
+                    answer.myAnswerVote = true;
+
+                    QuestionsService.voteAswExist(answer.id, userid).then((response) => {
+
+                        if (response.length == 0) {
+
+                            var updatedVote = {
+                                "votes": answer.votes + 1
+                            };
+                            var votes_answer = {
+                                "userId": userid,
+                                "answerId": answer.id
+                            };
+
+                            QuestionsService.updateVoteAnswer(answer.id, updatedVote).then((rsp) => {
+                                $log.log("vote update");
+                                // We look for the index of the answer in the answers array
+
+                                answer.votes = rsp.votes;
+                            }).catch((error) => {});
+
+                            QuestionsService.postVoteAnswerUser(votes_answer).then((rsp) => {}).catch((error) => {});
+
+                        }
+                    }).catch((error) => {})
+
+                }
+            }
 
             this.editContentAnswer = (answer) => {
 
