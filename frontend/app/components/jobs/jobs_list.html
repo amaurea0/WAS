@@ -6,11 +6,11 @@
 
     <div ng-if="$ctrl.jobs.length > 0">
         <div class="input-field">
-            <input class="validate" type="text" placeholder="Search..." ng-model="$ctrl.query">
+            <input class="validate" type="text" placeholder="Search..." ng-model="q">
         </div>
     </div>
 
-    <div class="question flex collection" dir-paginate="job in $ctrl.jobs | filter:q | filter : $ctrl.query | itemsPerPage: 4"
+    <div class="question flex collection" dir-paginate="job in $ctrl.jobs | filter:q | orderBy: '-date'| itemsPerPage: 4"
         current-page="$ctrl.currentPage">
 
         <!--<div id="question" ng-repeat="job in $ctrl.jobs | filter : $ctrl.model.query" class="collection">-->

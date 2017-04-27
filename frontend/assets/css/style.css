@@ -1,4 +1,4 @@
-body {
+    body {
     background-color: #f1f1f1;
 }
 
@@ -31,7 +31,7 @@ h1 {
 
 /*ICI VIENT LE STYLE DE LA BARRE DE NAV ET DU PARALLAX MAIN.HTML*/
 
-#sidenav-overlay{
+#sidenav-overlay {
     position: inherit;
 }
 
@@ -70,6 +70,7 @@ tooltip tip {
     background-color: #455a64 !important;
 }
 
+
 /*ICI VIENT LE STYLE DU NUAGE*/
 
 #btnNuage {
@@ -84,11 +85,12 @@ tooltip tip {
     font-size: 1.5em;
 }
 
+
 /*ICI VIENT LE STYLE DE LA LISTE DES USERS*/
 
 li {
-/*    display: flex;
-    direction: row; */
+    /*    display: flex;
+direction: row; */
     color: #455a64;
 }
 
@@ -124,7 +126,7 @@ i.icon-orange {
     color: #455a64;
 }
 
-#rightPerson{
+#rightPerson {
     text-align: center;
     width: 200px;
 }
@@ -138,23 +140,23 @@ i.icon-orange {
 /*ICI VIENT LE STYLE DE LA LISTE DU PROFILE*/
 
 #promotion {
-    width: 250px;  
+    width: 250px;
 }
 
-#promotion p{
-    color:#f1f1f1;
+#promotion p {
+    color: #f1f1f1;
 }
 
-#promotion span{
-    color:#ffa726;
+#promotion span {
+    color: #ffa726;
 }
-
 
 .icons {
     max-width: 30px;
     height: auto;
     margin: 1px;
 }
+
 
 /*ICI VIENT LE STYLE DE LA LISTE DES JOBS*/
 
@@ -166,7 +168,7 @@ i.icon-orange {
 .flexJob {
     display: flex;
     flex-direction: column;
-    }
+}
 
 .tagJob {
     font-size: 0.7em;
@@ -180,8 +182,8 @@ i.icon-orange {
     padding: 10px;
     background-color: #f1f1f1;
     color: #1fa597;
-
 }
+
 
 /*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS (Laetitia)*/
 
@@ -195,6 +197,7 @@ i.icon-orange {
 
 
 /*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS (Laetitia)*/
+
 .chip {
     color: #1fa597 !important;
 }
@@ -259,11 +262,13 @@ i.icon-orange {
 .answer {
     margin: 30px 0 0 50px;
 }
+
 .comment {
     border-bottom: 1px dotted #ffdea5;
     padding: 0 10px 10px 20px;
     background-color: rgba(250, 250, 250, 0.5)
 }
+
 .counters {
     display: flex;
     width: 20%;
@@ -283,11 +288,12 @@ i.icon-orange {
     background-size: 30px;
 }
 
-.notvoted{
+.notvoted {
     background: url(/frontend/assets/img/heart.png) no-repeat center;
     background-size: 30px;
 }
-.voted{
+
+.voted {
     background: url(/frontend/assets/img/heartOrange.png) no-repeat center;
     background-size: 30px;
 }
@@ -306,11 +312,11 @@ i.icon-orange {
     padding: 0;
 }
 
-.contenu span, .comment span {
+.contenu span,
+.comment span {
     font-size: 0.9em;
     color: #80cbc4;
     margin: 0;
-    padding: 0;
 }
 
 .contenu p {
@@ -331,6 +337,15 @@ i.icon-orange {
     padding: 2px 5px;
     margin: 0 10px;
     border: none;
+}
+
+.lienred {
+    background-color: #b9184d !important;
+}
+
+.redchip {
+    color: #b9184d;
+    background-color: #e0e0e0;
 }
 
 .pagination li.active {
@@ -400,151 +415,10 @@ p {
     width: 100%;
 }
 
-@media only screen and (max-width: 1250px) {
-    .parallax-container .section {
-        position: absolute;
-        top: 40%;
-    }
-}
 
-@media only screen and (max-width: 980px) {
-    .container ul.right.hide-on-small-only {
-        display: none;
-        height: 65px;
-        margin: 0;
-        border-bottom: 5px solid #f1f1f1;
-        padding: 10px 15px 10px 15px;
-    }
-    .nav-wrapper .brand-logo img {
-        height: 54px;
-        width: 55px;
-        margin-top: 5px;
-    }
-    .entete a {
-        float: right;
-    }
-    .entete h1 {
-        font-size: 2.5em;
-        margin: 0;
-        padding: 0;
-        text-transform: uppercase;
-        float: left;
-    }
-    .tabs {
-        background-color: none !important;
-    }
-    .tabs .tab a {
-        color: #1fa597 !important;
-    }
-    .tabs .tab a:hover,
-    .tabs .tab a.active {
-        color: #1fa597 !important;
-    }
-    .tabs .indicator {
-        background-color: #1fa597 !important;
-    }
-    #question,
-    #answer {
-        background-color: white;
-        display: flex;
-        color: black;
-        margin: 0;
-        padding-top: 15px;
-    }
-    #question {
-        background-color: white;
-        border-bottom: 1px dotted #ffdea5;
-    }
-    #answer {
-        margin: 30px 0 0 50px;
-    }
-    .counters {
-        display: flex;
-        width: 20%;
-    }
-    .counters>div {
-        margin: 10px;
-        width: 50%;
-        border-radius: 50%;
-        text-align: center;
-        font-size: 1.4em;
-        color: #455a64;
-    }
-    .contenu {
-        width: 70%;
-        color: black;
-        margin: 0;
-        padding: 0;
-    }
-    .contenu h3 {
-        font-size: 1.3em;
-        color: #35383a;
-        margin: 0;
-        padding: 0;
-    }
-    .contenu span {
-        font-size: 0.9em;
-        color: #80cbc4;
-        margin: 0;
-        padding: 0;
-    }
-    .contenu p {
-        color: #7b7b7b;
-        font-size: 1em;
-    }
-    .lien {
-        background-color: #80cbc4;
-        border-radius: 20px;
-        color: white;
-        font-size: 0.8em;
-        padding: 2px 5px;
-        margin: 0 10px;
-        border: none;
-    }
-    /*ICI VIENT LE STYLE DES FORRMULAIRES*/
-    .formulaire {
-        margin-bottom: 30px;
-    }
-    /*ICI VIENT LE STYLE DU FOOTER*/
-    .page-footer {
-        background-color: #455a64 !important;
-        max-height: 70px;
-    }
-    .page-footer img {
-        max-height: 80px;
-        padding-bottom: 40px;
-    }
-    /*///// HOME PAGE JULIEN/////*/
-    nav ul a,
-    nav .brand-logo {
-        color: #444;
-    }
-    p {
-        line-height: 2rem;
-    }
-    .button-collapse {
-        color: #26A69A;
-    }
-    .parallax-container {
-        min-height: 380px;
-        line-height: 0;
-        height: auto;
-        color: rgba(255, 255, 255, 0.9);
-    }
-    .parallax-container .section {
-        position: absolute;
-        top: 40%;
-    }
-    #index-banner .section {
-        top: 10%;
-    }
-    .icon-block #questionhome .vote {}
-}
-
-@media only screen and (max-width: 600px) {
-    #index-banner .section {
-        top: 0;
-    }
+.container h1.text-lighten-2 {
+    margin-top: 30px;
+    font-size: 50px;
 }
 
 .icon-block {
@@ -610,6 +484,20 @@ p {
     width: 100%;
 }
 
+.nav-wrapper .brand-logo img {
+    height: 54px;
+    width: 55px;
+    margin-top: 5px;
+}
+
+.container h1.text-lighten-2 {
+    margin-top: 117px;
+    font-size: 80px;
+}
+
+
+/*//////////////////////////////////////////////////////////////*/
+
 @media only screen and (max-width: 1250px) {
     .parallax-container .section {
         position: absolute;
@@ -631,22 +519,7 @@ p {
     }
 }
 
-@media only screen and (max-width: 980px) {
-    .container ul.right.hide-on-small-only {
-        display: none;
-    }
-}
-
-.nav-wrapper .brand-logo img {
-    height: 54px;
-    width: 55px;
-    margin-top: 5px;
-}
-
-.container h1.text-lighten-2 {
-    margin-top: 117px;
-    font-size: 82px;
-}
+/*//////////////////////////////////////////////////////////////*/
 
 @media only screen and (min-width: 1800px) {
     .parallax-container .section {
@@ -657,82 +530,203 @@ p {
         top: 10%;
     }
 
+    .icon-block {
+        padding: 0 15px;
+    }
+    .icon-block .material-icons {
+        font-size: inherit;
+    }
+    /* questions */
+    #questionhome {
+        display: flex;
+        padding-left: 13px;
+        border-bottom: 1px solid rgba(239, 236, 236, 0.619);
+        margin: 0 0 8px 0;
+        border-radius: 5px 5px 0px 0px;
+        border: 1px solid #EEECEC;
+    }
+    .vote {
+        display: flex;
+        width: 20%;
+    }
+    .vote p {
+        text-align: center;
+        margin-top: 0;
+        margin-right: 17px;
+    }
+    .text p {
+        font-size: 1.3em;
+        margin: 0;
+        padding: 0;
+    }
+    .text span {
+        font-size: 0.7em;
+        margin: 17px 13px 0 0;
+        float: right;
+        background-color: rgba(225, 225, 225, 0.274);
+        border: 1px solid #E5E5E5;
+        padding: 7px;
+        border-radius: 5px;
+        border-bottom: 2px solid #C7C7C7;
+    }
+    .tag span {
+        float: left;
+        border-radius: 4px;
+        padding: 5px 15px 5px 16px;
+        margin-left: -8px;
+        font-size: 13px;
+        border: 1px solid #BBAAAA;
+        background-color: rgba(223, 168, 110, 0.846);
+        color: rgba(255, 255, 255, 0.863);
+    }
+    /*   POST A QUESTION  */
+    #btn_right {
+        float: right;
+    }
+    .marg_bottom {
+        margin-bottom: 30px;
+    }
+}
+/*//////////////////////////////////////////////////////////////*/
+
+
+@media only screen and (max-width: 992px) {
+
+    .container h1.text-lighten-2 {
+        margin-top: 70px;
+        font-size: 50px;
+    }
+    .container ul.right.hide-on-small-only {
+        display: none;
+        height: 65px;
+        margin: 0;
+        border-bottom: 5px solid #f1f1f1;
+        padding: 10px 15px 10px 15px;
+    }
+    .nav-wrapper .brand-logo img {
+        height: 54px;
+        width: 55px;
+        margin-top: 5px;
+    }
+    .entete a {
+        float: right;
+    }
+    .entete h1 {
+        font-size: 2.5em;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        float: left;
+    }
+    .tabs {
+        background-color: none !important;
+    }
+    .tabs .tab a {
+        color: #1fa597 !important;
+    }
+    .tabs .tab a:hover,
+    .tabs .tab a.active {
+        color: #1fa597 !important;
+    }
+    .tabs .indicator {
+        background-color: #1fa597 !important;
+    }
+    #question,
+    #answer {
+        background-color: white;
+        display: flex;
+        color: black;
+        margin: 0;
+        padding-top: 15px;
+    }
+    #question {
+        background-color: white;
+        border-bottom: 1px dotted #ffdea5;
+    }
+    #answer {
+        margin: 30px 0 0 50px;
+    }
+    .counters {
+        display: none;
+        width: 20%;
+        margin: 10px;
+    }
+    .counters>div {
+        margin: 10px;
+        width: 50%;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 1.4em;
+        color: #455a64;
+    }
+    .contenu {
+        width: 80%;
+        color: black;
+        margin: 0;
+        padding: 0;
+        margin-left: 10px;
+    }
+    .jobcontent {
+        width: 60%;
+    }
+    .contenu h3 {
+        font-size: 1.3em;
+        color: #35383a;
+        margin: 0;
+        padding: 0;
+    }
+    .contenu p {
+        color: #7b7b7b;
+        font-size: 1em;
+    }
+    /*ICI VIENT LE STYLE DES FORRMULAIRES*/
+    .formulaire {
+        margin-bottom: 30px;
+    }
+    /*ICI VIENT LE STYLE DU FOOTER*/
+    .page-footer {
+        background-color: #455a64 !important;
+        max-height: 70px;
+    }
+    .page-footer img {
+        max-height: 80px;
+        padding-bottom: 40px;
+    }
+    /*///// HOME PAGE JULIEN/////*/
+    nav ul a,
+    nav .brand-logo {
+        color: #444;
+    }
+    p {
+        line-height: 2rem;
+    }
+    .button-collapse {
+        color: #26A69A;
+    }
+    .parallax-container {
+        min-height: 380px;
+        line-height: 0;
+        height: auto;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    .parallax-container .section {
+        position: absolute;
+        top: 40%;
+    }
+    #index-banner .section {
+        top: 10%;
+    }
+    .icon-block #questionhome .vote {}
+}
+
+/*//////////////////////////////////////////////////////////////*/
+
+
 @media only screen and (max-width: 600px) {
     #index-banner .section {
         top: 0;
     }
 }
 
-.icon-block {
-    padding: 0 15px;
-}
-
-.icon-block .material-icons {
-    font-size: inherit;
-}
-
-
-/* questions */
-
-#questionhome {
-    display: flex;
-    padding-left: 13px;
-    border-bottom: 1px solid rgba(239, 236, 236, 0.619);
-    margin: 0 0 8px 0;
-    border-radius: 5px 5px 0px 0px;
-    border: 1px solid #EEECEC;
-}
-
-.vote {
-    display: flex;
-    width: 20%;
-}
-
-.vote p {
-    text-align: center;
-    margin-top: 0;
-    margin-right: 17px;
-}
-
-.text p {
-    font-size: 1.3em;
-    margin: 0;
-    padding: 0;
-}
-
-.text span {
-    font-size: 0.7em;
-    margin: 17px 13px 0 0;
-    float: right;
-    background-color: rgba(225, 225, 225, 0.274);
-    border: 1px solid #E5E5E5;
-    padding: 7px;
-    border-radius: 5px;
-    border-bottom: 2px solid #C7C7C7;
-}
-
-.tag span {
-    float: left;
-    border-radius: 4px;
-    padding: 5px 15px 5px 16px;
-    margin-left: -8px;
-    font-size: 13px;
-    border: 1px solid #BBAAAA;
-    background-color: rgba(223, 168, 110, 0.846);
-    color: rgba(255, 255, 255, 0.863);
-}
-
-
-/*   POST A QUESTION  */
-#btn_right {
-    float: right;
-}
-
-.marg_bottom {
-    margin-bottom: 30px;
-}
-
-
-
-
+/*//////////////////////////////////////////////////////////////*/
 
