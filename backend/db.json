@@ -3,7 +3,7 @@
     {
       "title": "How do JavaScript closures work?",
       "content": "How would you explain JavaScript closures to someone with a knowledge of the concepts they consist of (for example functions, variables and the like), but does not understand closures themselves?",
-      "nb_views": 87,
+      "nb_views": 88,
       "votes": 100,
       "date": "2017-04-08T01:47:18.815Z",
       "answersCount": 0,
@@ -777,7 +777,8 @@
       "date": "2017-04-12T09:50:23.819Z",
       "id": 1,
       "questionId": 1,
-      "userId": 1
+      "userId": 1,
+      "bestAnswer": false
     },
     {
       "title": "Responsive div/container - media queries",
@@ -878,7 +879,8 @@
       "date": "2017-04-12T13:12:17.694Z",
       "id": 11,
       "questionId": 1,
-      "userId": 1
+      "userId": 1,
+      "bestAnswer": true
     },
     {
       "title": "smldfkjmldsqkjf",
@@ -979,7 +981,8 @@
       "date": "2017-04-13T19:17:29.206Z",
       "questionId": 1,
       "id": 21,
-      "userId": 1
+      "userId": 1,
+      "bestAnswer": false
     },
     {
       "title": "foukiou",
