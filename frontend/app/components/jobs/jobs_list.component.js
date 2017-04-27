@@ -16,7 +16,6 @@ COMPNT.component('jobsList', {
 
             this.currentPage = 1;
             this.jobs = [];
-            this.query = '';
 
             this.$onInit = () => {
                 this.getAllItems();

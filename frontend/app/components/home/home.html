@@ -99,7 +99,7 @@
     <div class="row">
       <div class="col s12 center">
         <h3><i class="mdi-content-send brown-text"></i></h3>
-        <h4>Last jobs</h4>
+        <h4>Latest jobs</h4>
         <div class="question flex" ng-repeat="job in $ctrl.jobs">
           <div class="counters" class="flexJob">
             <div>
@@ -111,7 +111,7 @@
             </div>
           </div>
 
-          <div class="contenu">
+          <div class="contenu jobcontent">
             <a>
               <h3 class="title" ng-bind="job.title"></h3>
               <p class="content flow-text">{{job.content}}</p>
