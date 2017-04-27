@@ -31,6 +31,10 @@ h1 {
 
 /*ICI VIENT LE STYLE DE LA BARRE DE NAV ET DU PARALLAX MAIN.HTML*/
 
+#sidenav-overlay{
+    position: inherit;
+}
+
 #search input[type="text"] {
     background: url(/frontend/assets/img/search-white.png) no-repeat 10px 6px #fcfcfc;
     height: 10px;
@@ -374,7 +378,6 @@ footer {
 
 /*///// HOME PAGE JULIEN/////*/
 
-nav ul a,
 nav .brand-logo {
     color: #444;
 }

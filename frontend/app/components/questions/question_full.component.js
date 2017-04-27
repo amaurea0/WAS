@@ -215,6 +215,7 @@ COMPNT
                 QuestionsService.updateContent(this.question.id, newAnswersCount).then((response) => {}).catch((error) => {})
 
                 QuestionsService.postAnswer(new_answer).then((response) => {
+                    this.answers = this.newAnswer(new_answer);
                     notify({
                         message: 'Votre réponse a été posté !',
                         duration: 2500,
@@ -228,14 +229,13 @@ COMPNT
                     })
                 });
 
-                this.question.answers.push(new_answer);
-
-                $state.go('questionSpec', {
-                    idQuestion: this.question.id,
-                    postAnswer: false
-                })
             }
 
+            this.newAnswer = (obj) => {
+                var _collection = this.question.answers;
+                _collection.push(obj);
+                return _collection;
+            }
 
             // poster un nouveau commentaire
             this.saveComment = (answerid) => {
@@ -265,11 +265,6 @@ COMPNT
                         classes: 'red darken-1'
                     })
                 });
-
-                // $state.go('questionSpec', {
-                //     idQuestion: this.question.id,
-                //     postComment: false
-                // })
             }
 
 
