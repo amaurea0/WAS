@@ -113,10 +113,10 @@
     {
       "title": "salut tout le monde",
       "content": "<div><!--block--><strong>hello</strong></div>",
-      "nb_views": 5,
+      "nb_views": 6,
       "votes": 0,
       "date": "2017-04-25T14:32:05.211Z",
-      "answersCount": 0,
+      "answersCount": 3,
       "userId": 8,
       "id": 12
     },
@@ -133,10 +133,10 @@
     {
       "title": "sdfferfze",
       "content": "<div><!--block-->test</div>",
-      "nb_views": 0,
+      "nb_views": 2,
       "votes": 0,
       "date": "2017-04-25T17:22:52.010Z",
-      "answersCount": 0,
+      "answersCount": 2,
       "userId": 1,
       "id": 14
     },
@@ -163,7 +163,7 @@
     {
       "title": "dadaz",
       "content": "<div><!--block-->kkdajkjad</div>",
-      "nb_views": 0,
+      "nb_views": 1,
       "votes": 0,
       "date": "2017-04-27T06:59:18.163Z",
       "answersCount": 0,
@@ -173,12 +173,32 @@
     {
       "title": "szsa",
       "content": "<div><!--block-->sasa</div>",
-      "nb_views": 0,
+      "nb_views": 1,
       "votes": 0,
       "date": "2017-04-27T07:01:30.818Z",
       "answersCount": 0,
       "userId": "9",
       "id": 18
+    },
+    {
+      "title": "new question",
+      "content": "<div><!--block-->tadada</div>",
+      "nb_views": 1,
+      "votes": 0,
+      "date": "2017-04-27T18:02:26.766Z",
+      "answersCount": 0,
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "title": "qsdf",
+      "content": "<div><!--block-->dfzef</div>",
+      "nb_views": 1,
+      "votes": 0,
+      "date": "2017-04-27T18:04:08.322Z",
+      "answersCount": 0,
+      "userId": 1,
+      "id": 20
     }
   ],
   "users": [
@@ -200,7 +220,7 @@
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
       "stack": "http://stackexchange.com/users/10499231/piotr",
-      "tokenSecure": 1740.22893890307,
+      "tokenSecure": 2595.7700322984815,
       "ville": "La loupe",
       "graduation": "Février 2017"
     },
@@ -1565,6 +1585,138 @@
       "questionId": 3,
       "bestAnswer": false,
       "id": 91
+    },
+    {
+      "title": "qsf",
+      "content": "<div><!--block-->sdf</div>",
+      "nb_views": 0,
+      "votes": 1,
+      "date": "2017-04-27T17:32:59.667Z",
+      "userId": 9,
+      "questionId": 12,
+      "bestAnswer": false,
+      "id": 92
+    },
+    {
+      "title": "sdf",
+      "content": "<div><!--block-->sdf</div>",
+      "nb_views": 0,
+      "votes": 1,
+      "date": "2017-04-27T17:53:26.845Z",
+      "userId": 9,
+      "questionId": 12,
+      "bestAnswer": false,
+      "id": 93
+    },
+    {
+      "title": "qsdf",
+      "content": "<div><!--block-->zer</div>",
+      "nb_views": 0,
+      "votes": 1,
+      "date": "2017-04-27T17:53:38.571Z",
+      "userId": 9,
+      "questionId": 12,
+      "bestAnswer": false,
+      "id": 94
+    },
+    {
+      "title": "sdfferfze",
+      "content": "<div><!--block-->sdfaez</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T17:57:01.039Z",
+      "userId": 9,
+      "questionId": 17,
+      "bestAnswer": false,
+      "id": 95
+    },
+    {
+      "title": "qsdfae",
+      "content": "<div><!--block-->faer</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T17:57:19.977Z",
+      "userId": 9,
+      "questionId": 17,
+      "bestAnswer": false,
+      "id": 96
+    },
+    {
+      "title": "qf",
+      "content": "<div><!--block-->azeff</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T17:58:47.846Z",
+      "userId": 9,
+      "questionId": 14,
+      "bestAnswer": false,
+      "id": 97
+    },
+    {
+      "title": "qsdfz",
+      "content": "<div><!--block-->fzef</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T17:58:59.836Z",
+      "userId": 9,
+      "questionId": 14,
+      "bestAnswer": false,
+      "id": 98
+    },
+    {
+      "title": "sdf",
+      "content": "<div><!--block-->fzef</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T17:59:48.269Z",
+      "userId": 9,
+      "questionId": 18,
+      "bestAnswer": false,
+      "id": 99
+    },
+    {
+      "title": "fzef",
+      "content": "<div><!--block-->qsfdz</div>",
+      "nb_views": 0,
+      "votes": 1,
+      "date": "2017-04-27T17:59:58.966Z",
+      "userId": 9,
+      "questionId": 18,
+      "bestAnswer": false,
+      "id": 100
+    },
+    {
+      "title": "sdfz",
+      "content": "<div><!--block-->fzef</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T18:04:19.141Z",
+      "userId": 1,
+      "questionId": 19,
+      "bestAnswer": false,
+      "id": 101
+    },
+    {
+      "title": "sdfz",
+      "content": "<div><!--block-->zefzef</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T18:11:47.233Z",
+      "userId": 1,
+      "questionId": 20,
+      "bestAnswer": false,
+      "id": 102
+    },
+    {
+      "title": "fzeffz",
+      "content": "<div><!--block-->fzef</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T18:12:01.589Z",
+      "userId": 1,
+      "questionId": 20,
+      "bestAnswer": false,
+      "id": 103
     }
   ],
   "comments": [
@@ -2037,6 +2189,26 @@
       "userId": 12,
       "answerId": 71,
       "id": 14
+    },
+    {
+      "userId": 9,
+      "answerId": 93,
+      "id": 15
+    },
+    {
+      "userId": 9,
+      "answerId": 92,
+      "id": 16
+    },
+    {
+      "userId": 9,
+      "answerId": 94,
+      "id": 17
+    },
+    {
+      "userId": 9,
+      "answerId": 100,
+      "id": 18
     }
   ],
   "ressources": [
