@@ -160,21 +160,21 @@ COMPNT
         }
 
         notify.config({
-            position: 'right',
-            startTop: 68
-          })
+          position: 'right',
+          startTop: 68
+        })
 
         ajax()
-        this.rebindDropDowns = function () {
-          $('.dropdown-button').dropdown({
-            hover: true
-          });
-          $('.dropdown-button').dropdown('close');
-          $('.button-collapse').sideNav();
-          $('.collapsible').collapsible();
-        };
       }
 
+      this.rebindDropDowns = function () {
+        $('.dropdown-button').dropdown({
+          hover: true
+        });
+        $('.dropdown-button').dropdown('close');
+        $('.button-collapse').sideNav('hide');
+        $('.collapsible').collapsible();
+      };
       this.getSearchQuestions = () => {
         var queryAsArray = this.searchQuery.split(' ');
         var queryAsString = queryAsArray.join('+');
