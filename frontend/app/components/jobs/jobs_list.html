@@ -1,6 +1,6 @@
 <div class="container">
     <div class="entete">
-        <a class="btn btn-floating #ffb74d orange lighten-2" ui-sref="jobPost" ui-sref-active="select"><i class="material-icons">add</i></a>
+        <a class="btn btn-floating pulse #ffb74d orange lighten-2" ui-sref="jobPost" ui-sref-active="select"><i class="material-icons">add</i></a>
         <h1>Jobs Search</h1>
     </div>
 
@@ -31,9 +31,8 @@
                 <div class="contenu">
                     <a>
                         <h3 class="title" ng-bind="job.title"></h3>
-                        <p>{{job.content}}</p>
-                        <button ng-if="job.annonce" href="{{job.annonce}}" target="_blank" id="btnJob">Ad Link</button>
-
+                        <p>{{job.content}}</p><br />           
+                        <a ng-if="job.annonce" href="{{job.annonce}}" target="_blank" id="btnJob">Ad Link</a><br />
                     </a>
                 </div>
             <!--</div>-->

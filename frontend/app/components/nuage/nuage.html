@@ -6,9 +6,9 @@
     <div id="nuage">
         <ul>
             <button id=btnNuage ng-repeat="tag in $ctrl.nuage.list | orderBy: tagName: tag.name">
-                <li class="#00695c teal-text darken-3" id="tagTitle" ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">{{tag.name}}</li>
+                <li class="#00695c teal-text darken-3" id="tagTitle">{{tag.name}}</li>
                 <li class="#455a64 blue-grey-text darken-2" ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">Questions</li>
-                <li class="#455a64 blue-grey-text darken-2" ui-sref="tags({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">Ressources</li>
+                <li class="#455a64 blue-grey-text darken-2" ui-sref="ressources({ tagName: tag.name, tagId: tag.id })" ui-sref-active="select">Ressources</li>
             </button>
         </ul>
     </div>

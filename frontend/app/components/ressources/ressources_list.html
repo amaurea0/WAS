@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="entete">
+    <a class="btn btn-floating pulse #ffb74d orange lighten-2" ui-sref="ressourcePost({ tagName: $ctrl.tagFilter.tagName, tagId: $ctrl.tagFilter.tagId })"
+      ui-sref-active="select"><i class="material-icons">add</i></a>
+    <h1>Ressources</h1>
+  </div>
+
+  <div class="input-field">
+    <input class="validate" type="text" placeholder="Search..." ng-model="q">
+  </div>
+
+  <div class="question flex collection" dir-paginate="ressource in $ctrl.ressources | filter:q | orderBy : aTab.sort | itemsPerPage: 10"
+    current-page="$ctrl.currentPage">
+
+    <div class="counters flexJob">
+      <div>
+        <a id="tagRessource">{{$ctrl.tagFilter.tagName}}</a>
+      </div>
+    </div>
+    <div class="contenu" id="ressourceTitle">
+      <h3 class="title" ng-bind="ressource.title"></h3>
+      <p>{{ressource.content}}</p><br /> 
+    </div>
+    <div class="collection-item avatar">
+      <a href="{{ressource.url}}" target="_blank" id="btnJob">Resource Link</a><br />
+    </div>
+  </div>
+  <dir-pagination-controls boundary-links="true" on-page-change="$ctrl.pageChangeHandler(newPageNumber)" template-url="node_modules/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+</div>

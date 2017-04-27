@@ -164,6 +164,11 @@ COMPNT
           startTop: 68
         })
 
+        notify({
+          message: 'You have ' + this.newAnswers + ' new answers',
+          classes: '#eceff1 blue-grey lighten-5',
+          duration: 0
+        });
         ajax()
         this.rebindDropDowns = function () {
           $('.dropdown-button').dropdown({

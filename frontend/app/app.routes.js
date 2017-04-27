@@ -23,6 +23,36 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
         })
 
         .state({
+            name: 'ressources',
+            url: '/ressources/:tagId/:tagName',
+            component: 'ressourcesList',
+            resolve: {
+                tagFilter: function ($stateParams) {
+                    return {
+                        tagId: $stateParams.tagId,
+                        tagName: $stateParams.tagName
+                    };
+                }
+
+            }
+        })
+
+        .state({
+            name: 'ressourcePost',
+            url: '/ressourcePost/:tagId/:tagName',
+            component: 'ressourcePost',
+            authenticate: true,
+            resolve: {
+                tagFilter: function ($stateParams) {
+                    return {
+                        tagId: $stateParams.tagId,
+                        tagName: $stateParams.tagName
+                    };
+                }
+            }
+        })
+
+        .state({
             name: 'users',
             url: '/users',
             component: 'usersList',

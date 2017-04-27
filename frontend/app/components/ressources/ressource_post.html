@@ -1,0 +1,41 @@
+<div class="container page">
+    <div class="entete">
+        <h1>Post Your Resource</h1>
+    </div>
+
+    <form name="myForm" ng-submit="$ctrl.save()" novalidate>
+        <div class="form-group marg_bottom">
+            <label for="title">Resource Title (eg: site's name)</label> <br>
+            <input name="title" type="text" class="form-control" id="title" required ng-model="$ctrl.ressource.title" />
+
+        </div>
+        <div class="form-group marg_bottom">
+            <label for="content">Content</label> <br>
+            <input name="title" type="text" class="form-control" id="title" required ng-model="$ctrl.ressource.content" />
+        </div>
+
+        <div class="form-group marg_bottom">
+            <label for="content">Complete URL</label> <br>
+            <input name="title" type="url" class="form-control" id="title" required ng-model="$ctrl.ressource.url" />
+        </div>
+
+
+        <div class="form-group marg_bottom">
+            <label>Tag : <span ng-repeat="eachTag in $ctrl.new_tags" class="chip"> {{eachTag}} <span ng-click="$ctrl.removeTag(eachTag)">X</span></span>
+            </label>
+            <input style="float: right" type="button" class="btn" ng-click="$ctrl.saveTag($ctrl.SelectedTag)" value="Add selected Tag"
+            />
+
+            <input id="tag" list="testList" class="form-control" type="text" ng-model="$ctrl.SelectedTag" />
+            <datalist id="testList">
+                <option ng-repeat="newtag in $ctrl.tags | orderBy:'name' " value="{{newtag.name}}">
+            </datalist>
+
+        </div>
+
+        <div class="item-actions">
+            <button type="submit" class="waves-effect waves-light btn" ng-disabled="myForm.$invalid"><i class="material-icons left">done</i>Validate</button>
+        </div>
+
+    </form>
+</div>
