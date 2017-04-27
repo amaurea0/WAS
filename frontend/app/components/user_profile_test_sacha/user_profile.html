@@ -39,8 +39,8 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="textarea1" ng-model="$ctrl.setting.profil" ng-value="$ctrl.person.profile"  class="materialize-textarea" placeholder="Résumer"></textarea>
-                        
+                        <textarea id="textarea1" ng-model="$ctrl.setting.profil" ng-value="$ctrl.person.profile" class="materialize-textarea" placeholder="Résumer"></textarea>
+
                     </div>
                 </div>
                 <center>
@@ -53,7 +53,7 @@
 <div class="container">
     <div class="entete">
         <h1>User Profile</h1>
-        <a ng-if="$ctrl.person.id == $ctrl.cookieUser" class="btn btn-floating #ffb74d orange lighten-2" ng-click="$ctrl.openmodal()"><i class="material-icons">mode_edit</i></a>
+        <a ng-if="$ctrl.person.id == $ctrl.cookieUser" class="btn btn-floating pulse #ffb74d orange lighten-2" ng-click="$ctrl.openmodal()"><i class="material-icons">mode_edit</i></a>
     </div>
     <div class="row">
         <div class="col s12">
@@ -92,38 +92,46 @@
                     </div>
                 </div>
                 <div class="card-action">
-                    <a id="questionsTags">{{question.tag}}</a>
-                    <a>hdghzhhhhhhhhhdghzhhhhh</a>
-                    <a>hdghzhhhhhhhhhdghzhhhhh</a>
-                    <a>hdghzhhhhhhhhhdghzhhhhh</a>
-                    <a>hdghzhhhhhhhhhdghzhhhhh</a>
-                    <a>hdghzhhhhhhhhhdghzhhhhh</a>
+                    <div class="collection with-header">
+                        <div class="collection-header">
+                            <h5>Answers</h5>
+                            <a ng-repeat="rep in $ctrl.reponse" class="collection-item" ui-sref="questionSpec({idQuestion : rep.questionId})">{{rep.title}}</a>
+                        </div>
+                    </div>
+
+                    <div class="collection with-header">
+                        <div class="collection-header">
+                            <h5>Questions</h5>
+                            <a ng-repeat="ques in $ctrl.question" class="collection-item profile" ui-sref="questionSpec({idQuestion : ques.id})">{{ques.title}}</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col s6">
-            <ul class="collection with-header">
-                <li class="collection-header">
-                    <h4>Reponse</h4>
-                </li>
-                <div ng-repeat="rep in $ctrl.reponse">
-                    <li class="collection-item"  ui-sref="questionSpec({idQuestion : rep.questionId})">{{rep.title}}</li>
-                </div>
-            </ul>
-
-        </div>
-        <div class="col s6">
-            <ul class="collection with-header">
-                <li class="collection-header">
-                    <h4>Question</h4>
-                </li>
-                <div ng-repeat="ques in $ctrl.question">
-                    <li class="collection-item"  ui-sref="questionSpec({idQuestion : ques.id})">{{ques.title}}</li>
-                </div>
-            </ul>
-
-        </div>
-    </div>
 </div>
+<!--<div class="row">
+            <div class="col s6">
+                <ul class="collection with-header">
+                    <li class="collection-header">
+                        <h4>Reponse</h4>
+                    </li>
+                    <div ng-repeat="rep in $ctrl.reponse">
+                        <li class="collection-item" ui-sref="questionSpec({idQuestion : rep.questionId})">{{rep.title}}</li>
+                    </div>
+                </ul>
+
+            </div>
+            <div class="col s6">
+                <ul class="collection with-header">
+                    <li class="collection-header">
+                        <h4>Question</h4>
+                    </li>
+                    <div ng-repeat="ques in $ctrl.question">
+                        <li class="collection-item" ui-sref="questionSpec({idQuestion : ques.id})">{{ques.title}}</li>
+                    </div>
+                </ul>
+
+            </div>
+        </div>
+    </div>-->

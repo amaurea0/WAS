@@ -62,6 +62,9 @@ h1 {
     color: #455a64 !important;
 }
 
+tooltip tip {
+    background-color: #455a64 !important;
+}
 
 /*ICI VIENT LE STYLE DU NUAGE*/
 
@@ -83,6 +86,10 @@ li {
 /*    display: flex;
     direction: row; */
     color: #455a64;
+}
+
+.collection.with-header .collection-item {
+    color: #455a64 !important;
 }
 
 i.icon-orange {
@@ -177,6 +184,16 @@ i.icon-orange {
 
 }
 
+/*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS (Laetitia)*/
+
+#tagRessource {
+    color: orange !important;
+}
+
+#ressourceTitle {
+    margin-left: auto;
+}
+
 
 /*ICI VIENT LE STYLE DE LA LISTE DE QUESTIONS (Laetitia)*/
 .chip {
@@ -234,7 +251,7 @@ i.icon-orange {
 
 .question {
     background-color: white;
-    color: black;
+    color: #455a64;
     margin: 0;
     padding-top: 15px;
     border-bottom: 1px dotted #ffdea5;
@@ -333,6 +350,10 @@ i.icon-orange {
 
 .page-footer img {
     max-height: 60px;
+    padding: 10px;
+}
+
+.page-footer a {
     padding: 10px;
 }
 

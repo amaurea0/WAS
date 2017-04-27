@@ -8,6 +8,7 @@ COMPNT.component("ressourcePost", {
   templateUrl: '/frontend/app/components/ressources/ressource_post.html',
 
   bindings: {
+    tagFilter: '<',
     info: '<'
   },
 
@@ -15,54 +16,54 @@ COMPNT.component("ressourcePost", {
 
     function (ressourcesService, TagsService, TaglinkService, authService, $scope, $state, notify) {
 
-      //get Tags for the input datalist
-      TagsService.getTags().then((data) => {
-        this.tags = data;
-        this.tagsname = [];
-        this.tags.forEach((tag) => {
-          this.tagsname.push(tag.name);
-        })
-      }).catch((err) => {});
+      this.$onInit = () => {
+        console.log(this.tagFilter);
 
-      this.new_tags = [];
+        //get Tags for the input datalist
+        TagsService.getTags().then((data) => {
+          this.tags = data;
+          this.tagsname = [];
+          this.tags.forEach((tag) => {
+            this.tagsname.push(tag.name);
+          })
+        }).catch((err) => { });
+        this.new_tags = [];
+      };
+
       this.saveTag = (tag) => {
         if (this.tagsname.indexOf(tag) !== -1) {
-          if (this.new_tags.indexOf(tag) == -1) this.new_tags.push(tag);
+          this.new_tags[0] = tag;
+          this.new_tag_name = tag;
           this.SelectedTag = "";
         }
       };
+
       this.removeTag = (tag) => {
         this.new_tags.splice(this.new_tags.indexOf(tag), 1);
       };
-      this.cancel = () => {
-        $state.go('ressources');
-      }
 
-      this.save = (ressource) => {
+      this.save = () => {
+        
+        this.tags.some((tag) => {
+          if (tag.name == this.new_tag_name) {
+            this.new_tag_id = tag.id;
+            return true;
+          }
+        })
 
         var new_ressource = {
           "title": this.ressource.title,
           "url": this.ressource.url,
+          "content": this.ressource.content,
+          "tagId": this.new_tag_id,
           "userId": authService.getCurrentUser().id
         }
 
         // Save the new ressource
         ressourcesService.save(new_ressource).then((items) => {
-          console.log('new question posted');
+          console.log('new resource posted');
+          $state.go('ressources', { tagName: this.new_tag_name, tagId: this.new_tag_id });
 
-          // Save the tags
-          angular.forEach(this.new_tags, (value, key) => {
-            var new_link = {};
-            ressourcesService.getTagId(value).then((tag) => {
-              new_ressource.tagId = tag[0].id;
-
-              ressourcesService.saveTaglink(new_link).then((resp) => {
-                console.log("new_link posted");
-
-              }).catch((err) => {});
-            }).catch((err) => {});
-          });
-          $state.go('ressources');
           notify({
             message: 'Thks for your post !',
             duration: 2500,

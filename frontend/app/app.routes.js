@@ -39,10 +39,17 @@ WEA.config(function ($stateProvider, $urlRouterProvider) {
 
         .state({
             name: 'ressourcePost',
-            url: '/post',
+            url: '/ressourcePost/:tagId/:tagName',
             component: 'ressourcePost',
             authenticate: true,
-            resolve: {}
+            resolve: {
+                tagFilter: function ($stateParams) {
+                    return {
+                        tagId: $stateParams.tagId,
+                        tagName: $stateParams.tagName
+                    };
+                }
+            }
         })
 
         .state({
