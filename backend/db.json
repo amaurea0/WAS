@@ -141,24 +141,84 @@
       "id": 14
     },
     {
-      "title": "test question",
-      "content": "<div><!--block-->un content</div>",
-      "nb_views": 0,
+      "title": "comment on fait ?",
+      "content": "<div><!--block-->pour dire&nbsp;<em>bonjour</em>&nbsp;en&nbsp;<strong>gaelique ?</strong></div>",
+      "nb_views": 8,
       "votes": 1,
-      "date": "2017-04-26T09:35:19.490Z",
+      "date": "2017-04-26T14:11:44.435Z",
       "answersCount": 0,
-      "userId": 1,
+      "userId": 11,
       "id": 15
     },
     {
-      "title": "new answer",
-      "content": "<div><!--block-->testestesets</div>",
+      "title": "coucou",
+      "content": "<div><!--block-->correction bug</div>",
       "nb_views": 1,
       "votes": 0,
-      "date": "2017-04-26T14:43:45.872Z",
-      "answersCount": 0,
-      "userId": 2,
+      "date": "2017-04-26T14:49:00.624Z",
+      "answersCount": 2,
+      "userId": 11,
       "id": 16
+    },
+    {
+      "title": "salut",
+      "content": "<div><!--block-->bugfix</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T14:49:37.050Z",
+      "answersCount": 0,
+      "userId": 11,
+      "id": 17
+    },
+    {
+      "title": "test sans objet",
+      "content": "<div><!--block-->test fail</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T14:53:50.750Z",
+      "answersCount": 0,
+      "id": 18,
+      "userId": 12
+    },
+    {
+      "title": "salut",
+      "content": "<div><!--block-->salut</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T14:54:19.668Z",
+      "answersCount": 0,
+      "userId": 12,
+      "id": 19
+    },
+    {
+      "title": "salut",
+      "content": "<div><!--block-->hello</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T15:02:29.771Z",
+      "answersCount": 0,
+      "userId": 12,
+      "id": 20
+    },
+    {
+      "title": "test",
+      "content": "<div><!--block-->cookie !</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T15:20:48.428Z",
+      "answersCount": 0,
+      "userId": 12,
+      "id": 21
+    },
+    {
+      "title": "test",
+      "content": "<div><!--block--><em>on check le cookie</em></div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T16:03:22.998Z",
+      "answersCount": 0,
+      "userId": 11,
+      "id": 22
     }
   ],
   "users": [
@@ -319,6 +379,42 @@
       "github": "https://github.com/Piotr-V?tab=repositories",
       "linkedin": "https://www.linkedin.com/in/pierre-vicq-4a246b120",
       "stack": "http://stackexchange.com/users/10499231/piotr"
+    },
+    {
+      "email": "shredding.fingers@gmail.com",
+      "pass": "toto",
+      "last_name": "GRASSO",
+      "first_name": "Sacha",
+      "pseudo": "Satch",
+      "date": "2017-04-26T14:00:35.370Z",
+      "avatar": "",
+      "profile": "",
+      "id": 10,
+      "tokenSecure": 1636.294878270232
+    },
+    {
+      "email": "elisa@gmail.com",
+      "pass": "tata",
+      "last_name": "elisa",
+      "first_name": "etcheverry",
+      "pseudo": "tatichou",
+      "date": "2017-04-26T14:09:04.514Z",
+      "avatar": "",
+      "profile": "",
+      "id": 11,
+      "tokenSecure": 2856.9278930811506
+    },
+    {
+      "email": "tutu@gmail.com",
+      "pass": "tutu",
+      "last_name": "grasso",
+      "first_name": "sacha",
+      "pseudo": "toto",
+      "date": "2017-04-26T15:01:36.135Z",
+      "avatar": "",
+      "profile": "",
+      "id": 12,
+      "tokenSecure": 3194.0387329797686
     }
   ],
   "tags": [
@@ -1302,6 +1398,86 @@
       "date": "2017-04-26T12:00:35.934Z",
       "questionId": 3,
       "id": 70
+    },
+    {
+       "title": "eh bien",
+      "content": "<div><!--block-->moi je sais le dire en&nbsp;<del>BASQUE</del>&nbsp;italien !!<br><br>buongiorno ;-)</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T14:29:39.041Z",
+      "userId": "10",
+      "questionId": 15,
+      "id": 70
+    },
+    {
+      "title": "je sais",
+      "content": "<div><!--block-->aussi le dire en anglais&nbsp;<em>HELLO</em></div>",
+      "nb_views": 0,
+      "votes": 1,
+      "date": "2017-04-26T14:30:40.246Z",
+      "userId": "10",
+      "questionId": 15,
+      "id": 71
+    },
+    {
+      "title": "derniere fois",
+      "content": "<div><!--block-->en japonais KONNICHIWA</div>",
+      "nb_views": 0,
+      "votes": 1,
+      "date": "2017-04-26T14:32:59.593Z",
+      "userId": "10",
+      "questionId": 15,
+      "id": 72
+    },
+    {
+      "title": "dernier test",
+      "content": "<div><!--block-->dernier test</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T14:34:23.532Z",
+      "userId": "10",
+      "questionId": 15,
+      "id": 73
+    },
+    {
+      "title": "on essaie !!",
+      "content": "<div><!--block-->on y croit !!!</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T15:21:10.863Z",
+      "userId": "12",
+      "questionId": 15,
+      "id": 74
+    },
+    {
+      "title": "coucou mathilde",
+      "content": "<div><!--block-->comment ca va ?</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T19:43:47.913Z",
+      "userId": 12,
+      "questionId": 15,
+      "id": 75
+    },
+    {
+      "title": "on teste les liens profiles",
+      "content": "<div><!--block-->nice</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T20:36:26.921Z",
+      "userId": 12,
+      "questionId": 16,
+      "id": 76
+    },
+    {
+      "title": "coucou toi",
+      "content": "<div><!--block-->comment ca va ?</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-26T20:36:37.442Z",
+      "userId": 12,
+      "questionId": 16,
+      "id": 77
     }
   ],
   "comments": [
@@ -1676,6 +1852,11 @@
       "userId": 3,
       "questionId": 2,
       "id": 4
+    },
+    {
+      "userId": 12,
+      "questionId": 15,
+      "id": 5
     }
   ],
   "votes_answer": [
@@ -1712,7 +1893,27 @@
     {
       "userId": 2,
       "answerId": 3,
-      "id": 7
+      "id": 10
+    },
+    {
+      "userId": 9,
+      "answerId": 33,
+      "id": 11
+    },
+    {
+      "userId": 9,
+      "answerId": 34,
+      "id": 12
+    },
+    {
+      "userId": 12,
+      "answerId": 72,
+      "id": 13
+    },
+    {
+      "userId": 12,
+      "answerId": 71,
+      "id": 14
     }
   ]
 }

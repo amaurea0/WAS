@@ -11,7 +11,8 @@ COMPNT
 
       this.info = {};
       this.searchQuery = '';
-      this.newAnswers = 3;
+      this.newAnswers = 0;
+      this.questions = [];
 
       var self = this;
 
@@ -70,12 +71,19 @@ COMPNT
       }
 
       this.deconnexion = () => {
+        notify({
+          message: 'À bientôt ;-) !',
+          classes: 'teal accent-3',
+          duration: 3000
+        });
         this.DeleteCookie();
         $state.go($rootScope.oldRouteUser ? $rootScope.oldRouteUser : 'questions');
+        this.newAnswers = 0;
       }
 
 
       this.connection = (email, mdp) => { // on envoye les information qu'on a écrit dans les champs (ng-model)
+
         UsersService.userConnect(email, mdp).then((response) => { // j'envoye mon email et mon mot de passe à mon service qui utilise la fonction UserConnecy
           self.user = response.data; // je récupère cest donné si les information son bonne
           self.user.id = response.data["0"].id;
@@ -97,15 +105,34 @@ COMPNT
             self.error = response.statusText || "une erreur s'est produite pendant l'identification"; //en cas d'échec je marque un message d'erreur
           });
           //END SEND USERTOKEN
+          UsersService.getUserQuestions(self.user.id).then((object) => {
+            this.questions = object.questions;
 
+            for (let i = 0; i < this.questions.length; i++) {
+              this.newAnswers += this.questions[i].answersCount;
+            }
+            if (this.newAnswers != 0) {
+              notify({
+                message: 'Bienvenue ! Vous avez ' + this.newAnswers + ' nouvelles réponses',
+                classes: 'teal accent-3',
+                duration: 0
+              });
+            } else {
+              notify({
+                message: 'Bienvenue !',
+                classes: 'teal accent-3',
+                duration: 0
+              });
+            }
+          }).catch((error) => {});
         }).catch((response) => {
           self.error = response.statusText || "une erreur s'est produite pendant l'identification"; //en cas d'échec je marque un message d'erreur
         });
       }
 
       function SendCookie(id, token) { // on envoye le cookie avec l'id de connexion
-        $cookies.put('id', '' + id + ''); // je crée mon cookie avec l'userId
-        $cookies.put('tokenSecure', '' + token + ''); // je crée mon cookie avec l'userId
+        $cookies.put('id', id); // je crée mon cookie avec l'userId
+        $cookies.put('tokenSecure', token); // je crée mon cookie avec l'userId
         self.cookieUser = $cookies.get('id'); //je déclare mon cookie dans une variable pour pouvoir faire des conditions trql
         self.cookieToken = $cookies.get('tokenSecure'); //je déclare mon cookie dans une variable pour pouvoir faire des conditions trql
 
@@ -121,9 +148,9 @@ COMPNT
         return (Math.random() * 6000); // on génére un chiffre aléatoire
       };
       this.openModal = () => {
-         $('#login').modal('open');
+        $('#login').modal('open');
       }
-      
+
       this.$onInit = () => {
         this.cookieUser = $cookies.get('id'); //je déclare mon cookie dans une variable pour pouvoir faire des conditions trql
         this.cookieToken = $cookies.get('tokenSecure'); //je déclare mon cookie dans une variable pour pouvoir faire des conditions trql
@@ -136,11 +163,7 @@ COMPNT
           position: 'right',
           startTop: 68
         })
-        notify({
-          message: 'Vous avez ' + this.newAnswers + ' nouvelles réponses',
-          classes: 'teal accent-3',
-          duration: 0
-        });
+
         ajax()
         this.rebindDropDowns = function () {
           $('.dropdown-button').dropdown({
