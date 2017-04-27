@@ -8,7 +8,7 @@ WEA.component('home', {
 
   },
 
-  controller: ['UsersService', 'QuestionsService', 'JobService', 'authService', function (UsersService, QuestionsService, JobService, authService) {
+  controller: ['UsersService', 'QuestionsService', 'JobService', 'authService', 'TaglinkService', function (UsersService, QuestionsService, JobService, authService, TaglinkService) {
 
     var self = this;
     this.ajax = function () {
@@ -31,6 +31,9 @@ WEA.component('home', {
     this.getQuestion = () => {
       QuestionsService.QuestionHome().then((response) => { // j'envoye l'id et le token qui va avec
         self.questions = response;
+        self.questions.forEach((currentQuestion) => {
+          TaglinkService.displayTags(currentQuestion);
+        });
         this.VotedQuestion(self.questions);
       }).catch((response) => {
         self.error = response.statusText || "une erreur s'est produite pendant l'identification"; //en cas d'échec je marque un message d'erreur
@@ -54,7 +57,7 @@ WEA.component('home', {
             } else {
               question.myQuestionVote = false;
             }
-          }).catch((error) => {});
+          }).catch((error) => { });
         };
       })
     };

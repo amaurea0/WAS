@@ -22,6 +22,11 @@
             <button ng-if="$ctrl.myQuestion" ui-sref="editPost({postId : $ctrl.question.id})" class="lien">Edit</button>
             <span>{{$ctrl.question.date | date:"MM/dd/yyyy"}}</span>
             <p ng-bind-html="$ctrl.question.content"></p>
+              <div >
+                <ul>
+                  <li ng-repeat="tag in $ctrl.question.tags" class="chip">{{tag.tag.name}}</li>
+                </ul>
+              </div>
         </div>
         <div class="collection-item avatar">
             <img class="circle" ng-src="{{$ctrl.question.user.avatar}}" alt="avatar">

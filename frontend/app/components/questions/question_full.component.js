@@ -15,7 +15,7 @@ COMPNT
             postAnswer: '<'
         },
 
-        controller: ['authService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', 'notify', '$scope', function (authService, QuestionsService, $log, $state, $stateParams, $location, $timeout, notify, $scope) {
+        controller: ['authService', 'QuestionsService', '$log', '$state', '$stateParams', '$location', '$timeout', 'notify', '$scope', 'TaglinkService', function (authService, QuestionsService, $log, $state, $stateParams, $location, $timeout, notify, $scope, TaglinkService) {
 
             this.currentPage = 1;
             this.pageSize = 3;
@@ -25,6 +25,8 @@ COMPNT
             };
 
             this.$onInit = () => {
+
+              TaglinkService.displayTags(this.question);
 
                 this.connected = authService.getCurrentUser();
                 this.myQuestionVote = false;

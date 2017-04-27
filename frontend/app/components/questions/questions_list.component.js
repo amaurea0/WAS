@@ -19,25 +19,25 @@ COMPNT
     controller: ['TaglinkService', '$state', '$stateParams', 'QuestionsService', '$log', 'authService', function (TaglinkService, $state, $stateParams, QuestionsService, $log, authService) {
 
       this.tabsList = [{
-          "view": "view1",
-          "label": "Most Popular",
-          "sort": "-votes"
-        },
-        {
-          "view": "view2",
-          "label": "Most Viewed",
-          "sort": "-nb_views"
-        },
-        {
-          "view": "view3",
-          "label": "Latest",
-          "sort": "-date"
-        },
-        {
-          "view": "view4",
-          "label": "Least Answered",
-          "sort": "answers"
-        }
+        "view": "view1",
+        "label": "Most Popular",
+        "sort": "-votes"
+      },
+      {
+        "view": "view2",
+        "label": "Most Viewed",
+        "sort": "-nb_views"
+      },
+      {
+        "view": "view3",
+        "label": "Latest",
+        "sort": "-date"
+      },
+      {
+        "view": "view4",
+        "label": "Least Answered",
+        "sort": "answers"
+      }
       ];
 
       this.model = {
@@ -69,19 +69,26 @@ COMPNT
 
           angular.forEach(this.model.tagQuestionId, (value, key) => {
             QuestionsService.getQuestionId(value.questionId).then((question) => {
+              TaglinkService.displayTags(question[0]);
               this.questions.push(question[0]);
-            }).catch((err) => {});
+            }).catch((err) => { });
           });
+          TaglinkService.displayTags(this.questions);
 
           this.VotedQuestion(this.questions);
-        }).catch((err) => {});
+        }).catch((err) => { });
       };
 
       this.getAllItems = () => {
         QuestionsService.getQuestions().then((items) => {
+
           this.questions = items;
+          this.questions.forEach((currentQuestion) => {
+            TaglinkService.displayTags(currentQuestion);
+          }).catch((err) => { });
+
           this.VotedQuestion(this.questions);
-        }).catch((err) => {});
+        }).catch((err) => { });
       };
 
       this.removeTag = () => {
@@ -92,7 +99,7 @@ COMPNT
         QuestionsService.searchQuestions(param).then((items) => {
           this.questions = items;
           this.VotedQuestion(this.questions);
-        }).catch((error) => {})
+        }).catch((error) => { })
       }
 
       this.countViews = (id) => {
@@ -102,7 +109,7 @@ COMPNT
 
           QuestionsService.updateContent(id, updatedCount).then((response) => {
             $log.log('views updated');
-          }).catch((error) => {});
+          }).catch((error) => { });
 
         }).catch((error) => {
           $log.error('pb sur getQuestionId');
@@ -119,7 +126,7 @@ COMPNT
               } else {
                 question.myQuestionVote = false;
               }
-            }).catch((error) => {});
+            }).catch((error) => { });
           };
         })
       }
