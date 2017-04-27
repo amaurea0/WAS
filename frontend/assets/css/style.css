@@ -111,23 +111,8 @@ i.icon-orange {
     width: 600px;
 }
 
-#personRight {
-    max-width: 250px;
-    display: flex;
-    flex-direction: column;
-    direction: row;
-    float: right;
-    margin: 10px;
-    overflow: hidden;
-    justify-content: center;
-}
-
 #pseudo {
     color: #f4a443;
-}
-
-.collection .collection-item.avatar {
-    width: 400px;
 }
 
 .collection .collection-item.avatar {
@@ -139,27 +124,37 @@ i.icon-orange {
     color: #455a64;
 }
 
+#rightPerson{
+    text-align: center;
+    width: 200px;
+}
+
+#icons {
+    max-width: 120px;
+    margin: auto;
+}
+
 
 /*ICI VIENT LE STYLE DE LA LISTE DU PROFILE*/
 
-#personRight td {
-    max-width: 80px;
+#promotion {
+    width: 250px;  
 }
 
-#personRight td * {
-    padding-top: 10px;
-    text-align: center;
+#promotion p{
+    color:#f1f1f1;
 }
+
+#promotion span{
+    color:#ffa726;
+}
+
 
 .icons {
-    max-width: 24px;
+    max-width: 30px;
     height: auto;
+    margin: 1px;
 }
-
-#avatar {
-    max-width: 60px;
-}
-
 
 /*ICI VIENT LE STYLE DE LA LISTE DES JOBS*/
 
