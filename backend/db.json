@@ -86,7 +86,7 @@
       "nb_views": 20,
       "votes": 0,
       "date": "2017-04-17T15:28:44.873Z",
-      "answersCount": 4,
+      "answersCount": 5,
       "userId": 6,
       "id": 9
     },
@@ -1458,6 +1458,17 @@
       "questionId": 9,
       "bestAnswer": false,
       "id": 81
+    },
+    {
+      "title": "bisounours",
+      "content": "<div><!--block-->coouou</div>",
+      "nb_views": 0,
+      "votes": 0,
+      "date": "2017-04-27T08:13:23.228Z",
+      "userId": 1,
+      "questionId": 9,
+      "bestAnswer": false,
+      "id": 82
     }
   ],
   "comments": [

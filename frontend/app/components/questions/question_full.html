@@ -28,7 +28,7 @@
         </div>
     </div>
 
-    <button class="waves-effect waves-light btn orange lighten-2" ui-sref="questionSpec({idQuestion : $ctrl.question.id, postAnswer: true})"
+    <button class="waves-effect waves-light btn orange lighten-2" ng-click="postAnswer = !postAnswer"
         ng-disabled="!$ctrl.connected.id">
 
         <i class="material-icons left">add</i>New Answer
@@ -53,7 +53,7 @@
         </form>
     </div>
     <!-- post answer-->
-    <div ng-if="$ctrl.postAnswer" class="bloc_center">
+    <div ng-show="postAnswer" class="bloc_center">
         <h2>Post a new answer</h2>
         <form name="myForm2" class="formulaire" ng-submit="$ctrl.saveAnswer($ctrl.answer)" novalidate>
             <div class="form-group">
@@ -66,7 +66,7 @@
             </div>
             <div class="item-actions">
 
-                <input class="btn btn-success" type="submit" value="Valider" ng-disabled="myForm2.$invalid" />
+                <input class="btn btn-success" ng-click="postAnswer = false" type="submit" value="Valider" ng-disabled="myForm2.$invalid" />
 
             </div>
         </form>

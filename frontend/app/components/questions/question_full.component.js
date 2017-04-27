@@ -231,11 +231,6 @@ COMPNT
                     })
                 });
 
-
-                $state.go('questionSpec', {
-                    idQuestion: this.question.id,
-                    postAnswer: false
-                })
             }
 
 
@@ -267,11 +262,6 @@ COMPNT
                         classes: 'red darken-1'
                     })
                 });
-
-                // $state.go('questionSpec', {
-                //     idQuestion: this.question.id,
-                //     postComment: false
-                // })
             }
 
 
