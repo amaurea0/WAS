@@ -69,9 +69,11 @@ COMPNT
 
           angular.forEach(this.model.tagQuestionId, (value, key) => {
             QuestionsService.getQuestionId(value.questionId).then((question) => {
+              TaglinkService.displayTags(question[0]);
               this.questions.push(question[0]);
             }).catch((err) => { });
           });
+          TaglinkService.displayTags(this.questions);
 
           this.VotedQuestion(this.questions);
         }).catch((err) => { });
@@ -82,59 +84,52 @@ COMPNT
 
           this.questions = items;
           this.questions.forEach((currentQuestion) => {
-            TaglinkService.getQuestionTags(currentQuestion.id).then((arrayTags) => {
-              $log.log(arrayTags[0]);
-              currentQuestion['tags'] = arrayTags;
-              
-            }).catch((err) => { });
+            TaglinkService.displayTags(currentQuestion);
+          }).catch((err) => { });
 
-
-          })
-
-
-        this.VotedQuestion(this.questions);
-      }).catch((err) => { });
+          this.VotedQuestion(this.questions);
+        }).catch((err) => { });
       };
 
-this.removeTag = () => {
-  $state.go('questions');
-};
+      this.removeTag = () => {
+        $state.go('questions');
+      };
 
-this.getQueries = (param) => {
-  QuestionsService.searchQuestions(param).then((items) => {
-    this.questions = items;
-    this.VotedQuestion(this.questions);
-  }).catch((error) => { })
-}
+      this.getQueries = (param) => {
+        QuestionsService.searchQuestions(param).then((items) => {
+          this.questions = items;
+          this.VotedQuestion(this.questions);
+        }).catch((error) => { })
+      }
 
-this.countViews = (id) => {
-  var updatedCount = {}
-  QuestionsService.getQuestionId(id).then((response) => {
-    updatedCount.nb_views = response[0].nb_views + 1
+      this.countViews = (id) => {
+        var updatedCount = {}
+        QuestionsService.getQuestionId(id).then((response) => {
+          updatedCount.nb_views = response[0].nb_views + 1
 
-    QuestionsService.updateContent(id, updatedCount).then((response) => {
-      $log.log('views updated');
-    }).catch((error) => { });
+          QuestionsService.updateContent(id, updatedCount).then((response) => {
+            $log.log('views updated');
+          }).catch((error) => { });
 
-  }).catch((error) => {
-    $log.error('pb sur getQuestionId');
-  });
+        }).catch((error) => {
+          $log.error('pb sur getQuestionId');
+        });
 
-}
+      }
 
-this.VotedQuestion = (questions) => {
-  questions.forEach((question) => {
-    if (authService.getCurrentUser()) {
-      QuestionsService.getIfMyVotedQuestion(question.id, authService.getCurrentUser().id).then((rsp) => {
-        if (rsp.length > 0) {
-          question.myQuestionVote = true;
-        } else {
-          question.myQuestionVote = false;
-        }
-      }).catch((error) => { });
-    };
-  })
-}
+      this.VotedQuestion = (questions) => {
+        questions.forEach((question) => {
+          if (authService.getCurrentUser()) {
+            QuestionsService.getIfMyVotedQuestion(question.id, authService.getCurrentUser().id).then((rsp) => {
+              if (rsp.length > 0) {
+                question.myQuestionVote = true;
+              } else {
+                question.myQuestionVote = false;
+              }
+            }).catch((error) => { });
+          };
+        })
+      }
 
     }]
   });

@@ -45,8 +45,11 @@
                 <span>{{question.answers.length}} Réponses</span>
                 <span>{{question.date | date:"MM/dd/yyyy"}}</span>
                 <p ng-bind-html="question.content"></p>
-
-                <span id="questionsTags">{{question.tag}}</span>
+                <div>
+                  <ul>
+                    <li ng-repeat="tag in question.tags" class="chip">{{tag.tag.name}}</li>
+                  </ul>
+                </div>
                 <div ng-bind="question.tag"></div>
               </a>
             </div>

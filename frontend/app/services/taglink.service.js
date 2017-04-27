@@ -50,5 +50,11 @@ SERVICES.service('TaglinkService', ['$http', '$log', '$q', function ($http, $log
         );
         return deferred.promise;
     }
-
+    this.displayTags = (question) => {
+            this.getQuestionTags(question.id).then((arrayTags) => {
+                $log.log(arrayTags[0]);
+                question['tags'] = arrayTags;
+            }).catch((err) => { });
+    }
 }]);
+

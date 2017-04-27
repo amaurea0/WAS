@@ -49,14 +49,12 @@
               <span>{{question.answers.length}} Réponses</span>
               <span>{{question.date | date:"MM/dd/yyyy"}}</span>
               <p ng-bind-html="question.content"></p>
+              <div >
+                <ul>
+                  <li ng-repeat="tag in question.tags" class="chip">{{tag.tag.name}}</li>
+                </ul>
+              </div>
 
-              <span ng-repeat="tag in question.tags">{{tag.tag.name}}
-
-
-
-
-
-              </span>
               <div ng-bind="question.tag"></div>
             </a>
           </div>
@@ -65,11 +63,11 @@
             <img class="responsive-img circle" ng-src="{{question.user.avatar}}" alt="user's picture">
           </div>
 
-        </div>
-        <dir-pagination-controls boundary-links="true" on-page-change="$ctrl.pageChangeHandler(newPageNumber)" template-url="node_modules/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
       </div>
+      <dir-pagination-controls boundary-links="true" on-page-change="$ctrl.pageChangeHandler(newPageNumber)" template-url="node_modules/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
     </div>
   </div>
-  <!-- FIN bloc_center -->
+</div>
+<!-- FIN bloc_center -->
 </div>
 <!-- FIN container -->
