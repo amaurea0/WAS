@@ -26,7 +26,7 @@ COMPNT
 
             this.$onInit = () => {
 
-              TaglinkService.displayTags(this.question);
+                TaglinkService.displayTags(this.question);
 
                 this.connected = authService.getCurrentUser();
                 this.myQuestionVote = false;
@@ -240,7 +240,7 @@ COMPNT
                     "questionId": this.question.id,
                     "bestAnswer": false
                 }
-                this.answer={};
+                this.answer = {};
 
                 var newAnswersCount = {
                     "answersCount": this.question.answersCount + 1
@@ -253,13 +253,13 @@ COMPNT
                     notify({
                         message: 'Votre réponse a été posté !',
                         duration: 2500,
-                        classes: 'green darken-1'
+                        classes: '#eceff1 blue-grey lighten-5',
                     });
                 }).catch((err) => {
                     notify({
                         message: "Votre réponse n'a pas été posté !",
                         duration: 2500,
-                        classes: 'red darken-1'
+                        classes: '#eceff1 blue-grey lighten-5',
                     })
                 });
 

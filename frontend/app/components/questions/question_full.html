@@ -142,7 +142,7 @@
                 <div ng-if="answer.coms.length > 0">
                     <div class="comment" ng-repeat="comment in answer.coms">
                         <p ng-bind="comment.content"></p>
-                        <span>{{comment.date | date:"MM/dd/yyyy"}}</span>by<span>{{comment.pseudo.userId}}</span>
+                        <span>{{comment.date | date:"MM/dd/yyyy"}}</span><span>{{comment.pseudo.userId}}</span>
                     </div>
                 </div>
             </div>
