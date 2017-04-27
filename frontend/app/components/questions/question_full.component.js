@@ -27,8 +27,6 @@ COMPNT
             this.$onInit = () => {
 
                 this.connected = authService.getCurrentUser();
-                console.log(this.connected)
-                this.answers = this.question.answers;
                 this.myQuestionVote = false;
                 this.myQuestion = false;
 
@@ -63,13 +61,47 @@ COMPNT
                     QuestionsService.getAnswerForComments(answer.id).then((answerfull) => {
                         $log.log(answerfull);
                         answer["coms"] = answerfull.comments;
-                        console.log(this.question.answers);
                     }).catch((error) => {
                         $log.error("comment error");
                     });
                 })
+
+                this.firstAnswer();
             }
 
+            this.firstAnswer = () => {
+                this.answers = this.question.answers;
+                var maxvote = 0;
+                var keepGoing = true;
+                this.answers.forEach((answer) => {
+                    if (keepGoing) {
+                        if (answer.votes > maxvote) {
+                            maxvote = answer.votes;
+                            this.bestanswer = answer;
+                        }
+                        if (answer.bestAnswer) {
+                            this.bestanswer = answer;
+                            this.resolved = true;
+                            keepGoing = false;
+                        }
+                    }
+                })
+                this.answers.splice(this.answers.indexOf(this.bestanswer), 1);
+            }
+
+            this.bestAnswer = (answer) => {
+                this.answers.push(this.bestanswer);
+                QuestionsService.updateContentAnswer(this.bestanswer.id, {
+                    bestAnswer: false
+                });
+
+                this.bestanswer = answer;
+                this.bestanswer.bestAnswer = true;
+                this.answers.splice(this.answers.indexOf(answer), 1);
+                QuestionsService.updateContentAnswer(answer.id, {
+                    bestAnswer: true
+                });
+            }
 
             this.voteQst = (questionid) => {
                 if (authService.getCurrentUser()) {
@@ -85,7 +117,6 @@ COMPNT
                                 "userId": userid,
                                 "questionId": questionid
                             };
-                            console.log(votes_question)
 
                             QuestionsService.updateContent(this.question.id, updatedVote).then((rsp) => {
                                 $log.log("vote update");
@@ -168,16 +199,15 @@ COMPNT
                     "votes": 0,
                     "date": new Date(),
                     "userId": authService.getCurrentUser().id,
-                    "questionId": this.question.id
+                    "questionId": this.question.id,
+                    "bestAnswer": false
                 }
 
                 var newAnswersCount = {
                     "answersCount": this.question.answersCount + 1
                 }
 
-                QuestionsService.updateContent(this.question.id, newAnswersCount).then((response) => {
-                    console.log("did it work ?");
-                }).catch((error) => {})
+                QuestionsService.updateContent(this.question.id, newAnswersCount).then((response) => {}).catch((error) => {})
 
                 QuestionsService.postAnswer(new_answer).then((response) => {
                     notify({
@@ -209,7 +239,7 @@ COMPNT
                 }
 
                 this.question.answers.forEach((answer) => {
-                    if(answer.id == answerid) {
+                    if (answer.id == answerid) {
                         answer.coms.push(new_comment);
                     }
                 })
