@@ -15,9 +15,11 @@
                 <div ng-bind="$ctrl.question.votes" ng-model="$ctrl.myQuestionVote"></div>
             </div>
         </div>
+
+        <span ng-if="$ctrl.resolved"> Resolved </span>
         <div class="contenu">
             <h3 ng-bind="$ctrl.question.title"></h3>
-            <button ng-if="$ctrl.myQuestion" ui-sref="editPost({postId : $ctrl.question.id})">Edit</button>
+            <button ng-if="$ctrl.myQuestion" ui-sref="editPost({postId : $ctrl.question.id})" class="lien">Edit</button>
             <span>{{$ctrl.question.date | date:"MM/dd/yyyy"}}</span>
             <p ng-bind-html="$ctrl.question.content"></p>
         </div>
@@ -72,7 +74,23 @@
     <!-- display answers-->
     <div ng-if="$ctrl.question.answers.length > 0">
 
+        <div class="best_answer question flex">
+            <div class="counters view">
+                <div ng-class="{voted: $ctrl.bestanswer.myAnswerVote, notvoted: !$ctrl.bestanswer.myAnswerVote}" ng-click="$ctrl.voteAsw($ctrl.bestanswer)">
+                    <div ng-bind="$ctrl.bestanswer.votes" ng-model="$ctrl.bestanswer.myAnswerVote"></div>
+                </div>
+            </div>
+            <span ng-if="$ctrl.bestanswer.bestAnswer"> Best Answer </span>
 
+            <div class="contenu">
+                <h3 ng-bind="$ctrl.bestanswer.title"></h3>
+
+                <button ng-if="$ctrl.bestanswer.myAnswer" class="lien" ui-sref="questionSpec({idQuestion : $ctrl.question.id, edition: true, answer: $ctrl.bestanswer.id})">edit</button>
+
+                <span>{{$ctrl.bestanswer.date | date:"MM/dd/yyyy"}}</span>
+                <p ng-bind-html="$ctrl.bestanswer.content"></p>
+            </div>
+        </div>
 
         <div class="answer" dir-paginate="answer in $ctrl.question.answers | filter : q | itemsPerPage: $ctrl.pageSize" current-page="$ctrl.currentPage">
             <div class="question flex">
@@ -81,6 +99,7 @@
                         <div ng-bind="answer.votes" ng-model="answer.myAnswerVote"></div>
                     </div>
                 </div>
+                <button ng-if="$ctrl.myQuestion" ng-click="$ctrl.bestAnswer(answer)" class="lien">best answer</button>
                 <div class="contenu">
                     <h3 ng-bind="answer.title"></h3>
                     <button ng-if="answer.myAnswer" class="lien" ui-sref="questionSpec({idQuestion : $ctrl.question.id, edition: true, answer: answer.id})">edit</button>

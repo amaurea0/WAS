@@ -13,7 +13,7 @@
     {
       "title": "AngularJS: Service vs provider vs factory",
       "content": "What are the differences between a Service, Provider and Factory in AngularJS?",
-      "nb_views": 347,
+      "nb_views": 349,
       "votes": 181,
       "date": "2017-04-08T01:49:44.615Z",
       "answersCount": 0,
@@ -23,7 +23,7 @@
     {
       "title": "How can I prevent SQL injection in PHP?",
       "content": "If user input is inserted without modification into an SQL query, then the application becomes vulnerable to SQL injection, like in the following example:",
-      "nb_views": 426,
+      "nb_views": 427,
       "votes": 900,
       "date": "2017-04-08T01:51:51.436Z",
       "answersCount": 5,
@@ -43,7 +43,7 @@
     {
       "title": "What does 'use strict' do in JavaScript, and what is the reasoning behind it?",
       "content": "Recently, I ran some of my JavaScript code through Crockford's JSLint, and it gave the following error:",
-      "nb_views": 28,
+      "nb_views": 29,
       "votes": 746,
       "date": "2017-04-08T09:25:09.366Z",
       "answersCount": 0,
@@ -729,13 +729,14 @@
       "date": "2017-04-12T09:50:23.819Z",
       "id": 2,
       "questionId": 2,
-      "userId": 1
+      "userId": 1,
+      "bestAnswer": true
     },
     {
       "title": "coucou papa",
       "content": "test de la mort qui tue",
       "nb_views": 0,
-      "votes": 2,
+      "votes": 3,
       "date": "2017-04-12T09:51:03.968Z",
       "id": 3,
       "questionId": 3,
@@ -829,7 +830,8 @@
       "date": "2017-04-12T13:12:19.061Z",
       "id": 12,
       "questionId": 2,
-      "userId": 1
+      "userId": 1,
+      "bestAnswer": false
     },
     {
       "title": "smldfkjmldsqkjf",
@@ -925,11 +927,12 @@
       "title": "foukiou",
       "content": "utouytiut",
       "nb_views": 0,
-      "votes": 0,
+      "votes": 5,
       "date": "2017-04-13T19:19:36.013Z",
       "questionId": 2,
       "id": 22,
-      "userId": 1
+      "userId": 1,
+      "bestAnswer": false
     },
     {
       "title": "test aurore",
@@ -1705,6 +1708,11 @@
       "userId": 3,
       "answerId": 25,
       "id": 6
+    },
+    {
+      "userId": 2,
+      "answerId": 3,
+      "id": 7
     }
   ]
 }
