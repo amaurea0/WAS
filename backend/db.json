@@ -3,10 +3,10 @@
     {
       "title": "How do JavaScript closures work?",
       "content": "How would you explain JavaScript closures to someone with a knowledge of the concepts they consist of (for example functions, variables and the like), but does not understand closures themselves?",
-      "nb_views": 152,
+      "nb_views": 153,
       "votes": 101,
       "date": "1998-04-08T01:47:18.815Z",
-      "answersCount": 1,
+      "answersCount": 0,
       "userId": 1,
       "id": 1
     },
@@ -106,7 +106,7 @@
       "nb_views": 189,
       "votes": 0,
       "date": "2016-06-25T12:12:40.826Z",
-      "answersCount": 2,
+      "answersCount": 0,
       "userId": 2,
       "id": 11
     },
@@ -173,17 +173,17 @@
     {
       "title": "What characters do I need to escape in XML documents?",
       "content": "What characters must be escaped in XML documents, or where could I find such a list?",
-      "nb_views": 349,
+      "nb_views": 351,
       "votes": 124,
       "date": "2016-10-27T07:01:30.818Z",
-      "answersCount": 1,
+      "answersCount": 0,
       "userId": 2,
       "id": 18
     },
     {
       "title": "Swift performance: sorting arrays",
       "content": "I was implementing an algorithm in Swift and noticed that the performance was very poor. After digging deeper I realised that one of the bottlenecks was something as simple as sorting arrays.",
-      "nb_views": 289,
+      "nb_views": 290,
       "votes": 120,
       "date": "2016-10-27T06:59:18.163Z",
       "answersCount": 0,
@@ -521,7 +521,7 @@
       "stack": "http://stackexchange.com/users/10499231/piotr",
       "ville": "La Loupe",
       "graduation": "Mars 2017",
-      "tokenSecure": 648.8477424046741
+      "tokenSecure": 4461.949192644823
     },
     {
       "email": "pierrevicq@hotmail.fr",
@@ -540,7 +540,7 @@
       "stack": "http://stackexchange.com/users/10499231/piotr",
       "ville": "Lyon",
       "graduation": "Septembre 2016",
-      "tokenSecure": 4578.866380591274
+      "tokenSecure": 3311.924741768291
     },
     {
       "email": "lderv68@gmail.com",

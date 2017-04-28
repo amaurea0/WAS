@@ -114,7 +114,7 @@
                     <div id="reponses-non-consultées" class="collection with-header">
                         <div class="collection-header">
                             <h5>Unchecked Answers</h5>
-                            <div ng-repeat="notifs in $ctrl.uncheckedAnswers" class="collection-item" ui-sref="questionSpec({idQuestion : notifs.questionId})">
+                            <div ng-repeat="notifs in $ctrl.uncheckedAnswers" class="collection-item" ui-sref="questionSpec({idQuestion : notifs.id})">
                                 <span>{{notifs.title}} {{notifs.answersCount}}</span>
                             </div>
                         </div>
