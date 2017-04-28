@@ -71,7 +71,7 @@ COMPNT.component("questionPost", {
           notify({
             message: 'Votre question a été posté !',
             duration: 2500,
-            classes: 'green darken-1'
+            classes: '#eceff1 blue-grey lighten-5',
           })
         }).catch((err) => {
           notify({
